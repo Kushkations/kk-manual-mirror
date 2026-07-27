@@ -534,41 +534,78 @@
     margin: -2px 0 12px;
   }
   .pick {
-    padding: 11px 0;
-    border-bottom: 1px solid #f0ede5;
+    background: #fff;
+    border: 1px solid #efe9dd;
+    border-radius: 14px;
+    padding: 13px 15px 14px;
+    margin-bottom: 11px;
+    box-shadow: 0 3px 12px rgba(30,49,32,0.07);
+    position: relative;
+    overflow: hidden;
   }
-  .pick:last-child { border-bottom: none; padding-bottom: 0; }
+  .pick:last-child { margin-bottom: 0; }
+  .pick::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg, var(--kk-green), var(--kk-mid));
+  }
+  .pick .p-top { display: flex; align-items: center; gap: 11px; }
+  .pick .p-txt { display: flex; flex-direction: column; min-width: 0; }
+  .pick .p-emoji {
+    flex: none;
+    width: 42px; height: 42px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #eef6ef, #e0efe4);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 23px;
+  }
   .pick .p-name {
-    font-size: 15px;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 20px;
     font-weight: 700;
     color: var(--kk-dark);
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    letter-spacing: 0.01em;
+    line-height: 1.08;
   }
   .pick .p-meta {
-    font-size: 10.5px;
+    font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 0.07em;
     color: var(--kk-mid);
-    font-weight: 700;
-    margin: 2px 0 4px;
+    font-weight: 800;
+    margin-top: 3px;
   }
   .pick .p-body {
     font-size: 12.5px;
     color: var(--kk-ink);
     line-height: 1.5;
+    margin-top: 9px;
   }
   .pick .p-order {
     font-size: 12.5px;
     line-height: 1.45;
-    margin-top: 5px;
-    padding: 6px 10px;
-    background: var(--kk-sand);
-    border-left: 3px solid var(--kk-green);
-    border-radius: 5px;
+    margin-top: 9px;
+    padding: 9px 12px;
+    background: linear-gradient(135deg, #f2f8f3, #e6f2ea);
+    border-radius: 10px;
     color: var(--kk-dark);
   }
-  .pick .p-order b { font-weight: 700; }
+  .pick .p-order b { font-weight: 800; color: var(--kk-mid); }
+
+  /* Collapsible sections (tap the heading to open/close) */
+  .collapsible > h2 { cursor: pointer; padding-right: 26px; user-select: none; }
+  .collapsible > h2::after {
+    content: '+';
+    position: absolute;
+    right: 0; top: -1px;
+    color: var(--kk-green);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+  }
+  .collapsible:not(.collapsed) > h2::after { content: '–'; }
+  .collapsible.collapsed .sec-collapse { display: none; }
 
   /* Sticky jump / tab navigation */
   .tab-nav-wrap {
@@ -853,6 +890,11 @@
       <span><span class="t-name">Drain the sink</span><span class="t-sub">Quick video walk-through</span></span>
       <span class="arrow">→</span>
     </a>
+    <a class="tut-row" href="https://youtu.be/xlKTRspHciM" target="_blank" rel="noopener">
+      <span class="t-icon">🛁</span>
+      <span><span class="t-name">Use the shower diverter</span><span class="t-sub">Switch between tub and shower — quick video</span></span>
+      <span class="arrow">→</span>
+    </a>
     <a class="tut-row" href="https://rb.gy/lh1ixm" target="_blank" rel="noopener">
       <span class="t-icon">🔥</span>
       <span><span class="t-name">Order propane for the grill</span><span class="t-sub">Video tutorial · delivered via Cynch</span></span>
@@ -1117,15 +1159,30 @@
   const picksSection = app.querySelector('[data-section="picks"]');
   if (picksSection && data.nearby && Array.isArray(data.nearby.host_picks) && data.nearby.host_picks.length) {
     const list = picksSection.querySelector('.picks-list');
+    const PICK_EMOJI = [
+      [/coffee|espresso|roaster|coffeehouse/i,'☕'],[/pizza|pizzeria/i,'🍕'],[/taco|taqueria|mexican|burrito|margarita/i,'🌮'],
+      [/burger|smash/i,'🍔'],[/sushi|ramen|japan|izakaya/i,'🍣'],[/thai|pho|vietnam|noodle/i,'🍜'],
+      [/bbq|barbe|smokehouse|brisket|\brib/i,'🍖'],[/chicken|wing|fried/i,'🍗'],[/breakfast|brunch|pancake|waffle|\begg/i,'🍳'],
+      [/steak|chophouse|grill/i,'🥩'],[/seafood|oyster|\bfish|crab|lobster/i,'🦞'],[/ice ?cream|gelato|dessert|donut|bakery|pastr/i,'🍰'],
+      [/\bbar\b|brew|\bpub\b|taproom|cocktail|beer/i,'🍺'],[/italian|pasta|trattoria/i,'🍝'],[/deli|sandwich|\bsub\b/i,'🥪'],
+      [/indian|curry/i,'🍛'],[/vegan|salad|healthy|\bbowl/i,'🥗'],
+    ];
+    const pickEmoji = (p) => {
+      const s = `${p.name||''} ${p.meta||''} ${p.body||''} ${p.order||''}`;
+      for (const [re,e] of PICK_EMOJI) if (re.test(s)) return e;
+      return '🍴';
+    };
     data.nearby.host_picks.forEach(p => {
       if (!p || !p.name) return;
       const el = document.createElement('div');
       el.className = 'pick';
       el.innerHTML = `
-        <div class="p-name">${esc(p.name)}</div>
-        ${p.meta ? `<div class="p-meta">${esc(p.meta)}</div>` : ''}
+        <div class="p-top">
+          <span class="p-emoji">${pickEmoji(p)}</span>
+          <span class="p-txt"><span class="p-name">${esc(p.name)}</span>${p.meta ? `<span class="p-meta">${esc(p.meta)}</span>` : ''}</span>
+        </div>
         ${p.body ? `<div class="p-body">${esc(p.body)}</div>` : ''}
-        ${p.order ? `<div class="p-order"><b>Order:</b> ${esc(p.order)}</div>` : ''}
+        ${p.order ? `<div class="p-order">😋 <b>Order:</b> ${esc(p.order)}</div>` : ''}
       `;
       list.appendChild(el);
     });
@@ -1200,6 +1257,25 @@
     }
   }
 
+  // Make the browse-y sections collapsible — tap the heading to open/close. Start collapsed.
+  function makeCollapsible(section, startCollapsed) {
+    if (!section || section.classList.contains('collapsible')) return;
+    const h2 = section.querySelector('h2');
+    if (!h2) return;
+    const body = document.createElement('div');
+    body.className = 'sec-collapse';
+    let n = h2.nextSibling;
+    while (n) { const nx = n.nextSibling; body.appendChild(n); n = nx; }
+    section.appendChild(body);
+    section.classList.add('collapsible');
+    if (startCollapsed) section.classList.add('collapsed');
+    h2.addEventListener('click', () => section.classList.toggle('collapsed'));
+  }
+  ['picks', 'getaround', 'nearest'].forEach(k => {
+    const sec = app.querySelector(`[data-section="${k}"]`);
+    if (sec && sec.style.display !== 'none') makeCollapsible(sec, true);
+  });
+
   document.title = `${data.meta.name} · KushKations`;
 
   // Sticky jump-nav — built from the sections that actually rendered for THIS property
@@ -1233,7 +1309,9 @@
       btn.className = 'tab-btn';
       btn.textContent = spec.label;
       btn.addEventListener('click', () => {
-        document.getElementById(sec.id).scrollIntoView({behavior: 'smooth', block: 'start'});
+        const target = document.getElementById(sec.id);
+        target.classList.remove('collapsed');  // open it if it's a collapsible section
+        target.scrollIntoView({behavior: 'smooth', block: 'start'});
       });
       tabNav.appendChild(btn);
       tabs.push({btn, sec});
@@ -1359,6 +1437,8 @@
     'Lost a remote? Control any TV from your phone': '¿Perdiste un control? Controla cualquier TV desde tu teléfono',
     'Drain the sink': 'Cómo drenar el lavabo',
     'Quick video walk-through': 'Video tutorial rápido',
+    'Use the shower diverter': 'Usar el desviador de la regadera',
+    'Switch between tub and shower — quick video': 'Cambia entre tina y regadera — video corto',
     'Order propane for the grill': 'Ordenar propano para el asador',
     'Video tutorial · delivered via Cynch': 'Video tutorial · entrega vía Cynch',
     'Cynch propane delivery': 'Entrega de propano Cynch',
@@ -1412,7 +1492,7 @@
   function setLang(lang) {
     localStorage.setItem('kk_lang', lang);
     document.documentElement.lang = lang;
-    document.querySelectorAll('h2, .label, .sub, .k, .v, .checkout-list li, .door-code-cta, .door-code-value, .amenity-card .title-row span:last-child, .amenity-card .body, .nearest-row .cat, .full-guide-link, p, .door-code-card h2, .t-name, .t-sub, section > .inst-note, .welcome, .picks-intro, .tab-btn, .r-title, .r-body, .help-line .h-main, .help-line .h-sub, .sb-title, .sb-sub, .amenity-acc summary').forEach(el => {
+    document.querySelectorAll('h2, .label, .sub, .k, .v, .checkout-list li, .door-code-cta, .door-code-value, .amenity-card .title-row span:last-child, .amenity-card .body, .nearest-row .cat, .full-guide-link, p, .door-code-card h2, .t-name, .t-sub, section .inst-note, .welcome, .picks-intro, .tab-btn, .r-title, .r-body, .help-line .h-main, .help-line .h-sub, .sb-title, .sb-sub, .amenity-acc summary').forEach(el => {
       if (lang === 'es') {
         if (!el.dataset.en) el.dataset.en = el.textContent.trim();
         const t = ES[el.dataset.en];
