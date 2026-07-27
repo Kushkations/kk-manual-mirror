@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<meta name="theme-color" content="#1e3120">
+<title>KushKations House Manuals</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --kk-dark:#1e3120; --kk-mid:#3d6f42; --kk-green:#65bc7b; --kk-sand:#f7f4ee; --kk-ink:#1a1a1a; --kk-muted:#6b6b6b; }
+  * { box-sizing:border-box; margin:0; padding:0; -webkit-tap-highlight-color:transparent; }
+  html,body { font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif; color:var(--kk-ink); background:var(--kk-sand); -webkit-font-smoothing:antialiased; min-height:100vh; }
+  .top-stripe { height:5px; background:linear-gradient(90deg,var(--kk-dark),var(--kk-mid),var(--kk-green)); }
+  .container { max-width:520px; margin:0 auto; padding:0 18px 44px; }
+  header { text-align:center; padding:26px 0 20px; }
+  header .logo { height:34px; width:auto; max-width:190px; margin-bottom:10px; }
+  header h1 { font-family:'Cormorant Garamond',Georgia,serif; font-size:34px; font-weight:700; color:var(--kk-dark); line-height:1.05; letter-spacing:-0.01em; }
+  header p { font-size:13px; color:var(--kk-mid); font-weight:600; margin-top:8px; }
+  .search { position:relative; margin:4px 0 18px; }
+  .search input { width:100%; border:1px solid #e3ddd0; background:#fff; border-radius:12px; padding:12px 14px 12px 40px; font-size:14px; font-family:'Inter',sans-serif; color:var(--kk-dark); box-shadow:0 2px 8px rgba(30,49,32,0.05); }
+  .search input:focus { outline:none; border-color:var(--kk-green); }
+  .search .ic { position:absolute; left:14px; top:50%; transform:translateY(-50%); font-size:15px; opacity:0.6; }
+  .grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .card { position:relative; display:block; aspect-ratio:4/3; border-radius:14px; overflow:hidden; text-decoration:none; background:linear-gradient(135deg,var(--kk-dark),var(--kk-mid)); box-shadow:0 3px 12px rgba(30,49,32,0.12); transition:transform 0.14s, box-shadow 0.14s; }
+  .card:active { transform:scale(0.97); }
+  .card img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; }
+  .card .overlay { position:absolute; left:0; right:0; bottom:0; padding:26px 12px 11px; background:linear-gradient(transparent,rgba(15,25,16,0.82)); z-index:2; }
+  .card .name { color:#fff; font-family:'Cormorant Garamond',Georgia,serif; font-weight:700; font-size:18px; line-height:1.1; text-shadow:0 1px 4px rgba(0,0,0,0.4); }
+  .card .go { position:absolute; top:9px; right:10px; z-index:2; background:rgba(255,255,255,0.92); color:var(--kk-dark); font-size:11px; font-weight:800; padding:3px 9px; border-radius:20px; letter-spacing:0.02em; }
+  .empty { grid-column:1 / -1; text-align:center; color:var(--kk-muted); padding:30px 0; font-size:14px; }
+  .loading { padding:60px 0; text-align:center; color:var(--kk-muted); }
+  footer { text-align:center; padding:24px 0 0; color:var(--kk-muted); font-size:11px; line-height:1.5; }
+</style>
+</head>
+<body>
+<div class="top-stripe"></div>
+<div class="container">
+  <header>
+    <img class="logo" src="../assets/kk-logo.png" alt="KushKations" onerror="this.style.display='none'">
+    <h1>House Manuals</h1>
+    <p>Tap your property to open its guide</p>
+  </header>
+  <div class="search">
+    <span class="ic">🔎</span>
+    <input id="q" type="text" placeholder="Search properties" autocomplete="off" aria-label="Search properties">
+  </div>
+  <div id="grid" class="grid"><div class="loading">Loading…</div></div>
+  <footer>KushKations<sup>™</sup> · Come enjoy a KushKation!</footer>
+</div>
+<script>
+(async function () {
+  // Resolve the app base regardless of trailing slash (Vercel "/all" vs GitHub Pages "/all/")
+  const base = location.href.replace(/\/all\/?(index\.html)?(\?.*)?(#.*)?$/i, '/');
+  const manualUrl = (slug) => base + 'm/index.html?p=' + encodeURIComponent(slug);
+
+  let props = [];
+  try {
+    const r = await fetch(base + 'content/properties-index.json', { cache: 'no-store' });
+    props = await r.json();
+  } catch (e) {
+    document.getElementById('grid').innerHTML = '<div class="empty">Couldn\'t load the property list. Please try again.</div>';
+    return;
+  }
+
+  const grid = document.getElementById('grid');
+  function render(list) {
+    if (!list.length) { grid.innerHTML = '<div class="empty">No properties match that search.</div>'; return; }
+    grid.innerHTML = list.map(p => {
+      const img = p.cover ? `<img src="${p.cover}" loading="lazy" alt="">` : '';
+      return `<a class="card" href="${manualUrl(p.slug)}">${img}<span class="go">Open</span><span class="overlay"><span class="name">${p.name}</span></span></a>`;
+    }).join('');
+  }
+  render(props);
+
+  const q = document.getElementById('q');
+  q.addEventListener('input', () => {
+    const t = q.value.trim().toLowerCase();
+    render(props.filter(p => p.name.toLowerCase().includes(t) || p.slug.includes(t)));
+  });
+})();
+</script>
+</body>
+</html>
