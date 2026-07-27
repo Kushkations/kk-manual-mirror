@@ -801,6 +801,38 @@
   .fee-item { padding: 9px 6px; text-align: center; border-top: 1px solid #f2efe7; }
   .fee-when { display: block; font-size: 12px; color: var(--kk-muted); }
   .fee-amt { display: block; font-size: 16px; font-weight: 800; color: var(--kk-dark); margin-top: 2px; }
+
+  /* WiFi card */
+  .wifi-card { display: flex; align-items: center; gap: 13px; background: linear-gradient(135deg, #eef6ef, #e0efe4); border-radius: 12px; padding: 14px 16px; }
+  .wifi-ic { font-size: 30px; flex: none; }
+  .wifi-lines { flex: 1; min-width: 0; display: grid; gap: 8px; }
+  .wifi-line { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; border-bottom: 1px solid rgba(61,111,66,0.16); padding-bottom: 7px; }
+  .wifi-line:last-child { border-bottom: none; padding-bottom: 0; }
+  .wifi-k { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--kk-mid); font-weight: 700; }
+  .wifi-val { font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 14.5px; font-weight: 700; color: var(--kk-dark); text-align: right; word-break: break-all; }
+
+  /* The Basics — arrival/departure stat cards + icon rows */
+  .basics-times { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px; }
+  .btime { border: 1px solid #ece5d6; border-radius: 12px; padding: 12px 8px; text-align: center; }
+  .bt-ic { font-size: 22px; display: block; }
+  .bt-lbl { font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--kk-mid); font-weight: 700; display: block; margin-top: 4px; }
+  .bt-val { font-size: 17px; font-weight: 800; color: var(--kk-dark); display: block; margin-top: 2px; }
+  .binfo { display: flex; align-items: flex-start; gap: 11px; padding: 10px 0; border-bottom: 1px solid #f0ede5; }
+  .binfo:last-of-type { border-bottom: none; }
+  .bi-ic { font-size: 19px; flex: none; margin-top: 1px; }
+  .bi-txt { display: flex; flex-direction: column; min-width: 0; }
+  .bi-k { font-size: 11px; letter-spacing: 0.07em; text-transform: uppercase; color: var(--kk-mid); font-weight: 700; }
+  .bi-v { font-size: 13.5px; color: var(--kk-dark); font-weight: 600; margin-top: 2px; line-height: 1.4; }
+
+  /* Cannabis-Friendly — status pills */
+  .cann-row { display: flex; align-items: center; gap: 11px; padding: 11px 0; border-bottom: 1px solid #f0ede5; }
+  .cann-row:last-child { border-bottom: none; }
+  .cann-ic { font-size: 20px; flex: none; }
+  .cann-lbl { flex: 1; font-size: 14px; font-weight: 600; color: var(--kk-dark); }
+  .cann-pill { font-size: 11px; font-weight: 800; padding: 4px 11px; border-radius: 20px; white-space: nowrap; }
+  .cann-pill.yes { background: #e3f2e7; color: #2b7a3f; }
+  .cann-pill.no { background: #fbe7e7; color: #c0392b; }
+  .cann-pill.warn { background: #fdf1e3; color: #b9701f; font-size: 10.5px; white-space: normal; text-align: right; max-width: 46%; }
 </style>
 </head>
 <body>
@@ -860,8 +892,13 @@
 
   <section>
     <h2>WiFi</h2>
-    <div class="wifi-row"><div class="k">Network</div><div class="v" data-bind="wifi.network"></div></div>
-    <div class="wifi-row"><div class="k">Password</div><div class="v" data-bind="wifi.password"></div></div>
+    <div class="wifi-card">
+      <span class="wifi-ic">📶</span>
+      <span class="wifi-lines">
+        <span class="wifi-line"><span class="wifi-k">Network</span><span class="wifi-val" data-bind="wifi.network"></span></span>
+        <span class="wifi-line"><span class="wifi-k">Password</span><span class="wifi-val" data-bind="wifi.password"></span></span>
+      </span>
+    </div>
   </section>
 
   <section>
@@ -878,19 +915,21 @@
 
   <section>
     <h2>The Basics</h2>
-    <div class="info-row"><div class="k">Check-in</div><div class="v" data-bind="arrival.check_in_time"></div></div>
-    <div class="info-row"><div class="k">Check-out</div><div class="v" data-bind="checkout.time"></div></div>
-    <div class="info-row"><div class="k">Trash</div><div class="v" data-bind="checkout.trash_day"></div></div>
-    <div class="info-row"><div class="k">Parking</div><div class="v" data-bind="arrival.parking"></div></div>
+    <div class="basics-times">
+      <div class="btime"><span class="bt-ic">🕓</span><span class="bt-lbl">Check-in</span><span class="bt-val" data-bind="arrival.check_in_time"></span></div>
+      <div class="btime"><span class="bt-ic">🕙</span><span class="bt-lbl">Check-out</span><span class="bt-val" data-bind="checkout.time"></span></div>
+    </div>
+    <div class="binfo"><span class="bi-ic">🗑️</span><span class="bi-txt"><span class="bi-k">Trash</span><span class="bi-v" data-bind="checkout.trash_day"></span></span></div>
+    <div class="binfo"><span class="bi-ic">🅿️</span><span class="bi-txt"><span class="bi-k">Parking</span><span class="bi-v" data-bind="arrival.parking"></span></span></div>
     <img data-bind-src="arrival.parking_photo" style="width:100%;border-radius:10px;margin-top:10px;display:block;" alt="Parking">
     <img data-bind-src="checkout.trash_photo" style="width:100%;border-radius:10px;margin-top:10px;display:block;" alt="Trash bins">
   </section>
 
   <section>
     <h2>Cannabis-Friendly</h2>
-    <div class="info-row"><div class="k">Indoor 420</div><div class="v">Allowed</div></div>
-    <div class="info-row"><div class="k">Indoor Tobacco</div><div class="v">Not allowed</div></div>
-    <div class="info-row"><div class="k">Tobacco Outside</div><div class="v">Allowed, but littering is NOT</div></div>
+    <div class="cann-row"><span class="cann-ic">🌿</span><span class="cann-lbl">Indoor 420</span><span class="cann-pill yes">Allowed</span></div>
+    <div class="cann-row"><span class="cann-ic">🚭</span><span class="cann-lbl">Indoor Tobacco</span><span class="cann-pill no">Not allowed</span></div>
+    <div class="cann-row"><span class="cann-ic">🚬</span><span class="cann-lbl">Tobacco Outside</span><span class="cann-pill warn">Allowed, but littering is NOT</span></div>
   </section>
 
   <section>
@@ -996,7 +1035,7 @@
 
   let data;
   try {
-    const res = await fetch(`../content/properties/${slug}.json`);
+    const res = await fetch(`../content/properties/${slug}.json`, { cache: 'no-store' });
     data = await res.json();
   } catch (e) {
     document.getElementById('app').innerHTML =
@@ -1594,7 +1633,7 @@
   function setLang(lang) {
     localStorage.setItem('kk_lang', lang);
     document.documentElement.lang = lang;
-    document.querySelectorAll('h2, .label, .sub, .k, .v, .checkout-list li, .door-code-cta, .door-code-value, .amenity-card .title-row span:last-child, .amenity-card .body, .nearest-row .cat, .full-guide-link, p, .door-code-card h2, .t-name, .t-sub, section .inst-note, .welcome, .picks-intro, .tab-btn, .r-title, .r-body, .help-line .h-main, .help-line .h-sub, .sb-title, .sb-sub, .amenity-acc summary, .vid-title, .vid-chan, .fee-title, .fee-note, .fee-row span').forEach(el => {
+    document.querySelectorAll('h2, .label, .sub, .k, .v, .checkout-list li, .door-code-cta, .door-code-value, .amenity-card .title-row span:last-child, .amenity-card .body, .nearest-row .cat, .full-guide-link, p, .door-code-card h2, .t-name, .t-sub, section .inst-note, .welcome, .picks-intro, .tab-btn, .r-title, .r-body, .help-line .h-main, .help-line .h-sub, .sb-title, .sb-sub, .amenity-acc summary, .vid-title, .vid-chan, .fee-title, .fee-note, .fee-item span, .wifi-k, .bt-lbl, .bi-k, .cann-lbl, .cann-pill').forEach(el => {
       if (lang === 'es') {
         if (!el.dataset.en) el.dataset.en = el.textContent.trim();
         const t = ES[el.dataset.en];
