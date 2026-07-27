@@ -25,7 +25,7 @@
   "extra_guests_allowed": 2,
   "size_sqft": 1200,
   "is_420_friendly": false,
-  "one_line_vibe": "Intimate Wheat Ridge stay with a shared hot tub — small-group focused.",
+  "one_line_vibe": "Intimate Wheat Ridge stay with a shared hot tub, small-group focused.",
   "layout": {
    "stairs_to_upstairs": "",
    "stairs_to_basement": ""
@@ -77,7 +77,7 @@
     "steps": [
      "Tap the Warm or Temp button to wake up the display",
      "Press Mode (or hold Warm for 3 sec if no Mode button)",
-     "Display cycles through ST → EC → SL — stop when it shows ST",
+     "Display cycles through ST → EC → SL, stop when it shows ST",
      "Then press Warm/Cool to set 102°F"
     ],
     "video_tutorial": "https://www.youtube.com/embed/UwFIbScelNU",
@@ -95,7 +95,7 @@
    "rules": [
     "No food, drinks, or glass in the tub",
     "Kids must be supervised",
-    "Keep water above the filter line — drops below = heater shuts off"
+    "Keep water above the filter line, drops below = heater shuts off"
    ],
    "photo": "",
    "location": "Outside: step out the back door, follow the path, and the hot tub is on your right. Each townhome unit has its own private back exit.",
@@ -120,13 +120,13 @@
    "shutdown": "Turn off the pit and close the propane tank when finished. Keep the pit covered when not in use."
   },
   "theater_room": {
-   "seating": "6-seater electronic recliners — controls on the right-hand side of each seat. One adult or child per seat. No rough play.",
+   "seating": "6-seater electronic recliners, controls on the right-hand side of each seat. One adult or child per seat. No rough play.",
    "popcorn_machine_steps": [
     "Turn on both the 'light' and 'pop' switches and preheat for 2–3 minutes",
     "Turn off the 'pop' switch",
     "Open the lid carefully, then add oil and a small measure of kernels",
     "Allow the kernels to pop, then turn off the machine promptly when popping ceases to prevent burning",
-    "Children must be supervised — the machine gets VERY HOT"
+    "Children must be supervised, the machine gets VERY HOT"
    ]
   },
   "pole_dance": {
@@ -140,7 +140,7 @@
   },
   "kitchen": {
    "highlights": [
-    "Full kitchen — cook what you'd cook at home",
+    "Full kitchen, cook what you'd cook at home",
     "Fire extinguisher under the sink",
     "Delivery works great: Uber Eats, DoorDash, Grubhub"
    ]
@@ -167,7 +167,7 @@
    "Set the hallway thermostat to 66°F in winter, 75°F in summer",
    "Lock up behind you and have a safe trip"
   ],
-  "trash_day": "Tuesday. Bins are by the back door of the house. Our team comes by to take the trash out and bring the bins back in — nothing for you to do."
+  "trash_day": "Tuesday. Bins are by the back door of the house. Our team comes by to take the trash out and bring the bins back in, nothing for you to do."
  },
  "temperature": {
   "main_thermostat_location": "",
@@ -333,17 +333,17 @@
   ],
   "dispensaries": [
    {
-    "name": "Green Dragon — West Denver",
+    "name": "Green Dragon, West Denver",
     "address": "4103 Sheridan Blvd, Denver",
     "drive_min": 3
    },
    {
-    "name": "Green Dragon — Edgewater",
+    "name": "Green Dragon, Edgewater",
     "address": "2467 Sheridan Blvd, Edgewater",
     "drive_min": 4
    },
    {
-    "name": "Star Buds — Lakeside",
+    "name": "Star Buds, Lakeside",
     "address": "5238 W 44th Ave, Denver",
     "drive_min": 5
    }
@@ -380,7 +380,7 @@
    "how_to_claim": [
     "Post a photo from your stay tagged #Kushkations and #KushKations",
     "Leave a five-star review on your booking platform",
-    "Email a screenshot to info@kushkations.com — we'll send the code"
+    "Email a screenshot to info@kushkations.com, we'll send the code"
    ]
   }
  },
@@ -519,7 +519,7 @@
   },
   "utilities": {
    "breaker_panel": "Inside the property, in the hallway, next to the entrance to the green room",
-   "water_shutoff": "Down the hall toward the G&S hot tub — first door on the floor on the right, lift the cover to enter the crawl space",
+   "water_shutoff": "Down the hall toward the G&S hot tub, first door on the floor on the right, lift the cover to enter the crawl space",
    "gas_shutoff": "",
    "wifi_router": "Bedroom",
    "wifi_router_guest_accessible": true,

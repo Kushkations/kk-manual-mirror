@@ -87,7 +87,7 @@
    "rules": [
     "No food, drinks, or glass in the tub",
     "Kids must be supervised",
-    "Keep water above the filter line — drops below = heater shuts off"
+    "Keep water above the filter line, drops below = heater shuts off"
    ],
    "photo": ""
   },
@@ -105,7 +105,7 @@
   },
   "outdoor": {
    "dining_table_seats": 6,
-   "notes": "Backyard dining table seats 6 — great for meals, games, or evening hangs."
+   "notes": "Backyard dining table seats 6, great for meals, games, or evening hangs."
   },
   "tv": {
    "streaming": [
@@ -115,7 +115,7 @@
   },
   "kitchen": {
    "highlights": [
-    "Full kitchen — cook what you'd cook at home",
+    "Full kitchen, cook what you'd cook at home",
     "Fire extinguisher under the sink",
     "Delivery works great: Uber Eats, DoorDash, Grubhub"
    ]
@@ -142,7 +142,7 @@
    "Set the hallway thermostat to 66°F in winter, 75°F in summer",
    "Lock up behind you and have a safe trip"
   ],
-  "trash_day": "Monday. Bins are on the right side of the house (facing the front), inside the fence door leading to the backyard. Bag all trash before placing in the bins. Our team comes by to take the trash out and bring the bins back in — nothing for you to do."
+  "trash_day": "Monday. Bins are on the right side of the house (facing the front), inside the fence door leading to the backyard. Bag all trash before placing in the bins. Our team comes by to take the trash out and bring the bins back in, nothing for you to do."
  },
  "temperature": {
   "main_thermostat_location": "",
@@ -250,17 +250,17 @@
   ],
   "dispensaries": [
    {
-    "name": "Star Buds — Aurora Quincy",
+    "name": "Star Buds, Aurora Quincy",
     "address": "19151 E Quincy Ave, Aurora",
     "drive_min": 5
    },
    {
-    "name": "LOVA Canna Co — Aurora",
+    "name": "LOVA Canna Co, Aurora",
     "address": "19005 E Quincy Ave, Aurora",
     "drive_min": 5
    },
    {
-    "name": "Star Buds — Aurora Southeast",
+    "name": "Star Buds, Aurora Southeast",
     "address": "14655 E Arapahoe Rd, Aurora",
     "drive_min": 10
    }
@@ -373,7 +373,7 @@
    "how_to_claim": [
     "Post a photo from your stay tagged #Kushkations and #KushKations",
     "Leave a five-star review on your booking platform",
-    "Email a screenshot to info@kushkations.com — we'll send the code"
+    "Email a screenshot to info@kushkations.com, we'll send the code"
    ]
   }
  },

@@ -137,12 +137,12 @@
    "streaming_steps": [
     "Turn on the TV and open the streaming service app.",
     "Tap 'Sign In' on the app's main screen.",
-    "Enter your email or username and password — or sign in with a code on your phone or computer by following the on-screen instructions.",
+    "Enter your email or username and password, or sign in with a code on your phone or computer by following the on-screen instructions.",
     "Follow any additional prompts to finish signing in, then start watching.",
     "Log out before you leave the device so the next guest doesn't see your account."
    ],
-   "roku_note": "Roku remotes are interchangeable — any Roku remote in the house works on any TV.",
-   "notes": "Log out of all streaming apps before checkout — keeps your info safe."
+   "roku_note": "Roku remotes are interchangeable, any Roku remote in the house works on any TV.",
+   "notes": "Log out of all streaming apps before checkout, keeps your info safe."
   },
   "kitchen": {
    "highlights": [
@@ -168,10 +168,10 @@
      "Select how many tanks you need to exchange or buy a spare tank to keep on hand.",
      "Choose a delivery date and drop-off location that work for your schedule.",
      "Set out your used tanks the night before delivery at the spot you selected.",
-     "We deliver to you — our driver handles the rest."
+     "We deliver to you, our driver handles the rest."
     ],
     "video_url": "https://rb.gy/lh1ixm",
-    "backup_contact": "Gilbert: (303) 475-3342 — call or text if the app isn't working."
+    "backup_contact": "Gilbert: (303) 475-3342, call or text if the app isn't working."
    }
   },
   "theater_room": {
@@ -250,7 +250,7 @@
     "title": "Trash",
     "items": [
      "Bag every piece of trash before putting it in the bins",
-     "Take all trash to the large bins outside the house — including the backyard (cigarette butts and wrapping papers)",
+     "Take all trash to the large bins outside the house, including the backyard (cigarette butts and wrapping papers)",
      "Don't leave any trash outside or in front of the house"
     ]
    },
@@ -258,12 +258,12 @@
     "title": "Before You Lock Up",
     "items": [
      "Close and lock all windows",
-     "Lock the front door behind you — please confirm it engages"
+     "Lock the front door behind you, please confirm it engages"
     ]
    }
   ],
   "cleaning_supplies_location": "Closet near the entrance",
-  "trash_day": "Wednesday. Bins are by the front entrance. Our team comes by to take the trash out and bring the bins back in — nothing for you to do."
+  "trash_day": "Wednesday. Bins are by the front entrance. Our team comes by to take the trash out and bring the bins back in, nothing for you to do."
  },
  "temperature": {
   "main_thermostat_location": "",
@@ -328,7 +328,7 @@
      "Massaman curry",
      "Tom kha soup"
     ],
-    "reason": "Shaquan's favorite Thai spot in the city. Order it medium-hot — they don't skimp on heat."
+    "reason": "Shaquan's favorite Thai spot in the city. Order it medium-hot, they don't skimp on heat."
    }
   ],
   "eat_in_10": [
@@ -422,7 +422,7 @@
    {
     "name": "Trail Winds Park",
     "drive_min": 8,
-    "reason": "111 acres of natural beauty in Thornton — well-maintained trails, lush greenery, and expansive open spaces. Soccer and football courts plus bike paths make it good for active days. Expect to spot birds, rabbits, squirrels, and occasionally deer."
+    "reason": "111 acres of natural beauty in Thornton, well-maintained trails, lush greenery, and expansive open spaces. Soccer and football courts plus bike paths make it good for active days. Expect to spot birds, rabbits, squirrels, and occasionally deer."
    },
    {
     "name": "Pecos Park",
@@ -432,12 +432,12 @@
    {
     "name": "Grange Creek Park",
     "drive_min": 7,
-    "reason": "16 acres of lush greenery and creekside views in Thornton. Trails and pathways for walking, running, and hiking. Year-round access. You might encounter deer, rabbits, various birds, and occasionally coyotes — keep your distance."
+    "reason": "16 acres of lush greenery and creekside views in Thornton. Trails and pathways for walking, running, and hiking. Year-round access. You might encounter deer, rabbits, various birds, and occasionally coyotes, keep your distance."
    },
    {
     "name": "Cherry Park",
     "drive_min": 8,
-    "reason": "24.2 acres of scenic trails and lush greenery — perfect for walking, running, and hiking with the dog. Easy parking, leisure playground, plus basketball and baseball courts. Birds, squirrels, rabbits, and occasional deer call this park home."
+    "reason": "24.2 acres of scenic trails and lush greenery, perfect for walking, running, and hiking with the dog. Easy parking, leisure playground, plus basketball and baseball courts. Birds, squirrels, rabbits, and occasional deer call this park home."
    },
    {
     "name": "Northstar Park",
@@ -460,7 +460,7 @@
     "name": "Red Rocks Park & Amphitheatre",
     "address": "18300 W. Alameda Pkwy., Morrison",
     "drive_min": 45,
-    "reason": "A picture-perfect setting with flawless all-natural acoustics 70 million years in the making. Beyond the blockbuster summer concerts (the Beatles to U2 have played here), it's open year-round — visit the Red Rocks Performers Hall of Fame or hike the 1.4-mile Trading Post Loop Trail through the rock formations and meadows."
+    "reason": "A picture-perfect setting with flawless all-natural acoustics 70 million years in the making. Beyond the blockbuster summer concerts (the Beatles to U2 have played here), it's open year-round, visit the Red Rocks Performers Hall of Fame or hike the 1.4-mile Trading Post Loop Trail through the rock formations and meadows."
    },
    {
     "name": "Lookout Mountain",
@@ -471,13 +471,13 @@
    {
     "name": "Estes Park & Rocky Mountain National Park",
     "drive_min": 90,
-    "reason": "The classic Colorado day. Estes is the base for Rocky Mountain National Park — elk, mouse, bears, alpine lakes, and miles of trails. Trail Ridge Road winds past craggy peaks, forests, and tundra. While you're there, stop by The Stanley Hotel and check out the story behind The Shining."
+    "reason": "The classic Colorado day. Estes is the base for Rocky Mountain National Park, elk, mouse, bears, alpine lakes, and miles of trails. Trail Ridge Road winds past craggy peaks, forests, and tundra. While you're there, stop by The Stanley Hotel and check out the story behind The Shining."
    },
    {
     "name": "Dinosaur Ridge",
     "address": "16831 W. Alameda Pkwy., Morrison",
     "drive_min": 35,
-    "reason": "A famous natural landmark along the Front Range with Jurassic dinosaur bones — Stegosaurus and Apatosaurus discovered here in 1877 — plus Cretaceous footprints. Self-guided with a guidebook, or arrange a guided tour with Friends of Dinosaur Ridge."
+    "reason": "A famous natural landmark along the Front Range with Jurassic dinosaur bones, Stegosaurus and Apatosaurus discovered here in 1877, plus Cretaceous footprints. Self-guided with a guidebook, or arrange a guided tour with Friends of Dinosaur Ridge."
    },
    {
     "name": "Buffalo Bill Museum & Grave",
@@ -489,7 +489,7 @@
     "name": "American Mountaineering Museum",
     "address": "710 10th St., Golden",
     "drive_min": 45,
-    "reason": "A must-stop on your way to the mountains. From 14ers to Everest, the museum lets you experience mountaineering through interactive exhibits — cross a crevasse, pick your route up Everest, follow famous climbers' footsteps."
+    "reason": "A must-stop on your way to the mountains. From 14ers to Everest, the museum lets you experience mountaineering through interactive exhibits, cross a crevasse, pick your route up Everest, follow famous climbers' footsteps."
    },
    {
     "name": "Boulder / Flatirons",
@@ -552,7 +552,7 @@
   ],
   "dispensaries": [
    {
-    "name": "Rocky Road — Thornton",
+    "name": "Rocky Road, Thornton",
     "address": "3901 E 112th Ave, Thornton",
     "drive_min": 7
    },
@@ -562,7 +562,7 @@
     "drive_min": 12
    },
    {
-    "name": "Medicine Man — Thornton",
+    "name": "Medicine Man, Thornton",
     "address": "130 W 84th Ave, Thornton",
     "drive_min": 12
    }
@@ -682,7 +682,7 @@
  "troubleshooting": [
   {
    "issue": "The hot tub isn't heating up",
-   "intro": "Nine times out of ten this is a low-water issue. The heater shuts itself off if the water drops below the filter line — a safety feature, not a malfunction.",
+   "intro": "Nine times out of ten this is a low-water issue. The heater shuts itself off if the water drops below the filter line, a safety feature, not a malfunction.",
    "steps": [
     "Lift the cover and check the water level. It should be above the top of the filter housing on the side of the tub.",
     "If it's low, top it up with the garden hose at the back of the house. Aim for 2–3 inches above the filter line.",
@@ -699,7 +699,7 @@
     "Turn each one fully counter-clockwise until it stops. That opens the airflow.",
     "Press the Jets button on the control panel once. The pump should kick on.",
     "Press it a second time to switch to high speed. Press again to turn off.",
-    "If the pump still doesn't engage, text us — it may need a quick reset on our end."
+    "If the pump still doesn't engage, text us, it may need a quick reset on our end."
    ]
   },
   {
@@ -729,7 +729,7 @@
    "steps": [
     "Grab the TV remote (the small black one), not the Roku remote.",
     "Press the Input or Source button.",
-    "Cycle through the inputs until you see HDMI 1 — that's where the Roku lives.",
+    "Cycle through the inputs until you see HDMI 1, that's where the Roku lives.",
     "Picture should come right back. Hand the Roku remote to whoever's choosing the show."
    ]
   }

@@ -37,7 +37,7 @@
   "access_method": "smart_lock",
   "code_delivery": "Sent the morning of your arrival. Activates at 4:00 PM unless early check-in has been approved.",
   "lock_backup_tip": "After entering your code, press the 'Check' (or 'Schlage') button to engage the lock. If the door doesn't open, try again slowly, one digit at a time.",
-  "parking": "Please access the driveway and street parking for additional space. Note: the garage is our cleaning headquarters — staff access only, no guest use.",
+  "parking": "Please access the driveway and street parking for additional space. Note: the garage is our cleaning headquarters, staff access only, no guest use.",
   "towels_location": "All towels are in the closet in the main hallway.",
   "cleaning_supplies_location": "Entrance of the house",
   "towel_photos": [
@@ -83,7 +83,7 @@
    "rules": [
     "No food, drinks, or glass in the tub",
     "Kids must be supervised",
-    "Keep water above the filter line — drops below = heater shuts off"
+    "Keep water above the filter line, drops below = heater shuts off"
    ],
    "photo": ""
   },
@@ -102,7 +102,7 @@
   "firepit": {
    "ignition_steps": [
     "Activate the propane tank by twisting its knob to the open position",
-    "Consult the manual located inside the pit for detailed starting instructions — the pit features an ignition system",
+    "Consult the manual located inside the pit for detailed starting instructions, the pit features an ignition system",
     "To ignite, rotate the knob to the lightning bolt symbol (ignition setting) and press it down while clicking the starter button",
     "It may require 15–30 seconds for the gas to prime and ignite",
     "Once flames appear, adjust the gas setting to low or high based on preference"
@@ -117,7 +117,7 @@
   },
   "kitchen": {
    "highlights": [
-    "Full kitchen — cook what you'd cook at home",
+    "Full kitchen, cook what you'd cook at home",
     "Fire extinguisher under the sink",
     "Delivery works great: Uber Eats, DoorDash, Grubhub"
    ]
@@ -143,7 +143,7 @@
    "Set the hallway thermostat to 66°F in winter, 75°F in summer",
    "Lock up behind you and have a safe trip"
   ],
-  "trash_day": "Tuesday. Bins are by the front entrance. Our team comes by to take the trash out and bring the bins back in — nothing for you to do."
+  "trash_day": "Tuesday. Bins are by the front entrance. Our team comes by to take the trash out and bring the bins back in, nothing for you to do."
  },
  "temperature": {
   "main_thermostat_location": "",
@@ -374,7 +374,7 @@
   ],
   "dispensaries": [
    {
-    "name": "Medicine Man — Thornton",
+    "name": "Medicine Man, Thornton",
     "address": "130 W 84th Ave, Thornton",
     "drive_min": 5
    },
@@ -421,7 +421,7 @@
    "how_to_claim": [
     "Post a photo from your stay tagged #Kushkations and #KushKations",
     "Leave a five-star review on your booking platform",
-    "Email a screenshot to info@kushkations.com — we'll send the code"
+    "Email a screenshot to info@kushkations.com, we'll send the code"
    ]
   }
  },
@@ -560,7 +560,7 @@
   },
   "utilities": {
    "breaker_panel": "Two electrical boxes, side by side, in the garage",
-   "water_shutoff": "Basement, in the room with two bunk beds, overhead wall has a small box with a designed cover — remove it to access the valve",
+   "water_shutoff": "Basement, in the room with two bunk beds, overhead wall has a small box with a designed cover, remove it to access the valve",
    "gas_shutoff": "",
    "wifi_router": "Garage",
    "wifi_router_guest_accessible": false,

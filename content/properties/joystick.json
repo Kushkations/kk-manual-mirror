@@ -86,7 +86,7 @@
    "rules": [
     "No food, drinks, or glass in the tub",
     "Kids must be supervised",
-    "Keep water above the filter line — drops below = heater shuts off"
+    "Keep water above the filter line, drops below = heater shuts off"
    ],
    "photo": ""
   },
@@ -117,7 +117,7 @@
     },
     {
      "name": "PS5",
-     "notes": "Press and hold the PlayStation logo on any controller to turn on. Log in as a guest to connect a second controller. All games are downloaded via PS Plus/PS Now — no disks."
+     "notes": "Press and hold the PlayStation logo on any controller to turn on. Log in as a guest to connect a second controller. All games are downloaded via PS Plus/PS Now, no disks."
     }
    ],
    "notes": "Please supervise children. Do not move consoles to other rooms or outside. Keep controllers charged and stored in the video game room."
@@ -125,7 +125,7 @@
   "theater_room": {
    "seating": "6-seater luxury electronic recliners",
    "rules": [
-    "Use the electronic recliners gently — rough play prohibited",
+    "Use the electronic recliners gently, rough play prohibited",
     "Each recliner is designed for one adult or child at a time",
     "Recline and headrest controls are on the right-hand side of each seat",
     "Children must not be left unattended in the theater room"
@@ -146,7 +146,7 @@
   },
   "outdoor": {
    "mini_putt_course": true,
-   "notes": "Mini putt course in the backyard — please use it respectfully and be mindful of the neighbors."
+   "notes": "Mini putt course in the backyard, please use it respectfully and be mindful of the neighbors."
   },
   "tv": {
    "streaming": [
@@ -156,7 +156,7 @@
   },
   "kitchen": {
    "highlights": [
-    "Full kitchen — cook what you'd cook at home",
+    "Full kitchen, cook what you'd cook at home",
     "Fire extinguisher under the sink",
     "Delivery works great: Uber Eats, DoorDash, Grubhub"
    ]
@@ -183,7 +183,7 @@
    "Set the hallway thermostat to 66°F in winter, 75°F in summer",
    "Lock up behind you and have a safe trip"
   ],
-  "trash_day": "Monday. Our team comes by to take the trash out and bring the bins back in — nothing for you to do."
+  "trash_day": "Monday. Our team comes by to take the trash out and bring the bins back in, nothing for you to do."
  },
  "temperature": {
   "main_thermostat_location": "",
@@ -431,7 +431,7 @@
    "how_to_claim": [
     "Post a photo from your stay tagged #Kushkations and #KushKations",
     "Leave a five-star review on your booking platform",
-    "Email a screenshot to info@kushkations.com — we'll send the code"
+    "Email a screenshot to info@kushkations.com, we'll send the code"
    ]
   }
  },

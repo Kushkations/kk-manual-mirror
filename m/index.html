@@ -76,7 +76,7 @@
     border-bottom: 1px dotted var(--kk-mid);
     padding-bottom: 1px;
   }
-  /* eyebrow vibe line — REMOVED per user request */
+  /* eyebrow vibe line, REMOVED per user request */
   header .vibe { display: none; }
 
   .welcome {
@@ -607,7 +607,7 @@
   .collapsible:not(.collapsed) > h2::after { content: '–'; }
   .collapsible.collapsed .sec-collapse { display: none; }
 
-  /* Explore & Help hub — CTA-style tiles that reveal their content below the grid */
+  /* Explore & Help hub, CTA-style tiles that reveal their content below the grid */
   .hub-section .cta-grid { margin-bottom: 0; }
   .hub-tile { border: none; font-family: inherit; width: 100%; }
   .hub-tile.active { background: var(--kk-dark); color: #fff; }
@@ -789,19 +789,18 @@
   .vid-title { font-size: 13.5px; font-weight: 700; line-height: 1.32; color: var(--kk-dark); }
   .vid-chan { font-size: 11.5px; color: var(--kk-muted); margin-top: 4px; }
 
-  /* Early / Late fee groups — two distinct cards so "Early"/"Late" isn't repeated per row */
-  .fee-group { border: 1px solid #ece5d6; border-radius: 12px; overflow: hidden; margin-bottom: 12px; }
-  .fee-head { display: flex; align-items: center; gap: 11px; padding: 11px 14px; }
-  .fee-group.early .fee-head { background: linear-gradient(135deg, #eef6ef, #dfeee4); }
-  .fee-group.late .fee-head { background: linear-gradient(135deg, #f4efe4, #eae1cf); }
-  .fee-ic { font-size: 24px; line-height: 1; }
-  .fee-htxt { display: flex; flex-direction: column; }
-  .fee-title { font-size: 15px; font-weight: 800; color: var(--kk-dark); line-height: 1.1; }
-  .fee-note { font-size: 11px; color: var(--kk-mid); font-weight: 600; margin-top: 2px; }
-  .fee-rows { padding: 2px 14px 6px; }
-  .fee-row { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; padding: 8px 0; border-bottom: 1px solid #f2efe7; font-size: 14px; color: var(--kk-ink); }
-  .fee-row:last-child { border-bottom: none; }
-  .fee-amt { font-weight: 800; color: var(--kk-dark); white-space: nowrap; }
+  /* Early / Late fees, two side-by-side columns for easy comparison */
+  .fee-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .fee-col { border: 1px solid #ece5d6; border-radius: 12px; overflow: hidden; }
+  .fee-head { padding: 11px 8px 10px; text-align: center; }
+  .fee-col.early .fee-head { background: linear-gradient(135deg, #eef6ef, #dfeee4); }
+  .fee-col.late .fee-head { background: linear-gradient(135deg, #f4efe4, #eae1cf); }
+  .fee-ic { font-size: 24px; line-height: 1; display: block; }
+  .fee-title { font-size: 13px; font-weight: 800; color: var(--kk-dark); display: block; margin-top: 4px; line-height: 1.15; }
+  .fee-note { font-size: 10px; color: var(--kk-mid); font-weight: 700; display: block; margin-top: 2px; text-transform: uppercase; letter-spacing: 0.04em; }
+  .fee-item { padding: 9px 6px; text-align: center; border-top: 1px solid #f2efe7; }
+  .fee-when { display: block; font-size: 12px; color: var(--kk-muted); }
+  .fee-amt { display: block; font-size: 16px; font-weight: 800; color: var(--kk-dark); margin-top: 2px; }
 </style>
 </head>
 <body>
@@ -871,9 +870,9 @@
       <div class="rule"><span class="r-num">1</span><div class="r-title">No Tobacco Indoors</div><div class="r-body">Cigarettes &amp; cigars outside only, no littering (fine). Vapes, blunt wraps &amp; marijuana are fine inside.</div></div>
       <div class="rule"><span class="r-num">2</span><div class="r-title">No Parties or Extra Guests</div><div class="r-body">Any unapproved party or extra guest ends your reservation immediately.</div></div>
       <div class="rule"><span class="r-num">3</span><div class="r-title">Quiet Hours · 10 PM to 9 AM</div><div class="r-body">Neighbor or police complaints may end your reservation.</div></div>
-      <div class="rule"><span class="r-num">4</span><div class="r-title">Pets Welcome</div><div class="r-body">Clean up after them — up to a $150 fine for waste left behind.</div></div>
+      <div class="rule"><span class="r-num">4</span><div class="r-title">Pets Welcome</div><div class="r-body">Clean up after them, up to a $150 fine for waste left behind.</div></div>
       <div class="rule"><span class="r-num">5</span><div class="r-title">No Late Checkouts</div><div class="r-body">$50 per 15 min past 10 AM. Ask 24 hours ahead for more time.</div></div>
-      <div class="rule"><span class="r-num">6</span><div class="r-title">Dispose of Ash Properly</div><div class="r-body">$50 fine — never ash in the hot tub or on furniture.</div></div>
+      <div class="rule"><span class="r-num">6</span><div class="r-title">Dispose of Ash Properly</div><div class="r-body">$50 fine, never ash in the hot tub or on furniture.</div></div>
     </div>
   </section>
 
@@ -896,23 +895,21 @@
 
   <section>
     <h2>Early Check-In &amp; Late Checkout</h2>
-    <div class="fee-group early">
-      <div class="fee-head"><span class="fee-ic">🌅</span><span class="fee-htxt"><span class="fee-title">Early Check-In</span><span class="fee-note">Standard check-in 4 PM</span></span></div>
-      <div class="fee-rows">
-        <div class="fee-row"><span>Before 10 AM</span><span class="fee-amt">$125</span></div>
-        <div class="fee-row"><span>Before noon</span><span class="fee-amt">$75</span></div>
-        <div class="fee-row"><span>Before 2 PM</span><span class="fee-amt">$50</span></div>
+    <div class="fee-cols">
+      <div class="fee-col early">
+        <div class="fee-head"><span class="fee-ic">🌅</span><span class="fee-title">Early Check-In</span><span class="fee-note">Check-in 4 PM</span></div>
+        <div class="fee-item"><span class="fee-when">Before 10 AM</span><span class="fee-amt">$125</span></div>
+        <div class="fee-item"><span class="fee-when">Before noon</span><span class="fee-amt">$75</span></div>
+        <div class="fee-item"><span class="fee-when">Before 2 PM</span><span class="fee-amt">$50</span></div>
+      </div>
+      <div class="fee-col late">
+        <div class="fee-head"><span class="fee-ic">🌙</span><span class="fee-title">Late Checkout</span><span class="fee-note">Checkout 10 AM</span></div>
+        <div class="fee-item"><span class="fee-when">Until 12 PM</span><span class="fee-amt">$50</span></div>
+        <div class="fee-item"><span class="fee-when">Until 2 PM</span><span class="fee-amt">$100</span></div>
+        <div class="fee-item"><span class="fee-when">After 2 PM</span><span class="fee-amt">Extra night</span></div>
       </div>
     </div>
-    <div class="fee-group late">
-      <div class="fee-head"><span class="fee-ic">🌙</span><span class="fee-htxt"><span class="fee-title">Late Checkout</span><span class="fee-note">Standard checkout 10 AM</span></span></div>
-      <div class="fee-rows">
-        <div class="fee-row"><span>Until 12 PM</span><span class="fee-amt">$50</span></div>
-        <div class="fee-row"><span>Until 2 PM</span><span class="fee-amt">$100</span></div>
-        <div class="fee-row"><span>After 2 PM</span><span class="fee-amt">Additional night</span></div>
-      </div>
-    </div>
-    <div class="inst-note">Subject to availability and the cleaning schedule — text us to lock it in.</div>
+    <div class="inst-note">Subject to availability and the cleaning schedule, text us to lock it in.</div>
     <a class="door-code-cta" data-bind-href="sms_extension_link" style="display:block;text-align:center;margin-top:10px;">Request via text →</a>
   </section>
 
@@ -941,7 +938,7 @@
 
   <section data-section="picks" style="display:none;">
     <h2>Host Picks</h2>
-    <p class="picks-intro">Personal favorites from your host — the spots he actually eats at, and the orders he stands behind.</p>
+    <p class="picks-intro">Personal favorites from your host, the spots he actually eats at, and the orders he stands behind.</p>
     <div class="picks-list"></div>
   </section>
 
@@ -963,7 +960,7 @@
 
   <section>
     <h2>Need Anything?</h2>
-    <a class="help-line" data-bind-href="tel_link"><span class="h-ic">📞</span><span><span class="h-main" data-bind="text_line_display"></span><span class="h-sub">Call or text us anytime — we reply fast</span></span><span class="arrow">→</span></a>
+    <a class="help-line" data-bind-href="tel_link"><span class="h-ic">📞</span><span><span class="h-main" data-bind="text_line_display"></span><span class="h-sub">Call or text us anytime, we reply fast</span></span><span class="arrow">→</span></a>
     <a class="help-line" data-bind-href="report_link"><span class="h-ic">⚠️</span><span><span class="h-main">Report an issue</span><span class="h-sub">Send a photo and a quick note</span></span><span class="arrow">→</span></a>
     <a class="help-line" data-bind-href="save10_link" target="_blank" rel="noopener"><span class="h-ic">🎁</span><span><span class="h-main">Book direct &amp; save 10%</span><span class="h-sub">Code STAYNSAVE10 at kushkations.com</span></span><span class="arrow">→</span></a>
   </section>
@@ -1033,7 +1030,7 @@
   data.sms_extension_link = `sms:+${phoneDigits}?body=${encodeURIComponent(`${guestPrefix} I'm staying at ${data.meta.name}. Can I request an early check-in or late checkout? Happy to pay the fee.`)}`;
   data.report_link = `sms:+${phoneDigits}?body=${encodeURIComponent(`${guestPrefix} I'm reporting an issue at ${data.meta.name}: `)}`;
   data.ig_link = 'https://instagram.com/kushkations';
-  data.review_link = `mailto:info@kushkations.com?subject=${encodeURIComponent(`Review — ${data.meta.name}`)}&body=${encodeURIComponent('Hi! Here is my review:\n\n\n— [Your name, dates of stay]')}`;
+  data.review_link = `mailto:info@kushkations.com?subject=${encodeURIComponent(`Review, ${data.meta.name}`)}&body=${encodeURIComponent('Hi! Here is my review:\n\n\n[Your name, dates of stay]')}`;
   data.save10_link = 'https://kushkations.com';
   data.tel_link = `tel:+${phoneDigits}`;
   data.text_line_display = phone;
@@ -1072,11 +1069,11 @@
   app.innerHTML = '';
   app.appendChild(node);
 
-  // Amenity instructions — one tap-to-expand accordion (each amenity reveals its full steps)
+  // Amenity instructions, one tap-to-expand accordion (each amenity reveals its full steps)
   const esc = (t) => String(t).replace(/[&<>"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));
   const AM = data.amenities || {};
 
-  // Amenity tutorial videos — central so the same clip serves every property.
+  // Amenity tutorial videos, central so the same clip serves every property.
   // Add a URL here and a "Watch the video" button appears in that amenity's panel.
   const AMENITY_VIDEOS = {
     ps5:       {url: 'https://www.youtube.com/watch?v=1jQjYuOeg4M', title: 'How to turn on the PS5 & sign in'},
@@ -1112,7 +1109,7 @@
     if (Array.isArray(ht.rules) && ht.rules.length) h += `<div class="inst-h">♨️ Hot tub rules</div><ul class="inst-list">${ht.rules.map(x => `<li>${esc(x)}</li>`).join('')}</ul>`;
     h += `<div class="inst-h">🔧 Still not heating?</div><ol class="inst-steps">`
        + `<li>Check the panel reads <strong>ST</strong> (Standard), not EC/Economy.</li>`
-       + `<li>Check the water level — it must cover the filter, or the heater shuts off.</li>`
+       + `<li>Check the water level, it must cover the filter, or the heater shuts off.</li>`
        + `<li>Top up with the garden hose to ~2 inches above the filter.</li>`
        + `<li>Give it 15 minutes, then re-check.</li>`
        + `<li>Still cold? Text us a photo of the control panel and we'll walk you through it.</li></ol>`;
@@ -1126,15 +1123,15 @@
       + `<div class="inst-h">How to run it</div>`
       + `<ol class="inst-steps"><li>Press <strong>POWER</strong> on the control panel.</li>`
       + `<li>Set the temperature with the <strong>+ / –</strong> buttons.</li>`
-      + `<li>Set the timer — the heater auto-shuts off when it ends.</li>`
+      + `<li>Set the timer, the heater auto-shuts off when it ends.</li>`
       + `<li>Keep water off the heater rocks. Sit back and enjoy.</li></ol>`;
   }
   function ps5Detail() {
-    return videoBtn('ps5') + `<div class="inst-note warn">⚠️ <strong>Use the Guest Account only.</strong> Signing in with your personal PSN account can lock the console for the next guest — and lock you out mid-game.</div>`
+    return videoBtn('ps5') + `<div class="inst-note warn">⚠️ <strong>Use the Guest Account only.</strong> Signing in with your personal PSN account can lock the console for the next guest, and lock you out mid-game.</div>`
       + `<div class="inst-h">Get playing</div>`
       + `<ol class="inst-steps"><li>Press and <strong>hold the PS button</strong> on the controller until it powers on.</li>`
       + `<li>Select the <strong>Guest Account</strong> already loaded on the console.</li>`
-      + `<li>Open any game — they're all pre-downloaded through PS Plus.</li>`
+      + `<li>Open any game, they're all pre-downloaded through PS Plus.</li>`
       + `<li>Controller dying? Plug it into the console with the USB cable; it plays while charging.</li></ol>`
       + `<div class="inst-h">Second player</div>`
       + `<ol class="inst-steps"><li>Press the PS button on the second controller.</li>`
@@ -1145,7 +1142,7 @@
   function theaterDetail(tr) {
     const pop = tr && tr.popcorn_machine && Array.isArray(tr.popcorn_machine.steps) ? tr.popcorn_machine.steps : null;
     const steps = pop || ['Turn on both the LIGHT and POP switches to preheat 2–3 minutes', 'Turn the POP switch off, then open the lid carefully', 'Add oil and a small measure of kernels', 'Turn the machine off as soon as popping slows'];
-    return videoBtn('theater') + `<div class="inst-h">🍿 Popcorn machine</div><ol class="inst-steps">${steps.map(x => `<li>${esc(x)}</li>`).join('')}</ol><div class="inst-note">The popcorn machine gets VERY hot — supervise kids.</div>`;
+    return videoBtn('theater') + `<div class="inst-h">🍿 Popcorn machine</div><ol class="inst-steps">${steps.map(x => `<li>${esc(x)}</li>`).join('')}</ol><div class="inst-note">The popcorn machine gets VERY hot, supervise kids.</div>`;
   }
   function golfDetail() {
     return videoBtn('golf') + `<div class="inst-note">SkyTrac launch monitor. Right-handed clubs only.</div>`
@@ -1160,7 +1157,7 @@
     ['highlights', 'features'].forEach(k => Array.isArray(gr[k]) && gr[k].forEach(x => items.push(esc(x))));
     if (Array.isArray(gr.consoles)) gr.consoles.forEach(c => {
       if (typeof c === 'string') items.push(esc(c));
-      else if (c && c.name) items.push(`<strong>${esc(c.name)}</strong>${c.notes ? ' — ' + esc(c.notes) : ''}`);
+      else if (c && c.name) items.push(`<strong>${esc(c.name)}</strong>${c.notes ? ', ' + esc(c.notes) : ''}`);
     });
     let g = '';
     if (items.length) g += `<ul class="inst-list">${items.map(i => `<li>${i}</li>`).join('')}</ul>`;
@@ -1187,7 +1184,7 @@
     }
   }
 
-  // Host Picks — host-voice food recs ported verbatim from the printed manual
+  // Host Picks, host-voice food recs ported verbatim from the printed manual
   const picksSection = app.querySelector('[data-section="picks"]');
   if (picksSection && data.nearby && Array.isArray(data.nearby.host_picks) && data.nearby.host_picks.length) {
     const list = picksSection.querySelector('.picks-list');
@@ -1221,7 +1218,7 @@
     if (list.children.length) picksSection.style.display = '';
   }
 
-  // Getting Around — per-property drive times (parsed from the print manuals)
+  // Getting Around, per-property drive times (parsed from the print manuals)
   const gaSection = app.querySelector('[data-section="getaround"]');
   if (gaSection && data.nearby && Array.isArray(data.nearby.getting_around) && data.nearby.getting_around.length) {
     const gaList = gaSection.querySelector('.ga-list');
@@ -1289,7 +1286,7 @@
     }
   }
 
-  // Make the browse-y sections collapsible — tap the heading to open/close. Start collapsed.
+  // Make the browse-y sections collapsible, tap the heading to open/close. Start collapsed.
   function makeCollapsible(section, startCollapsed) {
     if (!section || section.classList.contains('collapsible')) return;
     const h2 = section.querySelector('h2');
@@ -1345,11 +1342,11 @@
     });
   }
 
-  // Tutorials — a YouTube-style video picker (real YouTube thumbnails where available)
+  // Tutorials, a YouTube-style video picker (real YouTube thumbnails where available)
   const TUTORIALS = [
     {emoji: '📱', yt: null, title: 'Phone as a Roku remote', sub: 'Lost a remote? Control any TV from your phone', url: 'https://www.youtube.com/results?search_query=how+to+use+roku+mobile+app+as+remote'},
     {emoji: '🚿', yt: null, title: 'Drain the sink', sub: 'Quick video walk-through', url: 'https://drive.google.com/drive/u/4/folders/1yVkY8XZR6FO-OYCSfHkBG_JRiZji8leK'},
-    {emoji: '🛁', yt: 'xlKTRspHciM', title: 'Use the shower diverter', sub: 'Switch between tub and shower — quick video', url: 'https://youtu.be/xlKTRspHciM'},
+    {emoji: '🛁', yt: 'xlKTRspHciM', title: 'Use the shower diverter', sub: 'Switch between tub and shower, quick video', url: 'https://youtu.be/xlKTRspHciM'},
     {emoji: '🔥', yt: null, title: 'Order propane for the grill', sub: 'Video tutorial · delivered via Cynch', url: 'https://rb.gy/lh1ixm'},
     {emoji: '🛻', yt: null, title: 'Cynch propane delivery', sub: 'Order a tank to the door · guest provides propane', url: 'https://www.cynch.com'},
   ];
@@ -1367,7 +1364,7 @@
 
   document.title = `${data.meta.name} · KushKations`;
 
-  // Sticky jump-nav — built from the sections that actually rendered for THIS property
+  // Sticky jump-nav, built from the sections that actually rendered for THIS property
   const tabNav = app.querySelector('#tabNav');
   if (tabNav) {
     const TAB_SPEC = [
@@ -1488,11 +1485,11 @@
     'Quiet Hours · 10 PM to 9 AM': 'Horas de Silencio · 10 PM a 9 AM',
     'Neighbor or police complaints may end your reservation.': 'Las quejas de vecinos o de la policía pueden terminar tu reservación.',
     'Pets Welcome': 'Mascotas Bienvenidas',
-    'Clean up after them — up to a $150 fine for waste left behind.': 'Limpia después de ellas — hasta $150 de multa por desechos dejados.',
+    'Clean up after them, up to a $150 fine for waste left behind.': 'Limpia después de ellas, hasta $150 de multa por desechos dejados.',
     'No Late Checkouts': 'No Check-Out Tarde',
     '$50 per 15 min past 10 AM. Ask 24 hours ahead for more time.': '$50 por cada 15 min después de las 10 AM. Pídelo con 24 horas de anticipación para más tiempo.',
     'Dispose of Ash Properly': 'Desecha la Ceniza Correctamente',
-    '$50 fine — never ash in the hot tub or on furniture.': '$50 de multa — nunca dejes caer ceniza en el jacuzzi ni en los muebles.',
+    '$50 fine, never ash in the hot tub or on furniture.': '$50 de multa, nunca dejes caer ceniza en el jacuzzi ni en los muebles.',
     'Quick Instructions': 'Instrucciones Rápidas',
     'Hot Tub': 'Jacuzzi',
     'Sauna': 'Sauna',
@@ -1510,11 +1507,12 @@
     'FREE': 'GRATIS',
     'Full extra night': 'Noche extra completa',
     'Additional night': 'Noche adicional',
-    'Subject to availability and the cleaning schedule — text us to lock it in.': 'Sujeto a disponibilidad y al horario de limpieza — escríbenos para confirmarlo.',
+    'Subject to availability and the cleaning schedule, text us to lock it in.': 'Sujeto a disponibilidad y al horario de limpieza, escríbenos para confirmarlo.',
     'Early Check-In': 'Check-In Temprano',
     'Late Checkout': 'Check-Out Tarde',
-    'Standard check-in 4 PM': 'Check-in estándar 4 PM',
-    'Standard checkout 10 AM': 'Check-out estándar 10 AM',
+    'Check-in 4 PM': 'Check-in 4 PM',
+    'Checkout 10 AM': 'Check-out 10 AM',
+    'Extra night': 'Noche extra',
     'Before 10 AM': 'Antes de 10 AM',
     'Before noon': 'Antes del mediodía',
     'Before 2 PM': 'Antes de 2 PM',
@@ -1525,7 +1523,7 @@
     'Getting Around': 'Cómo Moverse',
     'Uber & Lyft are quick and reliable here. Easy highway access, and RTD transit stops are listed under What\'s Nearest.': 'Uber y Lyft son rápidos y confiables aquí. Fácil acceso a la autopista, y las paradas de RTD están en Lo Más Cercano.',
     "Host Picks": 'Los Favoritos de Shaquan',
-    'Personal favorites from your host — the spots he actually eats at, and the orders he stands behind.': 'Favoritos personales de tu anfitrión — los lugares donde realmente come, y lo que pide.',
+    'Personal favorites from your host, the spots he actually eats at, and the orders he stands behind.': 'Favoritos personales de tu anfitrión, los lugares donde realmente come, y lo que pide.',
     'A Few House Rules': 'Algunas Reglas de la Casa',
     "Welcome in! We've gathered your door code, Wi-Fi details, house instructions, and favorite local eats right here so you can settle in effortlessly.\n\nIf you need anything at all, just shoot us a message. We're more than willing to help ANYTIME!": '¡Bienvenido! Reunimos tu código de puerta, los datos del Wi-Fi, las instrucciones de la casa y los mejores lugares para comer aquí mismo para que te instales sin complicaciones.\n\nSi necesitas cualquier cosa, solo mándanos un mensaje. ¡Con gusto te ayudamos en CUALQUIER momento!',
     'Hot Tub Instructions': 'Instrucciones del Jacuzzi',
@@ -1536,7 +1534,7 @@
     'Drain the sink': 'Cómo drenar el lavabo',
     'Quick video walk-through': 'Video tutorial rápido',
     'Use the shower diverter': 'Usar el desviador de la regadera',
-    'Switch between tub and shower — quick video': 'Cambia entre tina y regadera — video corto',
+    'Switch between tub and shower, quick video': 'Cambia entre tina y regadera, video corto',
     'Order propane for the grill': 'Ordenar propano para el asador',
     'Video tutorial · delivered via Cynch': 'Video tutorial · entrega vía Cynch',
     'Cynch propane delivery': 'Entrega de propano Cynch',
@@ -1559,7 +1557,7 @@
     'Dispensary': 'Dispensario',
     'Grocery': 'Supermercado',
     'Need Anything?': '¿Necesitas Algo?',
-    'Call or text us anytime — we reply fast': 'Llámanos o escríbenos cuando quieras — respondemos rápido',
+    'Call or text us anytime, we reply fast': 'Llámanos o escríbenos cuando quieras, respondemos rápido',
     'Report an issue': 'Reportar un problema',
     'Send a photo and a quick note': 'Envía una foto y una nota rápida',
     'Book direct & save 10%': 'Reserva directo y ahorra 10%',

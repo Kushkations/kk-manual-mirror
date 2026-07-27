@@ -25,7 +25,7 @@
   "extra_guests_allowed": 2,
   "size_sqft": 1287,
   "is_420_friendly": false,
-  "one_line_vibe": "Compact Wheat Ridge stay with a shared hot tub — small groups only.",
+  "one_line_vibe": "Compact Wheat Ridge stay with a shared hot tub, small groups only.",
   "layout": {
    "stairs_to_upstairs": "",
    "stairs_to_basement": ""
@@ -83,7 +83,7 @@
    "rules": [
     "No food, drinks, or glass in the tub",
     "Kids must be supervised",
-    "Keep water above the filter line — drops below = heater shuts off"
+    "Keep water above the filter line, drops below = heater shuts off"
    ],
    "photo": ""
   },
@@ -99,7 +99,7 @@
   },
   "kitchen": {
    "highlights": [
-    "Full kitchen — cook what you'd cook at home",
+    "Full kitchen, cook what you'd cook at home",
     "Fire extinguisher under the sink",
     "Delivery works great: Uber Eats, DoorDash, Grubhub"
    ]
@@ -126,7 +126,7 @@
    "Set the hallway thermostat to 66°F in winter, 75°F in summer",
    "Lock up behind you and have a safe trip"
   ],
-  "trash_day": "Tuesday. Bins are in the backyard. Our team comes by to take the trash out and bring the bins back in — nothing for you to do."
+  "trash_day": "Tuesday. Bins are in the backyard. Our team comes by to take the trash out and bring the bins back in, nothing for you to do."
  },
  "temperature": {
   "main_thermostat_location": "",
@@ -233,17 +233,17 @@
   ],
   "dispensaries": [
    {
-    "name": "Green Dragon — West Denver",
+    "name": "Green Dragon, West Denver",
     "address": "4103 Sheridan Blvd, Denver",
     "drive_min": 3
    },
    {
-    "name": "Green Dragon — Edgewater",
+    "name": "Green Dragon, Edgewater",
     "address": "2467 Sheridan Blvd, Edgewater",
     "drive_min": 4
    },
    {
-    "name": "Star Buds — Lakeside",
+    "name": "Star Buds, Lakeside",
     "address": "5238 W 44th Ave, Denver",
     "drive_min": 5
    }
@@ -356,7 +356,7 @@
    "how_to_claim": [
     "Post a photo from your stay tagged #Kushkations and #KushKations",
     "Leave a five-star review on your booking platform",
-    "Email a screenshot to info@kushkations.com — we'll send the code"
+    "Email a screenshot to info@kushkations.com, we'll send the code"
    ]
   }
  },
@@ -495,7 +495,7 @@
   },
   "utilities": {
    "breaker_panel": "Inside the house, right next to the bathroom entrance",
-   "water_shutoff": "Down the hall toward the G&S Jacuzzi, on the right side of the floor — small door, reach inside to the shut-off",
+   "water_shutoff": "Down the hall toward the G&S Jacuzzi, on the right side of the floor, small door, reach inside to the shut-off",
    "gas_shutoff": "",
    "wifi_router": "Kitchen",
    "wifi_router_guest_accessible": true,

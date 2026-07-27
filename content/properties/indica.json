@@ -87,7 +87,7 @@
    "rules": [
     "No food, drinks, or glass in the tub",
     "Kids must be supervised",
-    "Keep water above the filter line — drops below = heater shuts off"
+    "Keep water above the filter line, drops below = heater shuts off"
    ],
    "photo": ""
   },
@@ -96,15 +96,15 @@
    "propane_vendor": "Gilbert (303) 475-3342"
   },
   "theater_room": {
-   "seating": "6-seater electronic recliners — controls on the right-hand side of each seat. One adult or child per seat. No rough play. Children must not be left unattended.",
-   "projector": "Use the remote controls to adjust the projector and Roku stick. The projector requires no adjustments on arrival. For an external device, bring an HDMI cable long enough to reach with slack — if there's no slack, the cable is too short.",
-   "streaming": "Roku stick included — sign in with your own streaming accounts and sign out before checkout.",
+   "seating": "6-seater electronic recliners, controls on the right-hand side of each seat. One adult or child per seat. No rough play. Children must not be left unattended.",
+   "projector": "Use the remote controls to adjust the projector and Roku stick. The projector requires no adjustments on arrival. For an external device, bring an HDMI cable long enough to reach with slack, if there's no slack, the cable is too short.",
+   "streaming": "Roku stick included, sign in with your own streaming accounts and sign out before checkout.",
    "popcorn_machine_steps": [
     "Turn both 'light' and 'pop' switches on and preheat for 2–3 minutes",
     "Turn off the 'pop' switch",
     "Open the lid carefully and add oil plus a small measure of kernels",
     "Once popping ceases, turn off the machine promptly to prevent burning",
-    "Supervise children — the machine gets VERY HOT"
+    "Supervise children, the machine gets VERY HOT"
    ]
   },
   "game_room": {
@@ -113,7 +113,7 @@
     "Foosball table",
     "Board games"
    ],
-   "notes": "Living area amenities. Children must be supervised — do not leave them unattended in this space."
+   "notes": "Living area amenities. Children must be supervised, do not leave them unattended in this space."
   },
   "firepit": {
    "ignition_steps": [
@@ -133,7 +133,7 @@
   },
   "kitchen": {
    "highlights": [
-    "Full kitchen — cook what you'd cook at home",
+    "Full kitchen, cook what you'd cook at home",
     "Fire extinguisher under the sink",
     "Delivery works great: Uber Eats, DoorDash, Grubhub"
    ]
@@ -160,7 +160,7 @@
    "Set the hallway thermostat to 66°F in winter, 75°F in summer",
    "Lock up behind you and have a safe trip"
   ],
-  "trash_day": "Monday. Bins are on the side of the house. Our team comes by to take the trash out and bring the bins back in — nothing for you to do."
+  "trash_day": "Monday. Bins are on the side of the house. Our team comes by to take the trash out and bring the bins back in, nothing for you to do."
  },
  "temperature": {
   "main_thermostat_location": "",
@@ -438,7 +438,7 @@
    "how_to_claim": [
     "Post a photo from your stay tagged #Kushkations and #KushKations",
     "Leave a five-star review on your booking platform",
-    "Email a screenshot to info@kushkations.com — we'll send the code"
+    "Email a screenshot to info@kushkations.com, we'll send the code"
    ]
   }
  },

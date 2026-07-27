@@ -25,7 +25,7 @@
   "extra_guests_allowed": 0,
   "size_sqft": 988,
   "is_420_friendly": true,
-  "one_line_vibe": "Pueblo stay with a hot tub — a quiet southern Colorado retreat.",
+  "one_line_vibe": "Pueblo stay with a hot tub, a quiet southern Colorado retreat.",
   "layout": {
    "stairs_to_upstairs": "",
    "stairs_to_basement": ""
@@ -80,7 +80,7 @@
     "steps": [
      "Tap the Warm or Temp button to wake up the display",
      "Press Mode (or hold Warm for 3 sec if no Mode button)",
-     "Display cycles through ST → EC → SL — stop when it shows ST",
+     "Display cycles through ST → EC → SL, stop when it shows ST",
      "Then press Warm/Cool to set 102°F"
     ],
     "video_tutorial": "https://www.youtube.com/embed/UwFIbScelNU",
@@ -98,7 +98,7 @@
    "rules": [
     "No food, drinks, or glass in the tub",
     "Kids must be supervised",
-    "Keep water above the filter line — drops below = heater shuts off"
+    "Keep water above the filter line, drops below = heater shuts off"
    ],
    "photo": ""
   },
@@ -108,7 +108,7 @@
   },
   "outdoor": {
    "projector_setup": {
-    "notes": "Backyard projector with Roku stick — use the remote controls to manage all settings for both the projector and the Roku stick. The projector requires no adjustments on arrival. If connecting an external device, check your HDMI cable length (no slack = too short).",
+    "notes": "Backyard projector with Roku stick, use the remote controls to manage all settings for both the projector and the Roku stick. The projector requires no adjustments on arrival. If connecting an external device, check your HDMI cable length (no slack = too short).",
     "roku_app_remote": [
      "Install the Roku mobile app and sign in",
      "Connect your phone to the same Wi-Fi as the Roku, then select the Roku device from the list",
@@ -125,7 +125,7 @@
   },
   "kitchen": {
    "highlights": [
-    "Full kitchen — cook what you'd cook at home",
+    "Full kitchen, cook what you'd cook at home",
     "Fire extinguisher under the sink",
     "Delivery works great: Uber Eats, DoorDash, Grubhub"
    ]
@@ -152,7 +152,7 @@
    "Set the hallway thermostat to 66°F in winter, 75°F in summer",
    "Lock up behind you and have a safe trip"
   ],
-  "trash_day": "Tuesday. Our team comes by to take the trash out and bring the bins back in — nothing for you to do."
+  "trash_day": "Tuesday. Our team comes by to take the trash out and bring the bins back in, nothing for you to do."
  },
  "temperature": {
   "main_thermostat_location": "",
@@ -312,7 +312,7 @@
    {
     "name": "University Park",
     "address": "903 Bluestem Blvd, Pueblo, CO 81001",
-    "reason": "Over 6 acres with gazebos and shelters — a quiet hangout."
+    "reason": "Over 6 acres with gazebos and shelters, a quiet hangout."
    },
    {
     "name": "Colorado City Recreation District",
@@ -348,7 +348,7 @@
    {
     "name": "Bingo Burger",
     "meta": "Local burger spot · Downtown · 9 min · 5 mi",
-    "body": "Pueblo-style green chile cheeseburgers. Cash-only sometimes — check the door.",
+    "body": "Pueblo-style green chile cheeseburgers. Cash-only sometimes, check the door.",
     "order": "Bingo Burger with green chile, hand-cut fries."
    },
    {
@@ -366,7 +366,7 @@
    {
     "name": "Mike Salvador's",
     "meta": "Mexican · 8 min · 4 mi",
-    "body": "Pueblo Mexican classic. Green chile is the move — full of heat and flavor.",
+    "body": "Pueblo Mexican classic. Green chile is the move, full of heat and flavor.",
     "order": "Smothered burrito, green chile, sopapilla."
    },
    {
@@ -420,7 +420,7 @@
    "how_to_claim": [
     "Post a photo from your stay tagged #Kushkations and #KushKations",
     "Leave a five-star review on your booking platform",
-    "Email a screenshot to info@kushkations.com — we'll send the code"
+    "Email a screenshot to info@kushkations.com, we'll send the code"
    ]
   }
  },

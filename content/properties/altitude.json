@@ -79,7 +79,7 @@
     "steps": [
      "Tap the Warm or Temp button to wake up the display",
      "Press Mode (or hold Warm for 3 sec if no Mode button)",
-     "Display cycles through ST → EC → SL — stop when it shows ST",
+     "Display cycles through ST → EC → SL, stop when it shows ST",
      "Then press Warm/Cool to set 102°F"
     ],
     "video_tutorial": "https://www.youtube.com/embed/UwFIbScelNU",
@@ -97,7 +97,7 @@
    "rules": [
     "No food, drinks, or glass in the tub",
     "Kids must be supervised",
-    "Keep water above the filter line — drops below = heater shuts off"
+    "Keep water above the filter line, drops below = heater shuts off"
    ],
    "photo": ""
   },
@@ -113,7 +113,7 @@
    ],
    "rules": [
     "Children must be supervised in the living area at all times",
-    "Account access is exclusive to the host — guest personal logins not permitted on the PS5"
+    "Account access is exclusive to the host, guest personal logins not permitted on the PS5"
    ]
   },
   "theater_room": {
@@ -136,7 +136,7 @@
   },
   "kitchen": {
    "highlights": [
-    "Full kitchen — cook what you'd cook at home",
+    "Full kitchen, cook what you'd cook at home",
     "Fire extinguisher under the sink",
     "Delivery works great: Uber Eats, DoorDash, Grubhub"
    ]
@@ -163,7 +163,7 @@
    "Set the hallway thermostat to 66°F in winter, 75°F in summer",
    "Lock up behind you and have a safe trip"
   ],
-  "trash_day": "Thursday. Bins are by the front entrance. Our team comes by to take the trash out and bring the bins back in — nothing for you to do."
+  "trash_day": "Thursday. Bins are by the front entrance. Our team comes by to take the trash out and bring the bins back in, nothing for you to do."
  },
  "temperature": {
   "main_thermostat_location": "",
@@ -376,7 +376,7 @@
    "how_to_claim": [
     "Post a photo from your stay tagged #Kushkations and #KushKations",
     "Leave a five-star review on your booking platform",
-    "Email a screenshot to info@kushkations.com — we'll send the code"
+    "Email a screenshot to info@kushkations.com, we'll send the code"
    ]
   }
  },

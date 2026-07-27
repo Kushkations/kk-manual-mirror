@@ -25,7 +25,7 @@
   "extra_guests_allowed": 2,
   "size_sqft": 1834,
   "is_420_friendly": true,
-  "one_line_vibe": "Northglenn house with a hot tub and a bunk-bed basement — great for groups.",
+  "one_line_vibe": "Northglenn house with a hot tub and a bunk-bed basement, great for groups.",
   "layout": {
    "stairs_to_upstairs": "7 steps to the 2nd floor",
    "stairs_to_basement": "7 steps to the basement"
@@ -81,7 +81,7 @@
     "steps": [
      "Tap the Warm or Temp button to wake up the display",
      "Press Mode (or hold Warm for 3 sec if no Mode button)",
-     "Display cycles through ST → EC → SL — stop when it shows ST",
+     "Display cycles through ST → EC → SL, stop when it shows ST",
      "Then press Warm/Cool to set 102°F"
     ],
     "video_tutorial": "https://www.youtube.com/embed/UwFIbScelNU",
@@ -99,7 +99,7 @@
    "rules": [
     "No food, drinks, or glass in the tub",
     "Kids must be supervised",
-    "Keep water above the filter line — drops below = heater shuts off"
+    "Keep water above the filter line, drops below = heater shuts off"
    ],
    "photo": ""
   },
@@ -119,13 +119,13 @@
    "beer_pong": "Arrange cups in a triangle at each end and fill with a drink. Play in teams of 1 or 2. Take turns throwing balls into the other team's cups; if you land one, they drink and remove that cup. First team to hit all the opponent's cups wins.",
    "air_hockey": "Turn the table on to start the air flow. Use the paddle to hit the puck into the opponent's goal. First to 7 points wins. Turn off when done.",
    "foosball": "Decide who starts, then serve the ball into play. Use rods to move players and score. Track goals with the counters on the table. First to 5 or 10 goals wins.",
-   "ps5_notes": "Press and hold the PlayStation logo on any controller to turn on. Log in as a guest to connect a second controller. All games via PS Plus/PS Now — no disks.",
+   "ps5_notes": "Press and hold the PlayStation logo on any controller to turn on. Log in as a guest to connect a second controller. All games via PS Plus/PS Now, no disks.",
    "notes": "Supervise children at all times. The smoking tower and game equipment require adult supervision."
   },
   "theater_room": {
    "seating": "6-seater luxury electronic recliners",
    "rules": [
-    "Use the electronic recliners gently — rough play prohibited",
+    "Use the electronic recliners gently, rough play prohibited",
     "Each recliner is designed for one adult or child at a time",
     "Recline and headrest controls are on the right-hand side of each seat",
     "Children must not be left unattended in the theater room"
@@ -148,7 +148,7 @@
   },
   "kitchen": {
    "highlights": [
-    "Full kitchen — cook what you'd cook at home",
+    "Full kitchen, cook what you'd cook at home",
     "Fire extinguisher under the sink",
     "Delivery works great: Uber Eats, DoorDash, Grubhub"
    ]
@@ -175,7 +175,7 @@
    "Set the hallway thermostat to 66°F in winter, 75°F in summer",
    "Lock up behind you and have a safe trip"
   ],
-  "trash_day": "Monday. Bins are on the side of the house. Our team comes by to take the trash out and bring the bins back in — nothing for you to do."
+  "trash_day": "Monday. Bins are on the side of the house. Our team comes by to take the trash out and bring the bins back in, nothing for you to do."
  },
  "temperature": {
   "main_thermostat_location": "",
@@ -453,7 +453,7 @@
    "how_to_claim": [
     "Post a photo from your stay tagged #Kushkations and #KushKations",
     "Leave a five-star review on your booking platform",
-    "Email a screenshot to info@kushkations.com — we'll send the code"
+    "Email a screenshot to info@kushkations.com, we'll send the code"
    ]
   }
  },
@@ -592,7 +592,7 @@
   },
   "utilities": {
    "breaker_panel": "Basement, in the room with the laundry and furnace",
-   "water_shutoff": "Basement, in the room with two bunk beds — closet has the valve",
+   "water_shutoff": "Basement, in the room with two bunk beds, closet has the valve",
    "gas_shutoff": "",
    "wifi_router": "Living room, in the lower part of the left cabinet",
    "wifi_router_guest_accessible": true,
