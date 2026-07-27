@@ -656,6 +656,30 @@
   .help-line .h-main { font-weight: 700; line-height: 1.3; }
   .help-line .h-sub { font-size: 11.5px; color: var(--kk-muted); margin-top: 1px; }
   .help-line .arrow { color: var(--kk-green); font-weight: 700; font-size: 17px; flex: none; }
+
+  /* Big "Save 10%" banner at the bottom */
+  .save-banner {
+    display: block;
+    text-align: center;
+    background: linear-gradient(135deg, var(--kk-mid) 0%, var(--kk-green) 100%);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 18px;
+    padding: 28px 22px;
+    margin: 6px 0 16px;
+    box-shadow: 0 6px 20px rgba(61,111,66,0.30);
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .save-banner:active { transform: scale(0.98); box-shadow: 0 2px 8px rgba(61,111,66,0.25); }
+  .save-banner .sb-icon { font-size: 44px; line-height: 1; margin-bottom: 6px; }
+  .save-banner .sb-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: 0.01em;
+  }
+  .save-banner .sb-sub { font-size: 13px; margin-top: 9px; font-weight: 600; opacity: 0.95; }
 </style>
 </head>
 <body>
@@ -690,6 +714,11 @@
       <div class="label">Text Us</div>
       <div class="sub">Quick reply, anytime</div>
     </a>
+    <a class="cta primary" data-bind-href="tel_link">
+      <div class="icon">📞</div>
+      <div class="label">Call Us</div>
+      <div class="sub">Tap to call anytime</div>
+    </a>
     <a class="cta accent" data-bind-href="sms_extension_link">
       <div class="icon">⏰</div>
       <div class="label">Early/Late Checkout</div>
@@ -699,11 +728,6 @@
       <div class="icon">⚠️</div>
       <div class="label">Report an Issue</div>
       <div class="sub">Send a photo + note</div>
-    </a>
-    <a class="cta" data-bind-href="save10_link" target="_blank" rel="noopener">
-      <div class="icon">🎁</div>
-      <div class="label">Save 10% next stay</div>
-      <div class="sub">Book direct · Code STAYNSAVE10</div>
     </a>
   </div>
 
@@ -843,6 +867,12 @@
     <div class="info-row"><div class="k">Address</div><div class="v" data-bind="emergency.nearest_hospital.address"></div></div>
     <div class="info-row"><div class="k">Police (non-emergency)</div><div class="v" data-bind="emergency.non_emergency_police"></div></div>
   </section>
+
+  <a class="save-banner" data-bind-href="save10_link" target="_blank" rel="noopener">
+    <div class="sb-icon">🎁</div>
+    <div class="sb-title">Save 10% on your next stay</div>
+    <div class="sb-sub">Book direct at kushkations.com · Code STAYNSAVE10</div>
+  </a>
 
   <footer>
     KushKations<sup>™</sup> · Come enjoy a KushKation!<br>
@@ -1294,6 +1324,10 @@
     'Send a photo and a quick note': 'Envía una foto y una nota rápida',
     'Book direct & save 10%': 'Reserva directo y ahorra 10%',
     'Code STAYNSAVE10 at kushkations.com': 'Código STAYNSAVE10 en kushkations.com',
+    'Call Us': 'Llámanos',
+    'Tap to call anytime': 'Toca para llamar',
+    'Save 10% on your next stay': 'Ahorra 10% en tu próxima estancia',
+    'Book direct at kushkations.com · Code STAYNSAVE10': 'Reserva directo en kushkations.com · Código STAYNSAVE10',
     '🔑 Access': '🔑 Acceso',
     '📶 WiFi': '📶 WiFi',
     '📋 Basics': '📋 Lo Básico',
@@ -1311,7 +1345,7 @@
   function setLang(lang) {
     localStorage.setItem('kk_lang', lang);
     document.documentElement.lang = lang;
-    document.querySelectorAll('h2, .label, .sub, .k, .v, .checkout-list li, .door-code-cta, .door-code-value, .amenity-card .title-row span:last-child, .amenity-card .body, .nearest-row .cat, .full-guide-link, p, .door-code-card h2, .t-name, .t-sub, section > .inst-note, .welcome, .picks-intro, .tab-btn, .r-title, .r-body, .help-line .h-main, .help-line .h-sub').forEach(el => {
+    document.querySelectorAll('h2, .label, .sub, .k, .v, .checkout-list li, .door-code-cta, .door-code-value, .amenity-card .title-row span:last-child, .amenity-card .body, .nearest-row .cat, .full-guide-link, p, .door-code-card h2, .t-name, .t-sub, section > .inst-note, .welcome, .picks-intro, .tab-btn, .r-title, .r-body, .help-line .h-main, .help-line .h-sub, .sb-title, .sb-sub').forEach(el => {
       if (lang === 'es') {
         if (!el.dataset.en) el.dataset.en = el.textContent.trim();
         const t = ES[el.dataset.en];
