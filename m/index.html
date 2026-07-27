@@ -607,6 +607,13 @@
   .collapsible:not(.collapsed) > h2::after { content: '–'; }
   .collapsible.collapsed .sec-collapse { display: none; }
 
+  /* Explore & Help hub — CTA-style tiles that reveal their content below the grid */
+  .hub-section .cta-grid { margin-bottom: 0; }
+  .hub-tile { border: none; font-family: inherit; width: 100%; }
+  .hub-tile.active { background: var(--kk-dark); color: #fff; }
+  .hub-tile.active .sub { color: rgba(255,255,255,0.72); }
+  .hub-content { margin-top: 14px; }
+
   /* Sticky jump / tab navigation */
   .tab-nav-wrap {
     position: sticky;
@@ -1271,10 +1278,47 @@
     if (startCollapsed) section.classList.add('collapsed');
     h2.addEventListener('click', () => section.classList.toggle('collapsed'));
   }
-  ['picks', 'getaround', 'nearest'].forEach(k => {
-    const sec = app.querySelector(`[data-section="${k}"]`);
-    if (sec && sec.style.display !== 'none') makeCollapsible(sec, true);
-  });
+  // Consolidate Host Picks / Getting Around / What's Nearest / Emergency into ONE section:
+  // a CTA-style 2×2 tile grid where tapping a tile reveals that content below the grid.
+  const HUB_SPEC = [
+    {key: 'picks',     icon: '🍽️', label: 'Host Picks',    sub: 'Where the host eats'},
+    {key: 'getaround', icon: '🚗', label: 'Getting Around', sub: 'Drive times & transit'},
+    {key: 'nearest',   icon: '📍', label: "What's Nearest", sub: 'Food, coffee & more'},
+    {key: 'emergency', icon: '🚨', label: 'Emergency',      sub: 'Hospital & police'},
+  ];
+  const hubFind = (key) => key === 'emergency'
+    ? Array.from(app.querySelectorAll('section')).find(s => (s.querySelector('h2') || {}).textContent === 'Emergency')
+    : app.querySelector(`[data-section="${key}"]`);
+  const hubEntries = HUB_SPEC.map(h => ({...h, sec: hubFind(h.key)})).filter(h => h.sec && h.sec.style.display !== 'none');
+  if (hubEntries.length) {
+    const hub = document.createElement('section');
+    hub.className = 'hub-section';
+    hub.innerHTML = `<h2>Explore &amp; Help</h2><div class="cta-grid hub-grid"></div><div class="hub-panel"></div>`;
+    const grid = hub.querySelector('.hub-grid');
+    const panel = hub.querySelector('.hub-panel');
+    hubEntries[0].sec.parentNode.insertBefore(hub, hubEntries[0].sec);
+    hubEntries.forEach(h => {
+      const content = document.createElement('div');
+      content.className = 'hub-content';
+      content.style.display = 'none';
+      const h2 = h.sec.querySelector('h2');
+      let n = h2 ? h2.nextSibling : h.sec.firstChild;
+      while (n) { const nx = n.nextSibling; content.appendChild(n); n = nx; }
+      panel.appendChild(content);
+      h.sec.remove();
+      const tile = document.createElement('button');
+      tile.type = 'button';
+      tile.className = 'cta hub-tile';
+      tile.innerHTML = `<div class="icon">${h.icon}</div><div class="label">${h.label}</div><div class="sub">${h.sub}</div>`;
+      tile.addEventListener('click', () => {
+        const open = content.style.display !== 'none';
+        panel.querySelectorAll('.hub-content').forEach(c => c.style.display = 'none');
+        grid.querySelectorAll('.hub-tile').forEach(t => t.classList.remove('active'));
+        if (!open) { content.style.display = ''; tile.classList.add('active'); }
+      });
+      grid.appendChild(tile);
+    });
+  }
 
   document.title = `${data.meta.name} · KushKations`;
 
@@ -1289,8 +1333,7 @@
       {match: 'Early Check-In',       label: '⏰ Early/Late'},
       {match: 'Checkout Instructions',label: '🚪 Checkout'},
       {match: 'Quick Instructions',   label: '🎮 Amenities'},
-      {match: 'Host Picks',           label: '🍽️ Food'},
-      {match: "What's Nearest",       label: '📍 Nearby'},
+      {match: 'Explore',              label: '🗺️ Explore'},
       {match: 'Need Anything',        label: '🆘 Help'},
     ];
     const secs = Array.from(app.querySelectorAll('section'));
@@ -1487,6 +1530,12 @@
     '🍽️ Food': '🍽️ Comida',
     '📍 Nearby': '📍 Cerca',
     '🆘 Help': '🆘 Ayuda',
+    '🗺️ Explore': '🗺️ Explorar',
+    'Explore & Help': 'Explora y Ayuda',
+    'Where the host eats': 'Dónde come el anfitrión',
+    'Drive times & transit': 'Tiempos de manejo y transporte',
+    'Food, coffee & more': 'Comida, café y más',
+    'Hospital & police': 'Hospital y policía',
   };
 
   function setLang(lang) {
