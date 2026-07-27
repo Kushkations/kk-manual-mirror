@@ -873,7 +873,7 @@
   // Pull current guest from OwnerRez (live, every page load)
   let live = null;
   try {
-    const r = await fetch(`/api/current-guest?p=${slug}`, { cache: 'no-store' });
+    const r = await fetch(`https://kk-manual.vercel.app/api/current-guest?p=${slug}`, { cache: 'no-store' });
     if (r.ok) live = await r.json();
   } catch (_) {}
 
