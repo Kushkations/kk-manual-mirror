@@ -1002,6 +1002,22 @@
   const esc = (t) => String(t).replace(/[&<>"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));
   const AM = data.amenities || {};
 
+  // Amenity tutorial videos — central so the same clip serves every property.
+  // Add a URL here and a "Watch the video" button appears in that amenity's panel.
+  const AMENITY_VIDEOS = {
+    ps5:       {url: 'https://www.youtube.com/watch?v=1jQjYuOeg4M', title: 'How to turn on the PS5 & sign in'},
+    sauna:     {url: 'https://drive.google.com/file/d/1jlfz6IULLoH9LtIhFn19FSkOprVu3BW4/view', title: 'How to use the sauna'},
+    golf:      {url: 'https://scanned.page/67aa367c633f2', title: 'How to use the golf simulator'},
+    theater:   null,      // no video tutorial yet (text SOP only)
+    game_room: null,      // no video tutorial yet (PDF only)
+  };
+  function videoBtn(key) {
+    const v = AMENITY_VIDEOS[key];
+    if (!v || !v.url) return '';
+    const url = String(v.url).replace('/embed/', '/watch?v=');
+    return `<a class="video-btn" href="${esc(url)}" target="_blank" rel="noopener">▶︎ ${esc(v.title || 'Watch the video')}</a>`;
+  }
+
   function hotTubDetail(ht) {
     if (!ht || typeof ht !== 'object') return '';
     let h = '';
@@ -1032,7 +1048,7 @@
     return h;
   }
   function saunaDetail() {
-    return `<div class="inst-note">Shower before use. Keep sessions to about 30 minutes.</div>`
+    return videoBtn('sauna') + `<div class="inst-note">Shower before use. Keep sessions to about 30 minutes.</div>`
       + `<div class="inst-h">How to run it</div>`
       + `<ol class="inst-steps"><li>Press <strong>POWER</strong> on the control panel.</li>`
       + `<li>Set the temperature with the <strong>+ / –</strong> buttons.</li>`
@@ -1040,7 +1056,7 @@
       + `<li>Keep water off the heater rocks. Sit back and enjoy.</li></ol>`;
   }
   function ps5Detail() {
-    return `<div class="inst-note warn">⚠️ <strong>Use the Guest Account only.</strong> Signing in with your personal PSN account can lock the console for the next guest — and lock you out mid-game.</div>`
+    return videoBtn('ps5') + `<div class="inst-note warn">⚠️ <strong>Use the Guest Account only.</strong> Signing in with your personal PSN account can lock the console for the next guest — and lock you out mid-game.</div>`
       + `<div class="inst-h">Get playing</div>`
       + `<ol class="inst-steps"><li>Press and <strong>hold the PS button</strong> on the controller until it powers on.</li>`
       + `<li>Select the <strong>Guest Account</strong> already loaded on the console.</li>`
@@ -1055,10 +1071,10 @@
   function theaterDetail(tr) {
     const pop = tr && tr.popcorn_machine && Array.isArray(tr.popcorn_machine.steps) ? tr.popcorn_machine.steps : null;
     const steps = pop || ['Turn on both the LIGHT and POP switches to preheat 2–3 minutes', 'Turn the POP switch off, then open the lid carefully', 'Add oil and a small measure of kernels', 'Turn the machine off as soon as popping slows'];
-    return `<div class="inst-h">🍿 Popcorn machine</div><ol class="inst-steps">${steps.map(x => `<li>${esc(x)}</li>`).join('')}</ol><div class="inst-note">The popcorn machine gets VERY hot — supervise kids.</div>`;
+    return videoBtn('theater') + `<div class="inst-h">🍿 Popcorn machine</div><ol class="inst-steps">${steps.map(x => `<li>${esc(x)}</li>`).join('')}</ol><div class="inst-note">The popcorn machine gets VERY hot — supervise kids.</div>`;
   }
   function golfDetail() {
-    return `<div class="inst-note">SkyTrac launch monitor. Right-handed clubs only.</div>`
+    return videoBtn('golf') + `<div class="inst-note">SkyTrac launch monitor. Right-handed clubs only.</div>`
       + `<div class="inst-h">Get set up</div>`
       + `<ol class="inst-steps"><li>Power on the projector and the SkyTrac unit.</li>`
       + `<li>Connect to Wi-Fi: <strong>kushkations.com</strong>.</li>`
@@ -1075,7 +1091,7 @@
     let g = '';
     if (items.length) g += `<ul class="inst-list">${items.map(i => `<li>${i}</li>`).join('')}</ul>`;
     if (gr.notes) g += `<div class="inst-note">${esc(gr.notes)}</div>`;
-    return g || `<div class="inst-note">Supervise kids in the game area.</div>`;
+    return videoBtn('game_room') + (g || `<div class="inst-note">Supervise kids in the game area.</div>`);
   }
 
   const amenitiesSection = app.querySelector('[data-amenity-cards]');
