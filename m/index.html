@@ -788,6 +788,20 @@
   .vid-info { flex: 1; min-width: 0; align-self: center; }
   .vid-title { font-size: 13.5px; font-weight: 700; line-height: 1.32; color: var(--kk-dark); }
   .vid-chan { font-size: 11.5px; color: var(--kk-muted); margin-top: 4px; }
+
+  /* Early / Late fee groups — two distinct cards so "Early"/"Late" isn't repeated per row */
+  .fee-group { border: 1px solid #ece5d6; border-radius: 12px; overflow: hidden; margin-bottom: 12px; }
+  .fee-head { display: flex; align-items: center; gap: 11px; padding: 11px 14px; }
+  .fee-group.early .fee-head { background: linear-gradient(135deg, #eef6ef, #dfeee4); }
+  .fee-group.late .fee-head { background: linear-gradient(135deg, #f4efe4, #eae1cf); }
+  .fee-ic { font-size: 24px; line-height: 1; }
+  .fee-htxt { display: flex; flex-direction: column; }
+  .fee-title { font-size: 15px; font-weight: 800; color: var(--kk-dark); line-height: 1.1; }
+  .fee-note { font-size: 11px; color: var(--kk-mid); font-weight: 600; margin-top: 2px; }
+  .fee-rows { padding: 2px 14px 6px; }
+  .fee-row { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; padding: 8px 0; border-bottom: 1px solid #f2efe7; font-size: 14px; color: var(--kk-ink); }
+  .fee-row:last-child { border-bottom: none; }
+  .fee-amt { font-weight: 800; color: var(--kk-dark); white-space: nowrap; }
 </style>
 </head>
 <body>
@@ -854,12 +868,12 @@
   <section>
     <h2>House Rules</h2>
     <div class="rules-list">
-      <div class="rule"><span class="r-num">1</span><div class="r-title">No Tobacco Indoors</div><div class="r-body">No cigarettes, cigars, or Black &amp; Milds inside. Vapes and blunt wraps are fine, and marijuana smoking indoors is allowed. Smoking tobacco outside is OK — please don't litter cigarette butts on the property (a fine applies).</div></div>
-      <div class="rule"><span class="r-num">2</span><div class="r-title">No Parties or Extra Guests</div><div class="r-body">Any party or additional guests not approved before your stay will end your reservation immediately. Quiet enjoyment is for everyone on the block.</div></div>
-      <div class="rule"><span class="r-num">3</span><div class="r-title">Quiet Hours · 10 PM to 9 AM</div><div class="r-body">A call from local authorities or a neighbor complaint means a check-in with the owner and may end your reservation.</div></div>
-      <div class="rule"><span class="r-num">4</span><div class="r-title">Pets Welcome</div><div class="r-body">Pets are welcome. Please clean up after them inside and out — up to a $150 fine for pet waste left behind.</div></div>
-      <div class="rule"><span class="r-num">5</span><div class="r-title">No Late Checkouts</div><div class="r-body">Unauthorized late checkout is charged $50 for every 15 minutes past 10 AM. Need an extension? Ask 24 hours ahead and we'll try to make it work.</div></div>
-      <div class="rule"><span class="r-num">6</span><div class="r-title">Dispose of Ash Properly</div><div class="r-body">$50 charge for improper ash disposal. Never ash in the hot tub or into any object in the home (like a chair cup holder).</div></div>
+      <div class="rule"><span class="r-num">1</span><div class="r-title">No Tobacco Indoors</div><div class="r-body">Cigarettes &amp; cigars outside only, no littering (fine). Vapes, blunt wraps &amp; marijuana are fine inside.</div></div>
+      <div class="rule"><span class="r-num">2</span><div class="r-title">No Parties or Extra Guests</div><div class="r-body">Any unapproved party or extra guest ends your reservation immediately.</div></div>
+      <div class="rule"><span class="r-num">3</span><div class="r-title">Quiet Hours · 10 PM to 9 AM</div><div class="r-body">Neighbor or police complaints may end your reservation.</div></div>
+      <div class="rule"><span class="r-num">4</span><div class="r-title">Pets Welcome</div><div class="r-body">Clean up after them — up to a $150 fine for waste left behind.</div></div>
+      <div class="rule"><span class="r-num">5</span><div class="r-title">No Late Checkouts</div><div class="r-body">$50 per 15 min past 10 AM. Ask 24 hours ahead for more time.</div></div>
+      <div class="rule"><span class="r-num">6</span><div class="r-title">Dispose of Ash Properly</div><div class="r-body">$50 fine — never ash in the hot tub or on furniture.</div></div>
     </div>
   </section>
 
@@ -882,13 +896,23 @@
 
   <section>
     <h2>Early Check-In &amp; Late Checkout</h2>
-    <div class="info-row"><div class="k">Early · before 10 AM</div><div class="v">$125</div></div>
-    <div class="info-row"><div class="k">Early · before noon</div><div class="v">$75</div></div>
-    <div class="info-row"><div class="k">Early · before 2 PM</div><div class="v">$50</div></div>
-    <div class="info-row"><div class="k">Late · until 12 PM</div><div class="v">$50</div></div>
-    <div class="info-row"><div class="k">Late · until 2 PM</div><div class="v">$100</div></div>
-    <div class="info-row"><div class="k">Late · after 2 PM</div><div class="v">Additional night</div></div>
-    <div class="inst-note">Standard check-in is 4 PM, checkout 10 AM. Subject to availability and the cleaning schedule — text us to lock it in.</div>
+    <div class="fee-group early">
+      <div class="fee-head"><span class="fee-ic">🌅</span><span class="fee-htxt"><span class="fee-title">Early Check-In</span><span class="fee-note">Standard check-in 4 PM</span></span></div>
+      <div class="fee-rows">
+        <div class="fee-row"><span>Before 10 AM</span><span class="fee-amt">$125</span></div>
+        <div class="fee-row"><span>Before noon</span><span class="fee-amt">$75</span></div>
+        <div class="fee-row"><span>Before 2 PM</span><span class="fee-amt">$50</span></div>
+      </div>
+    </div>
+    <div class="fee-group late">
+      <div class="fee-head"><span class="fee-ic">🌙</span><span class="fee-htxt"><span class="fee-title">Late Checkout</span><span class="fee-note">Standard checkout 10 AM</span></span></div>
+      <div class="fee-rows">
+        <div class="fee-row"><span>Until 12 PM</span><span class="fee-amt">$50</span></div>
+        <div class="fee-row"><span>Until 2 PM</span><span class="fee-amt">$100</span></div>
+        <div class="fee-row"><span>After 2 PM</span><span class="fee-amt">Additional night</span></div>
+      </div>
+    </div>
+    <div class="inst-note">Subject to availability and the cleaning schedule — text us to lock it in.</div>
     <a class="door-code-cta" data-bind-href="sms_extension_link" style="display:block;text-align:center;margin-top:10px;">Request via text →</a>
   </section>
 
@@ -1458,17 +1482,17 @@
     'Allowed, but littering is NOT': 'Permitido, pero tirar basura NO',
     'House Rules': 'Reglas de la Casa',
     'No Tobacco Indoors': 'Prohibido el Tabaco Adentro',
-    "No cigarettes, cigars, or Black & Milds inside. Vapes and blunt wraps are fine, and marijuana smoking indoors is allowed. Smoking tobacco outside is OK — please don't litter cigarette butts on the property (a fine applies).": 'No cigarrillos, puros ni Black & Milds adentro. Los vapes y las hojas para blunt están bien, y sí se permite fumar marihuana adentro. Fumar tabaco afuera está bien — por favor no tires las colillas en la propiedad (aplica una multa).',
+    'Cigarettes & cigars outside only, no littering (fine). Vapes, blunt wraps & marijuana are fine inside.': 'Cigarrillos y puros solo afuera, no tires las colillas (multa). Los vapes, las hojas para blunt y la marihuana están bien adentro.',
     'No Parties or Extra Guests': 'No Fiestas ni Huéspedes Extra',
-    'Any party or additional guests not approved before your stay will end your reservation immediately. Quiet enjoyment is for everyone on the block.': 'Cualquier fiesta o huésped adicional no aprobado antes de tu estancia terminará tu reservación de inmediato. La tranquilidad es para todos en la cuadra.',
+    'Any unapproved party or extra guest ends your reservation immediately.': 'Cualquier fiesta o huésped extra no aprobado termina tu reservación de inmediato.',
     'Quiet Hours · 10 PM to 9 AM': 'Horas de Silencio · 10 PM a 9 AM',
-    'A call from local authorities or a neighbor complaint means a check-in with the owner and may end your reservation.': 'Una llamada de las autoridades o una queja de un vecino significa una revisión con el dueño y puede terminar tu reservación.',
+    'Neighbor or police complaints may end your reservation.': 'Las quejas de vecinos o de la policía pueden terminar tu reservación.',
     'Pets Welcome': 'Mascotas Bienvenidas',
-    'Pets are welcome. Please clean up after them inside and out — up to a $150 fine for pet waste left behind.': 'Las mascotas son bienvenidas. Por favor limpia después de ellas adentro y afuera — hasta $150 de multa por desechos de mascota dejados.',
+    'Clean up after them — up to a $150 fine for waste left behind.': 'Limpia después de ellas — hasta $150 de multa por desechos dejados.',
     'No Late Checkouts': 'No Check-Out Tarde',
-    "Unauthorized late checkout is charged $50 for every 15 minutes past 10 AM. Need an extension? Ask 24 hours ahead and we'll try to make it work.": 'El check-out tarde no autorizado se cobra $50 por cada 15 minutos después de las 10 AM. ¿Necesitas más tiempo? Pídelo con 24 horas de anticipación y trataremos de acomodarte.',
+    '$50 per 15 min past 10 AM. Ask 24 hours ahead for more time.': '$50 por cada 15 min después de las 10 AM. Pídelo con 24 horas de anticipación para más tiempo.',
     'Dispose of Ash Properly': 'Desecha la Ceniza Correctamente',
-    '$50 charge for improper ash disposal. Never ash in the hot tub or into any object in the home (like a chair cup holder).': '$50 de cargo por desechar la ceniza incorrectamente. Nunca dejes caer ceniza en el jacuzzi ni en ningún objeto de la casa (como el portavasos de una silla).',
+    '$50 fine — never ash in the hot tub or on furniture.': '$50 de multa — nunca dejes caer ceniza en el jacuzzi ni en los muebles.',
     'Quick Instructions': 'Instrucciones Rápidas',
     'Hot Tub': 'Jacuzzi',
     'Sauna': 'Sauna',
@@ -1486,7 +1510,17 @@
     'FREE': 'GRATIS',
     'Full extra night': 'Noche extra completa',
     'Additional night': 'Noche adicional',
-    'Standard check-in is 4 PM, checkout 10 AM. Subject to availability and the cleaning schedule — text us to lock it in.': 'El check-in estándar es a las 4 PM y el check-out a las 10 AM. Sujeto a disponibilidad y al horario de limpieza — escríbenos para confirmarlo.',
+    'Subject to availability and the cleaning schedule — text us to lock it in.': 'Sujeto a disponibilidad y al horario de limpieza — escríbenos para confirmarlo.',
+    'Early Check-In': 'Check-In Temprano',
+    'Late Checkout': 'Check-Out Tarde',
+    'Standard check-in 4 PM': 'Check-in estándar 4 PM',
+    'Standard checkout 10 AM': 'Check-out estándar 10 AM',
+    'Before 10 AM': 'Antes de 10 AM',
+    'Before noon': 'Antes del mediodía',
+    'Before 2 PM': 'Antes de 2 PM',
+    'Until 12 PM': 'Hasta 12 PM',
+    'Until 2 PM': 'Hasta 2 PM',
+    'After 2 PM': 'Después de 2 PM',
     'Request via text →': 'Solicitar por texto →',
     'Getting Around': 'Cómo Moverse',
     'Uber & Lyft are quick and reliable here. Easy highway access, and RTD transit stops are listed under What\'s Nearest.': 'Uber y Lyft son rápidos y confiables aquí. Fácil acceso a la autopista, y las paradas de RTD están en Lo Más Cercano.',
@@ -1562,7 +1596,7 @@
   function setLang(lang) {
     localStorage.setItem('kk_lang', lang);
     document.documentElement.lang = lang;
-    document.querySelectorAll('h2, .label, .sub, .k, .v, .checkout-list li, .door-code-cta, .door-code-value, .amenity-card .title-row span:last-child, .amenity-card .body, .nearest-row .cat, .full-guide-link, p, .door-code-card h2, .t-name, .t-sub, section .inst-note, .welcome, .picks-intro, .tab-btn, .r-title, .r-body, .help-line .h-main, .help-line .h-sub, .sb-title, .sb-sub, .amenity-acc summary, .vid-title, .vid-chan').forEach(el => {
+    document.querySelectorAll('h2, .label, .sub, .k, .v, .checkout-list li, .door-code-cta, .door-code-value, .amenity-card .title-row span:last-child, .amenity-card .body, .nearest-row .cat, .full-guide-link, p, .door-code-card h2, .t-name, .t-sub, section .inst-note, .welcome, .picks-intro, .tab-btn, .r-title, .r-body, .help-line .h-main, .help-line .h-sub, .sb-title, .sb-sub, .amenity-acc summary, .vid-title, .vid-chan, .fee-title, .fee-note, .fee-row span').forEach(el => {
       if (lang === 'es') {
         if (!el.dataset.en) el.dataset.en = el.textContent.trim();
         const t = ES[el.dataset.en];
