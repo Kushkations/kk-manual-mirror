@@ -571,21 +571,60 @@
   .pick .p-order b { font-weight: 700; }
 
   /* Sticky jump / tab navigation */
-  .tab-nav {
+  .tab-nav-wrap {
     position: sticky;
     top: 0;
     z-index: 20;
+    margin: 0 0 14px;
+    background: rgba(247,244,238,0.94);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  .tab-nav {
     display: flex;
     gap: 7px;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     padding: 9px 2px;
-    margin: 0 0 14px;
-    background: rgba(247,244,238,0.94);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
   }
+  /* soft fade hints that the row continues under the arrows */
+  .tab-nav-wrap::before, .tab-nav-wrap::after {
+    content: "";
+    position: absolute;
+    top: 0; bottom: 0;
+    width: 40px;
+    pointer-events: none;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.15s;
+  }
+  .tab-nav-wrap::before { left: 0; background: linear-gradient(90deg, rgba(247,244,238,0.96), rgba(247,244,238,0)); }
+  .tab-nav-wrap::after  { right: 0; background: linear-gradient(270deg, rgba(247,244,238,0.96), rgba(247,244,238,0)); }
+  .tab-nav-wrap.more-left::before  { opacity: 1; }
+  .tab-nav-wrap.more-right::after  { opacity: 1; }
+  .tab-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    border: 1px solid #e2ddd1;
+    background: #fff;
+    color: var(--kk-dark);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26px;
+    text-align: center;
+    padding: 0;
+    cursor: pointer;
+    box-shadow: 0 2px 7px rgba(30,49,32,0.28);
+    z-index: 3;
+  }
+  .tab-arrow:active { transform: translateY(-50%) scale(0.9); }
+  .tab-arrow-left  { left: 3px; }
+  .tab-arrow-right { right: 3px; }
+  .tab-arrow[hidden] { display: none; }
   .tab-nav::-webkit-scrollbar { display: none; }
   .tab-nav .tab-btn {
     flex: 0 0 auto;
@@ -731,7 +770,11 @@
     </a>
   </div>
 
-  <nav id="tabNav" class="tab-nav" aria-label="Jump to a section"></nav>
+  <div class="tab-nav-wrap">
+    <button class="tab-arrow tab-arrow-left" id="tabArrowLeft" type="button" aria-label="Scroll tabs left" hidden>‹</button>
+    <nav id="tabNav" class="tab-nav" aria-label="Jump to a section"></nav>
+    <button class="tab-arrow tab-arrow-right" id="tabArrowRight" type="button" aria-label="Scroll tabs right" hidden>›</button>
+  </div>
 
   <section>
     <h2>WiFi</h2>
@@ -1201,7 +1244,8 @@
       tabs.push({btn, sec});
     });
     if (!tabs.length) {
-      tabNav.style.display = 'none';
+      const w = tabNav.closest('.tab-nav-wrap');
+      (w || tabNav).style.display = 'none';
     } else {
       const byId = new Map(tabs.map(t => [t.sec.id, t.btn]));
       const obs = new IntersectionObserver(entries => {
@@ -1213,6 +1257,29 @@
         });
       }, {rootMargin: '-45% 0px -50% 0px', threshold: 0});
       tabs.forEach(t => obs.observe(t.sec));
+
+      // Arrows to reach tabs sitting off-screen (the bar scrolls horizontally)
+      const tnWrap = tabNav.closest('.tab-nav-wrap');
+      const aLeft = tnWrap && tnWrap.querySelector('#tabArrowLeft');
+      const aRight = tnWrap && tnWrap.querySelector('#tabArrowRight');
+      if (tnWrap && aLeft && aRight) {
+        const upd = () => {
+          const max = tabNav.scrollWidth - tabNav.clientWidth;
+          const x = tabNav.scrollLeft;
+          const overflow = max > 6;
+          aLeft.hidden = !(overflow && x > 6);
+          aRight.hidden = !(overflow && x < max - 6);
+          tnWrap.classList.toggle('more-left', overflow && x > 6);
+          tnWrap.classList.toggle('more-right', overflow && x < max - 6);
+        };
+        const step = () => Math.max(120, tabNav.clientWidth * 0.7);
+        aRight.addEventListener('click', () => tabNav.scrollBy({left: step(), behavior: 'smooth'}));
+        aLeft.addEventListener('click', () => tabNav.scrollBy({left: -step(), behavior: 'smooth'}));
+        tabNav.addEventListener('scroll', upd, {passive: true});
+        window.addEventListener('resize', upd);
+        upd();
+        setTimeout(upd, 80);
+      }
     }
   }
 
