@@ -763,6 +763,31 @@
     letter-spacing: 0.01em;
   }
   .save-banner .sb-sub { font-size: 13px; margin-top: 9px; font-weight: 600; opacity: 0.95; }
+  /* YouTube-style tutorial video picker */
+  .vid-list { display: grid; gap: 13px; }
+  .vid-card { display: flex; gap: 12px; text-decoration: none; color: var(--kk-dark); }
+  .vid-card:active { opacity: 0.85; }
+  .vid-thumb {
+    position: relative; flex: none;
+    width: 140px; aspect-ratio: 16 / 9;
+    border-radius: 10px; overflow: hidden;
+    background: linear-gradient(135deg, var(--kk-dark), var(--kk-mid));
+    background-size: cover; background-position: center;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .vid-thumb .vid-emoji { position: absolute; font-size: 50px; opacity: 0.32; }
+  .vid-play {
+    position: absolute;
+    width: 40px; height: 28px;
+    border-radius: 7px;
+    background: #ff0000; color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; padding-left: 2px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.35);
+  }
+  .vid-info { flex: 1; min-width: 0; align-self: center; }
+  .vid-title { font-size: 13.5px; font-weight: 700; line-height: 1.32; color: var(--kk-dark); }
+  .vid-chan { font-size: 11.5px; color: var(--kk-muted); margin-top: 4px; }
 </style>
 </head>
 <body>
@@ -887,31 +912,7 @@
 
   <section>
     <h2>Tutorials &amp; How-Tos</h2>
-    <a class="tut-row" href="https://www.youtube.com/results?search_query=how+to+use+roku+mobile+app+as+remote" target="_blank" rel="noopener">
-      <span class="t-icon">📱</span>
-      <span><span class="t-name">Phone as a Roku remote</span><span class="t-sub">Lost a remote? Control any TV from your phone</span></span>
-      <span class="arrow">→</span>
-    </a>
-    <a class="tut-row" href="https://drive.google.com/drive/u/4/folders/1yVkY8XZR6FO-OYCSfHkBG_JRiZji8leK" target="_blank" rel="noopener">
-      <span class="t-icon">🚿</span>
-      <span><span class="t-name">Drain the sink</span><span class="t-sub">Quick video walk-through</span></span>
-      <span class="arrow">→</span>
-    </a>
-    <a class="tut-row" href="https://youtu.be/xlKTRspHciM" target="_blank" rel="noopener">
-      <span class="t-icon">🛁</span>
-      <span><span class="t-name">Use the shower diverter</span><span class="t-sub">Switch between tub and shower — quick video</span></span>
-      <span class="arrow">→</span>
-    </a>
-    <a class="tut-row" href="https://rb.gy/lh1ixm" target="_blank" rel="noopener">
-      <span class="t-icon">🔥</span>
-      <span><span class="t-name">Order propane for the grill</span><span class="t-sub">Video tutorial · delivered via Cynch</span></span>
-      <span class="arrow">→</span>
-    </a>
-    <a class="tut-row" href="https://www.cynch.com" target="_blank" rel="noopener">
-      <span class="t-icon">🛻</span>
-      <span><span class="t-name">Cynch propane delivery</span><span class="t-sub">Order a tank to the door · guest provides propane</span></span>
-      <span class="arrow">→</span>
-    </a>
+    <div class="vid-list"></div>
   </section>
 
   <section data-section="picks" style="display:none;">
@@ -1320,6 +1321,26 @@
     });
   }
 
+  // Tutorials — a YouTube-style video picker (real YouTube thumbnails where available)
+  const TUTORIALS = [
+    {emoji: '📱', yt: null, title: 'Phone as a Roku remote', sub: 'Lost a remote? Control any TV from your phone', url: 'https://www.youtube.com/results?search_query=how+to+use+roku+mobile+app+as+remote'},
+    {emoji: '🚿', yt: null, title: 'Drain the sink', sub: 'Quick video walk-through', url: 'https://drive.google.com/drive/u/4/folders/1yVkY8XZR6FO-OYCSfHkBG_JRiZji8leK'},
+    {emoji: '🛁', yt: 'xlKTRspHciM', title: 'Use the shower diverter', sub: 'Switch between tub and shower — quick video', url: 'https://youtu.be/xlKTRspHciM'},
+    {emoji: '🔥', yt: null, title: 'Order propane for the grill', sub: 'Video tutorial · delivered via Cynch', url: 'https://rb.gy/lh1ixm'},
+    {emoji: '🛻', yt: null, title: 'Cynch propane delivery', sub: 'Order a tank to the door · guest provides propane', url: 'https://www.cynch.com'},
+  ];
+  const vidList = app.querySelector('.vid-list');
+  if (vidList) {
+    vidList.innerHTML = TUTORIALS.map(t => {
+      const thumbStyle = t.yt ? ` style="background-image:url('https://img.youtube.com/vi/${t.yt}/hqdefault.jpg')"` : '';
+      const emoji = t.yt ? '' : `<span class="vid-emoji">${t.emoji}</span>`;
+      return `<a class="vid-card" href="${t.url}" target="_blank" rel="noopener">`
+        + `<div class="vid-thumb"${thumbStyle}>${emoji}<span class="vid-play">\u25B6</span></div>`
+        + `<div class="vid-info"><div class="vid-title">${t.title}</div><div class="vid-chan">${t.sub}</div></div>`
+        + `</a>`;
+    }).join('');
+  }
+
   document.title = `${data.meta.name} · KushKations`;
 
   // Sticky jump-nav — built from the sections that actually rendered for THIS property
@@ -1541,7 +1562,7 @@
   function setLang(lang) {
     localStorage.setItem('kk_lang', lang);
     document.documentElement.lang = lang;
-    document.querySelectorAll('h2, .label, .sub, .k, .v, .checkout-list li, .door-code-cta, .door-code-value, .amenity-card .title-row span:last-child, .amenity-card .body, .nearest-row .cat, .full-guide-link, p, .door-code-card h2, .t-name, .t-sub, section .inst-note, .welcome, .picks-intro, .tab-btn, .r-title, .r-body, .help-line .h-main, .help-line .h-sub, .sb-title, .sb-sub, .amenity-acc summary').forEach(el => {
+    document.querySelectorAll('h2, .label, .sub, .k, .v, .checkout-list li, .door-code-cta, .door-code-value, .amenity-card .title-row span:last-child, .amenity-card .body, .nearest-row .cat, .full-guide-link, p, .door-code-card h2, .t-name, .t-sub, section .inst-note, .welcome, .picks-intro, .tab-btn, .r-title, .r-body, .help-line .h-main, .help-line .h-sub, .sb-title, .sb-sub, .amenity-acc summary, .vid-title, .vid-chan').forEach(el => {
       if (lang === 'es') {
         if (!el.dataset.en) el.dataset.en = el.textContent.trim();
         const t = ES[el.dataset.en];
