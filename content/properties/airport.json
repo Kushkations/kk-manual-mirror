@@ -1,0 +1,602 @@
+{
+ "meta": {
+  "name": "Airport",
+  "slug": "airport",
+  "ownerrez_id": "435859",
+  "address": "19990 E 40th Ave Unit 2, Denver, CO 80249",
+  "coordinates": {
+   "lat": 0,
+   "lng": 0
+  },
+  "cover_photo": "https://uc.orez.io/i/1da3ab1f26674bef864c2c429e8dbe14-Large",
+  "photo_gallery": [
+   "https://uc.orez.io/i/a377e7845dc1488c9d33a43cf12b057e-Large",
+   "https://uc.orez.io/i/1da3ab1f26674bef864c2c429e8dbe14-Large",
+   "https://uc.orez.io/i/13a93f5d9375439598eb964ddf8a4e64-Large",
+   "https://uc.orez.io/i/27a145b3c67c4ca4abcc4412c3deacce-Large",
+   "https://uc.orez.io/i/c6189a9c2a7b42d7ac7437efb1d545b1-Large",
+   "https://uc.orez.io/i/29d0583e3ef3458386f82999d68f71a6-Large",
+   "https://uc.orez.io/i/edae0ddea8fc456a861c65d2131c5019-Large",
+   "https://uc.orez.io/i/ee36e8b13b4b4a3fb93b0d107d091e7e-Large"
+  ],
+  "bedrooms": 4,
+  "bathrooms": 3.5,
+  "sleeps": 10,
+  "extra_guests_allowed": 2,
+  "size_sqft": 1642,
+  "is_420_friendly": true,
+  "one_line_vibe": "Denver Airport-adjacent stay built for travelers and quick Colorado getaways.",
+  "layout": {
+   "stairs_to_upstairs": "17 steps to the 2nd floor",
+   "stairs_to_basement": "15 steps to the basement"
+  },
+  "direct_booking_url": "https://kushkations.com/airport-property/"
+ },
+ "arrival": {
+  "check_in_time": "4:00 PM",
+  "access_method": "smart_lock",
+  "code_delivery": "Sent the morning of your arrival. Activates at 4:00 PM unless early check-in has been approved.",
+  "lock_backup_tip": "After entering your code, press the 'Check' (or 'Schlage') button to engage the lock. If the door doesn't open, try again slowly, one digit at a time.",
+  "parking": "PLEASE DO NOT BLOCK NEIGHBORING DRIVEWAYS. Please access the driveway and park in front of the garage. You may also park along the road in front of the property.",
+  "towels_location": "8 towels in the closet near the bathroom in the basement, plus 8 more in the upstairs hallway closet across from the bathroom.",
+  "towel_photos": [
+   {
+    "url": "https://lh3.googleusercontent.com/d/1Jh-JSHEBzzFNUqA4R2Pvnc8SfSrD_OVU",
+    "caption": "Towel storage"
+   },
+   {
+    "url": "https://lh3.googleusercontent.com/d/1iseIUzJh9gIn_IPBXjh90XI1HEa8C1Oy",
+    "caption": "Towel storage"
+   }
+  ],
+  "first_steps": [
+   "Please take luggage directly to your bedroom to protect the floors.",
+   "Fire extinguishers are in every bedroom and beneath the kitchen sink.",
+   "Front and back doors are the two main exits."
+  ],
+  "exits": "Front door and back door (back door leads through the garage area)."
+ },
+ "wifi": {
+  "network": "Kushkations.com",
+  "password": "kushkations.com",
+  "notes": "If slow: unplug the router for 30 sec and plug back in.",
+  "router_location": "Living room"
+ },
+ "house_rules": [
+  "Feel free to smoke 420 indoors. Tobacco goes outside, please ($1,000 reset fee if it doesn't).",
+  "Quiet hours run 10 PM to 9 AM so the neighbors can rest easy.",
+  "Pets are welcome. Keep them off the furniture and clean up after them ($200 if we find a surprise).",
+  "Please check with us before adding guests or hosting a party. Unapproved gatherings cancel the stay.",
+  "The hot tub and cup holders are not ashtrays ($50 cleanup fee per incident)."
+ ],
+ "amenities": {
+  "tv": {
+   "streaming": [
+    "Sign in with your own accounts"
+   ],
+   "notes": "Log out of all streaming apps before checkout."
+  },
+  "kitchen": {
+   "highlights": [
+    "Full kitchen — cook what you'd cook at home",
+    "Fire extinguisher under the sink",
+    "Delivery works great: Uber Eats, DoorDash, Grubhub"
+   ]
+  },
+  "grill": {
+   "propane_vendor": "Gilbert (303) 475-3342"
+  },
+  "laundry": {
+   "washer": true,
+   "dryer": true,
+   "detergent_provided": true
+  },
+  "ps5": false,
+  "sauna": false,
+  "theater": false,
+  "golf_simulator": false,
+  "hot_tub": false,
+  "hair_dryer": {
+   "location": "Under each bathroom sink (one per bathroom)",
+   "notes": "If one is missing, message us and we will bring one over."
+  }
+ },
+ "checkout": {
+  "time": "10:00 AM",
+  "steps": [
+   "Bag the trash and move it to the bins near the front entrance",
+   "Sign out of any streaming apps on the TVs",
+   "Set the hallway thermostat to 66°F in winter, 75°F in summer",
+   "Lock up behind you and have a safe trip"
+  ],
+  "trash_day": "Wednesday. Bins are in the backyard, near the garage door. Our team comes by to take the trash out and bring the bins back in — nothing for you to do."
+ },
+ "temperature": {
+  "main_thermostat_location": "",
+  "zones": 1,
+  "winter_minimum": "66°F, required to prevent pipes from freezing",
+  "notes": "Thermostat controls both heat and A/C, adjust freely"
+ },
+ "nearby": {
+  "eat_in_10": [
+   {
+    "name": "Doug's Diner",
+    "address": "4243 E 136th Ave, Thornton",
+    "distance_mi": 4,
+    "drive_min": 9,
+    "cuisine": "American diner, breakfast & brunch",
+    "top_orders": [
+     "Green chile breakfast burrito",
+     "Homemade cinnamon rolls"
+    ],
+    "reason": "Family-owned since 2010. Scratch-made, cooked in real butter, served in nap-worthy portions."
+   },
+   {
+    "name": "Bluebird Cafe",
+    "address": "885 Thornton Pkwy, Thornton",
+    "distance_mi": 5,
+    "drive_min": 10,
+    "cuisine": "American breakfast & brunch, farm-to-table",
+    "top_orders": [
+     "Denver omelette",
+     "Bacon avocado scramble"
+    ],
+    "reason": "The old Egg & I reborn. Fresh local ingredients, gluten-free and vegetarian options."
+   }
+  ],
+  "coffee": [
+   {
+    "name": "Summer Moon Coffee",
+    "address": "12840 Holly St, Thornton",
+    "distance_mi": 4,
+    "drive_min": 9,
+    "cuisine": "Specialty coffee, oak-roasted",
+    "top_orders": [
+     "Moon Milk latte",
+     "Iced Moon with sweet cream"
+    ],
+    "reason": "Unique oak-roasting technique that produces a flavor worth trying at least once. Pet-friendly patio."
+   }
+  ],
+  "casual_dinner": [
+   {
+    "name": "Jim's Burger Haven",
+    "address": "595 E 88th Ave, Thornton",
+    "distance_mi": 4,
+    "drive_min": 9,
+    "cuisine": "American burgers, old-school diner",
+    "top_orders": [
+     "Original 6-inch smash burger",
+     "Onion rings",
+     "Real ice cream milkshakes"
+    ],
+    "reason": "Denver's original smash burger, in business since 1961. Colorado-raised Angus and never frozen."
+   },
+   {
+    "name": "Tequila's Family Mexican",
+    "address": "12020 Pennsylvania St, Thornton",
+    "distance_mi": 5,
+    "drive_min": 10,
+    "cuisine": "Authentic Mexican",
+    "top_orders": [
+     "Sizzling fajitas",
+     "Tacos al pastor"
+    ],
+    "reason": "Family-run for over eighteen years. Serious tequila and mezcal list if you want to make an evening of it."
+   },
+   {
+    "name": "Saigon Bowl",
+    "address": "9931 Grant St, Thornton",
+    "distance_mi": 4,
+    "drive_min": 8,
+    "cuisine": "Vietnamese, pho & rice bowls",
+    "top_orders": [
+     "Pho (any style)",
+     "Bun Bo Hue"
+    ],
+    "reason": "Widely considered the best pho in Thornton. Twenty years of Vietnamese cooking behind every bowl."
+   }
+  ],
+  "parks": [
+   {
+    "name": "Trail Winds Park",
+    "drive_min": 10,
+    "reason": "111 acres of trails and open space. Easy to walk, run, or spend a slow morning."
+   },
+   {
+    "name": "Pecos Park",
+    "drive_min": 8,
+    "reason": "A compact nine-acre park. Good for a quick stroll or a short run."
+   }
+  ],
+  "adventure_day": [
+   {
+    "name": "Red Rocks Amphitheatre",
+    "drive_min": 40,
+    "reason": "One of the great outdoor venues in the country. Free to walk and hike, even without a show."
+   },
+   {
+    "name": "Rocky Mountain National Park",
+    "drive_min": 90,
+    "reason": "The classic Colorado day. Elk, alpine lakes, and Trail Ridge Road."
+   },
+   {
+    "name": "Boulder / Flatirons",
+    "drive_min": 40,
+    "reason": "College town energy and iconic rock formations for photos."
+   }
+  ],
+  "late_night": [
+   {
+    "name": "Fat Shack",
+    "address": "Thornton",
+    "distance_mi": 6,
+    "drive_min": 11,
+    "cuisine": "Late-night burgers, wings, 'fat sandwiches'",
+    "top_orders": [
+     "The Fat Sandwich"
+    ],
+    "reason": "Open when almost nothing else is. A reliable answer to the 'what now?' question at 1 AM."
+   },
+   {
+    "name": "Waffle House",
+    "address": "Thornton",
+    "distance_mi": 5,
+    "drive_min": 10,
+    "cuisine": "American diner, 24/7",
+    "top_orders": [
+     "Scattered, smothered, covered hash browns"
+    ],
+    "reason": "Open twenty-four hours. If it's 2 AM and you're hungry, this is the answer."
+   },
+   {
+    "name": "In-N-Out Burger",
+    "address": "Thornton",
+    "distance_mi": 5,
+    "drive_min": 10,
+    "cuisine": "Fast-food burgers",
+    "top_orders": [
+     "Double-Double animal-style",
+     "Animal-style fries"
+    ],
+    "reason": "Fresh off the grill until late. Order the Double-Double animal-style at least once."
+   }
+  ],
+  "grocery": [
+   {
+    "name": "Park Hill Supermarket",
+    "address": "3770 E 40th Ave, Denver, CO 80205",
+    "drive_min": 2
+   },
+   {
+    "name": "Tommy's Market",
+    "address": "3119 Bruce Randolph Ave, Denver, CO 80205",
+    "drive_min": 3
+   },
+   {
+    "name": "Jerry's Round The Corner Food Store",
+    "address": "4301 Clayton St, Denver, CO 80216",
+    "drive_min": 4
+   }
+  ],
+  "dispensaries": [
+   {
+    "name": "Green Valley Dispensary",
+    "address": "4650 Tower Rd, Unit 108, Denver",
+    "drive_min": 5
+   },
+   {
+    "name": "Social Dispensary",
+    "address": "18494 E 104th Ave, Commerce City",
+    "drive_min": 13
+   }
+  ],
+  "gas_stations": [
+   {
+    "name": "Big D",
+    "address": "Denver, CO 80207",
+    "drive_min": 2
+   },
+   {
+    "name": "Conoco",
+    "address": "3990 E 35th Ave, Denver, CO 80205",
+    "drive_min": 2
+   },
+   {
+    "name": "Circle K",
+    "address": "3490 Colorado Blvd, Denver, CO 80205",
+    "drive_min": 2
+   }
+  ],
+  "transit": [
+   {
+    "name": "40th Ave & Steele St",
+    "address": "Denver, CO 80205",
+    "drive_min": 3
+   },
+   {
+    "name": "Jackson St & 40th Ave",
+    "address": "Denver, CO 80216",
+    "drive_min": 2
+   },
+   {
+    "name": "MLK Blvd & Elizabeth St",
+    "address": "Denver, CO 80205",
+    "drive_min": 3
+   }
+  ],
+  "getting_around": [
+   {
+    "name": "Red Rocks Park & Amphitheatre",
+    "time": "45 min"
+   },
+   {
+    "name": "Lookout Mountain",
+    "time": "45 min"
+   },
+   {
+    "name": "16th Street Mall",
+    "time": "22 min"
+   },
+   {
+    "name": "Estes Park & RMNP",
+    "time": "1h 45min"
+   },
+   {
+    "name": "Elitch Gardens",
+    "time": "22 min"
+   },
+   {
+    "name": "Dinosaur Ridge",
+    "time": "42 min"
+   }
+  ],
+  "host_picks": [
+   {
+    "name": "Brooklyn's Finest Pizza",
+    "meta": "Pizza · Host's pick · 12 min · 9 mi · Denver",
+    "body": "Host's favorite pizza in the city. New York style by the slice or full pie.",
+    "order": "Pepperoni slice, white pie, garlic knots."
+   },
+   {
+    "name": "Blue Agave",
+    "meta": "Mexican · Margaritas · 15 min · 10 mi · Denver",
+    "body": "Go-to for margaritas and fajitas. Upbeat vibe, generous portions, tableside guac.",
+    "order": "Sizzling fajitas, street tacos, tableside guac."
+   },
+   {
+    "name": "Welton Street Cafe",
+    "meta": "Soul Food · Five Points · 14 min · 8 mi · 2670 Welton St",
+    "body": "Southern soul food in historic Five Points. Family-run, full plates, a Denver institution.",
+    "order": "Fried chicken, mac and cheese, collards, sweet potato pie."
+   },
+   {
+    "name": "Thai Daughter",
+    "meta": "Thai · 14 min · 9 mi · Denver",
+    "body": "Local favorite Thai spot. Order it medium-hot, they don't skimp on heat.",
+    "order": "Pad Thai, drunken noodles, Massaman curry."
+   },
+   {
+    "name": "Gaetano's",
+    "meta": "Italian · Old-school · 17 min · 12 mi · 3760 Tejon St",
+    "body": "Classic red-sauce Italian in the Highlands. Family vibes, a bar with stories, lasagna for a cold night.",
+    "order": "Lasagna, veal parm, meatballs, Chianti."
+   },
+   {
+    "name": "Yard House",
+    "meta": "Sports Bar · 100+ beers · 18 min · 13 mi · Downtown",
+    "body": "Solid spot to watch a game. Huge beer list, big TVs, full pub menu.",
+    "order": "Truffle fries, nachos, half-pound burger, draft flight."
+   },
+   {
+    "name": "Denver Biscuit Company",
+    "meta": "Brunch · Southern · 10 min · 7 mi · 3237 E Colfax",
+    "body": "Hand-sized biscuits and fried chicken that hits every time. Real brunch.",
+    "order": "Franklin biscuit, biscuit French toast."
+   },
+   {
+    "name": "Rooftop · Night Out",
+    "meta": "Club · Nightlife · 18 min · 13 mi · Downtown",
+    "body": "Host's pick for a club night. Rooftop vibes, DJ sets on weekends, dress code applies.",
+    "order": "Bottle service, signature cocktails."
+   }
+  ]
+ },
+ "emergency": {
+  "text_line_override": "+1 (303) 731-6880",
+  "nearest_hospital": {
+   "name": "North Suburban Hospital",
+   "address": "9191 Grant St, Thornton, CO 80229",
+   "phone": "(303) 451-7800",
+   "drive_min": 0
+  },
+  "non_emergency_police": "Denver Police District 2: (720) 913-2000 (6 min away at 3921 Holly St)",
+  "fire_department": "Denver Fire Department, call 911. Nearest stations: Station 10 (3200 Steele St, 3 min), Station 9 (4400 Brighton Blvd, 7 min), Station 3 (2500 N Washington St, 9 min). Non-urgent: (720) 913-3473"
+ },
+ "troubleshooting": [
+  {
+   "issue": "WiFi slow or disconnected",
+   "fix": "Unplug the router for 30 seconds, plug back in, wait 2 min."
+  },
+  {
+   "issue": "TV stuck on 'No Signal'",
+   "fix": "Switch input to HDMI 1 using the TV remote (not the Roku remote)."
+  },
+  {
+   "issue": "Thermostat not responding",
+   "fix": "Check the breaker panel, HVAC breaker may have tripped."
+  }
+ ],
+ "promotions": {
+  "stay_n_save": {
+   "code": "STAYNSAVE10",
+   "how_to_claim": [
+    "Post a photo from your stay tagged #Kushkations and #KushKations",
+    "Leave a five-star review on your booking platform",
+    "Email a screenshot to info@kushkations.com — we'll send the code"
+   ]
+  }
+ },
+ "internal": {
+  "cleaner_notes": [
+   "Garage / cleaner access code: 0117",
+   "Check any exterior amenities are clean and safe",
+   "Reset thermostat to 68°F after clean, not lower",
+   "Empty trash bins and replace liners"
+  ],
+  "cleaner_checklist": [
+   {
+    "area": "Entry",
+    "tasks": [
+     "Wipe front door handle and lock panel",
+     "Sweep entryway",
+     "Replace doormat if needed"
+    ]
+   },
+   {
+    "area": "Kitchen",
+    "tasks": [
+     "Wipe counters and backsplash",
+     "Clean stovetop and oven exterior",
+     "Empty dishwasher",
+     "Restock paper towels, dish soap, sponge",
+     "Clear guest leftovers from fridge"
+    ]
+   },
+   {
+    "area": "Living",
+    "tasks": [
+     "Vacuum rugs and sofas",
+     "Wipe coffee tables and remotes",
+     "Reset throw pillows and blankets"
+    ]
+   },
+   {
+    "area": "Bedrooms",
+    "tasks": [
+     "Strip and remake all beds",
+     "Replace bath towels",
+     "Wipe nightstands and headboards",
+     "Check TV remotes in each room"
+    ]
+   },
+   {
+    "area": "Bathrooms",
+    "tasks": [
+     "Scrub tubs, showers, toilets, sinks",
+     "Restock toilet paper (3+ rolls per bath)",
+     "Fresh towels",
+     "Check hair on floor and drains"
+    ]
+   },
+   {
+    "area": "Outdoor",
+    "tasks": [
+     "Sweep patio and grill area",
+     "Check grill propane if present"
+    ]
+   },
+   {
+    "area": "Laundry",
+    "tasks": [
+     "Wash, dry, fold all linens",
+     "Restock detergent",
+     "Wipe machines"
+    ]
+   },
+   {
+    "area": "Trash & Exit",
+    "tasks": [
+     "All trash bagged at outdoor bins",
+     "Thermostat set to 68°F",
+     "All lights off",
+     "All doors locked"
+    ]
+   }
+  ],
+  "supply_tracker": {
+   "toilet_paper": {
+    "current": 0,
+    "par": 12,
+    "last_checked": ""
+   },
+   "paper_towels": {
+    "current": 0,
+    "par": 4,
+    "last_checked": ""
+   },
+   "dish_soap": {
+    "current": 0,
+    "par": 2,
+    "last_checked": ""
+   },
+   "laundry_detergent": {
+    "current": 0,
+    "par": 1,
+    "last_checked": ""
+   },
+   "trash_bags_13gal": {
+    "current": 0,
+    "par": 20,
+    "last_checked": ""
+   },
+   "trash_bags_outdoor": {
+    "current": 0,
+    "par": 8,
+    "last_checked": ""
+   },
+   "bath_towels": {
+    "current": 0,
+    "par": 12,
+    "last_checked": ""
+   },
+   "hand_towels": {
+    "current": 0,
+    "par": 6,
+    "last_checked": ""
+   }
+  },
+  "utilities": {
+   "breaker_panel": "The electrical breaker box is located in the garage where the game room is",
+   "water_shutoff": "Basement, in the closet at the bottom with password lock 1966 — open the door to access the valve",
+   "gas_shutoff": "",
+   "wifi_router": "Living room",
+   "wifi_router_guest_accessible": true,
+   "cleaner_access_code": "0117",
+   "garage_guest_accessible": null,
+   "garage_motor": "LiftMaster 8355W"
+  },
+  "appliances": {
+   "refrigerator": {
+    "brand": "Whirlpool",
+    "model": "WRS325SDHZ01",
+    "serial": ""
+   },
+   "microwave": {
+    "brand": "Whirlpool",
+    "model": "WMH31017HZ-2"
+   },
+   "dishwasher": {
+    "brand": "Whirlpool",
+    "model": "WDF330PAHS3"
+   },
+   "stove_oven": {
+    "brand": "Samsung",
+    "model": "NE58F9500SS/AA"
+   },
+   "washer": {
+    "brand": "Samsung",
+    "model": "WF45R6100AC/US"
+   },
+   "dryer": {
+    "brand": "Samsung",
+    "model": "DVE45R6100C/A3"
+   },
+   "garage_motor": {
+    "brand": "LiftMaster",
+    "model": "8355W"
+   }
+  },
+  "maintenance_log": []
+ }
+}

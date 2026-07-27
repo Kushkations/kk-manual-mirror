@@ -1,0 +1,523 @@
+{
+ "meta": {
+  "name": "Sheridan",
+  "slug": "sheridan",
+  "ownerrez_id": "370183",
+  "address": "3451 Sheridan Blvd, Wheat Ridge, CO 80212",
+  "coordinates": {
+   "lat": 0,
+   "lng": 0
+  },
+  "cover_photo": "https://uc.orez.io/i/e61283080cf845d690ac9fceb3fd4abb-Large",
+  "photo_gallery": [
+   "https://uc.orez.io/i/9e25454ce5614e64b7934e8531ba50c1-Large",
+   "https://uc.orez.io/i/e61283080cf845d690ac9fceb3fd4abb-Large",
+   "https://uc.orez.io/i/1268d62b500d4121a379a9954d23853d-Large",
+   "https://uc.orez.io/i/3dc165d2bd304b7fbcc331f01f085e12-Large",
+   "https://uc.orez.io/i/29301a0ee806476bb203ac858564afc9-Large",
+   "https://uc.orez.io/i/2835d60942564d46af5707794fcaf9c5-Large",
+   "https://uc.orez.io/i/9228435a0bf9453485f13d7172302923-Large",
+   "https://uc.orez.io/i/5853d8f49d2b4eed81cd59ba314be1a7-Large"
+  ],
+  "bedrooms": 2,
+  "bathrooms": 1,
+  "sleeps": 6,
+  "extra_guests_allowed": 2,
+  "size_sqft": 1287,
+  "is_420_friendly": false,
+  "one_line_vibe": "Compact Wheat Ridge stay with a shared hot tub — small groups only.",
+  "layout": {
+   "stairs_to_upstairs": "",
+   "stairs_to_basement": ""
+  },
+  "direct_booking_url": "https://kushkations.com/sheridan/"
+ },
+ "arrival": {
+  "check_in_time": "4:00 PM",
+  "access_method": "smart_lock",
+  "code_delivery": "Sent the morning of your arrival. Activates at 4:00 PM unless early check-in has been approved.",
+  "lock_backup_tip": "After entering your code, press the 'Check' (or 'Schlage') button to engage the lock. If the door doesn't open, try again slowly, one digit at a time.",
+  "parking": "Our Sheridan property offers three parking spots, clearly marked by KushKations signage. Please be respectful to our neighbors by using only the assigned parking spaces.",
+  "towels_location": "8 towels inside the closet next to the bathroom.",
+  "towel_photos": [
+   {
+    "url": "https://lh3.googleusercontent.com/d/1pckEYw45kbnc2wIvX-rlRqE_FfeOPnz1",
+    "caption": "Towel storage"
+   }
+  ],
+  "first_steps": [
+   "Please take luggage directly to your bedroom to protect the floors.",
+   "Fire extinguishers are in every bedroom and beneath the kitchen sink.",
+   "Front and back doors are the two main exits."
+  ],
+  "cleaning_supplies_location": "In one of the bedroom closets"
+ },
+ "wifi": {
+  "network": "Kushkations.com",
+  "password": "kushkations.com",
+  "notes": "If slow: unplug the router for 30 sec and plug back in.",
+  "router_location": "Kitchen"
+ },
+ "house_rules": [
+  "No smoking of any kind indoors ($1,000 reset fee if otherwise).",
+  "Quiet hours run 10 PM to 9 AM so the neighbors can rest easy.",
+  "Pets are welcome. Keep them off the furniture and clean up after them ($200 if we find a surprise).",
+  "Please check with us before adding guests or hosting a party. Unapproved gatherings cancel the stay.",
+  "The hot tub and cup holders are not ashtrays ($50 cleanup fee per incident)."
+ ],
+ "amenities": {
+  "hot_tub": {
+   "brand": "FreeFlow Spa Monterey 2020",
+   "temp_range": "100°F – 102°F",
+   "shock_location": "Top of the fridge",
+   "mode_setup": null,
+   "quick_start": [
+    "Flip the hot tub switch on; allow 30+ min to reach temp",
+    "Shower before getting in",
+    "Open all jet valves before running the jets",
+    "Press the Light button once on the control panel (if you want the LED on)",
+    "Set temperature to 100–102°F",
+    "Close the cover when not in use"
+   ],
+   "water_care": "Shock every 2–3 days for light use, or after each heavy / long soak. No food, drinks, glass, or smoking in the water.",
+   "rules": [
+    "No food, drinks, or glass in the tub",
+    "Kids must be supervised",
+    "Keep water above the filter line — drops below = heater shuts off"
+   ],
+   "photo": ""
+  },
+  "grill": {
+   "notes": "Propane grill is available. Bring your own propane or order a tank through the Cynch app.",
+   "propane_vendor": "Gilbert (303) 475-3342"
+  },
+  "tv": {
+   "streaming": [
+    "Sign in with your own accounts"
+   ],
+   "notes": "Log out of all streaming apps before checkout."
+  },
+  "kitchen": {
+   "highlights": [
+    "Full kitchen — cook what you'd cook at home",
+    "Fire extinguisher under the sink",
+    "Delivery works great: Uber Eats, DoorDash, Grubhub"
+   ]
+  },
+  "laundry": {
+   "washer": true,
+   "dryer": true,
+   "detergent_provided": true
+  },
+  "ps5": false,
+  "sauna": false,
+  "theater": false,
+  "golf_simulator": false,
+  "hair_dryer": {
+   "location": "Under each bathroom sink (one per bathroom)",
+   "notes": "If one is missing, message us and we will bring one over."
+  }
+ },
+ "checkout": {
+  "time": "10:00 AM",
+  "steps": [
+   "Bag the trash and move it to the bins near the front entrance",
+   "Sign out of any streaming apps on the TVs",
+   "Set the hallway thermostat to 66°F in winter, 75°F in summer",
+   "Lock up behind you and have a safe trip"
+  ],
+  "trash_day": "Tuesday. Bins are in the backyard. Our team comes by to take the trash out and bring the bins back in — nothing for you to do."
+ },
+ "temperature": {
+  "main_thermostat_location": "",
+  "zones": 1,
+  "winter_minimum": "66°F, required to prevent pipes from freezing",
+  "notes": "Thermostat controls both heat and A/C, adjust freely"
+ },
+ "nearby": {
+  "eat_in_10": [
+   {
+    "name": "Apple Ridge Cafe",
+    "address": "Wheat Ridge",
+    "distance_mi": 2,
+    "drive_min": 6,
+    "cuisine": "American diner, breakfast",
+    "top_orders": [
+     "Eggs benedict",
+     "Apple pancakes"
+    ],
+    "reason": "Family-owned neighborhood diner. Hearty, satisfying meals made with love."
+   }
+  ],
+  "coffee": [
+   {
+    "name": "Tenn Street Coffee & Books",
+    "address": "4418 Tennyson St, Denver",
+    "distance_mi": 2,
+    "drive_min": 6,
+    "cuisine": "Specialty coffee & cafe",
+    "top_orders": [
+     "Espresso",
+     "Pastries"
+    ],
+    "reason": "Espresso and internet cafe in the Tennyson St corridor. Local favorite."
+   }
+  ],
+  "casual_dinner": [
+   {
+    "name": "Fat Sully's Pizza",
+    "address": "4275 Tennyson St, Denver",
+    "distance_mi": 2,
+    "drive_min": 6,
+    "cuisine": "New York-style pizza",
+    "top_orders": [
+     "XL cheese slice",
+     "Pepperoni"
+    ],
+    "reason": "Giant New York-style slices. Quick, cheap, satisfying."
+   }
+  ],
+  "parks": [
+   {
+    "name": "Crown Hill Park",
+    "drive_min": 5,
+    "reason": "Over 240 acres with a lake loop trail. Nice walking and wildlife."
+   },
+   {
+    "name": "Prospect Park",
+    "drive_min": 6,
+    "reason": "Community park with trails and a small lake. Quiet mornings."
+   }
+  ],
+  "adventure_day": [
+   {
+    "name": "Red Rocks Amphitheatre",
+    "drive_min": 20,
+    "reason": "Closer than you think. A 20-minute drive to one of America's best concert venues."
+   },
+   {
+    "name": "Lookout Mountain (Golden)",
+    "drive_min": 20,
+    "reason": "Drive up to Buffalo Bill's grave and sweeping Front Range views."
+   }
+  ],
+  "late_night": [
+   {
+    "name": "IHOP",
+    "address": "Wheat Ridge area",
+    "distance_mi": 3,
+    "drive_min": 8,
+    "cuisine": "American diner, 24/7",
+    "top_orders": [
+     "Pancake combo"
+    ],
+    "reason": "Open all night when nothing else is."
+   }
+  ],
+  "grocery": [
+   {
+    "name": "Natural Grocers",
+    "address": "3825 Tennyson St, Denver, CO 80212",
+    "drive_min": 5
+   },
+   {
+    "name": "Sprouts Farmers Market",
+    "address": "4700 W 38th Ave Unit B, Denver, CO 80212",
+    "drive_min": 4
+   },
+   {
+    "name": "Walmart Supercenter",
+    "address": "5957 W 44th Ave, Lakeside, CO 80212",
+    "drive_min": 6
+   }
+  ],
+  "dispensaries": [
+   {
+    "name": "Green Dragon — West Denver",
+    "address": "4103 Sheridan Blvd, Denver",
+    "drive_min": 3
+   },
+   {
+    "name": "Green Dragon — Edgewater",
+    "address": "2467 Sheridan Blvd, Edgewater",
+    "drive_min": 4
+   },
+   {
+    "name": "Star Buds — Lakeside",
+    "address": "5238 W 44th Ave, Denver",
+    "drive_min": 5
+   }
+  ],
+  "getting_around": [
+   {
+    "name": "Red Rocks Park & Amphitheatre",
+    "time": "22 min"
+   },
+   {
+    "name": "Lookout Mountain",
+    "time": "18 min"
+   },
+   {
+    "name": "16th Street Mall",
+    "time": "12 min"
+   },
+   {
+    "name": "Estes Park & RMNP",
+    "time": "1h 20min"
+   },
+   {
+    "name": "Elitch Gardens",
+    "time": "12 min"
+   },
+   {
+    "name": "Dinosaur Ridge",
+    "time": "20 min"
+   }
+  ],
+  "host_picks": [
+   {
+    "name": "Brooklyn's Finest Pizza",
+    "meta": "Pizza · Host's pick · Multiple Denver locations",
+    "body": "Host's favorite pizza in the city. New York style by the slice or full pie.",
+    "order": "Pepperoni slice, white pie, garlic knots."
+   },
+   {
+    "name": "Blue Agave",
+    "meta": "Mexican · Margaritas · 9 mi · 16 min · Multiple locations",
+    "body": "Go-to for margaritas and fajitas. Upbeat vibe, generous portions, tableside guac.",
+    "order": "Sizzling fajitas, street tacos, tableside guac."
+   },
+   {
+    "name": "Welton Street Cafe",
+    "meta": "Soul Food · Five Points · 2670 Welton St",
+    "body": "Southern soul food in historic Five Points. Family-run, full plates, a Denver institution.",
+    "order": "Fried chicken, mac and cheese, collards, sweet potato pie."
+   },
+   {
+    "name": "Thai Daughter",
+    "meta": "Thai · 10 mi · 18 min · Denver",
+    "body": "Local favorite Thai spot. Order it medium-hot, they don't skimp on heat.",
+    "order": "Pad Thai, drunken noodles, Massaman curry."
+   },
+   {
+    "name": "Gaetano's",
+    "meta": "Italian · Old-school · 11 mi · 18 min · 3760 Tejon St",
+    "body": "Classic red-sauce Italian in the Highlands. Family vibes, a bar with stories, lasagna for a cold night.",
+    "order": "Lasagna, veal parm, meatballs, Chianti."
+   },
+   {
+    "name": "Yard House",
+    "meta": "Sports Bar · 100+ beers on tap · Downtown",
+    "body": "Solid spot to watch a game. Huge beer list, big TVs, full pub menu.",
+    "order": "Truffle fries, nachos, half-pound burger, draft flight."
+   },
+   {
+    "name": "Denver Biscuit Company",
+    "meta": "Brunch · Southern · 12 mi · 22 min · 3237 E Colfax",
+    "body": "Hand-sized biscuits and fried chicken that hits every time. Real brunch.",
+    "order": "Franklin biscuit, biscuit French toast."
+   },
+   {
+    "name": "Rooftop · Night Out",
+    "meta": "Club · Nightlife · Downtown Denver",
+    "body": "Host's pick for a club night. Rooftop vibes, DJ sets on weekends, dress code applies.",
+    "order": "Bottle service, signature cocktails."
+   }
+  ]
+ },
+ "emergency": {
+  "text_line_override": "+1 (303) 731-6880",
+  "nearest_hospital": {
+   "name": "Lutheran Hospital (Intermountain)",
+   "address": "12911 W 40th Ave, Wheat Ridge, CO 80033",
+   "phone": "(303) 425-4500",
+   "drive_min": 0
+  },
+  "non_emergency_police": "Wheat Ridge Police (non-emergency): (303) 237-2220",
+  "fire_department": "Wheat Ridge Fire, call 911 for emergencies"
+ },
+ "troubleshooting": [
+  {
+   "issue": "WiFi slow or disconnected",
+   "fix": "Unplug the router for 30 seconds, plug back in, wait 2 min."
+  },
+  {
+   "issue": "TV stuck on 'No Signal'",
+   "fix": "Switch input to HDMI 1 using the TV remote (not the Roku remote)."
+  },
+  {
+   "issue": "Thermostat not responding",
+   "fix": "Check the breaker panel, HVAC breaker may have tripped."
+  }
+ ],
+ "promotions": {
+  "stay_n_save": {
+   "code": "STAYNSAVE10",
+   "how_to_claim": [
+    "Post a photo from your stay tagged #Kushkations and #KushKations",
+    "Leave a five-star review on your booking platform",
+    "Email a screenshot to info@kushkations.com — we'll send the code"
+   ]
+  }
+ },
+ "internal": {
+  "cleaner_notes": [
+   "Garage / cleaner access code: 0117",
+   "Confirm hot tub is in ST mode after every clean, not EC",
+   "Reset thermostat to 68°F after clean, not lower",
+   "Empty trash bins and replace liners"
+  ],
+  "cleaner_checklist": [
+   {
+    "area": "Entry",
+    "tasks": [
+     "Wipe front door handle and lock panel",
+     "Sweep entryway",
+     "Replace doormat if needed"
+    ]
+   },
+   {
+    "area": "Kitchen",
+    "tasks": [
+     "Wipe counters and backsplash",
+     "Clean stovetop and oven exterior",
+     "Empty dishwasher",
+     "Restock paper towels, dish soap, sponge",
+     "Clear guest leftovers from fridge"
+    ]
+   },
+   {
+    "area": "Living",
+    "tasks": [
+     "Vacuum rugs and sofas",
+     "Wipe coffee tables and remotes",
+     "Reset throw pillows and blankets"
+    ]
+   },
+   {
+    "area": "Bedrooms",
+    "tasks": [
+     "Strip and remake all beds",
+     "Replace bath towels",
+     "Wipe nightstands and headboards",
+     "Check TV remotes in each room"
+    ]
+   },
+   {
+    "area": "Bathrooms",
+    "tasks": [
+     "Scrub tubs, showers, toilets, sinks",
+     "Restock toilet paper (3+ rolls per bath)",
+     "Fresh towels",
+     "Check hair on floor and drains"
+    ]
+   },
+   {
+    "area": "Hot Tub",
+    "tasks": [
+     "Confirm display shows ST mode",
+     "Water level above filter",
+     "Shock the water",
+     "Cover locked"
+    ]
+   },
+   {
+    "area": "Outdoor",
+    "tasks": [
+     "Sweep patio and grill area",
+     "Check grill propane if present"
+    ]
+   },
+   {
+    "area": "Laundry",
+    "tasks": [
+     "Wash, dry, fold all linens",
+     "Restock detergent",
+     "Wipe machines"
+    ]
+   },
+   {
+    "area": "Trash & Exit",
+    "tasks": [
+     "All trash bagged at outdoor bins",
+     "Thermostat set to 68°F",
+     "All lights off",
+     "All doors locked"
+    ]
+   }
+  ],
+  "supply_tracker": {
+   "toilet_paper": {
+    "current": 0,
+    "par": 12,
+    "last_checked": ""
+   },
+   "paper_towels": {
+    "current": 0,
+    "par": 4,
+    "last_checked": ""
+   },
+   "dish_soap": {
+    "current": 0,
+    "par": 2,
+    "last_checked": ""
+   },
+   "laundry_detergent": {
+    "current": 0,
+    "par": 1,
+    "last_checked": ""
+   },
+   "trash_bags_13gal": {
+    "current": 0,
+    "par": 20,
+    "last_checked": ""
+   },
+   "trash_bags_outdoor": {
+    "current": 0,
+    "par": 8,
+    "last_checked": ""
+   },
+   "hot_tub_shock": {
+    "current": 0,
+    "par": 6,
+    "last_checked": ""
+   },
+   "bath_towels": {
+    "current": 0,
+    "par": 12,
+    "last_checked": ""
+   },
+   "hand_towels": {
+    "current": 0,
+    "par": 6,
+    "last_checked": ""
+   }
+  },
+  "utilities": {
+   "breaker_panel": "Inside the house, right next to the bathroom entrance",
+   "water_shutoff": "Down the hall toward the G&S Jacuzzi, on the right side of the floor — small door, reach inside to the shut-off",
+   "gas_shutoff": "",
+   "wifi_router": "Kitchen",
+   "wifi_router_guest_accessible": true,
+   "cleaner_access_code": "0117",
+   "cleaner_access_code_2": "1963",
+   "garage_guest_accessible": null,
+   "garage_motor": ""
+  },
+  "appliances": {
+   "refrigerator": {
+    "brand": "Insignia",
+    "model": "NS-RTM18SS7"
+   },
+   "stove_oven": {
+    "brand": "General Electric",
+    "model": "NS-RTM18SS7"
+   },
+   "microwave": {
+    "brand": "Walmart",
+    "model": "MSF0R100072352"
+   }
+  },
+  "maintenance_log": []
+ }
+}

@@ -1,0 +1,585 @@
+{
+ "meta": {
+  "name": "Blue Dream",
+  "slug": "blue-dream",
+  "ownerrez_id": "400224",
+  "address": "1475 S Pierce St Unit 7, Lakewood, CO 80232",
+  "coordinates": {
+   "lat": 0,
+   "lng": 0
+  },
+  "cover_photo": "https://uc.orez.io/i/985218603b394003af969ff2aae41b46-Large",
+  "photo_gallery": [
+   "https://uc.orez.io/i/821d18ed21484b2191edb012db619012-Large",
+   "https://uc.orez.io/i/985218603b394003af969ff2aae41b46-Large",
+   "https://uc.orez.io/i/915c52d801b94f6e877bad0f7497dc5a-Large",
+   "https://uc.orez.io/i/c405a9f5d1114a8dad3e3617f82e81ba-Large",
+   "https://uc.orez.io/i/6f22af06b4274c1b87abe176b71a0984-Large",
+   "https://uc.orez.io/i/6a8e3cc7082345459feb24763e5fa373-Large",
+   "https://uc.orez.io/i/8d927fcc33114466923a0a439cc849ca-Large",
+   "https://uc.orez.io/i/a19b9bec0fa84192bb4d9da4e4f12611-Large"
+  ],
+  "bedrooms": 3,
+  "bathrooms": 1,
+  "sleeps": 12,
+  "extra_guests_allowed": 3,
+  "size_sqft": 1100,
+  "is_420_friendly": true,
+  "one_line_vibe": "Spacious Lakewood townhome with a hot tub. Great for families and small groups.",
+  "layout": {
+   "stairs_to_upstairs": "",
+   "stairs_to_basement": ""
+  },
+  "direct_booking_url": "https://kushkations.com/blue-dream/"
+ },
+ "arrival": {
+  "check_in_time": "4:00 PM",
+  "access_method": "smart_lock",
+  "code_delivery": "Sent the morning of your arrival. Activates at 4:00 PM unless early check-in has been approved.",
+  "lock_backup_tip": "After entering your code, press the 'Check' (or 'Schlage') button to engage the lock. If the door doesn't open, try again slowly, one digit at a time.",
+  "parking": "Our Lakewood property offers parking in front of the property. You may also use street parking. Please be respectful to our neighbors.",
+  "cleaning_supplies_location": "Inside the closet of the Bunk Bedroom",
+  "towels_location": "12 towels inside the cabinet under the bathroom sink.",
+  "towel_photos": [
+   {
+    "url": "https://lh3.googleusercontent.com/d/1up2xMxd_JR3Nz85vWRfFLKhLjCcn0zxH",
+    "caption": "Towel storage"
+   }
+  ],
+  "first_steps": [
+   "Please take luggage directly to your bedroom to protect the floors.",
+   "Fire extinguishers are in every bedroom and beneath the kitchen sink.",
+   "Front and back doors are the two main exits."
+  ]
+ },
+ "wifi": {
+  "network": "Kushkations.com",
+  "password": "kushkations.com",
+  "notes": "If slow: unplug the router for 30 sec and plug back in.",
+  "router_location": "Living room"
+ },
+ "house_rules": [
+  "Feel free to smoke 420 indoors. Tobacco goes outside, please ($1,000 reset fee if it doesn't).",
+  "Quiet hours run 10 PM to 9 AM so the neighbors can rest easy.",
+  "Pets are welcome. Keep them off the furniture and clean up after them ($200 if we find a surprise).",
+  "Please check with us before adding guests or hosting a party. Unapproved gatherings cancel the stay.",
+  "The hot tub and cup holders are not ashtrays ($50 cleanup fee per incident)."
+ ],
+ "amenities": {
+  "hot_tub": {
+   "brand": "Marquis Spa, Coastal Series",
+   "temp_range": "100°F – 102°F",
+   "shock_location": "Top of the fridge",
+   "mode_setup": {
+    "must_do_first": "Set the tub to ST (Standard) mode or it will not maintain temperature",
+    "why": "In EC (Economy) mode the heater only runs during filter cycles. Your water cools between them. ST keeps it at your set temp 24/7.",
+    "steps": [
+     "Tap the Warm or Temp button to wake up the display",
+     "Press Mode (or hold Warm for 3 sec if no Mode button)",
+     "Display cycles through ST → EC → SL — stop when it shows ST",
+     "Then press Warm/Cool to set 102°F"
+    ],
+    "video_tutorial": "https://www.youtube.com/embed/UwFIbScelNU",
+    "video_tutorial_title": "How to set ST vs EC mode (2 min)"
+   },
+   "quick_start": [
+    "Confirm the display shows ST (see mode setup above)",
+    "Shower before getting in",
+    "Open all jet valves before running the jets",
+    "Press the Light button once on the control panel (if you want the LED on)",
+    "Set temperature to 100–102°F",
+    "Close the cover when not in use"
+   ],
+   "water_care": "Shock every 2–3 days for light use, or after each heavy / long soak. No food, drinks, glass, or smoking in the water.",
+   "rules": [
+    "No food, drinks, or glass in the tub",
+    "Kids must be supervised",
+    "Keep water above the filter line — drops below = heater shuts off"
+   ],
+   "photo": ""
+  },
+  "tv": {
+   "streaming": [
+    "Sign in with your own accounts"
+   ],
+   "notes": "Log out of all streaming apps before checkout."
+  },
+  "kitchen": {
+   "highlights": [
+    "Full kitchen — cook what you'd cook at home",
+    "Fire extinguisher under the sink",
+    "Delivery works great: Uber Eats, DoorDash, Grubhub"
+   ]
+  },
+  "grill": {
+   "type": "Propane BBQ grill",
+   "notes": "Propane BBQ grill is available in the backyard. Bring your own propane or order a tank.",
+   "propane_vendor": "Gilbert (303) 475-3342"
+  },
+  "laundry": {
+   "washer": true,
+   "dryer": true,
+   "detergent_provided": false,
+   "coin_operated": true,
+   "shared": true,
+   "note": "This home has access to a shared, coin-operated laundry room. If you plan to do laundry during your stay, please bring quarters and your own detergent. It is not a private in-unit washer and dryer. The machines are serviced regularly, and if anything isn't working while you're here, just message us and we'll take care of it right away."
+  },
+  "ps5": false,
+  "sauna": false,
+  "theater": false,
+  "golf_simulator": false,
+  "hair_dryer": {
+   "location": "Under each bathroom sink (one per bathroom)",
+   "notes": "If one is missing, message us and we will bring one over."
+  }
+ },
+ "checkout": {
+  "time": "10:00 AM",
+  "steps": [
+   "Bag the trash and move it to the bins near the front entrance",
+   "Sign out of any streaming apps on the TVs",
+   "Set the hallway thermostat to 66°F in winter, 75°F in summer",
+   "Lock up behind you and have a safe trip"
+  ],
+  "trash_day": "Tuesday. Bins are across the street. Our team comes by to take the trash out and bring the bins back in — nothing for you to do."
+ },
+ "temperature": {
+  "main_thermostat_location": "",
+  "zones": 1,
+  "winter_minimum": "66°F, required to prevent pipes from freezing",
+  "notes": "Thermostat controls both heat and A/C, adjust freely"
+ },
+ "nearby": {
+  "eat_in_10": [
+   {
+    "name": "The French Press",
+    "address": "Belmar, Lakewood",
+    "distance_mi": 1,
+    "drive_min": 4,
+    "cuisine": "Breakfast & coffee",
+    "top_orders": [
+     "Breakfast burrito",
+     "Avocado toast"
+    ],
+    "reason": "Fair-trade organic coffee, huge portions, low prices. Surrounded by Belmar shopping."
+   }
+  ],
+  "coffee": [
+   {
+    "name": "Queen City Collective Coffee",
+    "address": "Lakewood",
+    "distance_mi": 2,
+    "drive_min": 6,
+    "cuisine": "Specialty coffee",
+    "top_orders": [
+     "Latte"
+    ],
+    "reason": "One of Denver's best independent coffee roasters."
+   },
+   {
+    "name": "Crema Coffee House",
+    "address": "Denver/Lakewood",
+    "distance_mi": 3,
+    "drive_min": 9,
+    "cuisine": "Specialty coffee",
+    "top_orders": [
+     "Seasonal lattes"
+    ],
+    "reason": "Industrial-chic roaster with solid food options."
+   }
+  ],
+  "casual_dinner": [
+   {
+    "name": "Tstreet Kitchen",
+    "address": "Belmar, Lakewood",
+    "distance_mi": 1,
+    "drive_min": 4,
+    "cuisine": "American contemporary",
+    "top_orders": [
+     "Teller Burger"
+    ],
+    "reason": "Contemporary, casual gathering place in Belmar. Famous Teller Burger."
+   }
+  ],
+  "parks": [
+   {
+    "name": "Belmar Park",
+    "drive_min": 2,
+    "reason": "132-acre neighborhood park with a lake and walking trails."
+   },
+   {
+    "name": "William Frederick Hayden Park (Green Mountain)",
+    "drive_min": 8,
+    "reason": "Hiking with real views. Front Range and downtown Denver visible from the top."
+   }
+  ],
+  "adventure_day": [
+   {
+    "name": "Red Rocks Amphitheatre",
+    "drive_min": 15,
+    "reason": "Fifteen minutes west. Walk the trails or catch a show."
+   },
+   {
+    "name": "Mount Evans / Idaho Springs",
+    "drive_min": 45,
+    "reason": "Classic mountain day trip. Echo Lake, summit drives, hot springs."
+   }
+  ],
+  "late_night": [
+   {
+    "name": "Waffle House",
+    "address": "Lakewood",
+    "distance_mi": 3,
+    "drive_min": 9,
+    "cuisine": "American diner, 24/7",
+    "top_orders": [
+     "Scattered hash browns"
+    ],
+    "reason": "24/7 diner classic."
+   }
+  ],
+  "grocery": [
+   {
+    "name": "Jasmine Market",
+    "address": "1050 S Wadsworth Blvd Unit K, Lakewood, CO 80226",
+    "drive_min": 4
+   },
+   {
+    "name": "The Food Store",
+    "address": "6715 W Mississippi Ave, Lakewood, CO 80226",
+    "drive_min": 4
+   },
+   {
+    "name": "King Soopers",
+    "address": "1927 S Wadsworth Blvd, Lakewood, CO 80227",
+    "drive_min": 5
+   }
+  ],
+  "dispensaries": [
+   {
+    "name": "Lightshade",
+    "address": "11126 S Sheridan",
+    "drive_min": 4
+   },
+   {
+    "name": "Mile High",
+    "address": "1350 S Sheridan",
+    "drive_min": 4
+   },
+   {
+    "name": "Horizon Cannabis",
+    "address": "6745 W Mississippi",
+    "drive_min": 4
+   }
+  ],
+  "gas_stations": [
+   {
+    "name": "Phillips 66",
+    "address": "1110 S Pierce St, Denver, CO 80232",
+    "drive_min": 3
+   },
+   {
+    "name": "GAS MART",
+    "address": "1495 S Sheridan Blvd, Denver, CO 80232",
+    "drive_min": 3
+   },
+   {
+    "name": "Conoco",
+    "address": "1110 S Wadsworth Blvd, Lakewood, CO 80232",
+    "drive_min": 3
+   }
+  ],
+  "transit": [
+   {
+    "name": "W Jewell Ave & S Pierce St",
+    "address": "Lakewood, CO 80232",
+    "drive_min": 2
+   },
+   {
+    "name": "W Mississippi Ave & S Reed St",
+    "address": "Lakewood, CO 80232",
+    "drive_min": 4
+   },
+   {
+    "name": "W Mississippi Ave & S Depew St",
+    "address": "Lakewood, CO 80226",
+    "drive_min": 4
+   }
+  ],
+  "getting_around": [
+   {
+    "name": "Red Rocks Park & Amphitheatre",
+    "time": "22 min"
+   },
+   {
+    "name": "Lookout Mountain",
+    "time": "22 min"
+   },
+   {
+    "name": "16th Street Mall",
+    "time": "17 min"
+   },
+   {
+    "name": "Estes Park & RMNP",
+    "time": "1h 30min"
+   },
+   {
+    "name": "Elitch Gardens",
+    "time": "16 min"
+   },
+   {
+    "name": "Dinosaur Ridge",
+    "time": "18 min"
+   }
+  ],
+  "host_picks": [
+   {
+    "name": "Brooklyn's Finest Pizza",
+    "meta": "Pizza · Host's pick · 15 min · 8 mi · Denver",
+    "body": "Host's favorite pizza in the city. New York style by the slice or full pie.",
+    "order": "Pepperoni slice, white pie, garlic knots."
+   },
+   {
+    "name": "Blue Agave",
+    "meta": "Mexican · Margaritas · 15 min · 8 mi · Denver",
+    "body": "Go-to for margaritas and fajitas. Upbeat vibe, generous portions, tableside guac.",
+    "order": "Sizzling fajitas, street tacos, tableside guac."
+   },
+   {
+    "name": "Welton Street Cafe",
+    "meta": "Soul Food · Five Points · 17 min · 9 mi · 2670 Welton St",
+    "body": "Southern soul food in historic Five Points. Family-run, full plates, a Denver institution.",
+    "order": "Fried chicken, mac and cheese, collards, sweet potato pie."
+   },
+   {
+    "name": "Thai Daughter",
+    "meta": "Thai · 17 min · 9 mi · Denver",
+    "body": "Local favorite Thai spot. Order it medium-hot, they don't skimp on heat.",
+    "order": "Pad Thai, drunken noodles, Massaman curry."
+   },
+   {
+    "name": "Gaetano's",
+    "meta": "Italian · Old-school · 12 min · 7 mi · 3760 Tejon St",
+    "body": "Classic red-sauce Italian in the Highlands. Family vibes, a bar with stories, lasagna for a cold night.",
+    "order": "Lasagna, veal parm, meatballs, Chianti."
+   },
+   {
+    "name": "Yard House",
+    "meta": "Sports Bar · 100+ beers · 16 min · 9 mi · Downtown",
+    "body": "Solid spot to watch a game. Huge beer list, big TVs, full pub menu.",
+    "order": "Truffle fries, nachos, half-pound burger, draft flight."
+   },
+   {
+    "name": "Denver Biscuit Company",
+    "meta": "Brunch · Southern · 16 min · 9 mi · 3237 E Colfax",
+    "body": "Hand-sized biscuits and fried chicken that hits every time. Real brunch.",
+    "order": "Franklin biscuit, biscuit French toast."
+   },
+   {
+    "name": "Rooftop · Night Out",
+    "meta": "Club · Nightlife · 16 min · 9 mi · Downtown",
+    "body": "Host's pick for a club night. Rooftop vibes, DJ sets on weekends, dress code applies.",
+    "order": "Bottle service, signature cocktails."
+   }
+  ]
+ },
+ "emergency": {
+  "text_line_override": "+1 (303) 731-6880",
+  "nearest_hospital": {
+   "name": "St. Anthony Hospital",
+   "address": "11600 W 2nd Pl, Lakewood, CO 80228",
+   "phone": "(720) 321-0000",
+   "drive_min": 0
+  },
+  "non_emergency_police": "Lakewood Police (non-emergency): (303) 987-7111",
+  "fire_department": "West Metro Fire, call 911 for emergencies"
+ },
+ "troubleshooting": [
+  {
+   "issue": "WiFi slow or disconnected",
+   "fix": "Unplug the router for 30 seconds, plug back in, wait 2 min."
+  },
+  {
+   "issue": "TV stuck on 'No Signal'",
+   "fix": "Switch input to HDMI 1 using the TV remote (not the Roku remote)."
+  },
+  {
+   "issue": "Thermostat not responding",
+   "fix": "Check the breaker panel, HVAC breaker may have tripped."
+  }
+ ],
+ "promotions": {
+  "stay_n_save": {
+   "code": "STAYNSAVE10",
+   "how_to_claim": [
+    "Post a photo from your stay tagged #Kushkations and #KushKations",
+    "Leave a five-star review on your booking platform",
+    "Email a screenshot to info@kushkations.com — we'll send the code"
+   ]
+  }
+ },
+ "internal": {
+  "cleaner_notes": [
+   "Garage / cleaner access code: 1012",
+   "Confirm hot tub is in ST mode after every clean, not EC",
+   "Reset thermostat to 68°F after clean, not lower",
+   "Empty trash bins and replace liners"
+  ],
+  "cleaner_checklist": [
+   {
+    "area": "Entry",
+    "tasks": [
+     "Wipe front door handle and lock panel",
+     "Sweep entryway",
+     "Replace doormat if needed"
+    ]
+   },
+   {
+    "area": "Kitchen",
+    "tasks": [
+     "Wipe counters and backsplash",
+     "Clean stovetop and oven exterior",
+     "Empty dishwasher",
+     "Restock paper towels, dish soap, sponge",
+     "Clear guest leftovers from fridge"
+    ]
+   },
+   {
+    "area": "Living",
+    "tasks": [
+     "Vacuum rugs and sofas",
+     "Wipe coffee tables and remotes",
+     "Reset throw pillows and blankets"
+    ]
+   },
+   {
+    "area": "Bedrooms",
+    "tasks": [
+     "Strip and remake all beds",
+     "Replace bath towels",
+     "Wipe nightstands and headboards",
+     "Check TV remotes in each room"
+    ]
+   },
+   {
+    "area": "Bathrooms",
+    "tasks": [
+     "Scrub tubs, showers, toilets, sinks",
+     "Restock toilet paper (3+ rolls per bath)",
+     "Fresh towels",
+     "Check hair on floor and drains"
+    ]
+   },
+   {
+    "area": "Hot Tub",
+    "tasks": [
+     "Confirm display shows ST mode",
+     "Water level above filter",
+     "Shock the water",
+     "Cover locked"
+    ]
+   },
+   {
+    "area": "Outdoor",
+    "tasks": [
+     "Sweep patio and grill area",
+     "Check grill propane if present"
+    ]
+   },
+   {
+    "area": "Laundry",
+    "tasks": [
+     "Wash, dry, fold all linens",
+     "Restock detergent",
+     "Wipe machines"
+    ]
+   },
+   {
+    "area": "Trash & Exit",
+    "tasks": [
+     "All trash bagged at outdoor bins",
+     "Thermostat set to 68°F",
+     "All lights off",
+     "All doors locked"
+    ]
+   }
+  ],
+  "supply_tracker": {
+   "toilet_paper": {
+    "current": 0,
+    "par": 12,
+    "last_checked": ""
+   },
+   "paper_towels": {
+    "current": 0,
+    "par": 4,
+    "last_checked": ""
+   },
+   "dish_soap": {
+    "current": 0,
+    "par": 2,
+    "last_checked": ""
+   },
+   "laundry_detergent": {
+    "current": 0,
+    "par": 1,
+    "last_checked": ""
+   },
+   "trash_bags_13gal": {
+    "current": 0,
+    "par": 20,
+    "last_checked": ""
+   },
+   "trash_bags_outdoor": {
+    "current": 0,
+    "par": 8,
+    "last_checked": ""
+   },
+   "hot_tub_shock": {
+    "current": 0,
+    "par": 6,
+    "last_checked": ""
+   },
+   "bath_towels": {
+    "current": 0,
+    "par": 12,
+    "last_checked": ""
+   },
+   "hand_towels": {
+    "current": 0,
+    "par": 6,
+    "last_checked": ""
+   }
+  },
+  "utilities": {
+   "breaker_panel": "Located inside the house, in front of the bathroom entrance",
+   "water_shutoff": "",
+   "gas_shutoff": "",
+   "wifi_router": "Living room",
+   "wifi_router_guest_accessible": true,
+   "cleaner_access_code": "1012",
+   "cleaner_access_code_2": "1966",
+   "garage_guest_accessible": null,
+   "garage_motor": ""
+  },
+  "appliances": {
+   "refrigerator": {
+    "brand": "GE Appliances",
+    "model": "GYE18JEMNFDS"
+   },
+   "microwave": {
+    "brand": "LG",
+    "model": "LMV1831ST/00"
+   },
+   "dishwasher": {
+    "brand": "Whirlpool",
+    "model": "DU1014XTXB3"
+   },
+   "stove_oven": {
+    "brand": "Frigidaire",
+    "model": "GCRE3060AFF"
+   }
+  },
+  "maintenance_log": []
+ }
+}

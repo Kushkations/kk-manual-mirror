@@ -1,0 +1,555 @@
+{
+ "meta": {
+  "name": "Wonderland",
+  "slug": "wonderland",
+  "ownerrez_id": "447452",
+  "address": "5955 S Zante Way, Aurora, CO 80015",
+  "coordinates": {
+   "lat": 0,
+   "lng": 0
+  },
+  "cover_photo": "https://uc.orez.io/i/a132d90bde0e4845ab88fb2a7b2a7c4d-Large",
+  "photo_gallery": [
+   "https://uc.orez.io/i/ff40bfdba6814b95bf6757567c1e04a1-Large",
+   "https://uc.orez.io/i/a132d90bde0e4845ab88fb2a7b2a7c4d-Large",
+   "https://uc.orez.io/i/ed50bda398764b6abae4f2100297762b-Large",
+   "https://uc.orez.io/i/42f8a4d402494e8ba70717a917924e69-Large",
+   "https://uc.orez.io/i/f70f56f065aa4cdb860520e8f8a9d688-Large",
+   "https://uc.orez.io/i/7556b1e5eb2e43839377d2cf6e2a276c-Large",
+   "https://uc.orez.io/i/7dc373ab993d49218b44ce932b6da474-Large",
+   "https://uc.orez.io/i/8187805c9a1a4bc2aad85d584e5411b2-Large"
+  ],
+  "bedrooms": 5,
+  "bathrooms": 2.5,
+  "sleeps": 16,
+  "extra_guests_allowed": 2,
+  "size_sqft": 1886,
+  "is_420_friendly": true,
+  "one_line_vibe": "Aurora home with a hot tub in a quiet residential neighborhood.",
+  "layout": {
+   "stairs_to_upstairs": "",
+   "stairs_to_basement": ""
+  },
+  "direct_booking_url": "https://kushkations.com/wonderland/"
+ },
+ "arrival": {
+  "check_in_time": "4:00 PM",
+  "access_method": "smart_lock",
+  "code_delivery": "Sent the morning of your arrival. Activates at 4:00 PM unless early check-in has been approved.",
+  "lock_backup_tip": "After entering your code, press the 'Check' (or 'Schlage') button to engage the lock. If the door doesn't open, try again slowly, one digit at a time.",
+  "parking": "Please access the driveway and street parking for additional space.",
+  "towels_location": "8 towels in the downstairs bathroom, 8 in the upstairs common bathroom, and 2 in each closet in the king bedroom.",
+  "towel_photos": [
+   {
+    "url": "https://lh3.googleusercontent.com/d/16FtpqCllDYEUUFT7PAkRfmv4Sdfo0DDh",
+    "caption": "Towel storage"
+   },
+   {
+    "url": "https://lh3.googleusercontent.com/d/10N6k71tfF22Z5_XfcLBbjA3ufTXpgNi6",
+    "caption": "Towel storage"
+   }
+  ],
+  "first_steps": [
+   "Please take luggage directly to your bedroom to protect the floors.",
+   "Two fire extinguishers are under the kitchen sink, plus one in each bedroom.",
+   "Front and back doors are the two main exits."
+  ],
+  "cleaning_supplies_location": "Closet near dining area"
+ },
+ "wifi": {
+  "network": "Kushkations.com",
+  "password": "kushkations.com",
+  "notes": "If slow: unplug the router for 30 sec and plug back in.",
+  "router_location": "Living room"
+ },
+ "house_rules": [
+  "Feel free to smoke 420 indoors. Tobacco goes outside, please ($1,000 reset fee if it doesn't).",
+  "Quiet hours run 10 PM to 9 AM so the neighbors can rest easy.",
+  "Pets are welcome. Keep them off the furniture and clean up after them ($200 if we find a surprise).",
+  "Please check with us before adding guests or hosting a party. Unapproved gatherings cancel the stay.",
+  "The hot tub and cup holders are not ashtrays ($50 cleanup fee per incident)."
+ ],
+ "amenities": {
+  "hot_tub": {
+   "brand": "Hot tub",
+   "temp_range": "100°F – 102°F",
+   "shock_location": "Top of the fridge",
+   "mode_setup": null,
+   "quick_start": [
+    "Flip the hot tub switch on; allow 30+ min to reach temp",
+    "Shower before getting in",
+    "Open all jet valves before running the jets",
+    "Press the Light button once on the control panel (if you want the LED on)",
+    "Set temperature to 100–102°F",
+    "Close the cover when not in use"
+   ],
+   "water_care": "Shock every 2–3 days for light use, or after each heavy / long soak. No food, drinks, glass, or smoking in the water.",
+   "rules": [
+    "No food, drinks, or glass in the tub",
+    "Kids must be supervised",
+    "Keep water above the filter line — drops below = heater shuts off"
+   ],
+   "photo": ""
+  },
+  "grill": {
+   "notes": "Propane grill is available. Bring your own propane or order a tank through the Cynch app.",
+   "propane_vendor": "Gilbert (303) 475-3342"
+  },
+  "game_room": {
+   "highlights": [
+    "Air hockey table",
+    "Pool table",
+    "Arcade games"
+   ],
+   "notes": "Kids must be supervised at all times in the game area."
+  },
+  "outdoor": {
+   "dining_table_seats": 6,
+   "notes": "Backyard dining table seats 6 — great for meals, games, or evening hangs."
+  },
+  "tv": {
+   "streaming": [
+    "Sign in with your own accounts"
+   ],
+   "notes": "Log out of all streaming apps before checkout."
+  },
+  "kitchen": {
+   "highlights": [
+    "Full kitchen — cook what you'd cook at home",
+    "Fire extinguisher under the sink",
+    "Delivery works great: Uber Eats, DoorDash, Grubhub"
+   ]
+  },
+  "laundry": {
+   "washer": true,
+   "dryer": true,
+   "detergent_provided": true
+  },
+  "ps5": false,
+  "theater": true,
+  "sauna": false,
+  "golf_simulator": false,
+  "hair_dryer": {
+   "location": "Under each bathroom sink (one per bathroom)",
+   "notes": "If one is missing, message us and we will bring one over."
+  }
+ },
+ "checkout": {
+  "time": "10:00 AM",
+  "steps": [
+   "Bag the trash and move it to the bins near the front entrance",
+   "Sign out of any streaming apps on the TVs",
+   "Set the hallway thermostat to 66°F in winter, 75°F in summer",
+   "Lock up behind you and have a safe trip"
+  ],
+  "trash_day": "Monday. Bins are on the right side of the house (facing the front), inside the fence door leading to the backyard. Bag all trash before placing in the bins. Our team comes by to take the trash out and bring the bins back in — nothing for you to do."
+ },
+ "temperature": {
+  "main_thermostat_location": "",
+  "zones": 1,
+  "winter_minimum": "66°F, required to prevent pipes from freezing",
+  "notes": "Thermostat controls both heat and A/C, adjust freely"
+ },
+ "nearby": {
+  "eat_in_10": [
+   {
+    "name": "Twisted Egg",
+    "address": "Aurora",
+    "distance_mi": 3,
+    "drive_min": 8,
+    "cuisine": "Breakfast & brunch",
+    "top_orders": [
+     "Twisted tots",
+     "Sunday brunch plates"
+    ],
+    "reason": "Dog-friendly patio. Popular for Sunday brunch after a walk in Cherry Creek."
+   },
+   {
+    "name": "The French Press",
+    "address": "Aurora area",
+    "distance_mi": 4,
+    "drive_min": 10,
+    "cuisine": "Breakfast & coffee",
+    "top_orders": [
+     "Chicken omelette",
+     "Huevos rancheros",
+     "Chilaquiles"
+    ],
+    "reason": "Warm, cozy, welcoming. Fantastic food and strong coffee."
+   }
+  ],
+  "coffee": [
+   {
+    "name": "Lucy Coffee House",
+    "address": "Aurora",
+    "distance_mi": 3,
+    "drive_min": 8,
+    "cuisine": "Specialty coffee",
+    "top_orders": [
+     "Latte",
+     "Pastries"
+    ],
+    "reason": "Neighborhood coffee shop favorite."
+   }
+  ],
+  "casual_dinner": [
+   {
+    "name": "Urban Egg",
+    "address": "Denver Tech Center / Aurora",
+    "distance_mi": 5,
+    "drive_min": 12,
+    "cuisine": "All-day breakfast",
+    "top_orders": [
+     "Eggs benedict",
+     "Breakfast burrito"
+    ],
+    "reason": "Beloved for locally-sourced ingredients. Spacious wrap-around patio at DTC."
+   }
+  ],
+  "parks": [
+   {
+    "name": "Cherry Creek State Park",
+    "drive_min": 6,
+    "reason": "Massive park with a reservoir. Dog off-leash area, trails, swimming in summer."
+   },
+   {
+    "name": "Aurora Reservoir",
+    "drive_min": 12,
+    "reason": "Quieter alternative to Cherry Creek. Walking path around the water."
+   }
+  ],
+  "adventure_day": [
+   {
+    "name": "Red Rocks Amphitheatre",
+    "drive_min": 45,
+    "reason": "About 45 minutes west. Plan a show night around it."
+   },
+   {
+    "name": "Rocky Mountain National Park",
+    "drive_min": 100,
+    "reason": "Longer drive from Aurora, but still a classic day."
+   },
+   {
+    "name": "Cherry Creek State Park",
+    "drive_min": 6,
+    "reason": "Your backyard. Reservoir, trails, off-leash dog area."
+   }
+  ],
+  "late_night": [
+   {
+    "name": "IHOP",
+    "address": "5820 S Parker Rd, Aurora",
+    "distance_mi": 3,
+    "drive_min": 8,
+    "cuisine": "American diner, 24/7",
+    "top_orders": [
+     "Pancake combos"
+    ],
+    "reason": "Open all night. Right down the road."
+   }
+  ],
+  "dispensaries": [
+   {
+    "name": "Star Buds — Aurora Quincy",
+    "address": "19151 E Quincy Ave, Aurora",
+    "drive_min": 5
+   },
+   {
+    "name": "LOVA Canna Co — Aurora",
+    "address": "19005 E Quincy Ave, Aurora",
+    "drive_min": 5
+   },
+   {
+    "name": "Star Buds — Aurora Southeast",
+    "address": "14655 E Arapahoe Rd, Aurora",
+    "drive_min": 10
+   }
+  ],
+  "getting_around": [
+   {
+    "name": "Red Rocks Park & Amphitheatre",
+    "time": "33 min"
+   },
+   {
+    "name": "Cherry Creek State Park",
+    "time": "15 min"
+   },
+   {
+    "name": "16th Street Mall",
+    "time": "33 min"
+   },
+   {
+    "name": "Estes Park & RMNP",
+    "time": "1h 45min"
+   },
+   {
+    "name": "Elitch Gardens",
+    "time": "30 min"
+   },
+   {
+    "name": "Dinosaur Ridge",
+    "time": "35 min"
+   }
+  ],
+  "host_picks": [
+   {
+    "name": "Brooklyn's Finest Pizza",
+    "meta": "Pizza · Host's pick · 5 mi · 11 min · Aurora location",
+    "body": "Host's favorite pizza in the city. New York style by the slice or full pie.",
+    "order": "Pepperoni slice, white pie, garlic knots."
+   },
+   {
+    "name": "Cherry Creek Grill",
+    "meta": "American · 8 mi · 16 min · 184 Steele St",
+    "body": "Upscale American comfort food in Cherry Creek. Reliable for a nice dinner.",
+    "order": "Cherry Creek burger, rotisserie chicken."
+   },
+   {
+    "name": "Sam's No. 3",
+    "meta": "Diner · 10 mi · 19 min · Aurora location",
+    "body": "Denver institution since 1927. Massive menu, killer breakfast burritos.",
+    "order": "Breakfast burrito, chicken and waffles, malt."
+   },
+   {
+    "name": "Mango House",
+    "meta": "Asian Food Hall · 7 mi · 13 min · 10180 E Colfax",
+    "body": "Refugee-run food hall with Ethiopian, Vietnamese, Burmese, Nepali stalls. Cheap, authentic, unforgettable.",
+    "order": "Whatever has a line. Try Komeeda for Ethiopian."
+   },
+   {
+    "name": "Gaetano's",
+    "meta": "Italian · Old-school · 16 mi · 22 min · 3760 Tejon St",
+    "body": "Classic red-sauce Italian in the Highlands. Family vibes, lasagna for a cold night.",
+    "order": "Lasagna, veal parm, meatballs, Chianti."
+   },
+   {
+    "name": "Welton Street Cafe",
+    "meta": "Soul Food · 14 mi · 25 min · 2670 Welton St, Five Points",
+    "body": "Southern soul food in historic Five Points. Family-run, full plates, a Denver institution.",
+    "order": "Fried chicken, mac and cheese, sweet potato pie."
+   },
+   {
+    "name": "Denver Biscuit Company",
+    "meta": "Brunch · 13 mi · 22 min · 3237 E Colfax",
+    "body": "Hand-sized biscuits and fried chicken that hits every time. Real brunch.",
+    "order": "Franklin biscuit, biscuit French toast."
+   },
+   {
+    "name": "Rooftop · Night Out",
+    "meta": "Club · Nightlife · 16 mi · 33 min · Downtown Denver",
+    "body": "Host's pick for a club night. Rooftop vibes, DJ sets on weekends, dress code applies.",
+    "order": "Bottle service, signature cocktails."
+   }
+  ]
+ },
+ "emergency": {
+  "text_line_override": "+1 (303) 731-6880",
+  "nearest_hospital": {
+   "name": "UC Health Medical Center",
+   "address": "16951 E Quincy Ave, Aurora, CO 80015",
+   "phone": "(303) 690-9200",
+   "drive_min": 0
+  },
+  "non_emergency_police": "Aurora Police (non-emergency): (303) 627-3100",
+  "fire_department": "Aurora Fire, call 911 for emergencies"
+ },
+ "troubleshooting": [
+  {
+   "issue": "WiFi slow or disconnected",
+   "fix": "Unplug the router for 30 seconds, plug back in, wait 2 min."
+  },
+  {
+   "issue": "TV stuck on 'No Signal'",
+   "fix": "Switch input to HDMI 1 using the TV remote (not the Roku remote)."
+  },
+  {
+   "issue": "Thermostat not responding",
+   "fix": "Check the breaker panel, HVAC breaker may have tripped."
+  }
+ ],
+ "promotions": {
+  "stay_n_save": {
+   "code": "STAYNSAVE10",
+   "how_to_claim": [
+    "Post a photo from your stay tagged #Kushkations and #KushKations",
+    "Leave a five-star review on your booking platform",
+    "Email a screenshot to info@kushkations.com — we'll send the code"
+   ]
+  }
+ },
+ "internal": {
+  "cleaner_notes": [
+   "Garage / cleaner access code: 0117 (hit the big button)",
+   "Confirm hot tub is in ST mode after every clean, not EC",
+   "Reset thermostat to 68°F after clean, not lower",
+   "Empty trash bins and replace liners"
+  ],
+  "cleaner_checklist": [
+   {
+    "area": "Entry",
+    "tasks": [
+     "Wipe front door handle and lock panel",
+     "Sweep entryway",
+     "Replace doormat if needed"
+    ]
+   },
+   {
+    "area": "Kitchen",
+    "tasks": [
+     "Wipe counters and backsplash",
+     "Clean stovetop and oven exterior",
+     "Empty dishwasher",
+     "Restock paper towels, dish soap, sponge",
+     "Clear guest leftovers from fridge"
+    ]
+   },
+   {
+    "area": "Living",
+    "tasks": [
+     "Vacuum rugs and sofas",
+     "Wipe coffee tables and remotes",
+     "Reset throw pillows and blankets"
+    ]
+   },
+   {
+    "area": "Bedrooms",
+    "tasks": [
+     "Strip and remake all beds",
+     "Replace bath towels",
+     "Wipe nightstands and headboards",
+     "Check TV remotes in each room"
+    ]
+   },
+   {
+    "area": "Bathrooms",
+    "tasks": [
+     "Scrub tubs, showers, toilets, sinks",
+     "Restock toilet paper (3+ rolls per bath)",
+     "Fresh towels",
+     "Check hair on floor and drains"
+    ]
+   },
+   {
+    "area": "Hot Tub",
+    "tasks": [
+     "Confirm display shows ST mode",
+     "Water level above filter",
+     "Shock the water",
+     "Cover locked"
+    ]
+   },
+   {
+    "area": "Outdoor",
+    "tasks": [
+     "Sweep patio and grill area",
+     "Check grill propane if present"
+    ]
+   },
+   {
+    "area": "Laundry",
+    "tasks": [
+     "Wash, dry, fold all linens",
+     "Restock detergent",
+     "Wipe machines"
+    ]
+   },
+   {
+    "area": "Trash & Exit",
+    "tasks": [
+     "All trash bagged at outdoor bins",
+     "Thermostat set to 68°F",
+     "All lights off",
+     "All doors locked"
+    ]
+   }
+  ],
+  "supply_tracker": {
+   "toilet_paper": {
+    "current": 0,
+    "par": 12,
+    "last_checked": ""
+   },
+   "paper_towels": {
+    "current": 0,
+    "par": 4,
+    "last_checked": ""
+   },
+   "dish_soap": {
+    "current": 0,
+    "par": 2,
+    "last_checked": ""
+   },
+   "laundry_detergent": {
+    "current": 0,
+    "par": 1,
+    "last_checked": ""
+   },
+   "trash_bags_13gal": {
+    "current": 0,
+    "par": 20,
+    "last_checked": ""
+   },
+   "trash_bags_outdoor": {
+    "current": 0,
+    "par": 8,
+    "last_checked": ""
+   },
+   "hot_tub_shock": {
+    "current": 0,
+    "par": 6,
+    "last_checked": ""
+   },
+   "bath_towels": {
+    "current": 0,
+    "par": 12,
+    "last_checked": ""
+   },
+   "hand_towels": {
+    "current": 0,
+    "par": 6,
+    "last_checked": ""
+   }
+  },
+  "utilities": {
+   "breaker_panel": "",
+   "water_shutoff": "",
+   "gas_shutoff": "",
+   "wifi_router": "Living room",
+   "wifi_router_guest_accessible": true,
+   "cleaner_access_code": "0117 (hit the big button)",
+   "garage_guest_accessible": null,
+   "garage_motor": "Craftsman 139.53914D"
+  },
+  "appliances": {
+   "refrigerator": {
+    "brand": "General Electric",
+    "model": "PFSF6PKXEWW"
+   },
+   "dishwasher": {
+    "brand": "Maytag",
+    "model": "MDB4949SHW 1"
+   },
+   "stove_oven": {
+    "brand": "UL",
+    "model": "JB645DK2WW"
+   },
+   "microwave": {
+    "brand": "Kenmore",
+    "model": "721.62642200"
+   },
+   "washer": {
+    "brand": "Samsung",
+    "model": "WA50R5200AW/US"
+   },
+   "dryer": {
+    "brand": "Maytag",
+    "model": "MEDB765FC0"
+   },
+   "garage_motor": {
+    "brand": "Craftsman",
+    "model": "139.53914D"
+   }
+  },
+  "maintenance_log": []
+ }
+}

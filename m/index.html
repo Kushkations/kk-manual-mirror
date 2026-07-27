@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<meta name="theme-color" content="#1e3120">
+<title>KushKations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --kk-dark:  #1e3120;
+    --kk-mid:   #3d6f42;
+    --kk-green: #65bc7b;
+    --kk-sand:  #f7f4ee;
+    --kk-ink:   #1a1a1a;
+    --kk-muted: #6b6b6b;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+  html, body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--kk-ink);
+    background: var(--kk-sand);
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+
+  .container {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 0 18px 40px;
+  }
+
+  .top-stripe {
+    height: 5px;
+    background: linear-gradient(90deg, var(--kk-dark), var(--kk-mid), var(--kk-green));
+  }
+
+  .hero-photo {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    border-radius: 0 0 18px 18px;
+    margin-bottom: 0;
+  }
+  header {
+    text-align: center;
+    padding: 22px 0 18px;
+  }
+  header .logo {
+    height: 32px;
+    width: auto;
+    max-width: 180px;
+    margin-bottom: 8px;
+  }
+  header .property {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--kk-dark);
+    line-height: 1;
+    margin-top: 4px;
+    letter-spacing: -0.01em;
+  }
+  header .address {
+    font-size: 14px;
+    color: var(--kk-dark);
+    margin-top: 12px;
+    font-weight: 600;
+  }
+  header .address a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px dotted var(--kk-mid);
+    padding-bottom: 1px;
+  }
+  /* eyebrow vibe line — REMOVED per user request */
+  header .vibe { display: none; }
+
+  .welcome {
+    background: white;
+    border-radius: 16px;
+    padding: 20px 22px;
+    margin-bottom: 16px;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 18px;
+    font-style: italic;
+    color: var(--kk-dark);
+    line-height: 1.45;
+    text-align: center;
+    white-space: pre-line;
+    box-shadow: 0 2px 10px rgba(30,49,32,0.06);
+  }
+
+  .cta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+  .cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background: white;
+    padding: 18px 12px;
+    border-radius: 14px;
+    text-decoration: none;
+    color: var(--kk-dark);
+    box-shadow: 0 2px 10px rgba(30,49,32,0.06);
+    transition: transform 0.15s, box-shadow 0.15s;
+    min-height: 92px;
+    text-align: center;
+  }
+  .cta:active { transform: scale(0.97); box-shadow: 0 1px 4px rgba(30,49,32,0.08); }
+  .cta .icon {
+    font-size: 28px;
+    line-height: 1;
+  }
+  .cta .label {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+  .cta .sub {
+    font-size: 10.5px;
+    color: var(--kk-muted);
+    margin-top: 1px;
+  }
+  .cta.primary {
+    background: var(--kk-dark);
+    color: white;
+  }
+  .cta.primary .sub { color: rgba(255,255,255,0.7); }
+  .cta.accent {
+    background: var(--kk-green);
+    color: white;
+  }
+  .cta.accent .sub { color: rgba(255,255,255,0.8); }
+
+  section {
+    background: white;
+    border-radius: 14px;
+    padding: 16px 18px;
+    margin-bottom: 14px;
+    box-shadow: 0 2px 10px rgba(30,49,32,0.05);
+  }
+  section h2 {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--kk-mid);
+    margin-bottom: 10px;
+    font-weight: 700;
+    padding-left: 12px;
+    position: relative;
+  }
+  section h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px; bottom: 2px;
+    width: 3px;
+    background: var(--kk-green);
+    border-radius: 2px;
+  }
+
+  .wifi-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: 'SF Mono', Menlo, Consolas, monospace;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0ede5;
+    font-size: 14px;
+  }
+  .wifi-row:last-child { border-bottom: none; }
+  .wifi-row .k { color: var(--kk-muted); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; font-family: 'Inter', sans-serif; font-weight: 600; }
+  .wifi-row .v { font-weight: 600; color: var(--kk-dark); }
+
+  .info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0ede5;
+    font-size: 14px;
+  }
+  .info-row:last-child { border-bottom: none; }
+  .info-row .k {
+    color: var(--kk-muted);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-top: 2px;
+  }
+  .info-row .v {
+    font-weight: 600;
+    color: var(--kk-dark);
+    text-align: right;
+    max-width: 65%;
+  }
+
+  .full-guide-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: white;
+    border: 1.5px dashed var(--kk-green);
+    padding: 14px 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--kk-dark);
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+  .full-guide-link .arrow {
+    color: var(--kk-green);
+    font-size: 18px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 18px 0 0;
+    color: var(--kk-muted);
+    font-size: 11px;
+    line-height: 1.5;
+  }
+  footer .tm {
+    margin-top: 6px;
+    font-size: 10px;
+    opacity: 0.7;
+  }
+
+  .loading {
+    padding: 60px 0;
+    text-align: center;
+    color: var(--kk-muted);
+  }
+
+  .door-code-card {
+    background: linear-gradient(135deg, #1e3120 0%, #3d6f42 100%) !important;
+    color: white;
+    text-align: center;
+    padding: 20px 18px !important;
+  }
+  .door-code-card h2 {
+    color: white !important;
+    border: none !important;
+    padding: 0 !important;
+    margin-bottom: 8px !important;
+    letter-spacing: 0.18em;
+  }
+  .door-code-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: white;
+    line-height: 1.3;
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+  .door-code-cta {
+    display: inline-block;
+    background: var(--kk-green);
+    color: var(--kk-dark);
+    padding: 9px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+  }
+  .door-code-cta:active { transform: scale(0.97); }
+
+  .checkout-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .checkout-list li {
+    padding: 8px 0 8px 26px;
+    border-bottom: 1px solid #ece8df;
+    font-size: 14px;
+    color: var(--kk-ink);
+    position: relative;
+    line-height: 1.45;
+  }
+  .checkout-list li:last-child { border-bottom: none; }
+  .checkout-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    color: var(--kk-green);
+    font-weight: 800;
+  }
+
+  .guest-greeting {
+    text-align: center;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--kk-dark);
+    margin-top: 4px;
+    margin-bottom: 2px;
+    line-height: 1.2;
+  }
+  .guest-greeting-sub {
+    text-align: center;
+    font-size: 12.5px;
+    color: var(--kk-mid);
+    font-weight: 600;
+    margin-bottom: 14px;
+    line-height: 1.4;
+  }
+
+  .amenity-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .amenity-card {
+    background: white;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 2px 8px rgba(30,49,32,0.06);
+    text-decoration: none;
+    color: var(--kk-dark);
+    display: block;
+  }
+  .amenity-card .title-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .amenity-card .body {
+    font-size: 12px;
+    color: var(--kk-muted);
+    line-height: 1.4;
+  }
+  .amenity-card .icon {
+    font-size: 18px;
+  }
+  .amenity-cards-section[data-empty] { display: none; }
+
+  .nearest-list {
+    display: grid;
+    gap: 8px;
+  }
+  .nearest-row {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 12px;
+    padding: 8px 0;
+    border-bottom: 1px solid #ece8df;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  .nearest-row:last-child { border-bottom: none; }
+  .nearest-row .cat {
+    color: var(--kk-mid);
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    padding-top: 2px;
+  }
+  .nearest-row .name {
+    color: var(--kk-dark);
+    font-weight: 600;
+  }
+  .nearest-row .addr {
+    color: var(--kk-muted);
+    font-size: 12px;
+    display: block;
+    margin-top: 2px;
+  }
+
+  .photo-strip {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+  .photo-strip img {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+  }
+
+  .lang-toggle {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    z-index: 10;
+    background: white;
+    border: 1px solid var(--kk-green);
+    color: var(--kk-dark);
+    padding: 5px 12px;
+    border-radius: 14px;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    box-shadow: 0 1px 4px rgba(30,49,32,0.12);
+  }
+  .lang-toggle:active { transform: scale(0.96); }
+
+  .tut-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 0;
+    border-bottom: 1px solid #f0ede5;
+    text-decoration: none;
+    color: var(--kk-dark);
+  }
+  .tut-row:last-child { border-bottom: none; }
+  .tut-row .t-icon { font-size: 20px; flex: none; }
+  .tut-row > span:nth-child(2) { flex: 1; display: flex; flex-direction: column; }
+  .tut-row .t-name { font-size: 14px; font-weight: 600; }
+  .tut-row .t-sub { font-size: 11.5px; color: var(--kk-muted); margin-top: 1px; }
+  .tut-row .arrow { color: var(--kk-green); font-size: 17px; flex: none; }
+
+  details.inst {
+    border-bottom: 1px solid #f0ede5;
+    padding: 4px 0;
+  }
+  details.inst:last-child { border-bottom: none; }
+  details.inst summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--kk-dark);
+    padding: 8px 0;
+  }
+  details.inst summary::-webkit-details-marker { display: none; }
+  details.inst summary::after {
+    content: '+';
+    margin-left: auto;
+    color: var(--kk-green);
+    font-size: 18px;
+    font-weight: 700;
+  }
+  details.inst[open] summary::after { content: '–'; }
+  details.inst .inst-body { padding: 2px 0 12px; }
+  .inst-note {
+    background: var(--kk-sand);
+    border-left: 3px solid var(--kk-green);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 12.5px;
+    line-height: 1.5;
+    margin: 8px 0;
+    color: var(--kk-dark);
+  }
+  ol.inst-steps, ul.inst-list {
+    margin: 6px 0 0 0;
+    padding-left: 20px;
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--kk-ink);
+  }
+  ol.inst-steps li, ul.inst-list li { margin-bottom: 6px; }
+  .video-btn {
+    display: block;
+    text-align: center;
+    background: var(--kk-dark);
+    color: #fff;
+    text-decoration: none;
+    font-size: 13.5px;
+    font-weight: 700;
+    padding: 11px 14px;
+    border-radius: 10px;
+    margin: 10px 0 4px;
+  }
+  .video-btn:active { transform: scale(0.98); }
+  .inst-note.warn {
+    background: #fff6e9;
+    border-left-color: #c2701f;
+  }
+  .inst-h {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--kk-mid);
+    margin: 12px 0 2px;
+  }
+  .access-strip {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    margin-top: 8px;
+  }
+  .access-strip img {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+  }
+
+  .nearest-row .mins {
+    font-size: 10.5px;
+    font-weight: 700;
+    color: var(--kk-mid);
+    background: var(--kk-sand);
+    padding: 1px 6px;
+    border-radius: 8px;
+    margin-left: 4px;
+    white-space: nowrap;
+  }
+  .picks-intro {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 15px;
+    font-style: italic;
+    color: var(--kk-mid);
+    line-height: 1.45;
+    margin: -2px 0 12px;
+  }
+  .pick {
+    padding: 11px 0;
+    border-bottom: 1px solid #f0ede5;
+  }
+  .pick:last-child { border-bottom: none; padding-bottom: 0; }
+  .pick .p-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--kk-dark);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    letter-spacing: 0.01em;
+  }
+  .pick .p-meta {
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--kk-mid);
+    font-weight: 700;
+    margin: 2px 0 4px;
+  }
+  .pick .p-body {
+    font-size: 12.5px;
+    color: var(--kk-ink);
+    line-height: 1.5;
+  }
+  .pick .p-order {
+    font-size: 12.5px;
+    line-height: 1.45;
+    margin-top: 5px;
+    padding: 6px 10px;
+    background: var(--kk-sand);
+    border-left: 3px solid var(--kk-green);
+    border-radius: 5px;
+    color: var(--kk-dark);
+  }
+  .pick .p-order b { font-weight: 700; }
+
+  /* Sticky jump / tab navigation */
+  .tab-nav {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    gap: 7px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 9px 2px;
+    margin: 0 0 14px;
+    background: rgba(247,244,238,0.94);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  .tab-nav::-webkit-scrollbar { display: none; }
+  .tab-nav .tab-btn {
+    flex: 0 0 auto;
+    background: white;
+    border: 1px solid #e6e1d6;
+    color: var(--kk-dark);
+    font-family: 'Inter', sans-serif;
+    font-size: 12.5px;
+    font-weight: 700;
+    padding: 8px 13px;
+    border-radius: 18px;
+    cursor: pointer;
+    white-space: nowrap;
+    box-shadow: 0 1px 4px rgba(30,49,32,0.06);
+    transition: transform 0.12s, background 0.12s, color 0.12s, border-color 0.12s;
+  }
+  .tab-nav .tab-btn:active { transform: scale(0.95); }
+  .tab-nav .tab-btn.active {
+    background: var(--kk-dark);
+    color: white;
+    border-color: var(--kk-dark);
+  }
+  section[id^="sec-"] { scroll-margin-top: 58px; }
+
+  /* Detailed house rules */
+  .rules-list { display: grid; gap: 13px; }
+  .rule { padding-left: 30px; position: relative; }
+  .rule .r-num {
+    position: absolute;
+    left: 0; top: 1px;
+    width: 21px; height: 21px;
+    background: var(--kk-green);
+    color: white;
+    border-radius: 50%;
+    font-size: 11.5px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .rule .r-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--kk-dark);
+    line-height: 1.3;
+  }
+  .rule .r-body {
+    font-size: 12.5px;
+    color: var(--kk-muted);
+    line-height: 1.5;
+    margin-top: 2px;
+  }
+
+  /* Need Anything / help block */
+  .help-line {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 0;
+    border-bottom: 1px solid #f0ede5;
+    font-size: 13.5px;
+    color: var(--kk-dark);
+    text-decoration: none;
+  }
+  .help-line:last-child { border-bottom: none; }
+  .help-line .h-ic { font-size: 19px; flex: none; }
+  .help-line > span:nth-child(2) { flex: 1; display: flex; flex-direction: column; }
+  .help-line .h-main { font-weight: 700; line-height: 1.3; }
+  .help-line .h-sub { font-size: 11.5px; color: var(--kk-muted); margin-top: 1px; }
+  .help-line .arrow { color: var(--kk-green); font-weight: 700; font-size: 17px; flex: none; }
+</style>
+</head>
+<body>
+<div class="top-stripe"></div>
+<button class="lang-toggle" id="langToggle">EN | ES</button>
+<div class="container">
+  <div id="app"><div class="loading">Loading…</div></div>
+</div>
+
+<template id="tpl">
+  <img class="hero-photo" data-bind-src="meta.cover_photo" alt="">
+  <header>
+    <img class="logo" src="../assets/kk-logo.png" alt="KushKations">
+    <div class="property" data-bind="meta.name"></div>
+    <div class="address"><a data-bind-href="map_link" data-bind="meta.address" target="_blank" rel="noopener"></a></div>
+  </header>
+
+  <div class="guest-greeting" data-bind="guest_greeting"></div>
+  <div class="guest-greeting-sub" data-bind="guest_greeting_sub"></div>
+
+  <section class="door-code-card">
+    <h2>Door Code</h2>
+    <div class="door-code-value" data-bind="door_code_display">Sent via text 24 hours before check-in</div>
+    <a class="door-code-cta" data-bind-href="sms_door_link">Need it now? Text us →</a>
+  </section>
+
+  <div class="welcome" data-bind="welcome_line"></div>
+
+  <div class="cta-grid">
+    <a class="cta primary" data-bind-href="sms_link">
+      <div class="icon">💬</div>
+      <div class="label">Text Us</div>
+      <div class="sub">Quick reply, anytime</div>
+    </a>
+    <a class="cta accent" data-bind-href="sms_extension_link">
+      <div class="icon">⏰</div>
+      <div class="label">Early/Late Checkout</div>
+      <div class="sub">Request via text</div>
+    </a>
+    <a class="cta" data-bind-href="report_link">
+      <div class="icon">⚠️</div>
+      <div class="label">Report an Issue</div>
+      <div class="sub">Send a photo + note</div>
+    </a>
+    <a class="cta" data-bind-href="save10_link" target="_blank" rel="noopener">
+      <div class="icon">🎁</div>
+      <div class="label">Save 10% next stay</div>
+      <div class="sub">Book direct · Code STAYNSAVE10</div>
+    </a>
+  </div>
+
+  <nav id="tabNav" class="tab-nav" aria-label="Jump to a section"></nav>
+
+  <section>
+    <h2>WiFi</h2>
+    <div class="wifi-row"><div class="k">Network</div><div class="v" data-bind="wifi.network"></div></div>
+    <div class="wifi-row"><div class="k">Password</div><div class="v" data-bind="wifi.password"></div></div>
+  </section>
+
+  <section>
+    <h2>The Basics</h2>
+    <div class="info-row"><div class="k">Check-in</div><div class="v" data-bind="arrival.check_in_time"></div></div>
+    <div class="info-row"><div class="k">Check-out</div><div class="v" data-bind="checkout.time"></div></div>
+    <div class="info-row"><div class="k">Trash</div><div class="v" data-bind="checkout.trash_day"></div></div>
+    <div class="info-row"><div class="k">Parking</div><div class="v" data-bind="arrival.parking"></div></div>
+    <img data-bind-src="arrival.parking_photo" style="width:100%;border-radius:10px;margin-top:10px;display:block;" alt="Parking">
+    <img data-bind-src="checkout.trash_photo" style="width:100%;border-radius:10px;margin-top:10px;display:block;" alt="Trash bins">
+  </section>
+
+  <section>
+    <h2>Early Check-In &amp; Late Checkout</h2>
+    <div class="info-row"><div class="k">Early · before 10 AM</div><div class="v">$100*</div></div>
+    <div class="info-row"><div class="k">Early · 10–11:59 AM</div><div class="v">$75</div></div>
+    <div class="info-row"><div class="k">Early · 12–3:59 PM</div><div class="v">$50</div></div>
+    <div class="info-row"><div class="k">Late · until 12 PM</div><div class="v">$50</div></div>
+    <div class="info-row"><div class="k">Late · until 2 PM</div><div class="v">$100</div></div>
+    <div class="info-row"><div class="k">Late · after 2 PM</div><div class="v">Full extra night</div></div>
+    <div class="inst-note">Standard check-in is 4 PM, checkout 10 AM. *The $100 early check-in applies only when the home is free the night before. Subject to the cleaning schedule — text us to lock it in.</div>
+    <a class="door-code-cta" data-bind-href="sms_extension_link" style="display:block;text-align:center;margin-top:10px;">Request via text →</a>
+  </section>
+
+  <section>
+    <h2>Checkout Instructions</h2>
+    <ul class="checkout-list">
+      <li>Place dirty towels and rags in the bathtub</li>
+      <li>Turn off all lights</li>
+      <li>Load any used dishes in the dishwasher</li>
+      <li>Take all trash to the outside bins</li>
+      <li>Return TV remotes to the holder</li>
+      <li>Leave any unopened food on the counter (donated to the cleaning team)</li>
+      <li>No need to strip the beds, our team handles it</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Cannabis-Friendly</h2>
+    <div class="info-row"><div class="k">Indoor 420</div><div class="v">Allowed</div></div>
+    <div class="info-row"><div class="k">Indoor Tobacco</div><div class="v">Not allowed</div></div>
+    <div class="info-row"><div class="k">Tobacco Outside</div><div class="v">OK · no littering</div></div>
+  </section>
+
+  <section>
+    <h2>House Rules</h2>
+    <div class="rules-list">
+      <div class="rule"><span class="r-num">1</span><div class="r-title">No Tobacco Indoors</div><div class="r-body">No cigarettes, cigars, or Black &amp; Milds inside. Vapes and blunt wraps are fine, and marijuana smoking indoors is allowed. Smoking tobacco outside is OK — please don't litter cigarette butts on the property (a fine applies).</div></div>
+      <div class="rule"><span class="r-num">2</span><div class="r-title">No Parties or Extra Guests</div><div class="r-body">Any party or additional guests not approved before your stay will end your reservation immediately. Quiet enjoyment is for everyone on the block.</div></div>
+      <div class="rule"><span class="r-num">3</span><div class="r-title">Quiet Hours · 10 PM to 9 AM</div><div class="r-body">A call from local authorities or a neighbor complaint means a check-in with the owner and may end your reservation.</div></div>
+      <div class="rule"><span class="r-num">4</span><div class="r-title">Pets Welcome</div><div class="r-body">Pets are welcome. Please clean up after them inside and out — up to a $150 fine for pet waste left behind.</div></div>
+      <div class="rule"><span class="r-num">5</span><div class="r-title">No Late Checkouts</div><div class="r-body">Unauthorized late checkout is charged $50 for every 15 minutes past 10 AM. Need an extension? Ask 24 hours ahead and we'll try to make it work.</div></div>
+      <div class="rule"><span class="r-num">6</span><div class="r-title">Dispose of Ash Properly</div><div class="r-body">$50 charge for improper ash disposal. Never ash in the hot tub or into any object in the home (like a chair cup holder).</div></div>
+    </div>
+  </section>
+
+  <section class="amenity-cards-section" data-amenity-cards>
+    <h2>Quick Instructions</h2>
+    <div class="amenity-cards"></div>
+  </section>
+
+  <section data-section="hottub" style="display:none;">
+    <h2>Hot Tub Instructions</h2>
+    <div class="ht-body"></div>
+  </section>
+
+  <section data-section="games" style="display:none;">
+    <h2>Game Instructions</h2>
+    <div class="games-body"></div>
+  </section>
+
+  <section>
+    <h2>Tutorials &amp; How-Tos</h2>
+    <a class="tut-row" href="https://www.youtube.com/results?search_query=how+to+use+roku+mobile+app+as+remote" target="_blank" rel="noopener">
+      <span class="t-icon">📱</span>
+      <span><span class="t-name">Phone as a Roku remote</span><span class="t-sub">Lost a remote? Control any TV from your phone</span></span>
+      <span class="arrow">→</span>
+    </a>
+    <a class="tut-row" href="https://drive.google.com/drive/u/4/folders/1yVkY8XZR6FO-OYCSfHkBG_JRiZji8leK" target="_blank" rel="noopener">
+      <span class="t-icon">🚿</span>
+      <span><span class="t-name">Drain the sink</span><span class="t-sub">Quick video walk-through</span></span>
+      <span class="arrow">→</span>
+    </a>
+    <a class="tut-row" href="https://rb.gy/lh1ixm" target="_blank" rel="noopener">
+      <span class="t-icon">🔥</span>
+      <span><span class="t-name">Order propane for the grill</span><span class="t-sub">Video tutorial · delivered via Cynch</span></span>
+      <span class="arrow">→</span>
+    </a>
+    <a class="tut-row" href="https://www.cynch.com" target="_blank" rel="noopener">
+      <span class="t-icon">🛻</span>
+      <span><span class="t-name">Cynch propane delivery</span><span class="t-sub">Order a tank to the door · guest provides propane</span></span>
+      <span class="arrow">→</span>
+    </a>
+  </section>
+
+  <section data-section="picks" style="display:none;">
+    <h2>Host Picks</h2>
+    <p class="picks-intro">Personal favorites from your host — the spots he actually eats at, and the orders he stands behind.</p>
+    <div class="picks-list"></div>
+  </section>
+
+  <section data-section="getaround" style="display:none;">
+    <h2>Getting Around</h2>
+    <div class="ga-list"></div>
+    <div class="inst-note">Uber &amp; Lyft are quick and reliable here. Easy highway access, and RTD transit stops are listed under What's Nearest.</div>
+  </section>
+
+  <section data-section="nearest">
+    <h2>What's Nearest</h2>
+    <div class="nearest-list"></div>
+  </section>
+
+  <section>
+    <h2>Photos</h2>
+    <div class="photo-strip"></div>
+  </section>
+
+  <section>
+    <h2>Need Anything?</h2>
+    <a class="help-line" data-bind-href="tel_link"><span class="h-ic">📞</span><span><span class="h-main" data-bind="text_line_display"></span><span class="h-sub">Call or text us anytime — we reply fast</span></span><span class="arrow">→</span></a>
+    <a class="help-line" data-bind-href="report_link"><span class="h-ic">⚠️</span><span><span class="h-main">Report an issue</span><span class="h-sub">Send a photo and a quick note</span></span><span class="arrow">→</span></a>
+    <a class="help-line" data-bind-href="save10_link" target="_blank" rel="noopener"><span class="h-ic">🎁</span><span><span class="h-main">Book direct &amp; save 10%</span><span class="h-sub">Code STAYNSAVE10 at kushkations.com</span></span><span class="arrow">→</span></a>
+  </section>
+
+  <section>
+    <h2>Emergency</h2>
+    <div class="info-row"><div class="k">Hospital</div><div class="v" data-bind="emergency.nearest_hospital.name"></div></div>
+    <div class="info-row"><div class="k">Address</div><div class="v" data-bind="emergency.nearest_hospital.address"></div></div>
+    <div class="info-row"><div class="k">Police (non-emergency)</div><div class="v" data-bind="emergency.non_emergency_police"></div></div>
+  </section>
+
+  <footer>
+    KushKations<sup>™</sup> · Come enjoy a KushKation!<br>
+    <div class="tm">This page refreshes automatically when we update it.</div>
+  </footer>
+</template>
+
+<script>
+(async function () {
+  const params = new URLSearchParams(location.search);
+  let slug = params.get('p');
+  if (!slug) {
+    const m = location.pathname.match(/\/m\/([a-z0-9-]+)\/?$/i);
+    if (m) slug = m[1];
+  }
+  slug = slug || 'palace';
+
+  let data;
+  try {
+    const res = await fetch(`../content/properties/${slug}.json`);
+    data = await res.json();
+  } catch (e) {
+    document.getElementById('app').innerHTML =
+      `<p style="padding:40px 16px;color:#b00;">Couldn't load ${slug}.json</p>`;
+    return;
+  }
+
+  // Pull current guest from OwnerRez (live, every page load)
+  let live = null;
+  try {
+    const r = await fetch(`/api/current-guest?p=${slug}`, { cache: 'no-store' });
+    if (r.ok) live = await r.json();
+  } catch (_) {}
+
+  // Guest personalization: URL ?guest=Name overrides; otherwise use OR
+  let guestName = params.get('guest') || (live && live.guest && live.guest.first_name) || '';
+  data.guest_greeting = guestName ? `Hi ${guestName}! 👋` : '';
+  data.guest_greeting_sub = guestName ? `This guide is set up just for your stay at ${data.meta.name}.` : '';
+  if (live && live.door_code) {
+    data.door_code_display = live.door_code;
+  } else if (live && live.door_code_available_on) {
+    data.door_code_display = `Available ${live.door_code_available_on}`;
+  }
+
+  // Derived fields
+  const phone = (data.emergency && data.emergency.text_line_override) || '+1 (303) 731-6880';
+  const phoneDigits = phone.replace(/\D/g, '');
+  const guestPrefix = guestName ? `Hi, this is ${guestName}.` : 'Hi,';
+  data.sms_link = `sms:+${phoneDigits}?body=${encodeURIComponent(`${guestPrefix} I'm staying at ${data.meta.name}.`)}`;
+  data.sms_door_link = `sms:+${phoneDigits}?body=${encodeURIComponent(`${guestPrefix} I'm checking into ${data.meta.name} and need the door code please.`)}`;
+  data.sms_extension_link = `sms:+${phoneDigits}?body=${encodeURIComponent(`${guestPrefix} I'm staying at ${data.meta.name}. Can I request an early check-in or late checkout? Happy to pay the fee.`)}`;
+  data.report_link = `sms:+${phoneDigits}?body=${encodeURIComponent(`${guestPrefix} I'm reporting an issue at ${data.meta.name}: `)}`;
+  data.ig_link = 'https://instagram.com/kushkations';
+  data.review_link = `mailto:info@kushkations.com?subject=${encodeURIComponent(`Review — ${data.meta.name}`)}&body=${encodeURIComponent('Hi! Here is my review:\n\n\n— [Your name, dates of stay]')}`;
+  data.save10_link = 'https://kushkations.com';
+  data.tel_link = `tel:+${phoneDigits}`;
+  data.text_line_display = phone;
+  data.welcome_line = `Welcome in! We've gathered your door code, Wi-Fi details, house instructions, and favorite local eats right here so you can settle in effortlessly.\n\nNeed a hand with anything? Send us a quick text and we'll take care of it right away.`;
+  data.map_link = data.meta.address
+    ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(data.meta.address)}`
+    : '';
+  // Door code: placeholder for now. Backend wiring (OwnerRez/ChargeAutomation lookup) to come.
+  data.door_code_display = data.door_code_display || 'Sent via text 24 hours before check-in';
+
+  const get = (path) =>
+    path.split('.').reduce((o, k) => (o == null ? undefined : o[k]), data);
+
+  const tpl = document.getElementById('tpl');
+  const node = tpl.content.cloneNode(true);
+
+  node.querySelectorAll('[data-bind]').forEach(el => {
+    const v = get(el.getAttribute('data-bind'));
+    if (v == null || v === '') { el.remove(); return; }
+    el.textContent = String(v);
+  });
+
+  node.querySelectorAll('[data-bind-src]').forEach(el => {
+    const v = get(el.getAttribute('data-bind-src'));
+    if (!v) { el.remove(); return; }
+    el.setAttribute('src', v);
+  });
+
+  node.querySelectorAll('[data-bind-href]').forEach(el => {
+    const v = get(el.getAttribute('data-bind-href'));
+    if (!v) { el.remove(); return; }
+    el.setAttribute('href', v);
+  });
+
+  const app = document.getElementById('app');
+  app.innerHTML = '';
+  app.appendChild(node);
+
+  // Populate amenity cards (Hot Tub, Sauna, PS5, Theater, etc.) based on JSON amenities
+  const amenitiesSection = app.querySelector('[data-amenity-cards]');
+  const amenityCards = amenitiesSection?.querySelector('.amenity-cards');
+  if (amenitiesSection && amenityCards) {
+    const am = data.amenities || {};
+    const cards = [];
+    if (am.hot_tub) {
+      const brand = (am.hot_tub.brand && !/^hot tub$/i.test(am.hot_tub.brand)) ? am.hot_tub.brand : '';
+      cards.push({icon: '♨️', title: 'Hot Tub', body: `${brand ? brand + '. ' : ''}Shower first, cover when not in use. Full steps in Hot Tub Instructions below.`});
+    }
+    if (am.sauna) cards.push({icon: '🧖', title: 'Sauna', body: 'Press POWER, set temp with +/- buttons, set time, heater auto-shuts off. Max 30 min sessions.'});
+    if (am.ps5) cards.push({icon: '🎮', title: 'PS5', body: 'Use the Guest Account only. PS Plus games already downloaded. Don\'t sign in with your personal PSN.'});
+    if (am.theater || am.theater_room) cards.push({icon: '🎬', title: 'Theater Room', body: 'Movie-night setup with popcorn machine — steps in Game Instructions below.'});
+    if (am.golf_simulator) cards.push({icon: '⛳', title: 'Golf Simulator', body: 'SkyTrac setup. Wi-Fi: kushkations.com. Right-handed players only.'});
+    if (am.game_room) cards.push({icon: '🕹️', title: 'Game Room', body: 'Details in Game Instructions below. Supervise kids in the game area.'});
+    if (cards.length === 0) {
+      amenitiesSection.setAttribute('data-empty', 'true');
+    } else {
+      cards.forEach(c => {
+        const el = document.createElement('div');
+        el.className = 'amenity-card';
+        el.innerHTML = `
+          <div class="title-row"><span class="icon">${c.icon}</span><span>${c.title}</span></div>
+          <div class="body">${c.body}</div>
+        `;
+        amenityCards.appendChild(el);
+      });
+    }
+  }
+
+  // Hot Tub + Game instructions — rendered from THIS property's own amenities JSON
+  const esc = (t) => String(t).replace(/[&<>"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));
+  const AM = data.amenities || {};
+
+  const htSection = app.querySelector('[data-section="hottub"]');
+  if (htSection && AM.hot_tub && typeof AM.hot_tub === 'object') {
+    const ht = AM.hot_tub;
+    let h = '';
+    const brand = (ht.brand && !/^hot tub$/i.test(ht.brand)) ? ht.brand : '';
+    if (brand || ht.temp_range) h += `<div class="inst-note">${brand ? '<strong>' + esc(brand) + '</strong>' : 'Hot tub'}${ht.temp_range ? ' · set ' + esc(ht.temp_range) : ''}</div>`;
+    const ms = ht.mode_setup || {};
+    // ⚠️ The #1 hot-tub support call: tub in EC/Economy won't hold temperature.
+    if (ms.must_do_first) h += `<div class="inst-note warn">⚠️ <strong>Do this first:</strong> ${esc(ms.must_do_first)}</div>`;
+    // Watch-the-video button (12 properties have one) — a tap beats a QR when they're already on their phone
+    if (ms.video_tutorial) {
+      const vurl = String(ms.video_tutorial).replace('/embed/', '/watch?v=');
+      h += `<a class="video-btn" href="${esc(vurl)}" target="_blank" rel="noopener">▶︎ ${esc(ms.video_tutorial_title || 'Watch the hot tub video')}</a>`;
+    }
+    if (Array.isArray(ht.quick_start) && ht.quick_start.length) h += `<div class="inst-h">Start it up</div><ol class="inst-steps">${ht.quick_start.map(s => `<li>${esc(s)}</li>`).join('')}</ol>`;
+    // Full heating / mode instructions — previously stored but NEVER shown in the app
+    if (Array.isArray(ms.steps) && ms.steps.length) {
+      h += `<details class="inst" open><summary>🌡️ Not staying hot? Set the mode</summary><div class="inst-body">`;
+      if (ms.why) h += `<div class="inst-note">${esc(ms.why)}</div>`;
+      h += `<ol class="inst-steps">${ms.steps.map(s => `<li>${esc(s)}</li>`).join('')}</ol></div></details>`;
+    }
+    if (Array.isArray(ht.rules) && ht.rules.length) h += `<details class="inst"><summary>♨️ Hot tub rules</summary><div class="inst-body"><ul class="inst-list">${ht.rules.map(s => `<li>${esc(s)}</li>`).join('')}</ul></div></details>`;
+    h += `<details class="inst"><summary>🔧 Still not heating?</summary><div class="inst-body"><ol class="inst-steps">`
+       + `<li>Check the panel reads <strong>ST</strong> (Standard), not EC/Economy.</li>`
+       + `<li>Check the water level — it must cover the filter, or the heater shuts off.</li>`
+       + `<li>Top up with the garden hose to ~2 inches above the filter.</li>`
+       + `<li>Give it 15 minutes, then re-check.</li>`
+       + `<li>Still cold? Text us a photo of the control panel and we'll walk you through it.</li></ol></div></details>`;
+    if (ht.shock_location || ht.water_care) h += `<div class="inst-note">${ht.shock_location ? '<strong>Shock:</strong> ' + esc(ht.shock_location) + '. ' : ''}${ht.water_care ? esc(ht.water_care) : ''}</div>`;
+    if (ht.access_note) h += `<div class="inst-note">🚶 ${esc(ht.access_note)}</div>`;
+    if (Array.isArray(ht.access_photos) && ht.access_photos.length) {
+      h += `<div class="access-strip">${ht.access_photos.map(u => `<img src="${esc(u)}" loading="lazy" alt="">`).join('')}</div>`;
+    }
+    if (h) { htSection.querySelector('.ht-body').innerHTML = h; htSection.style.display = ''; }
+  }
+
+  // Host Picks — host-voice food recs ported verbatim from the printed manual
+  const picksSection = app.querySelector('[data-section="picks"]');
+  if (picksSection && data.nearby && Array.isArray(data.nearby.host_picks) && data.nearby.host_picks.length) {
+    const list = picksSection.querySelector('.picks-list');
+    data.nearby.host_picks.forEach(p => {
+      if (!p || !p.name) return;
+      const el = document.createElement('div');
+      el.className = 'pick';
+      el.innerHTML = `
+        <div class="p-name">${esc(p.name)}</div>
+        ${p.meta ? `<div class="p-meta">${esc(p.meta)}</div>` : ''}
+        ${p.body ? `<div class="p-body">${esc(p.body)}</div>` : ''}
+        ${p.order ? `<div class="p-order"><b>Order:</b> ${esc(p.order)}</div>` : ''}
+      `;
+      list.appendChild(el);
+    });
+    if (list.children.length) picksSection.style.display = '';
+  }
+
+  // Getting Around — per-property drive times (parsed from the print manuals)
+  const gaSection = app.querySelector('[data-section="getaround"]');
+  if (gaSection && data.nearby && Array.isArray(data.nearby.getting_around) && data.nearby.getting_around.length) {
+    const gaList = gaSection.querySelector('.ga-list');
+    data.nearby.getting_around.forEach(r => {
+      if (!r || !r.name || !r.time) return;
+      const row = document.createElement('div');
+      row.className = 'info-row';
+      row.innerHTML = `<div class="k" style="text-transform:none;letter-spacing:0;font-size:13px;">${esc(r.name)}</div><div class="v">${esc(r.time)}</div>`;
+      gaList.appendChild(row);
+    });
+    if (gaList.children.length) gaSection.style.display = '';
+  }
+
+  const gSection = app.querySelector('[data-section="games"]');
+  if (gSection) {
+    let g = '';
+    const gr = AM.game_room;
+    if (gr && typeof gr === 'object') {
+      const items = [];
+      ['highlights', 'features'].forEach(k => Array.isArray(gr[k]) && gr[k].forEach(x => items.push(esc(x))));
+      if (Array.isArray(gr.consoles)) gr.consoles.forEach(c => {
+        if (typeof c === 'string') items.push(esc(c));
+        else if (c && c.name) items.push(`<strong>${esc(c.name)}</strong>${c.notes ? ' — ' + esc(c.notes) : ''}`);
+      });
+      if (items.length) {
+        g += `<details class="inst" open><summary>🕹️ Game room</summary><div class="inst-body"><ul class="inst-list">${items.map(i => `<li>${i}</li>`).join('')}</ul>${gr.notes ? `<div class="inst-note">${esc(gr.notes)}</div>` : ''}</div></details>`;
+      } else if (gr.notes) {
+        g += `<div class="inst-note">${esc(gr.notes)}</div>`;
+      }
+    }
+    if (AM.ps5) g += `<details class="inst" open><summary>🎮 PS5</summary><div class="inst-body">`
+      + `<div class="inst-note warn">⚠️ <strong>Use the Guest Account only.</strong> Signing in with your personal PSN account can lock the console for the next guest — and lock you out mid-game.</div>`
+      + `<div class="inst-h">Get playing</div>`
+      + `<ol class="inst-steps">`
+      + `<li>Press and <strong>hold the PS button</strong> on the controller until it powers on.</li>`
+      + `<li>Select the <strong>Guest Account</strong> already loaded on the console.</li>`
+      + `<li>Open any game — they're all pre-downloaded through PS Plus.</li>`
+      + `<li>Controller dying? Plug it into the console with the USB cable; it plays while charging.</li></ol>`
+      + `<div class="inst-h">Second player</div>`
+      + `<ol class="inst-steps"><li>Press the PS button on the second controller.</li>`
+      + `<li>When it asks, choose <strong>log in as guest</strong> to pair it.</li></ol>`
+      + `<div class="inst-note"><strong>No disc slot.</strong> The PS5 is mounted and has no disc tray, so you can't bring your own discs — stick with the downloaded PS Plus library.</div>`
+      + `<div class="inst-note">Before checkout, please <strong>sign out of anything you signed into</strong> and put the controllers back on the charger.</div>`
+      + `</div></details>`;
+    const tr = AM.theater_room;
+    if (AM.theater || tr) {
+      const pop = tr && tr.popcorn_machine && Array.isArray(tr.popcorn_machine.steps) ? tr.popcorn_machine.steps : null;
+      const steps = pop || ['Turn on both the LIGHT and POP switches to preheat 2–3 minutes', 'Turn the POP switch off, then open the lid carefully', 'Add oil and a small measure of kernels', 'Turn the machine off as soon as popping slows'];
+      g += `<details class="inst"><summary>🍿 Theater & popcorn</summary><div class="inst-body"><ol class="inst-steps">${steps.map(s => `<li>${esc(s)}</li>`).join('')}</ol><div class="inst-note">The popcorn machine gets VERY hot — supervise kids.</div></div></details>`;
+    }
+    if (g) { gSection.querySelector('.games-body').innerHTML = g; gSection.style.display = ''; }
+  }
+
+  // Populate "What's Nearest" from JSON nearby data
+  const nearestSection = app.querySelector('[data-section="nearest"]');
+  const nearestList = nearestSection?.querySelector('.nearest-list');
+  if (nearestList && data.nearby) {
+    const cats = [
+      {key: 'eat_in_10', label: 'Eat', max: 2},
+      {key: 'coffee', label: 'Coffee', max: 1},
+      {key: 'casual_dinner', label: 'Dinner', max: 2},
+      {key: 'late_night', label: 'Late Night', max: 1},
+      {key: 'parks', label: 'Park', max: 1},
+      {key: 'adventure_day', label: 'Day Trip', max: 1},
+      {key: 'dispensaries', label: 'Dispensary', max: 3},
+      {key: 'grocery', label: 'Grocery', max: 1},
+    ];
+    let rendered = 0;
+    cats.forEach(c => {
+      const arr = (data.nearby[c.key] || []).filter(x => x && x.name).slice(0, c.max);
+      arr.forEach(item => {
+        const row = document.createElement('div');
+        row.className = 'nearest-row';
+        row.innerHTML = `
+          <span class="cat">${c.label}</span>
+          <span>
+            <span class="name">${item.name}${item.drive_min ? ` <span class="mins">${item.drive_min} min</span>` : ''}</span>
+            ${item.address ? `<span class="addr">${item.address}</span>` : ''}
+          </span>
+        `;
+        nearestList.appendChild(row);
+        rendered++;
+      });
+    });
+    if (rendered === 0) nearestSection.style.display = 'none';
+  }
+
+  // Populate photo strip from gallery (skip the cover_photo since it's already the hero)
+  const photoStrip = app.querySelector('.photo-strip');
+  if (photoStrip && data.meta?.photo_gallery?.length) {
+    const cover = data.meta.cover_photo;
+    const others = data.meta.photo_gallery.filter(u => u !== cover).slice(0, 6);
+    if (others.length === 0) {
+      photoStrip.parentElement.style.display = 'none';
+    } else {
+      others.forEach(url => {
+        const img = document.createElement('img');
+        img.src = url;
+        img.loading = 'lazy';
+        img.alt = '';
+        photoStrip.appendChild(img);
+      });
+    }
+  }
+
+  document.title = `${data.meta.name} · KushKations`;
+
+  // Sticky jump-nav — built from the sections that actually rendered for THIS property
+  const tabNav = app.querySelector('#tabNav');
+  if (tabNav) {
+    const TAB_SPEC = [
+      {match: 'Door Code',            label: '🔑 Access'},
+      {match: 'WiFi',                 label: '📶 WiFi'},
+      {match: 'The Basics',           label: '📋 Basics'},
+      {match: 'Early Check-In',       label: '⏰ Early/Late'},
+      {match: 'Checkout Instructions',label: '🚪 Checkout'},
+      {match: 'House Rules',          label: '📜 Rules'},
+      {match: 'Quick Instructions',   label: '🎮 Amenities'},
+      {match: 'Hot Tub Instructions', label: '♨️ Hot Tub'},
+      {match: 'Game Instructions',    label: '🕹️ Games'},
+      {match: 'Host Picks',           label: '🍽️ Food'},
+      {match: "What's Nearest",       label: '📍 Nearby'},
+      {match: 'Need Anything',        label: '🆘 Help'},
+    ];
+    const secs = Array.from(app.querySelectorAll('section'));
+    let idn = 0;
+    const tabs = [];
+    TAB_SPEC.forEach(spec => {
+      const sec = secs.find(s => {
+        if (s.style.display === 'none') return false;
+        const h = s.querySelector('h2');
+        return h && h.textContent.trim().startsWith(spec.match);
+      });
+      if (!sec) return;
+      if (!sec.id) sec.id = `sec-${++idn}`;
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'tab-btn';
+      btn.textContent = spec.label;
+      btn.addEventListener('click', () => {
+        document.getElementById(sec.id).scrollIntoView({behavior: 'smooth', block: 'start'});
+      });
+      tabNav.appendChild(btn);
+      tabs.push({btn, sec});
+    });
+    if (!tabs.length) {
+      tabNav.style.display = 'none';
+    } else {
+      const byId = new Map(tabs.map(t => [t.sec.id, t.btn]));
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (!e.isIntersecting) return;
+          tabs.forEach(t => t.btn.classList.remove('active'));
+          const b = byId.get(e.target.id);
+          if (b) { b.classList.add('active'); b.scrollIntoView({inline: 'center', block: 'nearest', behavior: 'smooth'}); }
+        });
+      }, {rootMargin: '-45% 0px -50% 0px', threshold: 0});
+      tabs.forEach(t => obs.observe(t.sec));
+    }
+  }
+
+  // Spanish translation: simple text-content swap for static labels
+  const ES = {
+    'Door Code': 'Código de Puerta',
+    'Sent via text 24 hours before check-in': 'Enviado por texto 24 horas antes del check-in',
+    'Need it now? Text us →': '¿Lo necesitas ahora? Escríbenos →',
+    'Text Us': 'Escríbenos',
+    'Quick reply, anytime': 'Respuesta rápida',
+    'Early/Late Checkout': 'Check-out Temprano/Tarde',
+    'Request via text': 'Solicitar por texto',
+    'Report an Issue': 'Reportar un Problema',
+    'Send a photo + note': 'Envía una foto + nota',
+    'Save 10% next stay': 'Ahorra 10% próxima estancia',
+    'Code STAYNSAVE10': 'Código STAYNSAVE10',
+    'WiFi': 'WiFi',
+    'Network': 'Red',
+    'Password': 'Contraseña',
+    'The Basics': 'Lo Básico',
+    'Check-in': 'Check-in',
+    'Check-out': 'Check-out',
+    'Trash': 'Basura',
+    'Parking': 'Estacionamiento',
+    'Checkout Instructions': 'Instrucciones de Check-out',
+    'Place dirty towels and rags in the bathtub': 'Pon las toallas sucias en la bañera',
+    'Turn off all lights': 'Apaga todas las luces',
+    'Load any used dishes in the dishwasher': 'Pon los platos usados en el lavavajillas',
+    'Take all trash to the outside bins': 'Saca toda la basura a los botes de afuera',
+    'Return TV remotes to the holder': 'Regresa los controles de TV al porta-controles',
+    'Leave any unopened food on the counter (donated to the cleaning team)': 'Deja la comida sin abrir en la barra (la donamos al equipo de limpieza)',
+    'No need to strip the beds, our team handles it': 'No necesitas quitar las sábanas, nuestro equipo lo hace',
+    'Cannabis-Friendly': 'Cannabis Permitido',
+    'Indoor 420': '420 Adentro',
+    'Allowed': 'Permitido',
+    'Indoor Tobacco': 'Tabaco Adentro',
+    'Not allowed': 'No permitido',
+    'Tobacco Outside': 'Tabaco Afuera',
+    'OK · no littering': 'OK · no tires colillas',
+    'House Rules': 'Reglas de la Casa',
+    'No Tobacco Indoors': 'Prohibido el Tabaco Adentro',
+    "No cigarettes, cigars, or Black & Milds inside. Vapes and blunt wraps are fine, and marijuana smoking indoors is allowed. Smoking tobacco outside is OK — please don't litter cigarette butts on the property (a fine applies).": 'No cigarrillos, puros ni Black & Milds adentro. Los vapes y las hojas para blunt están bien, y sí se permite fumar marihuana adentro. Fumar tabaco afuera está bien — por favor no tires las colillas en la propiedad (aplica una multa).',
+    'No Parties or Extra Guests': 'No Fiestas ni Huéspedes Extra',
+    'Any party or additional guests not approved before your stay will end your reservation immediately. Quiet enjoyment is for everyone on the block.': 'Cualquier fiesta o huésped adicional no aprobado antes de tu estancia terminará tu reservación de inmediato. La tranquilidad es para todos en la cuadra.',
+    'Quiet Hours · 10 PM to 9 AM': 'Horas de Silencio · 10 PM a 9 AM',
+    'A call from local authorities or a neighbor complaint means a check-in with the owner and may end your reservation.': 'Una llamada de las autoridades o una queja de un vecino significa una revisión con el dueño y puede terminar tu reservación.',
+    'Pets Welcome': 'Mascotas Bienvenidas',
+    'Pets are welcome. Please clean up after them inside and out — up to a $150 fine for pet waste left behind.': 'Las mascotas son bienvenidas. Por favor limpia después de ellas adentro y afuera — hasta $150 de multa por desechos de mascota dejados.',
+    'No Late Checkouts': 'No Check-Out Tarde',
+    "Unauthorized late checkout is charged $50 for every 15 minutes past 10 AM. Need an extension? Ask 24 hours ahead and we'll try to make it work.": 'El check-out tarde no autorizado se cobra $50 por cada 15 minutos después de las 10 AM. ¿Necesitas más tiempo? Pídelo con 24 horas de anticipación y trataremos de acomodarte.',
+    'Dispose of Ash Properly': 'Desecha la Ceniza Correctamente',
+    '$50 charge for improper ash disposal. Never ash in the hot tub or into any object in the home (like a chair cup holder).': '$50 de cargo por desechar la ceniza incorrectamente. Nunca dejes caer ceniza en el jacuzzi ni en ningún objeto de la casa (como el portavasos de una silla).',
+    'Quick Instructions': 'Instrucciones Rápidas',
+    'Hot Tub': 'Jacuzzi',
+    'Sauna': 'Sauna',
+    'PS5': 'PS5',
+    'Theater Room': 'Sala de Cine',
+    'Golf Simulator': 'Simulador de Golf',
+    'Game Room': 'Sala de Juegos',
+    'Early Check-In & Late Checkout': 'Check-In Temprano y Check-Out Tarde',
+    'Early · before 10 AM': 'Temprano · antes de 10 AM',
+    'Early · 10–11:59 AM': 'Temprano · 10–11:59 AM',
+    'Early · 12–3:59 PM': 'Temprano · 12–3:59 PM',
+    'Late · until 12 PM': 'Tarde · hasta 12 PM',
+    'Late · until 2 PM': 'Tarde · hasta 2 PM',
+    'Late · after 2 PM': 'Tarde · después de 2 PM',
+    'FREE': 'GRATIS',
+    'Full extra night': 'Noche extra completa',
+    'Standard check-in is 4 PM, checkout 10 AM. *The $100 early check-in applies only when the home is free the night before. Subject to the cleaning schedule — text us to lock it in.': 'El check-in estándar es a las 4 PM y el check-out a las 10 AM. *El check-in temprano de $100 aplica solo cuando la casa está libre la noche anterior. Sujeto al horario de limpieza — escríbenos para confirmarlo.',
+    'Request via text →': 'Solicitar por texto →',
+    'Getting Around': 'Cómo Moverse',
+    'Uber & Lyft are quick and reliable here. Easy highway access, and RTD transit stops are listed under What\'s Nearest.': 'Uber y Lyft son rápidos y confiables aquí. Fácil acceso a la autopista, y las paradas de RTD están en Lo Más Cercano.',
+    "Host Picks": 'Los Favoritos de Shaquan',
+    'Personal favorites from your host — the spots he actually eats at, and the orders he stands behind.': 'Favoritos personales de tu anfitrión — los lugares donde realmente come, y lo que pide.',
+    'A Few House Rules': 'Algunas Reglas de la Casa',
+    "Welcome in! We've gathered your door code, Wi-Fi details, house instructions, and favorite local eats right here so you can settle in effortlessly.\n\nNeed a hand with anything? Send us a quick text and we'll take care of it right away.": '¡Bienvenido! Reunimos tu código de puerta, los datos del Wi-Fi, las instrucciones de la casa y los mejores lugares para comer aquí mismo para que te instales sin complicaciones.\n\n¿Necesitas ayuda con algo? Escríbenos un mensaje rápido y lo resolvemos de inmediato.',
+    'Hot Tub Instructions': 'Instrucciones del Jacuzzi',
+    'Game Instructions': 'Instrucciones de Juegos',
+    'Tutorials & How-Tos': 'Tutoriales y Guías',
+    'Phone as a Roku remote': 'Teléfono como control de Roku',
+    'Lost a remote? Control any TV from your phone': '¿Perdiste un control? Controla cualquier TV desde tu teléfono',
+    'Drain the sink': 'Cómo drenar el lavabo',
+    'Quick video walk-through': 'Video tutorial rápido',
+    'Order propane for the grill': 'Ordenar propano para el asador',
+    'Video tutorial · delivered via Cynch': 'Video tutorial · entrega vía Cynch',
+    'Cynch propane delivery': 'Entrega de propano Cynch',
+    'Order a tank to the door · guest provides propane': 'Pide un tanque a la puerta · el huésped provee el propano',
+    'Book direct · Code STAYNSAVE10': 'Reserva directa · Código STAYNSAVE10',
+    "What's Nearest": 'Lo Más Cercano',
+    'Photos': 'Fotos',
+    'Emergency': 'Emergencia',
+    'Hospital': 'Hospital',
+    'Address': 'Dirección',
+    'Police (non-emergency)': 'Policía (no emergencia)',
+    'Open the full guide': 'Abrir la guía completa',
+    'Watch the quick tutorial': 'Ver el tutorial rápido',
+    'Eat': 'Comer',
+    'Coffee': 'Café',
+    'Dinner': 'Cena',
+    'Late Night': 'Tarde de Noche',
+    'Park': 'Parque',
+    'Day Trip': 'Excursión',
+    'Dispensary': 'Dispensario',
+    'Grocery': 'Supermercado',
+    'Need Anything?': '¿Necesitas Algo?',
+    'Call or text us anytime — we reply fast': 'Llámanos o escríbenos cuando quieras — respondemos rápido',
+    'Report an issue': 'Reportar un problema',
+    'Send a photo and a quick note': 'Envía una foto y una nota rápida',
+    'Book direct & save 10%': 'Reserva directo y ahorra 10%',
+    'Code STAYNSAVE10 at kushkations.com': 'Código STAYNSAVE10 en kushkations.com',
+    '🔑 Access': '🔑 Acceso',
+    '📶 WiFi': '📶 WiFi',
+    '📋 Basics': '📋 Lo Básico',
+    '⏰ Early/Late': '⏰ Temprano/Tarde',
+    '🚪 Checkout': '🚪 Check-out',
+    '📜 Rules': '📜 Reglas',
+    '🎮 Amenities': '🎮 Amenidades',
+    '♨️ Hot Tub': '♨️ Jacuzzi',
+    '🕹️ Games': '🕹️ Juegos',
+    '🍽️ Food': '🍽️ Comida',
+    '📍 Nearby': '📍 Cerca',
+    '🆘 Help': '🆘 Ayuda',
+  };
+
+  function setLang(lang) {
+    localStorage.setItem('kk_lang', lang);
+    document.documentElement.lang = lang;
+    document.querySelectorAll('h2, .label, .sub, .k, .v, .checkout-list li, .door-code-cta, .door-code-value, .amenity-card .title-row span:last-child, .amenity-card .body, .nearest-row .cat, .full-guide-link, p, .door-code-card h2, .t-name, .t-sub, section > .inst-note, .welcome, .picks-intro, .tab-btn, .r-title, .r-body, .help-line .h-main, .help-line .h-sub').forEach(el => {
+      if (lang === 'es') {
+        if (!el.dataset.en) el.dataset.en = el.textContent.trim();
+        const t = ES[el.dataset.en];
+        if (t) el.textContent = t;
+      } else {
+        if (el.dataset.en) el.textContent = el.dataset.en;
+      }
+    });
+    const btn = document.getElementById('langToggle');
+    if (btn) btn.textContent = lang === 'es' ? 'ES | EN' : 'EN | ES';
+  }
+
+  const savedLang = localStorage.getItem('kk_lang') || 'en';
+  if (savedLang === 'es') setLang('es');
+  document.getElementById('langToggle').addEventListener('click', () => {
+    setLang(document.documentElement.lang === 'es' ? 'en' : 'es');
+  });
+})();
+</script>
+
+</body>
+</html>

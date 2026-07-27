@@ -1,0 +1,616 @@
+{
+ "meta": {
+  "name": "Indica",
+  "slug": "indica",
+  "ownerrez_id": "399810",
+  "address": "7682 Shoshone St, Denver, CO 80221",
+  "coordinates": {
+   "lat": 0,
+   "lng": 0
+  },
+  "cover_photo": "https://uc.orez.io/i/a9f6c967b9e9434e8ce95c8f75c873a8-Large",
+  "photo_gallery": [
+   "https://uc.orez.io/i/2c50e8e998694c04a641525139adb830-Large",
+   "https://uc.orez.io/i/a9f6c967b9e9434e8ce95c8f75c873a8-Large",
+   "https://uc.orez.io/i/a8dd000c5f82428e85b749eb8df38885-Large",
+   "https://uc.orez.io/i/4bec3055a6a8497ea78ee7fb38e951fb-Large",
+   "https://uc.orez.io/i/e3a4a0f8d9494f28b63bd565c897f849-Large",
+   "https://uc.orez.io/i/73d8acb13b2d471db6e2e6ecd863c59d-Large",
+   "https://uc.orez.io/i/7e86c861d6ac48efb1b490f534f7b574-Large",
+   "https://uc.orez.io/i/f23cb91c6f29454f9541ff7a906f3a18-Large"
+  ],
+  "bedrooms": 5,
+  "bathrooms": 2,
+  "sleeps": 16,
+  "extra_guests_allowed": 2,
+  "size_sqft": 1700,
+  "is_420_friendly": true,
+  "one_line_vibe": "Denver house with a basement cinema and a hot tub for unwinding.",
+  "layout": {
+   "stairs_to_upstairs": "",
+   "stairs_to_basement": ""
+  },
+  "direct_booking_url": "https://kushkations.com/indica/"
+ },
+ "arrival": {
+  "check_in_time": "4:00 PM",
+  "access_method": "smart_lock",
+  "code_delivery": "Sent the morning of your arrival. Activates at 4:00 PM unless early check-in has been approved.",
+  "lock_backup_tip": "After entering your code, press the 'Check' (or 'Schlage') button to engage the lock. If the door doesn't open, try again slowly, one digit at a time.",
+  "parking": "PLEASE DO NOT BLOCK NEIGHBORING DRIVEWAYS. Please access the driveway and park in front of the garage. You may also park along the road in front of the property.",
+  "towels_location": "8 towels in the closet of the upstairs room, plus 8 more on top of the washing machine in the downstairs room.",
+  "cleaning_supplies_location": "Next to the refrigerator",
+  "towel_photos": [
+   {
+    "url": "https://lh3.googleusercontent.com/d/1kRNXq0T0kE74wBCLnq0mt0ygZEAWpPJR",
+    "caption": "Towel storage"
+   },
+   {
+    "url": "https://lh3.googleusercontent.com/d/1vfl701p366vnZ5xofFghiNfmswQKN9fW",
+    "caption": "Towel storage"
+   }
+  ],
+  "first_steps": [
+   "Please take luggage directly to your bedroom to protect the floors.",
+   "Fire extinguishers are in every bedroom and beneath the kitchen sink.",
+   "Front and back doors are the two main exits."
+  ]
+ },
+ "wifi": {
+  "network": "Kushkations.com",
+  "password": "kushkations.com",
+  "notes": "If slow: unplug the router for 30 sec and plug back in.",
+  "router_location": "Living room, behind the dining table"
+ },
+ "house_rules": [
+  "Feel free to smoke 420 indoors. Tobacco goes outside, please ($1,000 reset fee if it doesn't).",
+  "Quiet hours run 10 PM to 9 AM so the neighbors can rest easy.",
+  "Pets are welcome. Keep them off the furniture and clean up after them ($200 if we find a surprise).",
+  "Please check with us before adding guests or hosting a party. Unapproved gatherings cancel the stay.",
+  "The hot tub and cup holders are not ashtrays ($50 cleanup fee per incident)."
+ ],
+ "amenities": {
+  "hot_tub": {
+   "brand": "Cool Spas",
+   "temp_range": "100°F – 102°F",
+   "shock_location": "Top of the fridge",
+   "mode_setup": null,
+   "quick_start": [
+    "Flip the hot tub switch on; allow 30+ min to reach temp",
+    "Shower before getting in",
+    "Open all jet valves before running the jets",
+    "Press the Light button once on the control panel (if you want the LED on)",
+    "Set temperature to 100–102°F",
+    "Close the cover when not in use"
+   ],
+   "water_care": "Shock every 2–3 days for light use, or after each heavy / long soak. No food, drinks, glass, or smoking in the water.",
+   "rules": [
+    "No food, drinks, or glass in the tub",
+    "Kids must be supervised",
+    "Keep water above the filter line — drops below = heater shuts off"
+   ],
+   "photo": ""
+  },
+  "grill": {
+   "notes": "Propane grill is available. Bring your own propane or order a tank through the Cynch app.",
+   "propane_vendor": "Gilbert (303) 475-3342"
+  },
+  "theater_room": {
+   "seating": "6-seater electronic recliners — controls on the right-hand side of each seat. One adult or child per seat. No rough play. Children must not be left unattended.",
+   "projector": "Use the remote controls to adjust the projector and Roku stick. The projector requires no adjustments on arrival. For an external device, bring an HDMI cable long enough to reach with slack — if there's no slack, the cable is too short.",
+   "streaming": "Roku stick included — sign in with your own streaming accounts and sign out before checkout.",
+   "popcorn_machine_steps": [
+    "Turn both 'light' and 'pop' switches on and preheat for 2–3 minutes",
+    "Turn off the 'pop' switch",
+    "Open the lid carefully and add oil plus a small measure of kernels",
+    "Once popping ceases, turn off the machine promptly to prevent burning",
+    "Supervise children — the machine gets VERY HOT"
+   ]
+  },
+  "game_room": {
+   "features": [
+    "Pool table",
+    "Foosball table",
+    "Board games"
+   ],
+   "notes": "Living area amenities. Children must be supervised — do not leave them unattended in this space."
+  },
+  "firepit": {
+   "ignition_steps": [
+    "Open the propane tank valve by twisting the knob to the open position",
+    "Follow the manual inside the pit for ignition specifics",
+    "Rotate the knob to the lightning bolt symbol and press it down while clicking the starter button",
+    "Allow 15–30 seconds for gas to prime and ignite",
+    "Once lit, adjust the gas setting to low or high based on preference"
+   ],
+   "shutdown": "Turn off the pit and close the propane tank when not in use. Keep the pit covered when not in use."
+  },
+  "tv": {
+   "streaming": [
+    "Sign in with your own accounts"
+   ],
+   "notes": "Log out of all streaming apps before checkout."
+  },
+  "kitchen": {
+   "highlights": [
+    "Full kitchen — cook what you'd cook at home",
+    "Fire extinguisher under the sink",
+    "Delivery works great: Uber Eats, DoorDash, Grubhub"
+   ]
+  },
+  "laundry": {
+   "washer": true,
+   "dryer": true,
+   "detergent_provided": true
+  },
+  "ps5": false,
+  "sauna": false,
+  "theater": true,
+  "golf_simulator": false,
+  "hair_dryer": {
+   "location": "Under each bathroom sink (one per bathroom)",
+   "notes": "If one is missing, message us and we will bring one over."
+  }
+ },
+ "checkout": {
+  "time": "10:00 AM",
+  "steps": [
+   "Bag the trash and move it to the bins near the front entrance",
+   "Sign out of any streaming apps on the TVs",
+   "Set the hallway thermostat to 66°F in winter, 75°F in summer",
+   "Lock up behind you and have a safe trip"
+  ],
+  "trash_day": "Monday. Bins are on the side of the house. Our team comes by to take the trash out and bring the bins back in — nothing for you to do."
+ },
+ "temperature": {
+  "main_thermostat_location": "",
+  "zones": 1,
+  "winter_minimum": "66°F, required to prevent pipes from freezing",
+  "notes": "Thermostat controls both heat and A/C, adjust freely"
+ },
+ "nearby": {
+  "eat_in_10": [
+   {
+    "name": "Doug's Diner",
+    "address": "4243 E 136th Ave, Thornton",
+    "distance_mi": 4,
+    "drive_min": 9,
+    "cuisine": "American diner, breakfast & brunch",
+    "top_orders": [
+     "Green chile breakfast burrito",
+     "Homemade cinnamon rolls"
+    ],
+    "reason": "Family-owned since 2010. Scratch-made, cooked in real butter, served in nap-worthy portions."
+   },
+   {
+    "name": "Bluebird Cafe",
+    "address": "885 Thornton Pkwy, Thornton",
+    "distance_mi": 5,
+    "drive_min": 10,
+    "cuisine": "American breakfast & brunch, farm-to-table",
+    "top_orders": [
+     "Denver omelette",
+     "Bacon avocado scramble"
+    ],
+    "reason": "The old Egg & I reborn. Fresh local ingredients, gluten-free and vegetarian options."
+   }
+  ],
+  "coffee": [
+   {
+    "name": "Summer Moon Coffee",
+    "address": "12840 Holly St, Thornton",
+    "distance_mi": 4,
+    "drive_min": 9,
+    "cuisine": "Specialty coffee, oak-roasted",
+    "top_orders": [
+     "Moon Milk latte",
+     "Iced Moon with sweet cream"
+    ],
+    "reason": "Unique oak-roasting technique that produces a flavor worth trying at least once. Pet-friendly patio."
+   }
+  ],
+  "casual_dinner": [
+   {
+    "name": "Jim's Burger Haven",
+    "address": "595 E 88th Ave, Thornton",
+    "distance_mi": 4,
+    "drive_min": 9,
+    "cuisine": "American burgers, old-school diner",
+    "top_orders": [
+     "Original 6-inch smash burger",
+     "Onion rings",
+     "Real ice cream milkshakes"
+    ],
+    "reason": "Denver's original smash burger, in business since 1961. Colorado-raised Angus and never frozen."
+   },
+   {
+    "name": "Tequila's Family Mexican",
+    "address": "12020 Pennsylvania St, Thornton",
+    "distance_mi": 5,
+    "drive_min": 10,
+    "cuisine": "Authentic Mexican",
+    "top_orders": [
+     "Sizzling fajitas",
+     "Tacos al pastor"
+    ],
+    "reason": "Family-run for over eighteen years. Serious tequila and mezcal list if you want to make an evening of it."
+   },
+   {
+    "name": "Saigon Bowl",
+    "address": "9931 Grant St, Thornton",
+    "distance_mi": 4,
+    "drive_min": 8,
+    "cuisine": "Vietnamese, pho & rice bowls",
+    "top_orders": [
+     "Pho (any style)",
+     "Bun Bo Hue"
+    ],
+    "reason": "Widely considered the best pho in Thornton. Twenty years of Vietnamese cooking behind every bowl."
+   }
+  ],
+  "parks": [
+   {
+    "name": "Trail Winds Park",
+    "drive_min": 10,
+    "reason": "111 acres of trails and open space. Easy to walk, run, or spend a slow morning."
+   },
+   {
+    "name": "Pecos Park",
+    "drive_min": 8,
+    "reason": "A compact nine-acre park. Good for a quick stroll or a short run."
+   }
+  ],
+  "adventure_day": [
+   {
+    "name": "Red Rocks Amphitheatre",
+    "drive_min": 40,
+    "reason": "One of the great outdoor venues in the country. Free to walk and hike, even without a show."
+   },
+   {
+    "name": "Rocky Mountain National Park",
+    "drive_min": 90,
+    "reason": "The classic Colorado day. Elk, alpine lakes, and Trail Ridge Road."
+   },
+   {
+    "name": "Boulder / Flatirons",
+    "drive_min": 40,
+    "reason": "College town energy and iconic rock formations for photos."
+   }
+  ],
+  "late_night": [
+   {
+    "name": "Fat Shack",
+    "address": "Thornton",
+    "distance_mi": 6,
+    "drive_min": 11,
+    "cuisine": "Late-night burgers, wings, 'fat sandwiches'",
+    "top_orders": [
+     "The Fat Sandwich"
+    ],
+    "reason": "Open when almost nothing else is. A reliable answer to the 'what now?' question at 1 AM."
+   },
+   {
+    "name": "Waffle House",
+    "address": "Thornton",
+    "distance_mi": 5,
+    "drive_min": 10,
+    "cuisine": "American diner, 24/7",
+    "top_orders": [
+     "Scattered, smothered, covered hash browns"
+    ],
+    "reason": "Open twenty-four hours. If it's 2 AM and you're hungry, this is the answer."
+   },
+   {
+    "name": "In-N-Out Burger",
+    "address": "Thornton",
+    "distance_mi": 5,
+    "drive_min": 10,
+    "cuisine": "Fast-food burgers",
+    "top_orders": [
+     "Double-Double animal-style",
+     "Animal-style fries"
+    ],
+    "reason": "Fresh off the grill until late. Order the Double-Double animal-style at least once."
+   }
+  ],
+  "getting_around": [
+   {
+    "name": "Red Rocks Park & Amphitheatre",
+    "time": "28 min"
+   },
+   {
+    "name": "Lookout Mountain",
+    "time": "25 min"
+   },
+   {
+    "name": "16th Street Mall",
+    "time": "12 min"
+   },
+   {
+    "name": "Estes Park & RMNP",
+    "time": "1h 30min"
+   },
+   {
+    "name": "Elitch Gardens",
+    "time": "12 min"
+   },
+   {
+    "name": "Dinosaur Ridge",
+    "time": "30 min"
+   }
+  ],
+  "host_picks": [
+   {
+    "name": "Brooklyn's Finest Pizza",
+    "meta": "Pizza · Host's pick · 10 min · 5 mi · Denver",
+    "body": "Host's favorite pizza in the city. New York style by the slice or full pie.",
+    "order": "Pepperoni slice, white pie, garlic knots."
+   },
+   {
+    "name": "Blue Agave",
+    "meta": "Mexican · Margaritas · 10 min · 5 mi · Denver",
+    "body": "Go-to for margaritas and fajitas. Upbeat vibe, generous portions, tableside guac.",
+    "order": "Sizzling fajitas, street tacos, tableside guac."
+   },
+   {
+    "name": "Welton Street Cafe",
+    "meta": "Soul Food · Five Points · 10 min · 5 mi · 2670 Welton St",
+    "body": "Southern soul food in historic Five Points. Family-run, full plates, a Denver institution.",
+    "order": "Fried chicken, mac and cheese, collards, sweet potato pie."
+   },
+   {
+    "name": "Thai Daughter",
+    "meta": "Thai · 10 min · 5 mi · Denver",
+    "body": "Local favorite Thai spot. Order it medium-hot, they don't skimp on heat.",
+    "order": "Pad Thai, drunken noodles, Massaman curry."
+   },
+   {
+    "name": "Gaetano's",
+    "meta": "Italian · Old-school · 7 min · 2.5 mi · 3760 Tejon St",
+    "body": "Classic red-sauce Italian in the Highlands. Family vibes, a bar with stories, lasagna for a cold night.",
+    "order": "Lasagna, veal parm, meatballs, Chianti."
+   },
+   {
+    "name": "Yard House",
+    "meta": "Sports Bar · 100+ beers · 12 min · 6 mi · Downtown",
+    "body": "Solid spot to watch a game. Huge beer list, big TVs, full pub menu.",
+    "order": "Truffle fries, nachos, half-pound burger, draft flight."
+   },
+   {
+    "name": "Denver Biscuit Company",
+    "meta": "Brunch · Southern · 14 min · 7 mi · 3237 E Colfax",
+    "body": "Hand-sized biscuits and fried chicken that hits every time. Real brunch.",
+    "order": "Franklin biscuit, biscuit French toast."
+   },
+   {
+    "name": "Rooftop · Night Out",
+    "meta": "Club · Nightlife · 12 min · 6 mi · Downtown",
+    "body": "Host's pick for a club night. Rooftop vibes, DJ sets on weekends, dress code applies.",
+    "order": "Bottle service, signature cocktails."
+   }
+  ],
+  "dispensaries": [
+   {
+    "name": "Social Cannabis",
+    "address": "5068 N Federal",
+    "drive_min": 5
+   },
+   {
+    "name": "Green Solution",
+    "address": "6681 Federal",
+    "drive_min": 5
+   },
+   {
+    "name": "Yuma Way Berkeley",
+    "address": "5398 Sheridan",
+    "drive_min": 7
+   }
+  ]
+ },
+ "emergency": {
+  "text_line_override": "+1 (303) 731-6880",
+  "nearest_hospital": {
+   "name": "North Suburban Hospital",
+   "address": "9191 Grant St, Thornton, CO 80229",
+   "phone": "(303) 451-7800",
+   "drive_min": 0
+  },
+  "non_emergency_police": "Thornton Police (non-emergency): (720) 977-5124",
+  "fire_department": "Thornton Fire, call 911 or (303) 538-7602 (non-urgent)"
+ },
+ "troubleshooting": [
+  {
+   "issue": "WiFi slow or disconnected",
+   "fix": "Unplug the router for 30 seconds, plug back in, wait 2 min."
+  },
+  {
+   "issue": "TV stuck on 'No Signal'",
+   "fix": "Switch input to HDMI 1 using the TV remote (not the Roku remote)."
+  },
+  {
+   "issue": "Thermostat not responding",
+   "fix": "Check the breaker panel, HVAC breaker may have tripped."
+  }
+ ],
+ "promotions": {
+  "stay_n_save": {
+   "code": "STAYNSAVE10",
+   "how_to_claim": [
+    "Post a photo from your stay tagged #Kushkations and #KushKations",
+    "Leave a five-star review on your booking platform",
+    "Email a screenshot to info@kushkations.com — we'll send the code"
+   ]
+  }
+ },
+ "internal": {
+  "cleaner_notes": [
+   "Garage / cleaner access code: 0117",
+   "Confirm hot tub is in ST mode after every clean, not EC",
+   "Reset thermostat to 68°F after clean, not lower",
+   "Empty trash bins and replace liners"
+  ],
+  "cleaner_checklist": [
+   {
+    "area": "Entry",
+    "tasks": [
+     "Wipe front door handle and lock panel",
+     "Sweep entryway",
+     "Replace doormat if needed"
+    ]
+   },
+   {
+    "area": "Kitchen",
+    "tasks": [
+     "Wipe counters and backsplash",
+     "Clean stovetop and oven exterior",
+     "Empty dishwasher",
+     "Restock paper towels, dish soap, sponge",
+     "Clear guest leftovers from fridge"
+    ]
+   },
+   {
+    "area": "Living",
+    "tasks": [
+     "Vacuum rugs and sofas",
+     "Wipe coffee tables and remotes",
+     "Reset throw pillows and blankets"
+    ]
+   },
+   {
+    "area": "Bedrooms",
+    "tasks": [
+     "Strip and remake all beds",
+     "Replace bath towels",
+     "Wipe nightstands and headboards",
+     "Check TV remotes in each room"
+    ]
+   },
+   {
+    "area": "Bathrooms",
+    "tasks": [
+     "Scrub tubs, showers, toilets, sinks",
+     "Restock toilet paper (3+ rolls per bath)",
+     "Fresh towels",
+     "Check hair on floor and drains"
+    ]
+   },
+   {
+    "area": "Hot Tub",
+    "tasks": [
+     "Confirm display shows ST mode",
+     "Water level above filter",
+     "Shock the water",
+     "Cover locked"
+    ]
+   },
+   {
+    "area": "Outdoor",
+    "tasks": [
+     "Sweep patio and grill area",
+     "Check grill propane if present"
+    ]
+   },
+   {
+    "area": "Laundry",
+    "tasks": [
+     "Wash, dry, fold all linens",
+     "Restock detergent",
+     "Wipe machines"
+    ]
+   },
+   {
+    "area": "Trash & Exit",
+    "tasks": [
+     "All trash bagged at outdoor bins",
+     "Thermostat set to 68°F",
+     "All lights off",
+     "All doors locked"
+    ]
+   }
+  ],
+  "supply_tracker": {
+   "toilet_paper": {
+    "current": 0,
+    "par": 12,
+    "last_checked": ""
+   },
+   "paper_towels": {
+    "current": 0,
+    "par": 4,
+    "last_checked": ""
+   },
+   "dish_soap": {
+    "current": 0,
+    "par": 2,
+    "last_checked": ""
+   },
+   "laundry_detergent": {
+    "current": 0,
+    "par": 1,
+    "last_checked": ""
+   },
+   "trash_bags_13gal": {
+    "current": 0,
+    "par": 20,
+    "last_checked": ""
+   },
+   "trash_bags_outdoor": {
+    "current": 0,
+    "par": 8,
+    "last_checked": ""
+   },
+   "hot_tub_shock": {
+    "current": 0,
+    "par": 6,
+    "last_checked": ""
+   },
+   "bath_towels": {
+    "current": 0,
+    "par": 12,
+    "last_checked": ""
+   },
+   "hand_towels": {
+    "current": 0,
+    "par": 6,
+    "last_checked": ""
+   }
+  },
+  "utilities": {
+   "breaker_panel": "Right next to the door to the backyard, beside the stairs going down to the basement",
+   "water_shutoff": "Basement cinema room, near the popcorn machine, behind a white cover",
+   "gas_shutoff": "",
+   "wifi_router": "Living room, behind the dining table",
+   "wifi_router_guest_accessible": true,
+   "cleaner_access_code": "0117",
+   "garage_guest_accessible": null,
+   "garage_motor": ""
+  },
+  "appliances": {
+   "refrigerator": {
+    "brand": "Samsung",
+    "model": "RF220NCTASR/AA"
+   },
+   "washer": {
+    "brand": "GE",
+    "model": "GTW465ASN0WW"
+   },
+   "dryer": {
+    "brand": "GE",
+    "model": "GTD42EASJ2WW"
+   },
+   "microwave": {
+    "brand": "GE",
+    "model": "JVM3160RF8SS"
+   },
+   "dishwasher": {
+    "brand": "GE",
+    "model": "GDF570SSJ0SS"
+   },
+   "stove_oven": {
+    "brand": "GE",
+    "model": "JGBS66REK1SS"
+   }
+  },
+  "maintenance_log": []
+ }
+}

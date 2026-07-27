@@ -1,0 +1,632 @@
+{
+ "meta": {
+  "name": "Buffalo Golf",
+  "slug": "buffalo-golf",
+  "ownerrez_id": "470233",
+  "address": "16714 Buffalo Run Dr, Commerce City, CO 80022",
+  "coordinates": {
+   "lat": 0,
+   "lng": 0
+  },
+  "cover_photo": "https://uc.orez.io/i/3069a8bb22ac4a28823e6862f9c89c74-Large",
+  "photo_gallery": [
+   "https://uc.orez.io/i/ab7dab42d24a4b0c8027941eef795636-Large",
+   "https://uc.orez.io/i/3069a8bb22ac4a28823e6862f9c89c74-Large",
+   "https://uc.orez.io/i/2f2d9de87471438abf4278bc5f402589-Large",
+   "https://uc.orez.io/i/553773e7f3bc47568d17a9d436fc1e97-Large",
+   "https://uc.orez.io/i/0b903707177441438e17f29d2ce3cde1-Large",
+   "https://uc.orez.io/i/8f13a8f872ee4f9699ee9d65c662a0e6-Large",
+   "https://uc.orez.io/i/142033e8c28449478f8578eb634aeb1e-Large",
+   "https://uc.orez.io/i/896cdc69a86f465188aff3c6eeb68e69-Large"
+  ],
+  "bedrooms": 5,
+  "bathrooms": 2.5,
+  "sleeps": 16,
+  "extra_guests_allowed": 4,
+  "size_sqft": 2146,
+  "is_420_friendly": true,
+  "one_line_vibe": "Golf-course-adjacent home in Commerce City. Midterm bookings focused.",
+  "layout": {
+   "stairs_to_upstairs": "",
+   "stairs_to_basement": ""
+  },
+  "direct_booking_url": "https://kushkations.com/buffalo-golf/"
+ },
+ "arrival": {
+  "check_in_time": "4:00 PM",
+  "access_method": "smart_lock",
+  "code_delivery": "Sent the morning of your arrival. Activates at 4:00 PM unless early check-in has been approved.",
+  "lock_backup_tip": "After entering your code, press the 'Check' (or 'Schlage') button to engage the lock. If the door doesn't open, try again slowly, one digit at a time.",
+  "parking": "PLEASE DO NOT BLOCK NEIGHBORING DRIVEWAYS. Park inside the garage (garage code: 0716) when possible. If you need additional parking, street parking is allowed only where marked with blue lines. Do not park in red-line areas. Improperly parked vehicles may be towed.",
+  "cleaning_supplies_location": "",
+  "towels_location": "8 towels below the main bathroom sink, plus 8 more below the guest bathroom sink.",
+  "towel_photos": [
+   {
+    "url": "https://lh3.googleusercontent.com/d/1mJlcud89UKUAW76wsMCZtxvmIxQqSG7k",
+    "caption": "Towel storage"
+   },
+   {
+    "url": "https://lh3.googleusercontent.com/d/1YDDa5gi3uofA1p7Z7N_6y1QTbPn93vRM",
+    "caption": "Towel storage"
+   }
+  ],
+  "first_steps": [
+   "Please take luggage directly to your bedroom to protect the floors.",
+   "Fire extinguishers are in every bedroom and beneath the kitchen sink.",
+   "Front and back doors are the two main exits."
+  ]
+ },
+ "wifi": {
+  "network": "Kushkations.com",
+  "password": "kushkations.com",
+  "notes": "If slow: unplug the router for 30 sec and plug back in.",
+  "router_location": ""
+ },
+ "house_rules": [
+  "Feel free to smoke 420 indoors. Tobacco goes outside, please ($1,000 reset fee if it doesn't).",
+  "Quiet hours run 10 PM to 9 AM so the neighbors can rest easy.",
+  "Pets are welcome. Keep them off the furniture and clean up after them ($200 if we find a surprise).",
+  "Please check with us before adding guests or hosting a party. Unapproved gatherings cancel the stay.",
+  "The hot tub and cup holders are not ashtrays ($50 cleanup fee per incident)."
+ ],
+ "amenities": {
+  "tv": {
+   "streaming": [
+    "Sign in with your own accounts"
+   ],
+   "notes": "Log out of all streaming apps before checkout."
+  },
+  "kitchen": {
+   "highlights": [
+    "Full kitchen — cook what you'd cook at home",
+    "Popcorn machine available",
+    "Fire extinguisher under the sink",
+    "Delivery works great: Uber Eats, DoorDash, Grubhub"
+   ]
+  },
+  "game_room": {
+   "location": "Bunk Bedroom and Living Area",
+   "features": [
+    "Pool table in the Bunk Bedroom",
+    "PS5 in the living area",
+    "Pac-Mania classic arcade machine",
+    "Street Fighter II classic arcade machine",
+    "65\" TV with streaming apps access"
+   ],
+   "rules": [
+    "Supervise children at all times while using the pool table",
+    "No drinks or food on the pool table",
+    "Use pool cues gently — do not hit walls, floor, or table rails",
+    "Return balls, cues, and rack neatly after use",
+    "Do not sit, stand, or lean on the pool table",
+    "Message the host if anything is damaged or loose"
+   ]
+  },
+  "tesla_charger": {
+   "available": true,
+   "location": "Attached garage wall charger"
+  },
+  "garage": {
+   "guest_accessible": true,
+   "keypad_code": "0716",
+   "notes": "Enter code + press ENTER. Do not share with non-guests. Do not leave door open."
+  },
+  "laundry": {
+   "washer": true,
+   "dryer": true,
+   "detergent_provided": true
+  },
+  "ps5": true,
+  "sauna": false,
+  "theater": false,
+  "golf_simulator": false,
+  "hot_tub": false,
+  "hair_dryer": {
+   "location": "Under each bathroom sink (one per bathroom)",
+   "notes": "If one is missing, message us and we will bring one over."
+  }
+ },
+ "checkout": {
+  "time": "10:00 AM",
+  "steps": [
+   "Bag the trash and move it to the bins near the front entrance",
+   "Sign out of any streaming apps on the TVs",
+   "Set the hallway thermostat to 66°F in winter, 75°F in summer",
+   "Lock up behind you and have a safe trip"
+  ],
+  "trash_day": "Friday. Bins are on the side of the house. Our team comes by to take the trash out and bring the bins back in — nothing for you to do."
+ },
+ "temperature": {
+  "main_thermostat_location": "",
+  "zones": 1,
+  "winter_minimum": "66°F, required to prevent pipes from freezing",
+  "notes": "Thermostat controls both heat and A/C, adjust freely"
+ },
+ "nearby": {
+  "eat_in_10": [
+   {
+    "name": "Doug's Diner",
+    "address": "4243 E 136th Ave, Thornton",
+    "distance_mi": 4,
+    "drive_min": 9,
+    "cuisine": "American diner, breakfast & brunch",
+    "top_orders": [
+     "Green chile breakfast burrito",
+     "Homemade cinnamon rolls"
+    ],
+    "reason": "Family-owned since 2010. Scratch-made, cooked in real butter, served in nap-worthy portions."
+   },
+   {
+    "name": "Bluebird Cafe",
+    "address": "885 Thornton Pkwy, Thornton",
+    "distance_mi": 5,
+    "drive_min": 10,
+    "cuisine": "American breakfast & brunch, farm-to-table",
+    "top_orders": [
+     "Denver omelette",
+     "Bacon avocado scramble"
+    ],
+    "reason": "The old Egg & I reborn. Fresh local ingredients, gluten-free and vegetarian options."
+   }
+  ],
+  "coffee": [
+   {
+    "name": "Summer Moon Coffee",
+    "address": "12840 Holly St, Thornton",
+    "distance_mi": 4,
+    "drive_min": 9,
+    "cuisine": "Specialty coffee, oak-roasted",
+    "top_orders": [
+     "Moon Milk latte",
+     "Iced Moon with sweet cream"
+    ],
+    "reason": "Unique oak-roasting technique that produces a flavor worth trying at least once. Pet-friendly patio."
+   }
+  ],
+  "casual_dinner": [
+   {
+    "name": "Jim's Burger Haven",
+    "address": "595 E 88th Ave, Thornton",
+    "distance_mi": 4,
+    "drive_min": 9,
+    "cuisine": "American burgers, old-school diner",
+    "top_orders": [
+     "Original 6-inch smash burger",
+     "Onion rings",
+     "Real ice cream milkshakes"
+    ],
+    "reason": "Denver's original smash burger, in business since 1961. Colorado-raised Angus and never frozen."
+   },
+   {
+    "name": "Tequila's Family Mexican",
+    "address": "12020 Pennsylvania St, Thornton",
+    "distance_mi": 5,
+    "drive_min": 10,
+    "cuisine": "Authentic Mexican",
+    "top_orders": [
+     "Sizzling fajitas",
+     "Tacos al pastor"
+    ],
+    "reason": "Family-run for over eighteen years. Serious tequila and mezcal list if you want to make an evening of it."
+   },
+   {
+    "name": "Saigon Bowl",
+    "address": "9931 Grant St, Thornton",
+    "distance_mi": 4,
+    "drive_min": 8,
+    "cuisine": "Vietnamese, pho & rice bowls",
+    "top_orders": [
+     "Pho (any style)",
+     "Bun Bo Hue"
+    ],
+    "reason": "Widely considered the best pho in Thornton. Twenty years of Vietnamese cooking behind every bowl."
+   }
+  ],
+  "parks": [
+   {
+    "name": "Trail Winds Park",
+    "drive_min": 10,
+    "reason": "111 acres of trails and open space. Easy to walk, run, or spend a slow morning."
+   },
+   {
+    "name": "Pecos Park",
+    "drive_min": 8,
+    "reason": "A compact nine-acre park. Good for a quick stroll or a short run."
+   }
+  ],
+  "adventure_day": [
+   {
+    "name": "Red Rocks Amphitheatre",
+    "drive_min": 40,
+    "reason": "One of the great outdoor venues in the country. Free to walk and hike, even without a show."
+   },
+   {
+    "name": "Rocky Mountain National Park",
+    "drive_min": 90,
+    "reason": "The classic Colorado day. Elk, alpine lakes, and Trail Ridge Road."
+   },
+   {
+    "name": "Boulder / Flatirons",
+    "drive_min": 40,
+    "reason": "College town energy and iconic rock formations for photos."
+   }
+  ],
+  "late_night": [
+   {
+    "name": "Fat Shack",
+    "address": "Thornton",
+    "distance_mi": 6,
+    "drive_min": 11,
+    "cuisine": "Late-night burgers, wings, 'fat sandwiches'",
+    "top_orders": [
+     "The Fat Sandwich"
+    ],
+    "reason": "Open when almost nothing else is. A reliable answer to the 'what now?' question at 1 AM."
+   },
+   {
+    "name": "Waffle House",
+    "address": "Thornton",
+    "distance_mi": 5,
+    "drive_min": 10,
+    "cuisine": "American diner, 24/7",
+    "top_orders": [
+     "Scattered, smothered, covered hash browns"
+    ],
+    "reason": "Open twenty-four hours. If it's 2 AM and you're hungry, this is the answer."
+   },
+   {
+    "name": "In-N-Out Burger",
+    "address": "Thornton",
+    "distance_mi": 5,
+    "drive_min": 10,
+    "cuisine": "Fast-food burgers",
+    "top_orders": [
+     "Double-Double animal-style",
+     "Animal-style fries"
+    ],
+    "reason": "Fresh off the grill until late. Order the Double-Double animal-style at least once."
+   }
+  ],
+  "grocery": [
+   {
+    "name": "King Soopers",
+    "address": "5990 Dahlia St, Commerce City, CO 80022",
+    "drive_min": 7
+   },
+   {
+    "name": "Walmart Supercenter",
+    "address": "5990 Dahlia St, Commerce City, CO 80022",
+    "drive_min": 12
+   },
+   {
+    "name": "Safeway",
+    "address": "3840 E 104th Ave, Thornton, CO 80233",
+    "drive_min": 15
+   }
+  ],
+  "dispensaries": [
+   {
+    "name": "Social Dispensary",
+    "address": "18494 E 104th",
+    "drive_min": 4
+   },
+   {
+    "name": "Golden Dispensary",
+    "address": "7150 Eudora Dr",
+    "drive_min": 5
+   },
+   {
+    "name": "Star Buds",
+    "address": "5844 Dahlia St",
+    "drive_min": 13
+   }
+  ],
+  "gas_stations": [
+   {
+    "name": "Shell",
+    "address": "15330 E 120th Ave, Commerce City, CO 80022",
+    "drive_min": 3
+   },
+   {
+    "name": "7-Eleven",
+    "address": "15200 E 120th Ave, Commerce City, CO 80022",
+    "drive_min": 4
+   },
+   {
+    "name": "Conoco",
+    "address": "18314 E 104th Ave, Commerce City, CO 80022",
+    "drive_min": 6
+   }
+  ],
+  "transit": [
+   {
+    "name": "Commerce City / 72nd Station",
+    "address": "3838 E 72nd Ave",
+    "drive_min": 18
+   },
+   {
+    "name": "Thornton Crossroads & 104th Station",
+    "address": "10375 Colorado Blvd",
+    "drive_min": 19
+   }
+  ],
+  "getting_around": [
+   {
+    "name": "Red Rocks Park & Amphitheatre",
+    "time": "38 min"
+   },
+   {
+    "name": "Lookout Mountain",
+    "time": "35 min"
+   },
+   {
+    "name": "16th Street Mall",
+    "time": "22 min"
+   },
+   {
+    "name": "Estes Park & RMNP",
+    "time": "1h 15min"
+   },
+   {
+    "name": "Elitch Gardens",
+    "time": "22 min"
+   },
+   {
+    "name": "Dinosaur Ridge",
+    "time": "38 min"
+   }
+  ],
+  "host_picks": [
+   {
+    "name": "Brooklyn's Finest Pizza",
+    "meta": "Pizza · Host's pick · 22 min · 13 mi · Denver",
+    "body": "Host's favorite pizza in the city. New York style by the slice or full pie.",
+    "order": "Pepperoni slice, white pie, garlic knots."
+   },
+   {
+    "name": "Blue Agave",
+    "meta": "Mexican · Margaritas · 22 min · 13 mi · Denver",
+    "body": "Go-to for margaritas and fajitas. Upbeat vibe, generous portions, tableside guac.",
+    "order": "Sizzling fajitas, street tacos, tableside guac."
+   },
+   {
+    "name": "Welton Street Cafe",
+    "meta": "Soul Food · Five Points · 20 min · 12 mi · 2670 Welton St",
+    "body": "Southern soul food in historic Five Points. Family-run, full plates, a Denver institution.",
+    "order": "Fried chicken, mac and cheese, collards, sweet potato pie."
+   },
+   {
+    "name": "Thai Daughter",
+    "meta": "Thai · 22 min · 13 mi · Denver",
+    "body": "Local favorite Thai spot. Order it medium-hot, they don't skimp on heat.",
+    "order": "Pad Thai, drunken noodles, Massaman curry."
+   },
+   {
+    "name": "Gaetano's",
+    "meta": "Italian · Old-school · 25 min · 16 mi · 3760 Tejon St",
+    "body": "Classic red-sauce Italian in the Highlands. Family vibes, a bar with stories, lasagna for a cold night.",
+    "order": "Lasagna, veal parm, meatballs, Chianti."
+   },
+   {
+    "name": "Yard House",
+    "meta": "Sports Bar · 100+ beers · 22 min · 13 mi · Downtown",
+    "body": "Solid spot to watch a game. Huge beer list, big TVs, full pub menu.",
+    "order": "Truffle fries, nachos, half-pound burger, draft flight."
+   },
+   {
+    "name": "Denver Biscuit Company",
+    "meta": "Brunch · Southern · 20 min · 12 mi · 3237 E Colfax",
+    "body": "Hand-sized biscuits and fried chicken that hits every time. Real brunch.",
+    "order": "Franklin biscuit, biscuit French toast."
+   },
+   {
+    "name": "Rooftop · Night Out",
+    "meta": "Club · Nightlife · 22 min · 13 mi · Downtown",
+    "body": "Host's pick for a club night. Rooftop vibes, DJ sets on weekends, dress code applies.",
+    "order": "Bottle service, signature cocktails."
+   }
+  ]
+ },
+ "emergency": {
+  "text_line_override": "+1 (303) 731-6880",
+  "nearest_hospital": {
+   "name": "North Suburban Hospital",
+   "address": "9191 Grant St, Thornton, CO 80229",
+   "phone": "(303) 451-7800",
+   "drive_min": 0
+  },
+  "non_emergency_police": "Thornton Police (non-emergency): (720) 977-5124",
+  "fire_department": "Thornton Fire, call 911 or (303) 538-7602 (non-urgent)"
+ },
+ "troubleshooting": [
+  {
+   "issue": "WiFi slow or disconnected",
+   "fix": "Unplug the router for 30 seconds, plug back in, wait 2 min."
+  },
+  {
+   "issue": "TV stuck on 'No Signal'",
+   "fix": "Switch input to HDMI 1 using the TV remote (not the Roku remote)."
+  },
+  {
+   "issue": "Thermostat not responding",
+   "fix": "Check the breaker panel, HVAC breaker may have tripped."
+  }
+ ],
+ "promotions": {
+  "stay_n_save": {
+   "code": "STAYNSAVE10",
+   "how_to_claim": [
+    "Post a photo from your stay tagged #Kushkations and #KushKations",
+    "Leave a five-star review on your booking platform",
+    "Email a screenshot to info@kushkations.com — we'll send the code"
+   ]
+  }
+ },
+ "internal": {
+  "cleaner_notes": [
+   "Garage keypad code: 0716",
+   "Reset thermostat to 68°F after clean, not lower",
+   "Empty trash bins and replace liners"
+  ],
+  "cleaner_checklist": [
+   {
+    "area": "Entry",
+    "tasks": [
+     "Wipe front door handle and lock panel",
+     "Sweep entryway",
+     "Replace doormat if needed"
+    ]
+   },
+   {
+    "area": "Kitchen",
+    "tasks": [
+     "Wipe counters and backsplash",
+     "Clean stovetop and oven exterior",
+     "Empty dishwasher",
+     "Restock paper towels, dish soap, sponge",
+     "Clear guest leftovers from fridge"
+    ]
+   },
+   {
+    "area": "Living",
+    "tasks": [
+     "Vacuum rugs and sofas",
+     "Wipe coffee tables and remotes",
+     "Reset throw pillows and blankets"
+    ]
+   },
+   {
+    "area": "Bedrooms",
+    "tasks": [
+     "Strip and remake all beds",
+     "Replace bath towels",
+     "Wipe nightstands and headboards",
+     "Check TV remotes in each room"
+    ]
+   },
+   {
+    "area": "Bathrooms",
+    "tasks": [
+     "Scrub tubs, showers, toilets, sinks",
+     "Restock toilet paper (3+ rolls per bath)",
+     "Fresh towels",
+     "Check hair on floor and drains"
+    ]
+   },
+   {
+    "area": "Hot Tub",
+    "tasks": [
+     "Confirm display shows ST mode",
+     "Water level above filter",
+     "Shock the water",
+     "Cover locked"
+    ]
+   },
+   {
+    "area": "Outdoor",
+    "tasks": [
+     "Sweep patio and grill area",
+     "Check grill propane if present"
+    ]
+   },
+   {
+    "area": "Laundry",
+    "tasks": [
+     "Wash, dry, fold all linens",
+     "Restock detergent",
+     "Wipe machines"
+    ]
+   },
+   {
+    "area": "Trash & Exit",
+    "tasks": [
+     "All trash bagged at outdoor bins",
+     "Thermostat set to 68°F",
+     "All lights off",
+     "All doors locked"
+    ]
+   }
+  ],
+  "supply_tracker": {
+   "toilet_paper": {
+    "current": 0,
+    "par": 12,
+    "last_checked": ""
+   },
+   "paper_towels": {
+    "current": 0,
+    "par": 4,
+    "last_checked": ""
+   },
+   "dish_soap": {
+    "current": 0,
+    "par": 2,
+    "last_checked": ""
+   },
+   "laundry_detergent": {
+    "current": 0,
+    "par": 1,
+    "last_checked": ""
+   },
+   "trash_bags_13gal": {
+    "current": 0,
+    "par": 20,
+    "last_checked": ""
+   },
+   "trash_bags_outdoor": {
+    "current": 0,
+    "par": 8,
+    "last_checked": ""
+   },
+   "hot_tub_shock": {
+    "current": 0,
+    "par": 6,
+    "last_checked": ""
+   },
+   "bath_towels": {
+    "current": 0,
+    "par": 12,
+    "last_checked": ""
+   },
+   "hand_towels": {
+    "current": 0,
+    "par": 6,
+    "last_checked": ""
+   }
+  },
+  "utilities": {
+   "breaker_panel": "",
+   "water_shutoff": "",
+   "gas_shutoff": "",
+   "wifi_router": "",
+   "wifi_router_guest_accessible": null,
+   "cleaner_access_code": "0716",
+   "garage_guest_accessible": true,
+   "garage_motor": "",
+   "garage_keypad_code": "0716",
+   "tesla_charger": "Attached garage wall charger"
+  },
+  "appliances": {
+   "refrigerator": {
+    "brand": "Samsung",
+    "model": "RF23M8070SR/AA"
+   },
+   "microwave": {
+    "brand": "Samsung"
+   },
+   "dishwasher": {
+    "brand": "Samsung",
+    "model": "DW80M2020US"
+   },
+   "washer": {
+    "brand": "Samsung",
+    "model": "WF45R6100AW/US"
+   },
+   "dryer": {
+    "brand": "Samsung",
+    "model": "DVE45R6100W/A3"
+   }
+  },
+  "maintenance_log": []
+ }
+}

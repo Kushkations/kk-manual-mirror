@@ -1,0 +1,590 @@
+{
+ "meta": {
+  "name": "Pueblo",
+  "slug": "pueblo",
+  "ownerrez_id": "400225",
+  "address": "8 Bruce Ln, Pueblo, CO 81001",
+  "coordinates": {
+   "lat": 0,
+   "lng": 0
+  },
+  "cover_photo": "https://uc.orez.io/i/24bf7e2be5904921940c15a09a2bc2b5-Large",
+  "photo_gallery": [
+   "https://uc.orez.io/i/13612781eebd46b8a91951ac1c133a35-Large",
+   "https://uc.orez.io/i/24bf7e2be5904921940c15a09a2bc2b5-Large",
+   "https://uc.orez.io/i/fb17b61a1df74b0c96dca4dcb9513341-Large",
+   "https://uc.orez.io/i/155d0c1582e0435dacbc2d161696f26d-Large",
+   "https://uc.orez.io/i/d844420126364757903abdcda2d3d1d6-Large",
+   "https://uc.orez.io/i/d44a953241d24da2ab9e2c403a2e754b-Large",
+   "https://uc.orez.io/i/130ec18d495d4617b3ac5a9b49b5b54c-Large",
+   "https://uc.orez.io/i/ecf95517f53440f384d1280f142c090e-Large"
+  ],
+  "bedrooms": 3,
+  "bathrooms": 2,
+  "sleeps": 10,
+  "extra_guests_allowed": 0,
+  "size_sqft": 988,
+  "is_420_friendly": true,
+  "one_line_vibe": "Pueblo stay with a hot tub — a quiet southern Colorado retreat.",
+  "layout": {
+   "stairs_to_upstairs": "",
+   "stairs_to_basement": ""
+  },
+  "direct_booking_url": "https://kushkations.com/pueblo/"
+ },
+ "arrival": {
+  "check_in_time": "4:00 PM",
+  "access_method": "smart_lock",
+  "code_delivery": "Sent the morning of your arrival. Activates at 4:00 PM unless early check-in has been approved.",
+  "lock_backup_tip": "After entering your code, press the 'Check' (or 'Schlage') button to engage the lock. If the door doesn't open, try again slowly, one digit at a time.",
+  "parking": "Park in front of the garage or along the street in front of the property.",
+  "towels_location": "10 bath towels in the closet at the end of the hallway (left side). Hand towels are in the cupboard and on top of the sink in each bathroom.",
+  "towel_photos": [
+   {
+    "url": "https://lh3.googleusercontent.com/d/1jACWVuasWtz_x3XSVVISKAEHEYJnj1lZ",
+    "caption": "Towel storage"
+   }
+  ],
+  "first_steps": [
+   "Please take luggage directly to your bedroom to protect the floors.",
+   "Fire extinguishers are in every bedroom and beneath the kitchen sink.",
+   "Front and back doors are the two main exits."
+  ],
+  "exits": [
+   "Main front door",
+   "Game room door leading to the hot tub"
+  ],
+  "cleaning_supplies_location": "Closet"
+ },
+ "wifi": {
+  "network": "Kushkations.com",
+  "password": "kushkations.com",
+  "notes": "If slow: unplug the router for 30 sec and plug back in.",
+  "router_location": ""
+ },
+ "house_rules": [
+  "Feel free to smoke 420 indoors. Tobacco goes outside, please ($1,000 reset fee if it doesn't).",
+  "Quiet hours run 10 PM to 9 AM so the neighbors can rest easy.",
+  "Pets are welcome. Keep them off the furniture and clean up after them ($200 if we find a surprise).",
+  "Please check with us before adding guests or hosting a party. Unapproved gatherings cancel the stay.",
+  "The hot tub and cup holders are not ashtrays ($50 cleanup fee per incident)."
+ ],
+ "amenities": {
+  "hot_tub": {
+   "brand": "Cal Spa",
+   "temp_range": "100°F – 102°F",
+   "shock_location": "Top of the fridge",
+   "mode_setup": {
+    "must_do_first": "Set the tub to ST (Standard) mode or it will not maintain temperature",
+    "why": "In EC (Economy) mode the heater only runs during filter cycles. Your water cools between them. ST keeps it at your set temp 24/7.",
+    "steps": [
+     "Tap the Warm or Temp button to wake up the display",
+     "Press Mode (or hold Warm for 3 sec if no Mode button)",
+     "Display cycles through ST → EC → SL — stop when it shows ST",
+     "Then press Warm/Cool to set 102°F"
+    ],
+    "video_tutorial": "https://www.youtube.com/embed/UwFIbScelNU",
+    "video_tutorial_title": "How to set ST vs EC mode (2 min)"
+   },
+   "quick_start": [
+    "Confirm the display shows ST (see mode setup above)",
+    "Shower before getting in",
+    "Open all jet valves before running the jets",
+    "Press the Light button once on the control panel (if you want the LED on)",
+    "Set temperature to 100–102°F",
+    "Close the cover when not in use"
+   ],
+   "water_care": "Shock every 2–3 days for light use, or after each heavy / long soak. No food, drinks, glass, or smoking in the water.",
+   "rules": [
+    "No food, drinks, or glass in the tub",
+    "Kids must be supervised",
+    "Keep water above the filter line — drops below = heater shuts off"
+   ],
+   "photo": ""
+  },
+  "grill": {
+   "notes": "Propane grill is available. Bring your own propane or order a tank through the Cynch app.",
+   "propane_vendor": "Gilbert (303) 475-3342"
+  },
+  "outdoor": {
+   "projector_setup": {
+    "notes": "Backyard projector with Roku stick — use the remote controls to manage all settings for both the projector and the Roku stick. The projector requires no adjustments on arrival. If connecting an external device, check your HDMI cable length (no slack = too short).",
+    "roku_app_remote": [
+     "Install the Roku mobile app and sign in",
+     "Connect your phone to the same Wi-Fi as the Roku, then select the Roku device from the list",
+     "Access the Remote tab",
+     "Use Private Headphones, Guide, Microphone (voice), Star (options), Play/Pause, Keyboard, and Channels/123 buttons as needed"
+    ]
+   }
+  },
+  "tv": {
+   "streaming": [
+    "Sign in with your own accounts"
+   ],
+   "notes": "Log out of all streaming apps before checkout."
+  },
+  "kitchen": {
+   "highlights": [
+    "Full kitchen — cook what you'd cook at home",
+    "Fire extinguisher under the sink",
+    "Delivery works great: Uber Eats, DoorDash, Grubhub"
+   ]
+  },
+  "laundry": {
+   "washer": true,
+   "dryer": true,
+   "detergent_provided": true
+  },
+  "ps5": false,
+  "sauna": false,
+  "theater": false,
+  "golf_simulator": false,
+  "hair_dryer": {
+   "location": "Under each bathroom sink (one per bathroom)",
+   "notes": "If one is missing, message us and we will bring one over."
+  }
+ },
+ "checkout": {
+  "time": "10:00 AM",
+  "steps": [
+   "Bag the trash and move it to the bins near the front entrance",
+   "Sign out of any streaming apps on the TVs",
+   "Set the hallway thermostat to 66°F in winter, 75°F in summer",
+   "Lock up behind you and have a safe trip"
+  ],
+  "trash_day": "Tuesday. Our team comes by to take the trash out and bring the bins back in — nothing for you to do."
+ },
+ "temperature": {
+  "main_thermostat_location": "",
+  "zones": 1,
+  "winter_minimum": "66°F, required to prevent pipes from freezing",
+  "notes": "Thermostat controls both heat and A/C, adjust freely"
+ },
+ "nearby": {
+  "eat_in_10": [
+   {
+    "name": "Fuel & Iron Food Hall",
+    "address": "Downtown Pueblo",
+    "distance_mi": 3,
+    "drive_min": 8,
+    "cuisine": "Food hall (5 kitchens)",
+    "top_orders": [
+     "Try multiple vendors",
+     "Coffee and ice cream"
+    ],
+    "reason": "Pueblo's first food hall. Five kitchens, a bar, and coffee. Great for indecisive groups."
+   },
+   {
+    "name": "Bingo Burger",
+    "address": "101 Central Plaza, Downtown Pueblo",
+    "distance_mi": 3,
+    "drive_min": 8,
+    "cuisine": "American burgers",
+    "top_orders": [
+     "Green chile burger",
+     "Bingo fries"
+    ],
+    "reason": "Widely considered one of the best burgers in Pueblo."
+   }
+  ],
+  "coffee": [
+   {
+    "name": "Solar Roast Coffee",
+    "address": "Downtown Pueblo",
+    "distance_mi": 3,
+    "drive_min": 8,
+    "cuisine": "Solar-roasted coffee",
+    "top_orders": [
+     "House blend",
+     "Chai latte"
+    ],
+    "reason": "Roasts beans with solar power. Pueblo original, quirky and good."
+   }
+  ],
+  "casual_dinner": [
+   {
+    "name": "Brues Alehouse",
+    "address": "Historic Arkansas Riverwalk, Pueblo",
+    "distance_mi": 3,
+    "drive_min": 8,
+    "cuisine": "Gastropub",
+    "top_orders": [
+     "House slopper",
+     "Craft beer flight"
+    ],
+    "reason": "Riverwalk gastropub with a rooftop beer garden. Try the slopper (Pueblo specialty)."
+   },
+   {
+    "name": "Angelo's Pizza Parlor",
+    "address": "Riverwalk, Pueblo",
+    "distance_mi": 3,
+    "drive_min": 8,
+    "cuisine": "NY-style pizza",
+    "top_orders": [
+     "Classic pepperoni",
+     "Large patio"
+    ],
+    "reason": "Family-owned since 1992. Transplanted straight from Brooklyn to the Riverwalk."
+   }
+  ],
+  "parks": [
+   {
+    "name": "Historic Arkansas Riverwalk of Pueblo (HARP)",
+    "drive_min": 8,
+    "reason": "Walkable riverside loop through downtown. Boats, bridges, and plenty of photo ops."
+   },
+   {
+    "name": "Lake Pueblo State Park",
+    "drive_min": 15,
+    "reason": "Boating, swimming, and hiking. Huge reservoir, classic Colorado day trip."
+   }
+  ],
+  "adventure_day": [
+   {
+    "name": "Bishop Castle",
+    "drive_min": 60,
+    "reason": "Hand-built stone castle in the mountains. Strange, incredible, free to visit."
+   },
+   {
+    "name": "Great Sand Dunes National Park",
+    "drive_min": 150,
+    "reason": "Tallest dunes in North America. Worth the long drive. Bring a sled."
+   },
+   {
+    "name": "Royal Gorge Bridge",
+    "drive_min": 50,
+    "reason": "One of the world's highest suspension bridges. Tram, zipline, and views."
+   }
+  ],
+  "late_night": [
+   {
+    "name": "Denny's",
+    "address": "Pueblo",
+    "distance_mi": 4,
+    "drive_min": 10,
+    "cuisine": "American diner, 24/7",
+    "top_orders": [
+     "Grand Slam"
+    ],
+    "reason": "Open 24/7 when the Riverwalk has gone to sleep."
+   }
+  ],
+  "dispensaries": [
+   {
+    "name": "Strawberry Fields",
+    "address": "2105 W US-50",
+    "drive_min": 8
+   },
+   {
+    "name": "Marisol Therapeutics",
+    "address": "27 Stanford Ave",
+    "drive_min": 12
+   },
+   {
+    "name": "Bonsai Cultivation",
+    "address": "950 Hwy 50",
+    "drive_min": 10
+   }
+  ],
+  "grocery": [
+   {
+    "name": "King Soopers",
+    "address": "3050 W Northern Ave, Pueblo, CO 81005",
+    "drive_min": 9
+   },
+   {
+    "name": "Walmart Supercenter",
+    "address": "4080 W Northern Ave, Pueblo, CO 81005",
+    "drive_min": 7
+   },
+   {
+    "name": "Safeway",
+    "address": "1017 Market Plaza, Pueblo, CO 81005",
+    "drive_min": 8
+   }
+  ],
+  "parks_local": [
+   {
+    "name": "Mineral Palace Park",
+    "address": "1600 N Santa Fe Ave, Pueblo, CO 81003",
+    "reason": "57-acre park with an arboretum, pool, playground, fitness trail, and fishing. Pueblo's first major flower gardens."
+   },
+   {
+    "name": "University Park",
+    "address": "903 Bluestem Blvd, Pueblo, CO 81001",
+    "reason": "Over 6 acres with gazebos and shelters — a quiet hangout."
+   },
+   {
+    "name": "Colorado City Recreation District",
+    "address": "4497 Bent Brothers Blvd, Colorado City, CO 81019",
+    "reason": "Hub of the Greenhorn Valley at ~6,000 ft, with Greenhorn Mountain rising over 12,000 ft to the west."
+   }
+  ],
+  "getting_around": [
+   {
+    "name": "Royal Gorge Bridge & Park",
+    "time": "50 min"
+   },
+   {
+    "name": "Garden of the Gods + Pikes Peak",
+    "time": "50 min"
+   },
+   {
+    "name": "Florence",
+    "time": "25 min"
+   },
+   {
+    "name": "Beulah Mountain Park",
+    "time": "40 min"
+   }
+  ],
+  "host_picks": [
+   {
+    "name": "Brues Alehouse Brewing Co.",
+    "meta": "Brewery + pub fare · Riverwalk · 8 min · 4 mi",
+    "body": "Patio overlooking the Riverwalk. Solid beer list and burgers + wings.",
+    "order": "Chile burger, IPA flight."
+   },
+   {
+    "name": "Bingo Burger",
+    "meta": "Local burger spot · Downtown · 9 min · 5 mi",
+    "body": "Pueblo-style green chile cheeseburgers. Cash-only sometimes — check the door.",
+    "order": "Bingo Burger with green chile, hand-cut fries."
+   },
+   {
+    "name": "D'Angelo's NY Style Pizzeria",
+    "meta": "Pizza · 10 min · 5 mi",
+    "body": "Real New York-style slices in Pueblo. Late-night spot, generous slices.",
+    "order": "Pepperoni slice, garlic knots, cannoli."
+   },
+   {
+    "name": "Solera",
+    "meta": "Italian-American · Riverwalk · 9 min · 4.5 mi",
+    "body": "Sit-down Italian on the Riverwalk. Date-night vibes, pasta done right.",
+    "order": "Linguine + meatballs, tiramisu."
+   },
+   {
+    "name": "Mike Salvador's",
+    "meta": "Mexican · 8 min · 4 mi",
+    "body": "Pueblo Mexican classic. Green chile is the move — full of heat and flavor.",
+    "order": "Smothered burrito, green chile, sopapilla."
+   },
+   {
+    "name": "The Pour House",
+    "meta": "Pub + sports · 7 min · 3.5 mi",
+    "body": "Casual bar with full menu. Game-day spot with screens up everywhere.",
+    "order": "Wings, nachos, draft pint."
+   },
+   {
+    "name": "Park East Tavern",
+    "meta": "Tavern · 6 min · 3 mi",
+    "body": "No-frills local tavern. Cheap beer, friendly crowd, classic burger.",
+    "order": "Tavern burger, draft."
+   },
+   {
+    "name": "Hop's House of Pizza",
+    "meta": "Pizza + Greek · 12 min · 5 mi",
+    "body": "Pueblo institution since the 60s. Greek-style pizza and gyros.",
+    "order": "Greek pizza, gyro, baklava."
+   }
+  ]
+ },
+ "emergency": {
+  "text_line_override": "+1 (303) 731-6880",
+  "nearest_hospital": {
+   "name": "UCHealth Parkview Medical Center",
+   "address": "400 W 16th St, Pueblo, CO 81003",
+   "phone": "(719) 584-4000",
+   "drive_min": 0
+  },
+  "non_emergency_police": "Pueblo Police (non-emergency): (719) 553-2502",
+  "fire_department": "Pueblo Fire, call 911 for emergencies"
+ },
+ "troubleshooting": [
+  {
+   "issue": "WiFi slow or disconnected",
+   "fix": "Unplug the router for 30 seconds, plug back in, wait 2 min."
+  },
+  {
+   "issue": "TV stuck on 'No Signal'",
+   "fix": "Switch input to HDMI 1 using the TV remote (not the Roku remote)."
+  },
+  {
+   "issue": "Thermostat not responding",
+   "fix": "Check the breaker panel, HVAC breaker may have tripped."
+  }
+ ],
+ "promotions": {
+  "stay_n_save": {
+   "code": "STAYNSAVE10",
+   "how_to_claim": [
+    "Post a photo from your stay tagged #Kushkations and #KushKations",
+    "Leave a five-star review on your booking platform",
+    "Email a screenshot to info@kushkations.com — we'll send the code"
+   ]
+  }
+ },
+ "internal": {
+  "cleaner_notes": [
+   "Garage / cleaner access code: 0117",
+   "Confirm hot tub is in ST mode after every clean, not EC",
+   "Reset thermostat to 68°F after clean, not lower",
+   "Empty trash bins and replace liners"
+  ],
+  "cleaner_checklist": [
+   {
+    "area": "Entry",
+    "tasks": [
+     "Wipe front door handle and lock panel",
+     "Sweep entryway",
+     "Replace doormat if needed"
+    ]
+   },
+   {
+    "area": "Kitchen",
+    "tasks": [
+     "Wipe counters and backsplash",
+     "Clean stovetop and oven exterior",
+     "Empty dishwasher",
+     "Restock paper towels, dish soap, sponge",
+     "Clear guest leftovers from fridge"
+    ]
+   },
+   {
+    "area": "Living",
+    "tasks": [
+     "Vacuum rugs and sofas",
+     "Wipe coffee tables and remotes",
+     "Reset throw pillows and blankets"
+    ]
+   },
+   {
+    "area": "Bedrooms",
+    "tasks": [
+     "Strip and remake all beds",
+     "Replace bath towels",
+     "Wipe nightstands and headboards",
+     "Check TV remotes in each room"
+    ]
+   },
+   {
+    "area": "Bathrooms",
+    "tasks": [
+     "Scrub tubs, showers, toilets, sinks",
+     "Restock toilet paper (3+ rolls per bath)",
+     "Fresh towels",
+     "Check hair on floor and drains"
+    ]
+   },
+   {
+    "area": "Hot Tub",
+    "tasks": [
+     "Confirm display shows ST mode",
+     "Water level above filter",
+     "Shock the water",
+     "Cover locked"
+    ]
+   },
+   {
+    "area": "Outdoor",
+    "tasks": [
+     "Sweep patio and grill area",
+     "Check grill propane if present"
+    ]
+   },
+   {
+    "area": "Laundry",
+    "tasks": [
+     "Wash, dry, fold all linens",
+     "Restock detergent",
+     "Wipe machines"
+    ]
+   },
+   {
+    "area": "Trash & Exit",
+    "tasks": [
+     "All trash bagged at outdoor bins",
+     "Thermostat set to 68°F",
+     "All lights off",
+     "All doors locked"
+    ]
+   }
+  ],
+  "supply_tracker": {
+   "toilet_paper": {
+    "current": 0,
+    "par": 12,
+    "last_checked": ""
+   },
+   "paper_towels": {
+    "current": 0,
+    "par": 4,
+    "last_checked": ""
+   },
+   "dish_soap": {
+    "current": 0,
+    "par": 2,
+    "last_checked": ""
+   },
+   "laundry_detergent": {
+    "current": 0,
+    "par": 1,
+    "last_checked": ""
+   },
+   "trash_bags_13gal": {
+    "current": 0,
+    "par": 20,
+    "last_checked": ""
+   },
+   "trash_bags_outdoor": {
+    "current": 0,
+    "par": 8,
+    "last_checked": ""
+   },
+   "hot_tub_shock": {
+    "current": 0,
+    "par": 6,
+    "last_checked": ""
+   },
+   "bath_towels": {
+    "current": 0,
+    "par": 12,
+    "last_checked": ""
+   },
+   "hand_towels": {
+    "current": 0,
+    "par": 6,
+    "last_checked": ""
+   }
+  },
+  "utilities": {
+   "breaker_panel": "",
+   "water_shutoff": "",
+   "gas_shutoff": "",
+   "wifi_router": "",
+   "wifi_router_guest_accessible": null,
+   "cleaner_access_code": "0117",
+   "garage_guest_accessible": null,
+   "garage_motor": ""
+  },
+  "appliances": {
+   "refrigerator": {
+    "brand": "Samsung",
+    "model": "RF260BEAESRIAA"
+   },
+   "washer": {
+    "brand": "UL",
+    "model": "FAFS4473LA0"
+   },
+   "dryer": {
+    "brand": "Whirlpool",
+    "model": "WED56OLHW2"
+   },
+   "stove_oven": {
+    "brand": "UL",
+    "model": "WFE320MOESI"
+   }
+  },
+  "maintenance_log": []
+ }
+}
