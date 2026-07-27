@@ -838,17 +838,7 @@
 
   <section class="amenity-cards-section" data-amenity-cards>
     <h2>Quick Instructions</h2>
-    <div class="amenity-cards"></div>
-  </section>
-
-  <section data-section="hottub" style="display:none;">
-    <h2>Hot Tub Instructions</h2>
-    <div class="ht-body"></div>
-  </section>
-
-  <section data-section="games" style="display:none;">
-    <h2>Game Instructions</h2>
-    <div class="games-body"></div>
+    <div class="amenity-acc"></div>
   </section>
 
   <section>
@@ -1008,74 +998,103 @@
   app.innerHTML = '';
   app.appendChild(node);
 
-  // Populate amenity cards (Hot Tub, Sauna, PS5, Theater, etc.) based on JSON amenities
-  const amenitiesSection = app.querySelector('[data-amenity-cards]');
-  const amenityCards = amenitiesSection?.querySelector('.amenity-cards');
-  if (amenitiesSection && amenityCards) {
-    const am = data.amenities || {};
-    const cards = [];
-    if (am.hot_tub) {
-      const brand = (am.hot_tub.brand && !/^hot tub$/i.test(am.hot_tub.brand)) ? am.hot_tub.brand : '';
-      cards.push({icon: '♨️', title: 'Hot Tub', body: `${brand ? brand + '. ' : ''}Shower first, cover when not in use. Full steps in Hot Tub Instructions below.`});
-    }
-    if (am.sauna) cards.push({icon: '🧖', title: 'Sauna', body: 'Press POWER, set temp with +/- buttons, set time, heater auto-shuts off. Max 30 min sessions.'});
-    if (am.ps5) cards.push({icon: '🎮', title: 'PS5', body: 'Use the Guest Account only. PS Plus games already downloaded. Don\'t sign in with your personal PSN.'});
-    if (am.theater || am.theater_room) cards.push({icon: '🎬', title: 'Theater Room', body: 'Movie-night setup with popcorn machine — steps in Game Instructions below.'});
-    if (am.golf_simulator) cards.push({icon: '⛳', title: 'Golf Simulator', body: 'SkyTrac setup. Wi-Fi: kushkations.com. Right-handed players only.'});
-    if (am.game_room) cards.push({icon: '🕹️', title: 'Game Room', body: 'Details in Game Instructions below. Supervise kids in the game area.'});
-    if (cards.length === 0) {
-      amenitiesSection.setAttribute('data-empty', 'true');
-    } else {
-      cards.forEach(c => {
-        const el = document.createElement('div');
-        el.className = 'amenity-card';
-        el.innerHTML = `
-          <div class="title-row"><span class="icon">${c.icon}</span><span>${c.title}</span></div>
-          <div class="body">${c.body}</div>
-        `;
-        amenityCards.appendChild(el);
-      });
-    }
-  }
-
-  // Hot Tub + Game instructions — rendered from THIS property's own amenities JSON
+  // Amenity instructions — one tap-to-expand accordion (each amenity reveals its full steps)
   const esc = (t) => String(t).replace(/[&<>"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));
   const AM = data.amenities || {};
 
-  const htSection = app.querySelector('[data-section="hottub"]');
-  if (htSection && AM.hot_tub && typeof AM.hot_tub === 'object') {
-    const ht = AM.hot_tub;
+  function hotTubDetail(ht) {
+    if (!ht || typeof ht !== 'object') return '';
     let h = '';
     const brand = (ht.brand && !/^hot tub$/i.test(ht.brand)) ? ht.brand : '';
     if (brand || ht.temp_range) h += `<div class="inst-note">${brand ? '<strong>' + esc(brand) + '</strong>' : 'Hot tub'}${ht.temp_range ? ' · set ' + esc(ht.temp_range) : ''}</div>`;
     const ms = ht.mode_setup || {};
-    // ⚠️ The #1 hot-tub support call: tub in EC/Economy won't hold temperature.
     if (ms.must_do_first) h += `<div class="inst-note warn">⚠️ <strong>Do this first:</strong> ${esc(ms.must_do_first)}</div>`;
-    // Watch-the-video button (12 properties have one) — a tap beats a QR when they're already on their phone
     if (ms.video_tutorial) {
       const vurl = String(ms.video_tutorial).replace('/embed/', '/watch?v=');
       h += `<a class="video-btn" href="${esc(vurl)}" target="_blank" rel="noopener">▶︎ ${esc(ms.video_tutorial_title || 'Watch the hot tub video')}</a>`;
     }
-    if (Array.isArray(ht.quick_start) && ht.quick_start.length) h += `<div class="inst-h">Start it up</div><ol class="inst-steps">${ht.quick_start.map(s => `<li>${esc(s)}</li>`).join('')}</ol>`;
-    // Full heating / mode instructions — previously stored but NEVER shown in the app
+    if (Array.isArray(ht.quick_start) && ht.quick_start.length) h += `<div class="inst-h">Start it up</div><ol class="inst-steps">${ht.quick_start.map(x => `<li>${esc(x)}</li>`).join('')}</ol>`;
     if (Array.isArray(ms.steps) && ms.steps.length) {
-      h += `<details class="inst" open><summary>🌡️ Not staying hot? Set the mode</summary><div class="inst-body">`;
+      h += `<div class="inst-h">🌡️ Not staying hot? Set the mode</div>`;
       if (ms.why) h += `<div class="inst-note">${esc(ms.why)}</div>`;
-      h += `<ol class="inst-steps">${ms.steps.map(s => `<li>${esc(s)}</li>`).join('')}</ol></div></details>`;
+      h += `<ol class="inst-steps">${ms.steps.map(x => `<li>${esc(x)}</li>`).join('')}</ol>`;
     }
-    if (Array.isArray(ht.rules) && ht.rules.length) h += `<details class="inst"><summary>♨️ Hot tub rules</summary><div class="inst-body"><ul class="inst-list">${ht.rules.map(s => `<li>${esc(s)}</li>`).join('')}</ul></div></details>`;
-    h += `<details class="inst"><summary>🔧 Still not heating?</summary><div class="inst-body"><ol class="inst-steps">`
+    if (Array.isArray(ht.rules) && ht.rules.length) h += `<div class="inst-h">♨️ Hot tub rules</div><ul class="inst-list">${ht.rules.map(x => `<li>${esc(x)}</li>`).join('')}</ul>`;
+    h += `<div class="inst-h">🔧 Still not heating?</div><ol class="inst-steps">`
        + `<li>Check the panel reads <strong>ST</strong> (Standard), not EC/Economy.</li>`
        + `<li>Check the water level — it must cover the filter, or the heater shuts off.</li>`
        + `<li>Top up with the garden hose to ~2 inches above the filter.</li>`
        + `<li>Give it 15 minutes, then re-check.</li>`
-       + `<li>Still cold? Text us a photo of the control panel and we'll walk you through it.</li></ol></div></details>`;
+       + `<li>Still cold? Text us a photo of the control panel and we'll walk you through it.</li></ol>`;
     if (ht.shock_location || ht.water_care) h += `<div class="inst-note">${ht.shock_location ? '<strong>Shock:</strong> ' + esc(ht.shock_location) + '. ' : ''}${ht.water_care ? esc(ht.water_care) : ''}</div>`;
     if (ht.access_note) h += `<div class="inst-note">🚶 ${esc(ht.access_note)}</div>`;
-    if (Array.isArray(ht.access_photos) && ht.access_photos.length) {
-      h += `<div class="access-strip">${ht.access_photos.map(u => `<img src="${esc(u)}" loading="lazy" alt="">`).join('')}</div>`;
+    if (Array.isArray(ht.access_photos) && ht.access_photos.length) h += `<div class="access-strip">${ht.access_photos.map(u => `<img src="${esc(u)}" loading="lazy" alt="">`).join('')}</div>`;
+    return h;
+  }
+  function saunaDetail() {
+    return `<div class="inst-note">Shower before use. Keep sessions to about 30 minutes.</div>`
+      + `<div class="inst-h">How to run it</div>`
+      + `<ol class="inst-steps"><li>Press <strong>POWER</strong> on the control panel.</li>`
+      + `<li>Set the temperature with the <strong>+ / –</strong> buttons.</li>`
+      + `<li>Set the timer — the heater auto-shuts off when it ends.</li>`
+      + `<li>Keep water off the heater rocks. Sit back and enjoy.</li></ol>`;
+  }
+  function ps5Detail() {
+    return `<div class="inst-note warn">⚠️ <strong>Use the Guest Account only.</strong> Signing in with your personal PSN account can lock the console for the next guest — and lock you out mid-game.</div>`
+      + `<div class="inst-h">Get playing</div>`
+      + `<ol class="inst-steps"><li>Press and <strong>hold the PS button</strong> on the controller until it powers on.</li>`
+      + `<li>Select the <strong>Guest Account</strong> already loaded on the console.</li>`
+      + `<li>Open any game — they're all pre-downloaded through PS Plus.</li>`
+      + `<li>Controller dying? Plug it into the console with the USB cable; it plays while charging.</li></ol>`
+      + `<div class="inst-h">Second player</div>`
+      + `<ol class="inst-steps"><li>Press the PS button on the second controller.</li>`
+      + `<li>When it asks, choose <strong>log in as guest</strong> to pair it.</li></ol>`
+      + `<div class="inst-note"><strong>No disc slot.</strong> The PS5 is mounted and has no disc tray, so stick with the downloaded PS Plus library.</div>`
+      + `<div class="inst-note">Before checkout, please <strong>sign out of anything you signed into</strong> and put the controllers back on the charger.</div>`;
+  }
+  function theaterDetail(tr) {
+    const pop = tr && tr.popcorn_machine && Array.isArray(tr.popcorn_machine.steps) ? tr.popcorn_machine.steps : null;
+    const steps = pop || ['Turn on both the LIGHT and POP switches to preheat 2–3 minutes', 'Turn the POP switch off, then open the lid carefully', 'Add oil and a small measure of kernels', 'Turn the machine off as soon as popping slows'];
+    return `<div class="inst-h">🍿 Popcorn machine</div><ol class="inst-steps">${steps.map(x => `<li>${esc(x)}</li>`).join('')}</ol><div class="inst-note">The popcorn machine gets VERY hot — supervise kids.</div>`;
+  }
+  function golfDetail() {
+    return `<div class="inst-note">SkyTrac launch monitor. Right-handed clubs only.</div>`
+      + `<div class="inst-h">Get set up</div>`
+      + `<ol class="inst-steps"><li>Power on the projector and the SkyTrac unit.</li>`
+      + `<li>Connect to Wi-Fi: <strong>kushkations.com</strong>.</li>`
+      + `<li>Open the golf app, pick your course, and tee off.</li></ol>`;
+  }
+  function gameRoomDetail(gr) {
+    if (!gr || typeof gr !== 'object') return `<div class="inst-note">Supervise kids in the game area.</div>`;
+    const items = [];
+    ['highlights', 'features'].forEach(k => Array.isArray(gr[k]) && gr[k].forEach(x => items.push(esc(x))));
+    if (Array.isArray(gr.consoles)) gr.consoles.forEach(c => {
+      if (typeof c === 'string') items.push(esc(c));
+      else if (c && c.name) items.push(`<strong>${esc(c.name)}</strong>${c.notes ? ' — ' + esc(c.notes) : ''}`);
+    });
+    let g = '';
+    if (items.length) g += `<ul class="inst-list">${items.map(i => `<li>${i}</li>`).join('')}</ul>`;
+    if (gr.notes) g += `<div class="inst-note">${esc(gr.notes)}</div>`;
+    return g || `<div class="inst-note">Supervise kids in the game area.</div>`;
+  }
+
+  const amenitiesSection = app.querySelector('[data-amenity-cards]');
+  const amenityAcc = amenitiesSection && amenitiesSection.querySelector('.amenity-acc');
+  if (amenitiesSection && amenityAcc) {
+    const aItems = [];
+    if (AM.hot_tub) aItems.push({icon: '♨️', name: 'Hot Tub', body: hotTubDetail(AM.hot_tub)});
+    if (AM.sauna) aItems.push({icon: '🧖', name: 'Sauna', body: saunaDetail()});
+    if (AM.ps5) aItems.push({icon: '🎮', name: 'PS5', body: ps5Detail()});
+    if (AM.theater || AM.theater_room) aItems.push({icon: '🎬', name: 'Theater Room', body: theaterDetail(AM.theater_room)});
+    if (AM.golf_simulator) aItems.push({icon: '⛳', name: 'Golf Simulator', body: golfDetail()});
+    if (AM.game_room) aItems.push({icon: '🕹️', name: 'Game Room', body: gameRoomDetail(AM.game_room)});
+    if (!aItems.length) {
+      amenitiesSection.setAttribute('data-empty', 'true');
+    } else {
+      amenityAcc.innerHTML = aItems.map(it =>
+        `<details class="inst"><summary>${it.icon} ${esc(it.name)}</summary><div class="inst-body">${it.body || ''}</div></details>`
+      ).join('');
     }
-    if (h) { htSection.querySelector('.ht-body').innerHTML = h; htSection.style.display = ''; }
   }
 
   // Host Picks — host-voice food recs ported verbatim from the printed manual
@@ -1111,45 +1130,7 @@
     if (gaList.children.length) gaSection.style.display = '';
   }
 
-  const gSection = app.querySelector('[data-section="games"]');
-  if (gSection) {
-    let g = '';
-    const gr = AM.game_room;
-    if (gr && typeof gr === 'object') {
-      const items = [];
-      ['highlights', 'features'].forEach(k => Array.isArray(gr[k]) && gr[k].forEach(x => items.push(esc(x))));
-      if (Array.isArray(gr.consoles)) gr.consoles.forEach(c => {
-        if (typeof c === 'string') items.push(esc(c));
-        else if (c && c.name) items.push(`<strong>${esc(c.name)}</strong>${c.notes ? ' — ' + esc(c.notes) : ''}`);
-      });
-      if (items.length) {
-        g += `<details class="inst" open><summary>🕹️ Game room</summary><div class="inst-body"><ul class="inst-list">${items.map(i => `<li>${i}</li>`).join('')}</ul>${gr.notes ? `<div class="inst-note">${esc(gr.notes)}</div>` : ''}</div></details>`;
-      } else if (gr.notes) {
-        g += `<div class="inst-note">${esc(gr.notes)}</div>`;
-      }
-    }
-    if (AM.ps5) g += `<details class="inst" open><summary>🎮 PS5</summary><div class="inst-body">`
-      + `<div class="inst-note warn">⚠️ <strong>Use the Guest Account only.</strong> Signing in with your personal PSN account can lock the console for the next guest — and lock you out mid-game.</div>`
-      + `<div class="inst-h">Get playing</div>`
-      + `<ol class="inst-steps">`
-      + `<li>Press and <strong>hold the PS button</strong> on the controller until it powers on.</li>`
-      + `<li>Select the <strong>Guest Account</strong> already loaded on the console.</li>`
-      + `<li>Open any game — they're all pre-downloaded through PS Plus.</li>`
-      + `<li>Controller dying? Plug it into the console with the USB cable; it plays while charging.</li></ol>`
-      + `<div class="inst-h">Second player</div>`
-      + `<ol class="inst-steps"><li>Press the PS button on the second controller.</li>`
-      + `<li>When it asks, choose <strong>log in as guest</strong> to pair it.</li></ol>`
-      + `<div class="inst-note"><strong>No disc slot.</strong> The PS5 is mounted and has no disc tray, so you can't bring your own discs — stick with the downloaded PS Plus library.</div>`
-      + `<div class="inst-note">Before checkout, please <strong>sign out of anything you signed into</strong> and put the controllers back on the charger.</div>`
-      + `</div></details>`;
-    const tr = AM.theater_room;
-    if (AM.theater || tr) {
-      const pop = tr && tr.popcorn_machine && Array.isArray(tr.popcorn_machine.steps) ? tr.popcorn_machine.steps : null;
-      const steps = pop || ['Turn on both the LIGHT and POP switches to preheat 2–3 minutes', 'Turn the POP switch off, then open the lid carefully', 'Add oil and a small measure of kernels', 'Turn the machine off as soon as popping slows'];
-      g += `<details class="inst"><summary>🍿 Theater & popcorn</summary><div class="inst-body"><ol class="inst-steps">${steps.map(s => `<li>${esc(s)}</li>`).join('')}</ol><div class="inst-note">The popcorn machine gets VERY hot — supervise kids.</div></div></details>`;
-    }
-    if (g) { gSection.querySelector('.games-body').innerHTML = g; gSection.style.display = ''; }
-  }
+  // (hot tub + game instructions now live in the Quick Instructions accordion above)
 
   // Populate "What's Nearest" from JSON nearby data
   const nearestSection = app.querySelector('[data-section="nearest"]');
@@ -1216,8 +1197,6 @@
       {match: 'Early Check-In',       label: '⏰ Early/Late'},
       {match: 'Checkout Instructions',label: '🚪 Checkout'},
       {match: 'Quick Instructions',   label: '🎮 Amenities'},
-      {match: 'Hot Tub Instructions', label: '♨️ Hot Tub'},
-      {match: 'Game Instructions',    label: '🕹️ Games'},
       {match: 'Host Picks',           label: '🍽️ Food'},
       {match: "What's Nearest",       label: '📍 Nearby'},
       {match: 'Need Anything',        label: '🆘 Help'},
@@ -1404,6 +1383,11 @@
     '🎮 Amenities': '🎮 Amenidades',
     '♨️ Hot Tub': '♨️ Jacuzzi',
     '🕹️ Games': '🕹️ Juegos',
+    '🧖 Sauna': '🧖 Sauna',
+    '🎮 PS5': '🎮 PS5',
+    '🎬 Theater Room': '🎬 Sala de Cine',
+    '⛳ Golf Simulator': '⛳ Simulador de Golf',
+    '🕹️ Game Room': '🕹️ Sala de Juegos',
     '🍽️ Food': '🍽️ Comida',
     '📍 Nearby': '📍 Cerca',
     '🆘 Help': '🆘 Ayuda',
@@ -1412,7 +1396,7 @@
   function setLang(lang) {
     localStorage.setItem('kk_lang', lang);
     document.documentElement.lang = lang;
-    document.querySelectorAll('h2, .label, .sub, .k, .v, .checkout-list li, .door-code-cta, .door-code-value, .amenity-card .title-row span:last-child, .amenity-card .body, .nearest-row .cat, .full-guide-link, p, .door-code-card h2, .t-name, .t-sub, section > .inst-note, .welcome, .picks-intro, .tab-btn, .r-title, .r-body, .help-line .h-main, .help-line .h-sub, .sb-title, .sb-sub').forEach(el => {
+    document.querySelectorAll('h2, .label, .sub, .k, .v, .checkout-list li, .door-code-cta, .door-code-value, .amenity-card .title-row span:last-child, .amenity-card .body, .nearest-row .cat, .full-guide-link, p, .door-code-card h2, .t-name, .t-sub, section > .inst-note, .welcome, .picks-intro, .tab-btn, .r-title, .r-body, .help-line .h-main, .help-line .h-sub, .sb-title, .sb-sub, .amenity-acc summary').forEach(el => {
       if (lang === 'es') {
         if (!el.dataset.en) el.dataset.en = el.textContent.trim();
         const t = ES[el.dataset.en];
