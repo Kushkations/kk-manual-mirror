@@ -783,6 +783,18 @@
   </section>
 
   <section>
+    <h2>House Rules</h2>
+    <div class="rules-list">
+      <div class="rule"><span class="r-num">1</span><div class="r-title">No Tobacco Indoors</div><div class="r-body">No cigarettes, cigars, or Black &amp; Milds inside. Vapes and blunt wraps are fine, and marijuana smoking indoors is allowed. Smoking tobacco outside is OK — please don't litter cigarette butts on the property (a fine applies).</div></div>
+      <div class="rule"><span class="r-num">2</span><div class="r-title">No Parties or Extra Guests</div><div class="r-body">Any party or additional guests not approved before your stay will end your reservation immediately. Quiet enjoyment is for everyone on the block.</div></div>
+      <div class="rule"><span class="r-num">3</span><div class="r-title">Quiet Hours · 10 PM to 9 AM</div><div class="r-body">A call from local authorities or a neighbor complaint means a check-in with the owner and may end your reservation.</div></div>
+      <div class="rule"><span class="r-num">4</span><div class="r-title">Pets Welcome</div><div class="r-body">Pets are welcome. Please clean up after them inside and out — up to a $150 fine for pet waste left behind.</div></div>
+      <div class="rule"><span class="r-num">5</span><div class="r-title">No Late Checkouts</div><div class="r-body">Unauthorized late checkout is charged $50 for every 15 minutes past 10 AM. Need an extension? Ask 24 hours ahead and we'll try to make it work.</div></div>
+      <div class="rule"><span class="r-num">6</span><div class="r-title">Dispose of Ash Properly</div><div class="r-body">$50 charge for improper ash disposal. Never ash in the hot tub or into any object in the home (like a chair cup holder).</div></div>
+    </div>
+  </section>
+
+  <section>
     <h2>The Basics</h2>
     <div class="info-row"><div class="k">Check-in</div><div class="v" data-bind="arrival.check_in_time"></div></div>
     <div class="info-row"><div class="k">Check-out</div><div class="v" data-bind="checkout.time"></div></div>
@@ -822,18 +834,6 @@
     <div class="info-row"><div class="k">Indoor 420</div><div class="v">Allowed</div></div>
     <div class="info-row"><div class="k">Indoor Tobacco</div><div class="v">Not allowed</div></div>
     <div class="info-row"><div class="k">Tobacco Outside</div><div class="v">OK · no littering</div></div>
-  </section>
-
-  <section>
-    <h2>House Rules</h2>
-    <div class="rules-list">
-      <div class="rule"><span class="r-num">1</span><div class="r-title">No Tobacco Indoors</div><div class="r-body">No cigarettes, cigars, or Black &amp; Milds inside. Vapes and blunt wraps are fine, and marijuana smoking indoors is allowed. Smoking tobacco outside is OK — please don't litter cigarette butts on the property (a fine applies).</div></div>
-      <div class="rule"><span class="r-num">2</span><div class="r-title">No Parties or Extra Guests</div><div class="r-body">Any party or additional guests not approved before your stay will end your reservation immediately. Quiet enjoyment is for everyone on the block.</div></div>
-      <div class="rule"><span class="r-num">3</span><div class="r-title">Quiet Hours · 10 PM to 9 AM</div><div class="r-body">A call from local authorities or a neighbor complaint means a check-in with the owner and may end your reservation.</div></div>
-      <div class="rule"><span class="r-num">4</span><div class="r-title">Pets Welcome</div><div class="r-body">Pets are welcome. Please clean up after them inside and out — up to a $150 fine for pet waste left behind.</div></div>
-      <div class="rule"><span class="r-num">5</span><div class="r-title">No Late Checkouts</div><div class="r-body">Unauthorized late checkout is charged $50 for every 15 minutes past 10 AM. Need an extension? Ask 24 hours ahead and we'll try to make it work.</div></div>
-      <div class="rule"><span class="r-num">6</span><div class="r-title">Dispose of Ash Properly</div><div class="r-body">$50 charge for improper ash disposal. Never ash in the hot tub or into any object in the home (like a chair cup holder).</div></div>
-    </div>
   </section>
 
   <section class="amenity-cards-section" data-amenity-cards>
@@ -1211,10 +1211,10 @@
     const TAB_SPEC = [
       {match: 'Door Code',            label: '🔑 Access'},
       {match: 'WiFi',                 label: '📶 WiFi'},
+      {match: 'House Rules',          label: '📜 Rules'},
       {match: 'The Basics',           label: '📋 Basics'},
       {match: 'Early Check-In',       label: '⏰ Early/Late'},
       {match: 'Checkout Instructions',label: '🚪 Checkout'},
-      {match: 'House Rules',          label: '📜 Rules'},
       {match: 'Quick Instructions',   label: '🎮 Amenities'},
       {match: 'Hot Tub Instructions', label: '♨️ Hot Tub'},
       {match: 'Game Instructions',    label: '🕹️ Games'},
