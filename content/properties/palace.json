@@ -1,13 +1,13 @@
 {
  "page_photos": {
-  "checkin": "../../assets/photos/palace-canva/exterior.jpg",
-  "rules": "../../assets/photos/palace-canva/bedroom.jpg",
-  "checkout": "../../assets/photos/palace-canva/kitchen.jpg",
-  "towels": "../../assets/photos/palace-canva/bedroom.jpg",
-  "trips": "../../assets/photos/palace-canva/day_trips.jpg",
-  "nearest": "../../assets/photos/palace-canva/exterior_alt.jpg",
-  "trouble": "../../assets/photos/palace-canva/exterior.jpg",
-  "thanks": "../../assets/photos/palace-canva/exterior_alt.jpg"
+  "checkin": "../assets/photos/palace-canva/exterior.jpg",
+  "rules": "../assets/photos/palace-canva/bedroom.jpg",
+  "checkout": "../assets/photos/palace-canva/kitchen.jpg",
+  "towels": "../assets/photos/palace-canva/bedroom.jpg",
+  "trips": "../assets/photos/palace-canva/day_trips.jpg",
+  "nearest": "../assets/photos/palace-canva/exterior_alt.jpg",
+  "trouble": "../assets/photos/palace-canva/exterior.jpg",
+  "thanks": "../assets/photos/palace-canva/exterior_alt.jpg"
  },
  "meta": {
   "name": "Palace",
@@ -18,16 +18,16 @@
    "lng": 0,
    "_todo": "pull exact lat/lng from Google Maps"
   },
-  "cover_photo": "../../assets/photos/palace/1c2674b4c4.jpg",
+  "cover_photo": "../assets/photos/palace/1c2674b4c4.jpg",
   "photo_gallery": [
-   "../../assets/photos/palace/7445da39dc.jpg",
-   "../../assets/photos/palace/1c2674b4c4.jpg",
-   "../../assets/photos/palace/dad7f67754.jpg",
-   "../../assets/photos/palace/96b39fe677.jpg",
-   "../../assets/photos/palace/830746fb6f.jpg",
-   "../../assets/photos/palace/f042afd4a3.jpg",
-   "../../assets/photos/palace/176aa95d85.jpg",
-   "../../assets/photos/palace/dc8d9b555c.jpg"
+   "../assets/photos/palace/7445da39dc.jpg",
+   "../assets/photos/palace/1c2674b4c4.jpg",
+   "../assets/photos/palace/dad7f67754.jpg",
+   "../assets/photos/palace/96b39fe677.jpg",
+   "../assets/photos/palace/830746fb6f.jpg",
+   "../assets/photos/palace/f042afd4a3.jpg",
+   "../assets/photos/palace/176aa95d85.jpg",
+   "../assets/photos/palace/dc8d9b555c.jpg"
   ],
   "bedrooms": 6,
   "bathrooms": 6,
@@ -52,19 +52,19 @@
   "towels_location": "8 towels in the downstairs bathroom, 8 in the upstairs common bathroom, and 2 in each closet in the king bedroom.",
   "towel_photos": [
    {
-    "url": "../../assets/photos/palace/300cf4d0d4.jpg",
+    "url": "../assets/photos/palace/300cf4d0d4.jpg",
     "caption": "Towel storage"
    },
    {
-    "url": "../../assets/photos/palace/c10616d506.jpg",
+    "url": "../assets/photos/palace/c10616d506.jpg",
     "caption": "Towel storage"
    },
    {
-    "url": "../../assets/photos/palace/e2b507ac5e.jpg",
+    "url": "../assets/photos/palace/e2b507ac5e.jpg",
     "caption": "Towel storage"
    },
    {
-    "url": "../../assets/photos/palace/830a34d973.jpg",
+    "url": "../assets/photos/palace/830a34d973.jpg",
     "caption": "Towel storage"
    }
   ],
@@ -128,7 +128,7 @@
     "warm_cool_button": "Press 'Warm' or 'Cool' once and the set temperature flashes. Keep tapping to raise or lower it. Wait a few seconds for the flashing to stop and the new set point locks in.",
     "lights_and_features": "If the spa has lighting or audio, the controls live on the same panel. Tap each one to experiment with settings."
    },
-   "photo": "../../assets/photos/palace-canva/hot_tub.jpg"
+   "photo": "../assets/photos/palace-canva/hot_tub.jpg"
   },
   "tv": {
    "streaming": [
@@ -150,7 +150,7 @@
     "Fire extinguisher under the sink",
     "Delivery works great: Uber Eats, DoorDash, Grubhub"
    ],
-   "photo": "../../assets/photos/palace-canva/kitchen.jpg"
+   "photo": "../assets/photos/palace-canva/kitchen.jpg"
   },
   "laundry": {
    "washer": true,
@@ -179,7 +179,7 @@
     "75-inch TV with theater seating",
     "6-seater room with popcorn machine"
    ],
-   "photo": "../../assets/photos/palace/f042afd4a3.jpg"
+   "photo": "../assets/photos/palace/f042afd4a3.jpg"
   },
   "game_room": {
    "highlights": [
@@ -193,7 +193,7 @@
    "rules": [
     "Kids supervised at all times"
    ],
-   "photo": "../../assets/photos/palace/830746fb6f.jpg"
+   "photo": "../assets/photos/palace/830746fb6f.jpg"
   },
   "outdoor": {
    "highlights": [
@@ -202,7 +202,7 @@
     "Basketball hoop",
     "Horseshoes area"
    ],
-   "photo": "../../assets/photos/palace-canva/backyard.jpg"
+   "photo": "../assets/photos/palace-canva/backyard.jpg"
   },
   "golf_simulator": true,
   "ps5": true,
