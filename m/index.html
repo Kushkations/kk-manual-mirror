@@ -1387,7 +1387,7 @@
   const photoStrip = app.querySelector('.photo-strip');
   if (photoStrip && data.meta?.photo_gallery?.length) {
     const cover = data.meta.cover_photo;
-    const others = data.meta.photo_gallery.filter(u => u !== cover).slice(0, 10);
+    const others = data.meta.photo_gallery.filter(u => u !== cover).slice(0, 12);
     if (others.length === 0) {
       photoStrip.parentElement.style.display = 'none';
     } else {
