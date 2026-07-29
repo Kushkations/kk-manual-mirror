@@ -458,7 +458,9 @@
   }
   .photo-strip img:last-child:nth-child(odd) {
     grid-column: 1 / -1;
-    height: 170px;
+    justify-self: center;
+    width: calc((100% - 6px) / 2);
+    height: 110px;
   }
 
   .lang-toggle {
