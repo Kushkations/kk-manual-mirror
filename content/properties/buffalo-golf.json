@@ -8,16 +8,14 @@
    "lat": 0,
    "lng": 0
   },
-  "cover_photo": "https://uc.orez.io/i/3069a8bb22ac4a28823e6862f9c89c74-Large",
+  "cover_photo": "../assets/photos/buffalo-golf/cover26_bright.jpg",
   "photo_gallery": [
-   "https://uc.orez.io/i/ab7dab42d24a4b0c8027941eef795636-Large",
+   "https://uc.orez.io/i/2a9f8afaf6d542869022cba49a99f736-Large",
+   "https://uc.orez.io/i/2fa0662bca624d3894f94ae780a07818-Large",
    "https://uc.orez.io/i/3069a8bb22ac4a28823e6862f9c89c74-Large",
-   "https://uc.orez.io/i/2f2d9de87471438abf4278bc5f402589-Large",
-   "https://uc.orez.io/i/553773e7f3bc47568d17a9d436fc1e97-Large",
-   "https://uc.orez.io/i/0b903707177441438e17f29d2ce3cde1-Large",
-   "https://uc.orez.io/i/8f13a8f872ee4f9699ee9d65c662a0e6-Large",
-   "https://uc.orez.io/i/142033e8c28449478f8578eb634aeb1e-Large",
-   "https://uc.orez.io/i/896cdc69a86f465188aff3c6eeb68e69-Large"
+   "https://uc.orez.io/i/5fc759c676414a5289a063cf4381e2e5-Large",
+   "https://uc.orez.io/i/f88166101d2144e292bb11a7508bcd52-Large",
+   "https://uc.orez.io/i/142033e8c28449478f8578eb634aeb1e-Large"
   ],
   "bedrooms": 5,
   "bathrooms": 2.5,
