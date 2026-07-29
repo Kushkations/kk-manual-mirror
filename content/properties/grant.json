@@ -8,16 +8,18 @@
    "lat": 0,
    "lng": 0
   },
-  "cover_photo": "https://uc.orez.io/i/83291e8a7bec49278f338aed7352de47-Large",
+  "cover_photo": "../assets/photos/grant/cover8_bright.jpg",
   "photo_gallery": [
-   "https://uc.orez.io/i/68264527f0eb4efdac10e7be35fdd0e6-Large",
    "https://uc.orez.io/i/83291e8a7bec49278f338aed7352de47-Large",
-   "https://uc.orez.io/i/d8cee17b37c141469396eff7c06bff99-Large",
-   "https://uc.orez.io/i/e86660c090784dc19890e888dc7d2627-Large",
+   "https://uc.orez.io/i/7c1c48ee8cf445b699dd13b41bbba8a2-Large",
    "https://uc.orez.io/i/873421b194c846f787d35cc61d7b1f5f-Large",
-   "https://uc.orez.io/i/5d0264dcce844636a1007eb2a95050fd-Large",
-   "https://uc.orez.io/i/5f619e8316d54c64ad81a68814839c83-Large",
-   "https://uc.orez.io/i/f8cd681693d345df89a6454c340805b1-Large"
+   "https://uc.orez.io/i/fa58acec9a464fe28f31e72b1cd8d718-Large",
+   "https://uc.orez.io/i/eb8ab4883a734f839233d15fa12aa8e1-Large",
+   "https://uc.orez.io/i/cdc5d34e93dd4addb959a35a29a6d62b-Large",
+   "https://uc.orez.io/i/d8cee17b37c141469396eff7c06bff99-Large",
+   "https://uc.orez.io/i/04e8181fbdd641cea889847848ea8188-Large",
+   "https://uc.orez.io/i/da0ae4c3fde44938b0ecbec9be23ae1a-Large",
+   "https://uc.orez.io/i/9a393fe01bd94b7495816275cba7d243-Large"
   ],
   "bedrooms": 8,
   "bathrooms": 2,
