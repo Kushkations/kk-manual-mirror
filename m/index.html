@@ -8,7 +8,7 @@
 <title>KushKations</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
     --kk-dark:  #1e3120;
@@ -20,7 +20,7 @@
   }
   * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
   html, body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     color: var(--kk-ink);
     background: var(--kk-sand);
     -webkit-font-smoothing: antialiased;
@@ -85,7 +85,7 @@
     border-radius: 16px;
     padding: 20px 22px;
     margin-bottom: 16px;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     font-size: 15px;
     font-style: normal;
     color: var(--kk-dark);
@@ -213,7 +213,7 @@
     font-size: 14px;
   }
   .wifi-row:last-child { border-bottom: none; }
-  .wifi-row .k { color: var(--kk-muted); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; font-family: 'Inter', sans-serif; font-weight: 600; }
+  .wifi-row .k { color: var(--kk-muted); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; }
   .wifi-row .v { font-weight: 600; color: var(--kk-dark); }
 
   .info-row {
@@ -283,6 +283,7 @@
     color: white;
     text-align: center;
     padding: 20px 18px !important;
+    border-radius: 16px !important;
   }
   .door-code-card h2 {
     color: white !important;
@@ -355,26 +356,35 @@
   }
   .tagline {
     text-align: center;
-    max-width: 22em;
-    margin: 14px auto 14px;
-    padding: 0 14px;
+    max-width: 23em;
+    margin: 20px auto 18px;
+    padding: 0 16px;
+  }
+  .tagline-brand {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.34;
+    color: var(--kk-dark);
+    margin: 0 0 16px;
+    letter-spacing: 0.005em;
   }
   .tagline-lead {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 31px;
-    font-weight: 700;
-    letter-spacing: 0.03em;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 19px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
-    line-height: 1.1;
+    line-height: 1.25;
     color: var(--kk-dark);
     margin-bottom: 8px;
   }
   .tagline-sub {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 14.5px;
     font-weight: 500;
     line-height: 1.5;
-    color: var(--kk-mid);
+    color: #305632;
     max-width: 24em;
     margin: 0 auto;
   }
@@ -740,7 +750,7 @@
     background: white;
     border: 1px solid #e6e1d6;
     color: var(--kk-dark);
-    font-family: 'Inter', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 12.5px;
     font-weight: 700;
     padding: 8px 13px;
@@ -922,8 +932,9 @@
   </header>
 
   <div class="tagline">
+    <div class="tagline-brand">Where memories won't be forgotten.</div>
     <div class="tagline-lead">Your reset starts now.</div>
-    <div class="tagline-sub">Step inside, leave the noise behind, and enjoy every moment of your KushKation.</div>
+    <div class="tagline-sub">Step inside, leave the noise behind, and enjoy every moment of your stay.</div>
   </div>
 
   <div class="guest-greeting" data-bind="guest_greeting"></div>
@@ -1558,8 +1569,9 @@
 
   // Spanish translation: simple text-content swap for static labels
   const ES = {
+    'Where memories won\'t be forgotten.': 'Donde los recuerdos no se olvidan.',
     'Your reset starts now.': 'Tu reset empieza ahora.',
-    'Step inside, leave the noise behind, and enjoy every moment of your KushKation.': 'Entra, deja el ruido atrás y disfruta cada momento de tu KushKation.',
+    'Step inside, leave the noise behind, and enjoy every moment of your stay.': 'Entra, deja el ruido atrás y disfruta cada momento de tu estadía.',
     'Door Code': 'Código de Puerta',
     'Sent via text 24 hours before check-in': 'Enviado por texto 24 horas antes del check-in',
     'Need it now? Text us →': '¿Lo necesitas ahora? Escríbenos →',
@@ -1711,7 +1723,7 @@
   function setLang(lang) {
     localStorage.setItem('kk_lang', lang);
     document.documentElement.lang = lang;
-    document.querySelectorAll('h2, .tagline-lead, .tagline-sub, .label, .sub, .k, .v, .checkout-list li, .co-txt, .door-code-cta, .door-code-value, .amenity-card .title-row span:last-child, .amenity-card .body, .nearest-row .cat, .full-guide-link, p, .door-code-card h2, .t-name, .t-sub, section .inst-note, .welcome, .picks-intro, .tab-btn, .r-title, .r-body, .help-line .h-main, .help-line .h-sub, .sb-title, .sb-sub, .amenity-acc summary, .vid-title, .vid-chan, .fee-title, .fee-note, .fee-item span, .wifi-k, .bt-lbl, .bi-k, .cann-lbl, .cann-pill').forEach(el => {
+    document.querySelectorAll('h2, .tagline-brand, .tagline-lead, .tagline-sub, .label, .sub, .k, .v, .checkout-list li, .co-txt, .door-code-cta, .door-code-value, .amenity-card .title-row span:last-child, .amenity-card .body, .nearest-row .cat, .full-guide-link, p, .door-code-card h2, .t-name, .t-sub, section .inst-note, .welcome, .picks-intro, .tab-btn, .r-title, .r-body, .help-line .h-main, .help-line .h-sub, .sb-title, .sb-sub, .amenity-acc summary, .vid-title, .vid-chan, .fee-title, .fee-note, .fee-item span, .wifi-k, .bt-lbl, .bi-k, .cann-lbl, .cann-pill').forEach(el => {
       if (lang === 'es') {
         if (!el.dataset.en) el.dataset.en = el.textContent.trim();
         const t = ES[el.dataset.en];
