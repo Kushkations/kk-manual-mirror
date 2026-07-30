@@ -58,12 +58,22 @@
   }
   header .property {
     font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 38px;
+    font-size: 28px;
     font-weight: 700;
     color: var(--kk-dark);
-    line-height: 1;
-    margin-top: 4px;
-    letter-spacing: -0.01em;
+    line-height: 1.22;
+    margin: 6px auto 0;
+    max-width: 14em;
+    letter-spacing: 0;
+  }
+  header .property .prop-dash {
+    color: var(--kk-green);
+    font-weight: 400;
+    padding: 0 3px;
+  }
+  header .property .prop-tag {
+    font-weight: 500;
+    color: var(--kk-mid);
   }
   header .address {
     font-size: 14px;
@@ -927,12 +937,11 @@
   <img class="hero-photo" data-bind-src="meta.cover_photo" alt="">
   <header>
     <img class="logo" src="../assets/kk-logo.png" alt="KushKations">
-    <div class="property" data-bind="meta.name"></div>
+    <div class="property"><span class="prop-name" data-bind="meta.name"></span> <span class="prop-dash">—</span> <span class="prop-tag">Where memories won't be forgotten.</span></div>
     <div class="address"><a data-bind-href="map_link" data-bind="meta.address" target="_blank" rel="noopener"></a></div>
   </header>
 
   <div class="tagline">
-    <div class="tagline-brand">Where memories won't be forgotten.</div>
     <div class="tagline-lead">Your reset starts now.</div>
     <div class="tagline-sub">Step inside, leave the noise behind, and enjoy every moment of your stay.</div>
   </div>
@@ -1723,7 +1732,7 @@
   function setLang(lang) {
     localStorage.setItem('kk_lang', lang);
     document.documentElement.lang = lang;
-    document.querySelectorAll('h2, .tagline-brand, .tagline-lead, .tagline-sub, .label, .sub, .k, .v, .checkout-list li, .co-txt, .door-code-cta, .door-code-value, .amenity-card .title-row span:last-child, .amenity-card .body, .nearest-row .cat, .full-guide-link, p, .door-code-card h2, .t-name, .t-sub, section .inst-note, .welcome, .picks-intro, .tab-btn, .r-title, .r-body, .help-line .h-main, .help-line .h-sub, .sb-title, .sb-sub, .amenity-acc summary, .vid-title, .vid-chan, .fee-title, .fee-note, .fee-item span, .wifi-k, .bt-lbl, .bi-k, .cann-lbl, .cann-pill').forEach(el => {
+    document.querySelectorAll('h2, .prop-tag, .tagline-lead, .tagline-sub, .label, .sub, .k, .v, .checkout-list li, .co-txt, .door-code-cta, .door-code-value, .amenity-card .title-row span:last-child, .amenity-card .body, .nearest-row .cat, .full-guide-link, p, .door-code-card h2, .t-name, .t-sub, section .inst-note, .welcome, .picks-intro, .tab-btn, .r-title, .r-body, .help-line .h-main, .help-line .h-sub, .sb-title, .sb-sub, .amenity-acc summary, .vid-title, .vid-chan, .fee-title, .fee-note, .fee-item span, .wifi-k, .bt-lbl, .bi-k, .cann-lbl, .cann-pill').forEach(el => {
       if (lang === 'es') {
         if (!el.dataset.en) el.dataset.en = el.textContent.trim();
         const t = ES[el.dataset.en];
