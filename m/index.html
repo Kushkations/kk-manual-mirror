@@ -2060,23 +2060,8 @@
       }
     });
 
-    // (refinement 2) Early/Late fees: collapse the dense tier grid into a tap-to-open
-    // accordion, keeping the "Request via text" button prominent below.
-    const feeSec = [...app.querySelectorAll('section')].find(s => {
-      const h = s.querySelector('h2'); return h && /Early Check-?In/i.test(h.textContent);
-    });
-    if (feeSec) {
-      const cols = feeSec.querySelector('.fee-cols');
-      if (cols && !feeSec.querySelector('.fee-accordion')) {
-        const det = document.createElement('details');
-        det.className = 'fee-accordion';
-        const sum = document.createElement('summary');
-        sum.textContent = 'View early check-in & late checkout pricing';
-        cols.parentNode.insertBefore(det, cols);
-        det.appendChild(sum);
-        det.appendChild(cols);
-      }
-    }
+    // (refinement 2 — reverted per Shaquan) Early/Late fees stay visible as the organized
+    // two-column price/time grid (no accordion). The .fee-cols table already renders cleanly.
 
     // (refinement 3) Quick Instructions: add a "tap to view" hint (the whole summary row is
     // already the tap target for its <details>).
