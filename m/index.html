@@ -1030,6 +1030,35 @@
     display: inline-flex; align-items: center; gap: 6px;
   }
   body.palace-v2 .pv2-count svg { width: 14px; height: 14px; }
+  body.palace-v2 .photo-strip.pv2-banner { cursor: pointer; }
+
+  /* Full-screen photo gallery (opens when the banner is tapped) */
+  body.palace-v2 .pv2-lightbox { position: fixed; inset: 0; z-index: 1000; background: rgba(12,16,13,0.95); display: none; }
+  body.palace-v2 .pv2-lightbox.open { display: flex; }
+  body.palace-v2 .pv2-lb-track {
+    flex: 1; display: flex; overflow-x: auto; scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; scrollbar-width: none;
+  }
+  body.palace-v2 .pv2-lb-track::-webkit-scrollbar { display: none; }
+  body.palace-v2 .pv2-lb-slide { flex: 0 0 100%; scroll-snap-align: center; display: flex; align-items: center; justify-content: center; padding: 20px 14px; }
+  body.palace-v2 .pv2-lb-slide img { max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; }
+  body.palace-v2 .pv2-lb-close {
+    position: absolute; top: 14px; right: 14px; z-index: 3; width: 42px; height: 42px; border-radius: 50%;
+    border: none; cursor: pointer; background: rgba(255,255,255,0.16); color: #fff;
+    display: flex; align-items: center; justify-content: center;
+  }
+  body.palace-v2 .pv2-lb-close svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; }
+  body.palace-v2 .pv2-lb-count {
+    position: absolute; top: 22px; left: 50%; transform: translateX(-50%); z-index: 3; color: #fff;
+    font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700; background: rgba(0,0,0,0.45); padding: 5px 13px; border-radius: 999px;
+  }
+  body.palace-v2 .pv2-lb-nav {
+    position: absolute; top: 50%; transform: translateY(-50%); z-index: 3; width: 44px; height: 44px; border-radius: 50%;
+    border: none; cursor: pointer; background: rgba(255,255,255,0.14); color: #fff; display: flex; align-items: center; justify-content: center;
+  }
+  body.palace-v2 .pv2-lb-nav svg { width: 24px; height: 24px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  body.palace-v2 .pv2-lb-prev { left: 10px; }
+  body.palace-v2 .pv2-lb-next { right: 10px; }
 
   /* ---- 3. HOUSE RULES — penalties in warning badges ---- */
   body.palace-v2 .r-title { font-weight: 800; }
@@ -1780,6 +1809,9 @@
       door:'<svg viewBox="0 0 24 24"><path d="M13 4h3a2 2 0 0 1 2 2v14"/><path d="M2 20h3"/><path d="M13 20h9"/><path d="M13 4.6v16.1a1 1 0 0 1-1.24.97L5 20V5.6a2 2 0 0 1 1.5-1.94l4-1A2 2 0 0 1 13 4.56Z"/></svg>',
       map:'<svg viewBox="0 0 24 24"><path d="M14.1 5.5a2 2 0 0 0 1.8 0l3.6-1.8A1 1 0 0 1 21 4.6v12.8a1 1 0 0 1-.55.9l-4.55 2.28a2 2 0 0 1-1.8 0l-4.2-2.1a2 2 0 0 0-1.8 0l-3.6 1.8A1 1 0 0 1 3 19.4V6.6a1 1 0 0 1 .55-.9L8.1 3.4a2 2 0 0 1 1.8 0z"/><path d="M15 5.8v15"/><path d="M9 3.2v15"/></svg>',
       help:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>',
+      x:'<svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>',
+      chevL:'<svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>',
+      chevR:'<svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>',
     };
     const ico = (n) => `<span class="kk-icon">${I[n] || ''}</span>`;
 
@@ -1874,19 +1906,50 @@
       if (h2) h2.insertAdjacentHTML('afterend', '<div class="vid-hint">Swipe to browse →</div>');
     }
 
-    // 2. Photos → single compact preview banner
+    // 2. Photos → compact preview banner that opens a full-screen swipeable gallery on tap
     const strip = app.querySelector('.photo-strip');
     if (strip && strip.querySelectorAll('img').length) {
-      const imgs = Array.from(strip.querySelectorAll('img'));
-      const first = imgs[0];
-      const n = imgs.length;
+      const imgEls = Array.from(strip.querySelectorAll('img'));
+      const urls = imgEls.map(im => im.getAttribute('src') || im.src);
+      const first = imgEls[0];
+      const n = urls.length;
       strip.innerHTML = '';
       strip.classList.add('pv2-banner');
       strip.appendChild(first);
       const count = document.createElement('span');
       count.className = 'pv2-count';
-      count.innerHTML = I.image + `<span>${n} photo${n > 1 ? 's' : ''}</span>`;
+      count.innerHTML = I.image + `<span class="pv2-count-lbl">View all ${n} photo${n > 1 ? 's' : ''}</span>`;
       strip.appendChild(count);
+
+      // Full-screen lightbox with every photo (horizontal swipe + arrows + counter)
+      const lb = document.createElement('div');
+      lb.className = 'pv2-lightbox';
+      lb.innerHTML =
+        `<button class="pv2-lb-close" type="button" aria-label="Close gallery">${I.x}</button>` +
+        `<div class="pv2-lb-count"></div>` +
+        `<button class="pv2-lb-nav pv2-lb-prev" type="button" aria-label="Previous">${I.chevL}</button>` +
+        `<div class="pv2-lb-track">${urls.map(u => `<div class="pv2-lb-slide"><img src="${u}" loading="lazy" alt=""></div>`).join('')}</div>` +
+        `<button class="pv2-lb-nav pv2-lb-next" type="button" aria-label="Next">${I.chevR}</button>`;
+      document.body.appendChild(lb);
+      const track = lb.querySelector('.pv2-lb-track');
+      const counter = lb.querySelector('.pv2-lb-count');
+      const idx = () => Math.round(track.scrollLeft / track.clientWidth);
+      const sync = () => { counter.textContent = `${Math.min(idx() + 1, n)} / ${n}`; };
+      track.addEventListener('scroll', sync, { passive: true });
+      const go = (d) => track.scrollTo({ left: (idx() + d) * track.clientWidth, behavior: 'smooth' });
+      lb.querySelector('.pv2-lb-next').addEventListener('click', () => go(1));
+      lb.querySelector('.pv2-lb-prev').addEventListener('click', () => go(-1));
+      const open = () => { lb.classList.add('open'); document.body.style.overflow = 'hidden'; track.scrollLeft = 0; sync(); };
+      const close = () => { lb.classList.remove('open'); document.body.style.overflow = ''; };
+      strip.addEventListener('click', open);
+      lb.querySelector('.pv2-lb-close').addEventListener('click', close);
+      lb.addEventListener('click', e => { if (e.target === lb) close(); });
+      document.addEventListener('keydown', e => {
+        if (!lb.classList.contains('open')) return;
+        if (e.key === 'Escape') close();
+        else if (e.key === 'ArrowRight') go(1);
+        else if (e.key === 'ArrowLeft') go(-1);
+      });
     }
 
     // 4. Promo banner → gift icon + dashed coupon pill with copy
