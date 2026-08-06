@@ -1109,6 +1109,26 @@
   body.palace-v2 .amenity-acc summary .kk-icon { color: var(--kk-mid); font-size: 18px; flex: none; }
   body.palace-v2 .tab-btn { display: inline-flex; align-items: center; gap: 6px; }
   body.palace-v2 .tab-btn .kk-icon { font-size: 14px; flex: none; }
+
+  /* (refinement 1) Cannabis: title + subtle subtext, uniform pills */
+  body.palace-v2 .cann-txt { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
+  body.palace-v2 .cann-txt .cann-lbl { flex: none; }
+  body.palace-v2 .cann-sub { font-size: 11px; color: var(--kk-muted); font-weight: 500; line-height: 1.3; }
+
+  /* (refinement 2) Early/Late pricing accordion */
+  body.palace-v2 .fee-accordion { border: 1px solid #ece5d6; border-radius: 12px; overflow: hidden; margin-bottom: 12px; }
+  body.palace-v2 .fee-accordion summary {
+    list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    padding: 13px 15px; font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700; color: var(--kk-dark);
+  }
+  body.palace-v2 .fee-accordion summary::-webkit-details-marker { display: none; }
+  body.palace-v2 .fee-accordion summary::after { content: '+'; color: var(--kk-green); font-size: 20px; font-weight: 700; line-height: 1; }
+  body.palace-v2 .fee-accordion[open] summary::after { content: '–'; }
+  body.palace-v2 .fee-accordion .fee-cols { padding: 0 13px 14px; }
+
+  /* (refinement 3) Quick Instructions: hint + larger tap target on each row */
+  body.palace-v2 .amen-hint { font-size: 11px; color: var(--kk-muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin: -4px 0 8px; }
+  body.palace-v2 .amenity-acc summary { padding-top: 12px; padding-bottom: 12px; }
 </style>
 </head>
 <body>
@@ -1812,6 +1832,7 @@
       x:'<svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>',
       chevL:'<svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>',
       chevR:'<svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>',
+      cross:'<svg viewBox="0 0 24 24"><path d="M9 3h6a1 1 0 0 1 1 1v4h4a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-4v4a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-4H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1h4V4a1 1 0 0 1 1-1z"/></svg>',
     };
     const ico = (n) => `<span class="kk-icon">${I[n] || ''}</span>`;
 
@@ -2010,12 +2031,59 @@
       const hit = CO_ICON.find(([re]) => re.test(t));
       if (hit) setIco(it.querySelector('.co-ic'), hit[1]);
     });
-    const HUB_ICON = [[/host pick/i, 'utensils'], [/getting around/i, 'car'], [/nearest/i, 'mappin'], [/emergenc/i, 'siren']];
+    const HUB_ICON = [[/host pick/i, 'utensils'], [/getting around/i, 'car'], [/nearest/i, 'mappin'], [/emergenc/i, 'cross']];
     app.querySelectorAll('.hub-tile').forEach(t => {
       const lbl = ((t.querySelector('.label') || {}).textContent || '');
       const hit = HUB_ICON.find(([re]) => re.test(lbl));
       if (hit) setIco(t.querySelector('.icon'), hit[1]);
     });
+
+    // (refinement 1) Cannabis: uniform pills — turn the big orange "littering" block into a
+    // clean "Allowed Outside" pill and move the detail into subtle subtext under the title.
+    app.querySelectorAll('.cann-row').forEach(row => {
+      const pill = row.querySelector('.cann-pill');
+      const lbl = row.querySelector('.cann-lbl');
+      if (!pill || !pill.classList.contains('warn')) return;
+      pill.classList.remove('warn');
+      pill.classList.add('yes');
+      pill.textContent = 'Allowed Outside';
+      if (lbl && !lbl.closest('.cann-txt')) {
+        const txt = document.createElement('span');
+        txt.className = 'cann-txt';
+        lbl.parentNode.insertBefore(txt, lbl);
+        txt.appendChild(lbl);
+        const sub = document.createElement('span');
+        sub.className = 'cann-sub';
+        sub.textContent = 'No littering, please';
+        txt.appendChild(sub);
+      }
+    });
+
+    // (refinement 2) Early/Late fees: collapse the dense tier grid into a tap-to-open
+    // accordion, keeping the "Request via text" button prominent below.
+    const feeSec = [...app.querySelectorAll('section')].find(s => {
+      const h = s.querySelector('h2'); return h && /Early Check-?In/i.test(h.textContent);
+    });
+    if (feeSec) {
+      const cols = feeSec.querySelector('.fee-cols');
+      if (cols && !feeSec.querySelector('.fee-accordion')) {
+        const det = document.createElement('details');
+        det.className = 'fee-accordion';
+        const sum = document.createElement('summary');
+        sum.textContent = 'View early check-in & late checkout pricing';
+        cols.parentNode.insertBefore(det, cols);
+        det.appendChild(sum);
+        det.appendChild(cols);
+      }
+    }
+
+    // (refinement 3) Quick Instructions: add a "tap to view" hint (the whole summary row is
+    // already the tap target for its <details>).
+    const amenSec = app.querySelector('[data-amenity-cards]');
+    if (amenSec && !amenSec.querySelector('.amen-hint')) {
+      const h2 = amenSec.querySelector('h2');
+      if (h2) h2.insertAdjacentHTML('afterend', '<div class="amen-hint">Tap to view instructions</div>');
+    }
 
     // Tag the elements setLang WILL clobber (amenity summaries + nav pills) with a stable
     // data-key and strip their emoji, so palaceReskin() can re-apply an SVG icon after any
@@ -2205,12 +2273,17 @@
     'Drive times & transit': 'Tiempos de manejo y transporte',
     'Food, coffee & more': 'Comida, café y más',
     'Hospital & police': 'Hospital y policía',
+    'Allowed Outside': 'Permitido Afuera',
+    'No littering, please': 'No tires basura, por favor',
+    'Tap to view instructions': 'Toca para ver las instrucciones',
+    'Swipe to browse →': 'Desliza para explorar →',
+    'View early check-in & late checkout pricing': 'Ver precios de check-in temprano y check-out tarde',
   };
 
   function setLang(lang) {
     localStorage.setItem('kk_lang', lang);
     document.documentElement.lang = lang;
-    document.querySelectorAll('h2, .prop-tag, .tagline-lead, .tagline-sub, .label, .sub, .k, .v, .checkout-list li, .co-txt, .door-code-cta, .door-code-value, .amenity-card .title-row span:last-child, .amenity-card .body, .nearest-row .cat, .full-guide-link, p, .door-code-card h2, .t-name, .t-sub, section .inst-note, .welcome, .picks-intro, .tab-btn, .r-title, .r-body, .help-line .h-main, .help-line .h-sub, .sb-title, .sb-sub, .amenity-acc summary, .vid-title, .vid-chan, .fee-title, .fee-note, .fee-item span, .wifi-k, .bt-lbl, .bi-k, .cann-lbl, .cann-pill').forEach(el => {
+    document.querySelectorAll('h2, .prop-tag, .tagline-lead, .tagline-sub, .label, .sub, .k, .v, .checkout-list li, .co-txt, .door-code-cta, .door-code-value, .amenity-card .title-row span:last-child, .amenity-card .body, .nearest-row .cat, .full-guide-link, p, .door-code-card h2, .t-name, .t-sub, section .inst-note, .welcome, .picks-intro, .tab-btn, .r-title, .r-body, .help-line .h-main, .help-line .h-sub, .sb-title, .sb-sub, .amenity-acc summary, .vid-title, .vid-chan, .fee-title, .fee-note, .fee-item span, .wifi-k, .bt-lbl, .bi-k, .cann-lbl, .cann-pill, .cann-sub, .amen-hint, .vid-hint, .fee-accordion summary').forEach(el => {
       if (lang === 'es') {
         if (!el.dataset.en) el.dataset.en = el.textContent.trim();
         const t = ES[el.dataset.en];
