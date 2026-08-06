@@ -8,7 +8,7 @@
 <title>KushKations</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
     --kk-dark:  #1e3120;
@@ -40,8 +40,8 @@
 
   .hero-photo {
     width: 100%;
-    height: 220px;
-    object-fit: cover;
+    aspect-ratio: 1020 / 713; /* match the trimmed collage (white cropped off) — box = image ratio */
+    object-fit: cover;        /* fills edge-to-edge: no white bars, no crop since ratios match */
     display: block;
     border-radius: 0 0 18px 18px;
     margin-bottom: 0;
@@ -925,6 +925,142 @@
   .co-item { display: flex; align-items: center; gap: 12px; padding: 11px 13px; background: linear-gradient(135deg, #f3f8f4, #eaf3ec); border-radius: 12px; }
   .co-ic { flex: none; width: 36px; height: 36px; border-radius: 10px; background: #fff; display: flex; align-items: center; justify-content: center; font-size: 18px; box-shadow: 0 1px 4px rgba(30,49,32,0.12); }
   .co-txt { font-size: 13.5px; color: var(--kk-dark); font-weight: 600; line-height: 1.35; }
+
+  /* =====================================================================
+     PALACE V2 — scoped redesign. EVERY rule is prefixed body.palace-v2 so
+     it can ONLY affect the Palace property (?p=palace). The other 20
+     properties never get the class and render exactly as before.
+     Fonts: Montserrat (headers/accent) · Inter (body + codes). No cursive.
+     ===================================================================== */
+  body.palace-v2 { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; --pv-shadow: 0 4px 16px rgba(30,49,32,0.09); }
+  body.palace-v2 .welcome, body.palace-v2 .wn-body, body.palace-v2 .r-body,
+  body.palace-v2 .bi-v, body.palace-v2 .p-body, body.palace-v2 .co-txt,
+  body.palace-v2 .help-line, body.palace-v2 .address { font-family: 'Inter', sans-serif; }
+  body.palace-v2 section h2, body.palace-v2 .property, body.palace-v2 .prop-tag,
+  body.palace-v2 .tagline-lead, body.palace-v2 .sb-title, body.palace-v2 .r-title,
+  body.palace-v2 .fee-title, body.palace-v2 .bt-val, body.palace-v2 .cta .label,
+  body.palace-v2 .tab-btn { font-family: 'Montserrat', sans-serif; }
+
+  /* inline line-icons (Lucide-style, consistent 2px stroke) */
+  body.palace-v2 .kk-icon { display: inline-flex; align-items: center; justify-content: center; line-height: 0; }
+  body.palace-v2 .kk-icon svg, body.palace-v2 .copy-btn svg,
+  body.palace-v2 .wifi-ic svg, body.palace-v2 .cta .icon svg,
+  body.palace-v2 .help-line .h-ic svg, body.palace-v2 .sb-icon svg,
+  body.palace-v2 .pv2-count svg {
+    width: 1em; height: 1em; stroke: currentColor; stroke-width: 2;
+    fill: none; stroke-linecap: round; stroke-linejoin: round;
+  }
+
+  /* ---- 1. HEADER & BRAND (high priority) ---- */
+  body.palace-v2 header { padding: 20px 0 8px; }
+  body.palace-v2 header .property {
+    font-weight: 800; font-size: clamp(20px, 6vw, 26px);
+    color: var(--kk-dark); letter-spacing: -0.01em;
+    white-space: normal; line-height: 1.2; max-width: 15em; margin: 8px auto 0;
+  }
+  body.palace-v2 header .property .prop-dash { color: var(--kk-green); font-weight: 800; padding: 0 5px; }
+  body.palace-v2 header .property .prop-tag { font-weight: 800; color: var(--kk-dark); }
+  body.palace-v2 header .address { font-weight: 600; font-size: 13.5px; margin-top: 10px; }
+  body.palace-v2 .tagline { margin: 12px auto 16px; max-width: 25em; }
+  body.palace-v2 .tagline-lead {
+    font-weight: 800; font-size: 21px; letter-spacing: 0; text-transform: none;
+    color: var(--kk-dark); margin-bottom: 6px;
+  }
+  body.palace-v2 .tagline-sub { font-family: 'Inter', sans-serif; font-weight: 500; color: var(--kk-muted); font-size: 14px; }
+
+  /* card system: 14px radius + soft elevation */
+  body.palace-v2 section { border-radius: 14px; box-shadow: var(--pv-shadow); }
+  body.palace-v2 section h2 { font-weight: 800; letter-spacing: 0.1em; color: var(--kk-mid); }
+  body.palace-v2 .cta { border-radius: 14px; box-shadow: var(--pv-shadow); }
+  body.palace-v2 .cta .icon { display: flex; align-items: center; justify-content: center; font-size: 26px; }
+  body.palace-v2 .cta .label { font-weight: 700; }
+
+  /* ---- 1. DOOR CODE — heavy code + copy + keyhole ---- */
+  body.palace-v2 .door-code-card { border-radius: 16px !important; }
+  body.palace-v2 .door-code-card h2 { display: flex; align-items: center; justify-content: center; gap: 7px; }
+  body.palace-v2 .door-code-card h2 .kk-icon { font-size: 15px; }
+  body.palace-v2 .door-code-value {
+    font-family: 'Inter', sans-serif; font-weight: 800; font-size: 40px;
+    letter-spacing: 0.16em; line-height: 1.05; margin-bottom: 6px;
+  }
+  body.palace-v2 .door-code-value.is-msg { font-size: 15px; font-weight: 600; letter-spacing: 0; line-height: 1.5; }
+  body.palace-v2 .door-code-copy-row { display: flex; justify-content: center; margin: 0 0 12px; }
+
+  /* copy button — shared (door code · wifi · coupon) */
+  body.palace-v2 .copy-btn {
+    display: inline-flex; align-items: center; gap: 5px; border: none; cursor: pointer;
+    font-family: 'Inter', sans-serif; font-weight: 700; font-size: 12px;
+    padding: 6px 12px; border-radius: 999px;
+    background: rgba(255,255,255,0.18); color: #fff; -webkit-tap-highlight-color: transparent;
+    transition: transform 0.12s, background 0.12s;
+  }
+  body.palace-v2 .copy-btn:active { transform: scale(0.94); }
+  body.palace-v2 .copy-btn.copied { background: var(--kk-green); color: var(--kk-dark); }
+
+  /* ---- 1. WiFi — signal icon + password copy ---- */
+  body.palace-v2 .wifi-card { border-radius: 14px; }
+  body.palace-v2 .wifi-ic { font-size: 30px; color: var(--kk-mid); }
+  body.palace-v2 .wifi-val-row { display: inline-flex; align-items: center; gap: 8px; }
+  body.palace-v2 .wifi-card .wifi-val { word-break: normal; white-space: nowrap; font-size: 13.5px; }
+  body.palace-v2 .wifi-val-row .copy-btn { background: var(--kk-dark); color: #fff; padding: 5px; font-size: 11px; flex: none; }
+  body.palace-v2 .wifi-val-row .copy-btn svg { width: 15px; height: 15px; }
+  body.palace-v2 .help-line .h-ic { font-size: 20px; color: var(--kk-mid); }
+  body.palace-v2 .sb-icon { font-size: 40px; color: #fff; }
+
+  /* ---- 2. VIDEO TUTORIALS → horizontal swipe carousel ---- */
+  body.palace-v2 .vid-hint { font-size: 11px; color: var(--kk-muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin: -4px 0 10px; }
+  body.palace-v2 .vid-list {
+    display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: 4px; margin: 0 -2px;
+  }
+  body.palace-v2 .vid-list::-webkit-scrollbar { display: none; }
+  body.palace-v2 .vid-card {
+    flex: 0 0 76%; max-width: 250px; flex-direction: column; scroll-snap-align: start;
+    background: #fff; border: 1px solid #efe9dd; border-radius: 14px; overflow: hidden; box-shadow: var(--pv-shadow);
+  }
+  body.palace-v2 .vid-card .vid-thumb { width: 100%; border-radius: 0; }
+  body.palace-v2 .vid-card .vid-info { padding: 10px 12px 12px; align-self: stretch; }
+
+  /* ---- 2. PHOTOS → single compact preview banner ---- */
+  body.palace-v2 .photo-strip.pv2-banner { display: block; position: relative; border-radius: 14px; overflow: hidden; }
+  body.palace-v2 .photo-strip.pv2-banner img { width: 100%; height: 150px; object-fit: cover; border-radius: 14px; }
+  body.palace-v2 .photo-strip.pv2-banner .pv2-count {
+    position: absolute; right: 10px; bottom: 10px; background: rgba(30,49,32,0.82); color: #fff;
+    font-size: 11.5px; font-weight: 700; padding: 5px 12px; border-radius: 999px;
+    display: inline-flex; align-items: center; gap: 6px;
+  }
+  body.palace-v2 .pv2-count svg { width: 14px; height: 14px; }
+
+  /* ---- 3. HOUSE RULES — penalties in warning badges ---- */
+  body.palace-v2 .r-title { font-weight: 800; }
+  body.palace-v2 .fine-badge {
+    display: inline-block; background: #fbe6cd; color: #93540f; font-weight: 800; font-size: 12px;
+    padding: 1px 8px; border-radius: 8px; white-space: nowrap; border: 1px solid #edc794;
+  }
+
+  /* ---- 3. CANNABIS PILLS — higher contrast ---- */
+  body.palace-v2 .cann-pill { font-weight: 800; font-size: 11.5px; padding: 5px 13px; border: 1px solid transparent; }
+  body.palace-v2 .cann-pill.yes { background: #d2edd9; color: #185c28; border-color: #97d1a6; }
+  body.palace-v2 .cann-pill.no { background: #fad7d7; color: #97281c; border-color: #eeaba6; }
+  body.palace-v2 .cann-pill.warn { background: #fbe2c4; color: #854b0d; border-color: #eabf87; }
+
+  /* ---- 4. PROMO BANNER → coupon pill ---- */
+  body.palace-v2 .save-banner { border-radius: 18px; }
+  body.palace-v2 .save-banner .sb-title { font-weight: 800; letter-spacing: -0.01em; }
+  body.palace-v2 .coupon-pill {
+    display: inline-flex; align-items: center; gap: 10px; background: #fff; color: var(--kk-dark);
+    border: 2px dashed var(--kk-mid); border-radius: 12px; padding: 8px 8px 8px 16px; margin-top: 14px;
+  }
+  body.palace-v2 .coupon-pill .cp-code { font-family: 'Inter', sans-serif; font-weight: 800; font-size: 16px; letter-spacing: 0.12em; }
+  body.palace-v2 .coupon-pill .copy-btn { background: var(--kk-dark); color: #fff; }
+
+  /* ---- 4. FOOTER — more breathing room ---- */
+  body.palace-v2 footer { padding: 34px 0 40px; }
+
+  /* ---- sticky nav polish (already sticky globally) ---- */
+  body.palace-v2 .tab-nav-wrap { box-shadow: 0 3px 10px rgba(30,49,32,0.06); }
+  body.palace-v2 .tab-btn { font-weight: 700; }
+  body.palace-v2 .tab-nav .tab-btn.active { background: var(--kk-mid); border-color: var(--kk-mid); }
 </style>
 </head>
 <body>
@@ -1143,7 +1279,7 @@
   // Pull current guest from OwnerRez (live, every page load)
   let live = null;
   try {
-    const r = await fetch(`https://kk-manual.vercel.app/api/current-guest?p=${slug}`, { cache: 'no-store' });
+    const r = await fetch(`/api/current-guest?p=${slug}`, { cache: 'no-store' });
     if (r.ok) live = await r.json();
   } catch (_) {}
 
@@ -1153,6 +1289,9 @@
   data.guest_greeting_sub = guestName ? `This guide is set up just for your stay at ${data.meta.name}.` : '';
   if (live && live.door_code) {
     data.door_code_display = live.door_code;
+  } else if (live && live.code_gate === 'withheld') {
+    // Requirements not yet complete — withhold the code, tell them what to finish.
+    data.door_code_display = 'Complete your pre-arrival requirements to unlock your door code: sign the lease agreement and finish identity verification.';
   } else if (live && live.door_code_available_on) {
     data.door_code_display = `Available ${live.door_code_available_on}`;
   }
@@ -1573,6 +1712,154 @@
         window.addEventListener('resize', upd);
         upd();
         setTimeout(upd, 80);
+      }
+    }
+  }
+
+  // =====================================================================
+  // PALACE V2 — Palace-only UI/UX test build (Shaquan 2026-08-05).
+  // Runs ONLY for ?p=palace; every other property skips this entirely.
+  // =====================================================================
+  if (slug === 'palace') applyPalaceV2();
+  function applyPalaceV2() {
+    document.body.classList.add('palace-v2');
+    const I = {
+      key:'<svg viewBox="0 0 24 24"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6"/><path d="m15.5 7.5 3 3L22 7l-3-3"/></svg>',
+      wifi:'<svg viewBox="0 0 24 24"><path d="M5 13a10 10 0 0 1 14 0"/><path d="M8.5 16.5a5 5 0 0 1 7 0"/><path d="M2 8.82a15 15 0 0 1 20 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>',
+      msg:'<svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>',
+      phone:'<svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>',
+      clock:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>',
+      alert:'<svg viewBox="0 0 24 24"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>',
+      gift:'<svg viewBox="0 0 24 24"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>',
+      copy:'<svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>',
+      check:'<svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>',
+      image:'<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>',
+    };
+    const ico = (n) => `<span class="kk-icon">${I[n] || ''}</span>`;
+
+    function copyBtn(text, label) {
+      const b = document.createElement('button');
+      b.type = 'button'; b.className = 'copy-btn';
+      b.innerHTML = I.copy + (label ? `<span>${label}</span>` : '');
+      b.addEventListener('click', (e) => {
+        e.preventDefault(); e.stopPropagation();
+        const restore = b.innerHTML;
+        const done = () => {
+          b.classList.add('copied');
+          b.innerHTML = I.check + '<span>Copied</span>';
+          setTimeout(() => { b.classList.remove('copied'); b.innerHTML = restore; }, 1500);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(done, done);
+        } else {
+          const ta = document.createElement('textarea'); ta.value = text;
+          document.body.appendChild(ta); ta.select();
+          try { document.execCommand('copy'); } catch (_) {}
+          ta.remove(); done();
+        }
+      });
+      return b;
+    }
+
+    // 1. Reorder: Door Code + WiFi directly under the intro (above the welcome note)
+    const welcome = app.querySelector('.welcome');
+    const doorCard = app.querySelector('.door-code-card');
+    const wifiSec = Array.from(app.querySelectorAll('section')).find(s => {
+      const h = s.querySelector('h2'); return h && h.textContent.trim().startsWith('WiFi');
+    });
+    if (welcome && doorCard) welcome.parentNode.insertBefore(doorCard, welcome);
+    if (doorCard && wifiSec) doorCard.parentNode.insertBefore(wifiSec, doorCard.nextSibling);
+
+    // 1. Door code — keyhole icon, heavy code, copy button (only when it's a real code)
+    const dcH2 = app.querySelector('.door-code-card h2');
+    if (dcH2 && !dcH2.querySelector('.kk-icon')) dcH2.insertAdjacentHTML('afterbegin', ico('key'));
+    const dcVal = app.querySelector('.door-code-value');
+    if (dcVal) {
+      const txt = (dcVal.textContent || '').trim();
+      const isCode = /^\d{3,8}$/.test(txt);
+      dcVal.classList.toggle('is-msg', !isCode);
+      if (isCode) {
+        const row = document.createElement('div');
+        row.className = 'door-code-copy-row';
+        row.appendChild(copyBtn(txt, 'Copy code'));
+        dcVal.after(row);
+      }
+    }
+
+    // 1. WiFi — signal icon + copy the password
+    const wifiIc = app.querySelector('.wifi-ic');
+    if (wifiIc) wifiIc.innerHTML = I.wifi;
+    const wifiVals = app.querySelectorAll('.wifi-card .wifi-val');
+    if (wifiVals.length >= 2) {
+      const pw = wifiVals[1];
+      const pwText = (pw.textContent || '').trim();
+      const row = document.createElement('span');
+      row.className = 'wifi-val-row';
+      pw.parentNode.insertBefore(row, pw);
+      row.appendChild(pw);
+      row.appendChild(copyBtn(pwText, ''));
+    }
+
+    // CTA tiles + support lines → line icons
+    const CTA_ICON = [['Text Us', 'msg'], ['Call Us', 'phone'], ['Early/Late', 'clock'], ['Report an Issue', 'alert']];
+    app.querySelectorAll('.cta-grid .cta').forEach(c => {
+      const lbl = ((c.querySelector('.label') || {}).textContent || '');
+      const ic = c.querySelector('.icon');
+      const hit = CTA_ICON.find(([k]) => lbl.indexOf(k) >= 0);
+      if (ic && hit) ic.innerHTML = I[hit[1]];
+    });
+
+    // 4. Support "Need Anything?" — swap icons AND drop the Book-Direct line
+    app.querySelectorAll('.help-line').forEach(h => {
+      const main = ((h.querySelector('.h-main') || {}).textContent || '');
+      if (/book direct/i.test(main)) { h.remove(); return; }
+      const ic = h.querySelector('.h-ic');
+      if (ic) ic.innerHTML = /report/i.test(main) ? I.alert : I.phone;
+    });
+
+    // 3. House Rules — wrap $ penalties in warning badges
+    app.querySelectorAll('.rule .r-body').forEach(b => {
+      b.innerHTML = b.innerHTML.replace(/\$[\d,]+/g, m => `<span class="fine-badge">${m}</span>`);
+    });
+
+    // 2. Tutorials → horizontal carousel (CSS drives layout; add a swipe hint)
+    const vsec = Array.from(app.querySelectorAll('section')).find(s => {
+      const h = s.querySelector('h2'); return h && h.textContent.trim().startsWith('Tutorials');
+    });
+    if (vsec && !vsec.querySelector('.vid-hint')) {
+      const h2 = vsec.querySelector('h2');
+      if (h2) h2.insertAdjacentHTML('afterend', '<div class="vid-hint">Swipe to browse →</div>');
+    }
+
+    // 2. Photos → single compact preview banner
+    const strip = app.querySelector('.photo-strip');
+    if (strip && strip.querySelectorAll('img').length) {
+      const imgs = Array.from(strip.querySelectorAll('img'));
+      const first = imgs[0];
+      const n = imgs.length;
+      strip.innerHTML = '';
+      strip.classList.add('pv2-banner');
+      strip.appendChild(first);
+      const count = document.createElement('span');
+      count.className = 'pv2-count';
+      count.innerHTML = I.image + `<span>${n} photo${n > 1 ? 's' : ''}</span>`;
+      strip.appendChild(count);
+    }
+
+    // 4. Promo banner → gift icon + dashed coupon pill with copy
+    const sb = app.querySelector('.save-banner');
+    if (sb) {
+      const sbIcon = sb.querySelector('.sb-icon');
+      if (sbIcon) sbIcon.innerHTML = I.gift;
+      const sub = sb.querySelector('.sb-sub');
+      if (sub && !sb.querySelector('.coupon-pill')) {
+        sub.textContent = 'Book direct at kushkations.com';
+        const pill = document.createElement('div');
+        pill.className = 'coupon-pill';
+        pill.innerHTML = `<span class="cp-code">STAYNSAVE10</span>`;
+        pill.appendChild(copyBtn('STAYNSAVE10', ''));
+        pill.addEventListener('click', e => { e.preventDefault(); e.stopPropagation(); });
+        sub.after(pill);
       }
     }
   }
