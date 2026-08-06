@@ -1905,6 +1905,19 @@
       const h2 = vsec.querySelector('h2');
       if (h2) h2.insertAdjacentHTML('afterend', '<div class="vid-hint">Swipe to browse →</div>');
     }
+    // Palace: the shared "Drain the sink" tutorial pointed at a private Drive folder (dead link
+    // for guests). Swap in the real public YouTube short + its thumbnail. Palace only for now.
+    const SINK_YT = '7_NgcBi4qHc';
+    app.querySelectorAll('.vid-list .vid-card').forEach(card => {
+      if (!/drain the sink/i.test(((card.querySelector('.vid-title') || {}).textContent || ''))) return;
+      card.setAttribute('href', `https://www.youtube.com/shorts/${SINK_YT}`);
+      const thumb = card.querySelector('.vid-thumb');
+      if (thumb) {
+        thumb.style.backgroundImage = `url('https://img.youtube.com/vi/${SINK_YT}/hqdefault.jpg')`;
+        const em = thumb.querySelector('.vid-emoji');
+        if (em) em.remove();
+      }
+    });
 
     // 2. Photos → compact preview banner that opens a full-screen swipeable gallery on tap
     const strip = app.querySelector('.photo-strip');
