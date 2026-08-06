@@ -1061,6 +1061,25 @@
   body.palace-v2 .tab-nav-wrap { box-shadow: 0 3px 10px rgba(30,49,32,0.06); }
   body.palace-v2 .tab-btn { font-weight: 700; }
   body.palace-v2 .tab-nav .tab-btn.active { background: var(--kk-mid); border-color: var(--kk-mid); }
+
+  /* ---- (a) line icons across the remaining lower-section tiles/rows ---- */
+  body.palace-v2 .bt-ic svg, body.palace-v2 .bi-ic svg, body.palace-v2 .cann-ic svg,
+  body.palace-v2 .fee-ic svg, body.palace-v2 .co-ic svg {
+    stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+  }
+  body.palace-v2 .bt-ic { color: var(--kk-mid); }
+  body.palace-v2 .bt-ic svg { width: 22px; height: 22px; }
+  body.palace-v2 .bi-ic { color: var(--kk-mid); }
+  body.palace-v2 .bi-ic svg { width: 19px; height: 19px; vertical-align: middle; }
+  body.palace-v2 .cann-ic { color: var(--kk-mid); display: inline-flex; align-items: center; }
+  body.palace-v2 .cann-ic svg { width: 20px; height: 20px; }
+  body.palace-v2 .fee-ic { color: var(--kk-mid); }
+  body.palace-v2 .fee-ic svg { width: 22px; height: 22px; }
+  body.palace-v2 .co-ic { color: var(--kk-mid); }
+  body.palace-v2 .co-ic svg { width: 18px; height: 18px; }
+  body.palace-v2 .amenity-acc summary .kk-icon { color: var(--kk-mid); font-size: 18px; flex: none; }
+  body.palace-v2 .tab-btn { display: inline-flex; align-items: center; gap: 6px; }
+  body.palace-v2 .tab-btn .kk-icon { font-size: 14px; flex: none; }
 </style>
 </head>
 <body>
@@ -1734,6 +1753,33 @@
       copy:'<svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>',
       check:'<svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>',
       image:'<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>',
+      trash:'<svg viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/></svg>',
+      parking:'<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 17V7h4a3 3 0 0 1 0 6H9"/></svg>',
+      leaf:'<svg viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg>',
+      ban:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m4.9 4.9 14.2 14.2"/></svg>',
+      cig:'<svg viewBox="0 0 24 24"><path d="M18 12H2v4h16"/><path d="M22 12v4"/><path d="M18.5 12v4"/><path d="M18 8c0-2.5-2-2.5-2-5"/><path d="M22 8c0-2.5-2-2.5-2-5"/></svg>',
+      sunrise:'<svg viewBox="0 0 24 24"><path d="M12 2v8"/><path d="m4.93 10.93 1.41 1.41"/><path d="M2 18h2"/><path d="M20 18h2"/><path d="m19.07 10.93-1.41 1.41"/><path d="M22 22H2"/><path d="m8 6 4-4 4 4"/><path d="M16 18a4 4 0 0 0-8 0"/></svg>',
+      moon:'<svg viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>',
+      shirt:'<svg viewBox="0 0 24 24"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></svg>',
+      bulb:'<svg viewBox="0 0 24 24"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>',
+      utensils:'<svg viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>',
+      tv:'<svg viewBox="0 0 24 24"><rect width="20" height="15" x="2" y="7" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>',
+      box:'<svg viewBox="0 0 24 24"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>',
+      bed:'<svg viewBox="0 0 24 24"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg>',
+      waves:'<svg viewBox="0 0 24 24"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg>',
+      flame:'<svg viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>',
+      gamepad:'<svg viewBox="0 0 24 24"><line x1="6" x2="10" y1="12" y2="12"/><line x1="8" x2="8" y1="10" y2="14"/><line x1="15" x2="15.01" y1="13" y2="13"/><line x1="18" x2="18.01" y1="11" y2="11"/><rect width="20" height="12" x="2" y="6" rx="4"/></svg>',
+      film:'<svg viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 3v18"/><path d="M3 7.5h4"/><path d="M3 12h18"/><path d="M3 16.5h4"/><path d="M17 3v18"/><path d="M17 7.5h4"/><path d="M17 16.5h4"/></svg>',
+      flag:'<svg viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/></svg>',
+      dice:'<svg viewBox="0 0 24 24"><rect width="12" height="12" x="2" y="10" rx="2"/><path d="m17.92 14 3.5-3.5a2.24 2.24 0 0 0 0-3l-5-4.92a2.24 2.24 0 0 0-3 0L10 6"/><path d="M6 18h.01"/><path d="M10 14h.01"/><path d="M15 6h.01"/><path d="M18 9h.01"/></svg>',
+      car:'<svg viewBox="0 0 24 24"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.5 2.8C1.4 11.3 2 12 3 12"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>',
+      mappin:'<svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>',
+      siren:'<svg viewBox="0 0 24 24"><path d="M7 18v-6a5 5 0 1 1 10 0v6"/><path d="M5 21a1 1 0 0 0 1-1v-1a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v1a1 1 0 0 0 1 1"/><path d="M21 12h1"/><path d="M18.5 4.5 18 5"/><path d="M2 12h1"/><path d="M12 2v1"/><path d="M5.5 4.5 6 5"/></svg>',
+      scroll:'<svg viewBox="0 0 24 24"><path d="M8 21h12a2 2 0 0 0 2-2v-2H10v2a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v3h4"/><path d="M19 17V5a2 2 0 0 0-2-2H4"/></svg>',
+      clipboard:'<svg viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg>',
+      door:'<svg viewBox="0 0 24 24"><path d="M13 4h3a2 2 0 0 1 2 2v14"/><path d="M2 20h3"/><path d="M13 20h9"/><path d="M13 4.6v16.1a1 1 0 0 1-1.24.97L5 20V5.6a2 2 0 0 1 1.5-1.94l4-1A2 2 0 0 1 13 4.56Z"/></svg>',
+      map:'<svg viewBox="0 0 24 24"><path d="M14.1 5.5a2 2 0 0 0 1.8 0l3.6-1.8A1 1 0 0 1 21 4.6v12.8a1 1 0 0 1-.55.9l-4.55 2.28a2 2 0 0 1-1.8 0l-4.2-2.1a2 2 0 0 0-1.8 0l-3.6 1.8A1 1 0 0 1 3 19.4V6.6a1 1 0 0 1 .55-.9L8.1 3.4a2 2 0 0 1 1.8 0z"/><path d="M15 5.8v15"/><path d="M9 3.2v15"/></svg>',
+      help:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>',
     };
     const ico = (n) => `<span class="kk-icon">${I[n] || ''}</span>`;
 
@@ -1817,10 +1863,7 @@
       if (ic) ic.innerHTML = /report/i.test(main) ? I.alert : I.phone;
     });
 
-    // 3. House Rules — wrap $ penalties in warning badges
-    app.querySelectorAll('.rule .r-body').forEach(b => {
-      b.innerHTML = b.innerHTML.replace(/\$[\d,]+/g, m => `<span class="fine-badge">${m}</span>`);
-    });
+    // 3. House-rule badges are applied in palaceReskin() below, so they survive ES/EN toggles.
 
     // 2. Tutorials → horizontal carousel (CSS drives layout; add a swipe hint)
     const vsec = Array.from(app.querySelectorAll('section')).find(s => {
@@ -1862,6 +1905,75 @@
         sub.after(pill);
       }
     }
+
+    // (a) Line icons for the remaining lower-section tiles/rows. These icon holders are NOT
+    //     translated by setLang, so they persist across language switches (set once here).
+    const setIco = (el, n) => { if (el) el.innerHTML = I[n] || ''; };
+    const bt = app.querySelectorAll('.basics-times .btime .bt-ic');
+    if (bt[0]) setIco(bt[0], 'clock');
+    if (bt[1]) setIco(bt[1], 'clock');
+    app.querySelectorAll('.binfo').forEach(row => {
+      const k = ((row.querySelector('.bi-k') || {}).textContent || '').toLowerCase();
+      const ic = row.querySelector('.bi-ic');
+      if (/trash/.test(k)) setIco(ic, 'trash');
+      else if (/parking/.test(k)) setIco(ic, 'parking');
+    });
+    app.querySelectorAll('.cann-row').forEach(row => {
+      const lbl = ((row.querySelector('.cann-lbl') || {}).textContent || '').toLowerCase();
+      const ic = row.querySelector('.cann-ic');
+      if (/420/.test(lbl)) setIco(ic, 'leaf');
+      else if (/indoor tobacco/.test(lbl)) setIco(ic, 'ban');
+      else setIco(ic, 'cig');
+    });
+    app.querySelectorAll('.fee-col').forEach(col => {
+      setIco(col.querySelector('.fee-ic'), col.classList.contains('late') ? 'moon' : 'sunrise');
+    });
+    const CO_ICON = [[/towel|rag/, 'shirt'], [/light/, 'bulb'], [/dish/, 'utensils'], [/trash/, 'trash'], [/remote|tv/, 'tv'], [/food|counter/, 'box'], [/bed/, 'bed']];
+    app.querySelectorAll('.co-item').forEach(it => {
+      const t = ((it.querySelector('.co-txt') || {}).textContent || '').toLowerCase();
+      const hit = CO_ICON.find(([re]) => re.test(t));
+      if (hit) setIco(it.querySelector('.co-ic'), hit[1]);
+    });
+    const HUB_ICON = [[/host pick/i, 'utensils'], [/getting around/i, 'car'], [/nearest/i, 'mappin'], [/emergenc/i, 'siren']];
+    app.querySelectorAll('.hub-tile').forEach(t => {
+      const lbl = ((t.querySelector('.label') || {}).textContent || '');
+      const hit = HUB_ICON.find(([re]) => re.test(lbl));
+      if (hit) setIco(t.querySelector('.icon'), hit[1]);
+    });
+
+    // Tag the elements setLang WILL clobber (amenity summaries + nav pills) with a stable
+    // data-key and strip their emoji, so palaceReskin() can re-apply an SVG icon after any
+    // toggle. Stripping the emoji also lets the plain name hit the ES dictionary cleanly.
+    const AM_ICON = [[/hot tub|jacuzzi/i, 'waves'], [/sauna/i, 'flame'], [/ps5/i, 'gamepad'], [/theater|cine/i, 'film'], [/golf/i, 'flag'], [/game room|juegos/i, 'dice']];
+    app.querySelectorAll('.amenity-acc > details > summary').forEach(s => {
+      const name = (s.textContent || '').trim().replace(/^\S+\s+/, '');
+      const hit = AM_ICON.find(([re]) => re.test(name));
+      if (hit) { s.dataset.pico = hit[1]; s.textContent = name; }
+    });
+    const PILL_ICON = [[/access/i, 'key'], [/wifi/i, 'wifi'], [/rules/i, 'scroll'], [/basics/i, 'clipboard'], [/early/i, 'clock'], [/checkout/i, 'door'], [/amenities/i, 'gamepad'], [/explore/i, 'map'], [/help/i, 'help']];
+    app.querySelectorAll('.tab-nav .tab-btn').forEach(btn => {
+      const name = (btn.textContent || '').trim().replace(/^\S+\s+/, '');
+      const hit = PILL_ICON.find(([re]) => re.test(name));
+      if (hit) { btn.dataset.pico = hit[1]; btn.textContent = name; }
+    });
+
+    // Re-runnable reskin: (b) rule badges + the clobberable icons. Runs once now and again
+    // after every language switch (via __afterSetLang), so nothing is permanently lost.
+    function palaceReskin() {
+      app.querySelectorAll('.rule .r-body').forEach(b => {
+        if (!b.querySelector('.fine-badge')) {
+          b.innerHTML = b.innerHTML.replace(/\$[\d,]+/g, m => `<span class="fine-badge">${m}</span>`);
+        }
+      });
+      app.querySelectorAll('.amenity-acc > details > summary[data-pico]').forEach(s => {
+        if (!s.querySelector('.kk-icon')) s.insertAdjacentHTML('afterbegin', ico(s.dataset.pico));
+      });
+      app.querySelectorAll('.tab-nav .tab-btn[data-pico]').forEach(btn => {
+        if (!btn.querySelector('.kk-icon')) btn.insertAdjacentHTML('afterbegin', ico(btn.dataset.pico));
+      });
+    }
+    window.__afterSetLang = palaceReskin;
+    palaceReskin();
   }
 
   // Spanish translation: simple text-content swap for static labels
@@ -1993,6 +2105,8 @@
     'Save 10% on your next stay': 'Ahorra 10% en tu próxima estancia',
     'Book direct at kushkations.com · Code STAYNSAVE10': 'Reserva directo en kushkations.com · Código STAYNSAVE10',
     '🔑 Access': '🔑 Acceso',
+    'Access': 'Acceso', 'Rules': 'Reglas', 'Basics': 'Lo Básico', 'Early/Late': 'Temprano/Tarde',
+    'Checkout': 'Check-out', 'Amenities': 'Amenidades', 'Explore': 'Explorar', 'Help': 'Ayuda',
     '📶 WiFi': '📶 WiFi',
     '📋 Basics': '📋 Lo Básico',
     '⏰ Early/Late': '⏰ Temprano/Tarde',
@@ -2031,6 +2145,8 @@
     });
     const btn = document.getElementById('langToggle');
     if (btn) btn.textContent = lang === 'es' ? 'ES | EN' : 'EN | ES';
+    // Palace v2: re-apply icons/badges that this text swap wiped out.
+    if (window.__afterSetLang) { try { window.__afterSetLang(lang); } catch (_) {} }
   }
 
   const savedLang = localStorage.getItem('kk_lang') || 'en';
