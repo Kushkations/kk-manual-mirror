@@ -1833,6 +1833,7 @@
       chevL:'<svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>',
       chevR:'<svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>',
       cross:'<svg viewBox="0 0 24 24"><path d="M9 3h6a1 1 0 0 1 1 1v4h4a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-4v4a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-4H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1h4V4a1 1 0 0 1 1-1z"/></svg>',
+      dining:'<svg viewBox="0 0 24 24"><path d="m16 2-2.3 2.3a3 3 0 0 0 0 4.2l1.8 1.8a3 3 0 0 0 4.2 0L22 8"/><path d="M15 15 3.3 3.3a4.2 4.2 0 0 0 0 6l7.3 7.3c.7.7 2 .7 2.8 0L15 15Zm0 0 7 7"/><path d="m2.1 21.8 6.4-6.3"/><path d="m19 5-7 7"/></svg>',
     };
     const ico = (n) => `<span class="kk-icon">${I[n] || ''}</span>`;
 
@@ -2031,7 +2032,7 @@
       const hit = CO_ICON.find(([re]) => re.test(t));
       if (hit) setIco(it.querySelector('.co-ic'), hit[1]);
     });
-    const HUB_ICON = [[/host pick/i, 'utensils'], [/getting around/i, 'car'], [/nearest/i, 'mappin'], [/emergenc/i, 'cross']];
+    const HUB_ICON = [[/host pick/i, 'dining'], [/getting around/i, 'car'], [/nearest/i, 'mappin'], [/emergenc/i, 'cross']];
     app.querySelectorAll('.hub-tile').forEach(t => {
       const lbl = ((t.querySelector('.label') || {}).textContent || '');
       const hit = HUB_ICON.find(([re]) => re.test(lbl));
