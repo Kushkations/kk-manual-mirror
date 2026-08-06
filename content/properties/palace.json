@@ -18,7 +18,7 @@
    "lng": 0,
    "_todo": "pull exact lat/lng from Google Maps"
   },
-  "cover_photo": "https://uc.orez.io/i/53d84dd1b701403db15af003768b0378-Large",
+  "cover_photo": "../assets/covers/palace.jpg",
   "photo_gallery": [
    "https://uc.orez.io/i/408f89400f70418da298a367a18bd489-Large",
    "https://uc.orez.io/i/c0f8e457d8c04434b572b85eaf0ce2d2-Large",
