@@ -1360,8 +1360,8 @@
   } else if (live && live.code_gate === 'withheld') {
     // Requirements not yet complete — withhold the code, tell them what to finish.
     data.door_code_display = 'Complete your pre-arrival requirements to unlock your door code: sign the lease agreement and finish identity verification.';
-  } else if (live && live.door_code_available_on) {
-    data.door_code_display = `Available ${live.door_code_available_on}`;
+  } else if (live && (live.door_code_available_at || live.door_code_available_on)) {
+    data.door_code_display = `Available ${live.door_code_available_at || live.door_code_available_on}`;
   }
 
   // Derived fields
@@ -1420,7 +1420,7 @@
   // Add a URL here and a "Watch the video" button appears in that amenity's panel.
   const AMENITY_VIDEOS = {
     ps5:       {url: 'https://www.youtube.com/watch?v=1jQjYuOeg4M', title: 'How to turn on the PS5 & sign in'},
-    sauna:     {url: 'https://drive.google.com/file/d/1jlfz6IULLoH9LtIhFn19FSkOprVu3BW4/view', title: 'How to use the sauna'},
+    sauna:     null,  // 8/12 audit: Drive file is PRIVATE (guests hit a Google login wall) — restore once a public/unlisted video exists
     golf:      {url: 'https://scanned.page/67aa367c633f2', title: 'How to use the golf simulator'},
     theater:   null,      // no video tutorial yet (text SOP only)
     game_room: null,      // no video tutorial yet (PDF only)
@@ -1438,20 +1438,27 @@
     const brand = (ht.brand && !/^hot tub$/i.test(ht.brand)) ? ht.brand : '';
     if (brand || ht.temp_range) h += `<div class="inst-note">${brand ? '<strong>' + esc(brand) + '</strong>' : 'Hot tub'}${ht.temp_range ? ' · set ' + esc(ht.temp_range) : ''}</div>`;
     const ms = ht.mode_setup || {};
-    if (ms.must_do_first) h += `<div class="inst-note warn">⚠️ <strong>Do this first:</strong> ${esc(ms.must_do_first)}</div>`;
-    if (ms.video_tutorial) {
+    // ST/EC ("Standard/Economy") mode is Marquis (Balboa) terminology. Only Palace + Blue Dream
+    // are actually Marquis; on any other brand the mode steps + the Marquis mode-video send guests
+    // hunting for buttons that aren't on their panel (guest complaint — Grant/Legacy Whirlpool).
+    const isMarquis = /marquis/i.test(ht.brand || '');
+    if (isMarquis && ms.must_do_first) h += `<div class="inst-note warn">⚠️ <strong>Do this first:</strong> ${esc(ms.must_do_first)}</div>`;
+    if (isMarquis && ms.video_tutorial) {
       const vurl = String(ms.video_tutorial).replace('/embed/', '/watch?v=');
       h += `<a class="video-btn" href="${esc(vurl)}" target="_blank" rel="noopener">▶︎ ${esc(ms.video_tutorial_title || 'Watch the hot tub video')}</a>`;
     }
     if (Array.isArray(ht.quick_start) && ht.quick_start.length) h += `<div class="inst-h">Start it up</div><ol class="inst-steps">${ht.quick_start.map(x => `<li>${esc(x)}</li>`).join('')}</ol>`;
-    if (Array.isArray(ms.steps) && ms.steps.length) {
+    if (isMarquis && Array.isArray(ms.steps) && ms.steps.length) {
       h += `<div class="inst-h">🌡️ Not staying hot? Set the mode</div>`;
       if (ms.why) h += `<div class="inst-note">${esc(ms.why)}</div>`;
       h += `<ol class="inst-steps">${ms.steps.map(x => `<li>${esc(x)}</li>`).join('')}</ol>`;
     }
     if (Array.isArray(ht.rules) && ht.rules.length) h += `<div class="inst-h">♨️ Hot tub rules</div><ul class="inst-list">${ht.rules.map(x => `<li>${esc(x)}</li>`).join('')}</ul>`;
+    const heatFix = isMarquis
+      ? `<li>Check the panel reads <strong>ST</strong> (Standard), not EC/Economy.</li>`
+      : `<li>Make sure the set temperature reads <strong>100–102°F</strong> — press the Warm/Temp button to raise it (the display flashes, then locks in).</li>`;
     h += `<div class="inst-h">🔧 Still not heating?</div><ol class="inst-steps">`
-       + `<li>Check the panel reads <strong>ST</strong> (Standard), not EC/Economy.</li>`
+       + heatFix
        + `<li>Check the water level, it must cover the filter, or the heater shuts off.</li>`
        + `<li>Top up with the garden hose to ~2 inches above the filter.</li>`
        + `<li>Give it 15 minutes, then re-check.</li>`
@@ -1688,7 +1695,7 @@
   // Tutorials, a YouTube-style video picker (real YouTube thumbnails where available)
   const TUTORIALS = [
     {emoji: '📱', yt: null, title: 'Phone as a Roku remote', sub: 'Lost a remote? Control any TV from your phone', url: 'https://www.youtube.com/results?search_query=how+to+use+roku+mobile+app+as+remote'},
-    {emoji: '🚿', yt: null, title: 'Drain the sink', sub: 'Quick video walk-through', url: 'https://drive.google.com/drive/u/4/folders/1yVkY8XZR6FO-OYCSfHkBG_JRiZji8leK'},
+    {emoji: '🚿', yt: '7_NgcBi4qHc', title: 'Drain the sink', sub: 'Quick video walk-through', url: 'https://www.youtube.com/shorts/7_NgcBi4qHc'},
     {emoji: '🛁', yt: 'xlKTRspHciM', title: 'Use the shower diverter', sub: 'Switch between tub and shower, quick video', url: 'https://youtu.be/xlKTRspHciM'},
     {emoji: '🔥', yt: null, title: 'Order propane for the grill', sub: 'Video tutorial · delivered via Cynch', url: 'https://rb.gy/lh1ixm'},
     {emoji: '🛻', yt: null, title: 'Cynch propane delivery', sub: 'Order a tank to the door · guest provides propane', url: 'https://www.cynch.com'},
