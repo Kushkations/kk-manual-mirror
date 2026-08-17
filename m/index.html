@@ -1432,44 +1432,42 @@
     return `<a class="video-btn" href="${esc(url)}" target="_blank" rel="noopener">▶︎ ${esc(v.title || 'Watch the video')}</a>`;
   }
 
+  // Panel-exact hot tub controls, read from the cleaners' turnover photos (Aug 2026).
+  // Keyed by a lowercase substring of the brand; matched against ht.brand. No tub uses ST/EC.
+  const HOT_TUB_PANELS = {
+    'legacy whirlpool': `Set the temperature with the <strong>WARM</strong> (▲) and <strong>COOL</strong> (▼) buttons; the display shows your setpoint. <strong>JETS</strong> runs the jets, <strong>LIGHT</strong> the light, <strong>AUX</strong> the blower.`,
+    'strong spas': `Set the temperature with the <strong>Warm</strong> / <strong>Cool</strong> buttons; the display shows your setpoint. The spa-side control runs the <strong>Jets</strong> and <strong>Light</strong>.`,
+    'cal spas': `Set the temperature with the <strong>WARM</strong> and <strong>COOL</strong> buttons; the display flashes your setpoint, then locks in. The <strong>Jets</strong> button runs the jets.`,
+    'sundance': `Set the temperature with the red <strong>▲</strong> (up) and blue <strong>▼</strong> (down) arrows; the display shows your setpoint. <strong>Jets 1</strong> and <strong>Jets 2</strong> run the two jet pumps; the light-bulb buttons control the lights.`,
+    'hot spring': `Set the temperature with the <strong>TEMP ▲ / ▼</strong> buttons; the red display shows your setpoint. <strong>JETS</strong> runs the jets, <strong>LIGHT</strong> the light, <strong>MODE</strong> cycles the light.`,
+    'marquis': `Set the temperature with the <strong>TEMP +</strong> / <strong>TEMP –</strong> buttons. <strong>JETS</strong> runs the jets and <strong>SPA LIGHT</strong> the light. <strong>QUIET SOAK</strong> is the energy-saver setting; use <strong>BACK/SET</strong> for the menu.`,
+    'balboa': `Set the temperature with the <strong>WARM</strong> (▲) and <strong>COOL</strong> (▼) buttons. If the display reads <strong>ECONOMY</strong> and it isn't staying hot, press <strong>MODE/PROG</strong> until it shows <strong>STANDARD</strong>. <strong>Jets 1</strong>, <strong>Jets 2</strong>, <strong>Blower</strong> and <strong>Light</strong> run those features.`,
+    'jacuzzi': `Set the temperature with the <strong>+</strong> and <strong>–</strong> buttons; the display shows your setpoint. The jets and light icons run those; the menu (☰) button cycles options.`,
+    'hudson bay': `Set the temperature with the <strong>Warm</strong> and <strong>Cool</strong> buttons; the display shows your setpoint. <strong>Pump</strong> runs the jets and <strong>Light</strong> the light.`,
+    'freeflow': `Set the temperature with the <strong>–</strong> / <strong>+</strong> buttons; the display shows your setpoint. Separate buttons run the <strong>jets</strong> and <strong>light</strong>.`,
+    'beachcomber': `Set the temperature with the <strong>Warm</strong> / <strong>Cool</strong> (or ▲/▼) buttons; the display shows your setpoint. Separate buttons run the <strong>jets</strong> and <strong>light</strong>.`,
+    'garden spas': `Set the temperature with the <strong>Warm</strong> / <strong>Cool</strong> buttons; the display shows your setpoint. Buttons run the <strong>jets</strong> and <strong>light</strong>.`,
+  };
+  const hotTubPanel = (brand) => {
+    const b = (brand || '').toLowerCase();
+    const key = Object.keys(HOT_TUB_PANELS).find(k => b.includes(k));
+    return key ? HOT_TUB_PANELS[key] : '';
+  };
   function hotTubDetail(ht) {
     if (!ht || typeof ht !== 'object') return '';
     let h = '';
     const brand = (ht.brand && !/^hot tub$/i.test(ht.brand)) ? ht.brand : '';
     if (brand || ht.temp_range) h += `<div class="inst-note">${brand ? '<strong>' + esc(brand) + '</strong>' : 'Hot tub'}${ht.temp_range ? ' · set ' + esc(ht.temp_range) : ''}</div>`;
-    const ms = ht.mode_setup || {};
-    // ST/EC ("Standard/Economy") mode is Marquis (Balboa) terminology. Only Palace + Blue Dream
-    // are actually Marquis; on any other brand the mode steps + the Marquis mode-video send guests
-    // hunting for buttons that aren't on their panel (guest complaint — Grant/Legacy Whirlpool).
-    const isMarquis = /marquis/i.test(ht.brand || '');
-    // Balboa-based panels (Marquis, and tubs branded "Balboa Water Group") use Standard/Economy/Sleep
-    // (ST/EC/SL) modes; every other brand just sets a temperature. Only the mode-spa family gets mode steps.
-    const isModeSpa = /marquis|balboa/i.test(ht.brand || '');
-    if (isMarquis && ms.must_do_first) h += `<div class="inst-note warn">⚠️ <strong>Do this first:</strong> ${esc(ms.must_do_first)}</div>`;
-    if (isMarquis && ms.video_tutorial) {
-      const vurl = String(ms.video_tutorial).replace('/embed/', '/watch?v=');
-      h += `<a class="video-btn" href="${esc(vurl)}" target="_blank" rel="noopener">▶︎ ${esc(ms.video_tutorial_title || 'Watch the hot tub video')}</a>`;
-    }
+    // Panel-exact controls, read from the cleaners' turnover photos (Aug 2026): no tub here uses ST/EC —
+    // every brand just sets a temperature with its own buttons, so show that brand's real panel.
+    const panelCtl = hotTubPanel(ht.brand);
     if (Array.isArray(ht.quick_start) && ht.quick_start.length) h += `<div class="inst-h">Start it up</div><ol class="inst-steps">${ht.quick_start.map(x => `<li>${esc(x)}</li>`).join('')}</ol>`;
-    if (isMarquis && Array.isArray(ms.steps) && ms.steps.length) {
-      h += `<div class="inst-h">🌡️ Not staying hot? Set the mode</div>`;
-      if (ms.why) h += `<div class="inst-note">${esc(ms.why)}</div>`;
-      h += `<ol class="inst-steps">${ms.steps.map(x => `<li>${esc(x)}</li>`).join('')}</ol>`;
-    } else if (isModeSpa) {
-      // Balboa panel without per-property mode steps (e.g. Joystick): generic, panel-safe mode guidance.
-      h += `<div class="inst-h">🌡️ Not staying hot? Check the mode</div>`
-         + `<div class="inst-note">This panel has <strong>Standard / Economy / Sleep</strong> modes. Only <strong>Standard (ST)</strong> holds your set temperature; <strong>Economy (EC)</strong> and <strong>Sleep (SL)</strong> let the water cool between cycles.</div>`
-         + `<ol class="inst-steps"><li>Wake the panel (tap Warm/Temp).</li><li>Press <strong>Mode</strong> (or hold Warm ~3 sec if there's no Mode button) until the display reads <strong>ST</strong>.</li><li>Then set the temperature to 100–102°F.</li></ol>`;
-    }
+    if (panelCtl) h += `<div class="inst-h">🎛️ Your control panel — ${esc(ht.brand || '')}</div><div class="inst-note">${panelCtl}</div>`;
     if (Array.isArray(ht.rules) && ht.rules.length) h += `<div class="inst-h">♨️ Hot tub rules</div><ul class="inst-list">${ht.rules.map(x => `<li>${esc(x)}</li>`).join('')}</ul>`;
-    const heatFix = isModeSpa
-      ? `<li>Check the panel reads <strong>ST</strong> (Standard), not EC/Economy.</li>`
-      : `<li>Make sure the set temperature reads <strong>100–102°F</strong> — press the Warm/Temp button to raise it (the display flashes, then locks in).</li>`;
     h += `<div class="inst-h">🔧 Still not heating?</div><ol class="inst-steps">`
-       + heatFix
-       + `<li>Check the water level, it must cover the filter, or the heater shuts off.</li>`
-       + `<li>Top up with the garden hose to ~2 inches above the filter.</li>`
-       + `<li>Give it 15 minutes, then re-check.</li>`
+       + `<li>Check the water level first — it must cover the filter, or the safety cutoff stops the heater. Top up with the garden hose to ~2 inches above the filter line.</li>`
+       + `<li>Make sure the temperature is set to <strong>100–102°F</strong> on the panel (see your controls above).</li>`
+       + `<li>Give it 15–30 minutes to warm up, then re-check.</li>`
        + `<li>Still cold? Text us a photo of the control panel and we'll walk you through it.</li></ol>`;
     if (ht.shock_location || ht.water_care) h += `<div class="inst-note">${ht.shock_location ? '<strong>Shock:</strong> ' + esc(ht.shock_location) + '. ' : ''}${ht.water_care ? esc(ht.water_care) : ''}</div>`;
     if (ht.access_note) h += `<div class="inst-note">🚶 ${esc(ht.access_note)}</div>`;
