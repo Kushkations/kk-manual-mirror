@@ -1442,6 +1442,9 @@
     // are actually Marquis; on any other brand the mode steps + the Marquis mode-video send guests
     // hunting for buttons that aren't on their panel (guest complaint — Grant/Legacy Whirlpool).
     const isMarquis = /marquis/i.test(ht.brand || '');
+    // Balboa-based panels (Marquis, and tubs branded "Balboa Water Group") use Standard/Economy/Sleep
+    // (ST/EC/SL) modes; every other brand just sets a temperature. Only the mode-spa family gets mode steps.
+    const isModeSpa = /marquis|balboa/i.test(ht.brand || '');
     if (isMarquis && ms.must_do_first) h += `<div class="inst-note warn">⚠️ <strong>Do this first:</strong> ${esc(ms.must_do_first)}</div>`;
     if (isMarquis && ms.video_tutorial) {
       const vurl = String(ms.video_tutorial).replace('/embed/', '/watch?v=');
@@ -1452,9 +1455,14 @@
       h += `<div class="inst-h">🌡️ Not staying hot? Set the mode</div>`;
       if (ms.why) h += `<div class="inst-note">${esc(ms.why)}</div>`;
       h += `<ol class="inst-steps">${ms.steps.map(x => `<li>${esc(x)}</li>`).join('')}</ol>`;
+    } else if (isModeSpa) {
+      // Balboa panel without per-property mode steps (e.g. Joystick): generic, panel-safe mode guidance.
+      h += `<div class="inst-h">🌡️ Not staying hot? Check the mode</div>`
+         + `<div class="inst-note">This panel has <strong>Standard / Economy / Sleep</strong> modes. Only <strong>Standard (ST)</strong> holds your set temperature; <strong>Economy (EC)</strong> and <strong>Sleep (SL)</strong> let the water cool between cycles.</div>`
+         + `<ol class="inst-steps"><li>Wake the panel (tap Warm/Temp).</li><li>Press <strong>Mode</strong> (or hold Warm ~3 sec if there's no Mode button) until the display reads <strong>ST</strong>.</li><li>Then set the temperature to 100–102°F.</li></ol>`;
     }
     if (Array.isArray(ht.rules) && ht.rules.length) h += `<div class="inst-h">♨️ Hot tub rules</div><ul class="inst-list">${ht.rules.map(x => `<li>${esc(x)}</li>`).join('')}</ul>`;
-    const heatFix = isMarquis
+    const heatFix = isModeSpa
       ? `<li>Check the panel reads <strong>ST</strong> (Standard), not EC/Economy.</li>`
       : `<li>Make sure the set temperature reads <strong>100–102°F</strong> — press the Warm/Temp button to raise it (the display flashes, then locks in).</li>`;
     h += `<div class="inst-h">🔧 Still not heating?</div><ol class="inst-steps">`
