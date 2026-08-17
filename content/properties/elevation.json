@@ -8,7 +8,7 @@
    "lat": 0,
    "lng": 0
   },
-  "cover_photo": "https://uc.orez.io/i/f9eff02e5f2a47a7a4715c6ca803a321-Large",
+  "cover_photo": "../assets/covers/elevation.jpg",
   "photo_gallery": [
    "https://uc.orez.io/i/56b6fb10746742368fe7cad23a48512e-Large",
    "https://uc.orez.io/i/d9eb279232084157a0bff04d0a28b232-Large",
@@ -73,7 +73,7 @@
  ],
  "amenities": {
   "hot_tub": {
-   "brand": "Artesian / Island Spa Captiva",
+   "brand": "Marquis Spas",
    "temp_range": "100°F – 102°F",
    "shock_location": "Top of the fridge",
    "safety_kill_switch": "Inside the water filter system (Canva: 'located within the water filter system')",
