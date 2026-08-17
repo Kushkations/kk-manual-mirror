@@ -8,7 +8,7 @@
    "lat": 0,
    "lng": 0
   },
-  "cover_photo": "https://uc.orez.io/i/7e86c861d6ac48efb1b490f534f7b574-Large",
+  "cover_photo": "../assets/covers/indica.jpg",
   "photo_gallery": [
    "https://uc.orez.io/i/8f4e6370473d4726aa490ac4563bd6ec-Large",
    "https://uc.orez.io/i/f23cb91c6f29454f9541ff7a906f3a18-Large",
@@ -74,7 +74,7 @@
  ],
  "amenities": {
   "hot_tub": {
-   "brand": "Cool Spas",
+   "brand": "Cal Spas",
    "temp_range": "100°F – 102°F",
    "shock_location": "Top of the fridge",
    "mode_setup": null,
