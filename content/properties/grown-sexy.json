@@ -8,7 +8,7 @@
    "lat": 0,
    "lng": 0
   },
-  "cover_photo": "https://uc.orez.io/i/9fa04088ce784c8fb6188db6c2d559cf-Large",
+  "cover_photo": "../assets/covers/grown-sexy.jpg",
   "photo_gallery": [
    "https://uc.orez.io/i/682e7957f16943e89d62b46693daa70e-Large",
    "https://uc.orez.io/i/a2979fd6a6694f06b0fad1d56e16072c-Large",
@@ -68,7 +68,7 @@
  ],
  "amenities": {
   "hot_tub": {
-   "brand": "Hot Spring Spa",
+   "brand": "Hot Spring Portable Spas",
    "temp_range": "100°F – 102°F",
    "shock_location": "Top of the fridge",
    "mode_setup": {
