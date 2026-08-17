@@ -8,7 +8,7 @@
    "lat": 0,
    "lng": 0
   },
-  "cover_photo": "https://uc.orez.io/i/a19b9bec0fa84192bb4d9da4e4f12611-Large",
+  "cover_photo": "../assets/covers/blue-dream.jpg",
   "photo_gallery": [
    "https://uc.orez.io/i/6c58329632d845499fde084bf997186d-Large",
    "https://uc.orez.io/i/6a8e3cc7082345459feb24763e5fa373-Large",
@@ -64,7 +64,7 @@
  ],
  "amenities": {
   "hot_tub": {
-   "brand": "Marquis Spa, Coastal Series",
+   "brand": "Cal Spas",
    "temp_range": "100°F – 102°F",
    "shock_location": "Top of the fridge",
    "mode_setup": {
