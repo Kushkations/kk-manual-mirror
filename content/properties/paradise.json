@@ -8,7 +8,7 @@
    "lat": 0,
    "lng": 0
   },
-  "cover_photo": "https://uc.orez.io/i/f5e7d7aa0b3f4caaa61df6503e83f9dd-Large",
+  "cover_photo": "../assets/covers/paradise.jpg",
   "photo_gallery": [
    "https://uc.orez.io/i/b92453140c17486aab95b1d4a6ad162c-Large",
    "https://uc.orez.io/i/a615bbd2c413422ebe5f75be31137fe8-Large",
@@ -73,7 +73,7 @@
  ],
  "amenities": {
   "hot_tub": {
-   "brand": "Caldera Spas",
+   "brand": "Cal Spas",
    "temp_range": "100°F – 102°F",
    "shock_location": "Top of the fridge",
    "mode_setup": {
