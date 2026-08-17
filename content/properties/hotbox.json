@@ -8,7 +8,7 @@
    "lat": 0,
    "lng": 0
   },
-  "cover_photo": "https://uc.orez.io/i/6acd02edd75744cf8f0441105994dd09-Large",
+  "cover_photo": "../assets/covers/hotbox.jpg",
   "photo_gallery": [
    "https://uc.orez.io/i/926b19bd67b94496906114534466e72c-Large",
    "https://uc.orez.io/i/e196012664a34cb78c4999801ebf2594-Large",
@@ -68,7 +68,7 @@
  ],
  "amenities": {
   "hot_tub": {
-   "brand": "Caldera Spas",
+   "brand": "Strong Spas",
    "temp_range": "100°F – 102°F",
    "shock_location": "Top of the fridge",
    "mode_setup": {
