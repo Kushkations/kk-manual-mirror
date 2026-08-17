@@ -8,7 +8,7 @@
    "lat": 0,
    "lng": 0
   },
-  "cover_photo": "https://uc.orez.io/i/3be35dd8c06f424d8af00b0e66c2669c-Large",
+  "cover_photo": "../assets/covers/wonderland.jpg",
   "photo_gallery": [
    "https://uc.orez.io/i/8b7598bcb3f445bba993449863be431e-Large",
    "https://uc.orez.io/i/76e6c746d1ad4bc18412b2e5fd17f774-Large",
@@ -72,7 +72,7 @@
  ],
  "amenities": {
   "hot_tub": {
-   "brand": "Hot tub",
+   "brand": "Garden Spas (by Artesian Spas)",
    "temp_range": "100°F – 102°F",
    "shock_location": "Top of the fridge",
    "mode_setup": null,
