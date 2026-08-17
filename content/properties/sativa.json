@@ -8,7 +8,7 @@
    "lat": 0,
    "lng": 0
   },
-  "cover_photo": "https://uc.orez.io/i/4cc8d85386d94a31b019d47a672ddca7-Large",
+  "cover_photo": "../assets/covers/sativa.jpg",
   "photo_gallery": [
    "https://uc.orez.io/i/6013563a0685471aa961f18a0026aee1-Large",
    "https://uc.orez.io/i/2c9308a15c014d1992d6851ffe5c87b5-Large",
@@ -62,7 +62,7 @@
  ],
  "amenities": {
   "hot_tub": {
-   "brand": "Sundance",
+   "brand": "Sundance Spas",
    "temp_range": "100°F – 102°F",
    "shock_location": "Top of the fridge",
    "mode_setup": {
