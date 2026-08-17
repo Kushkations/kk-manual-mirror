@@ -8,7 +8,7 @@
    "lat": 0,
    "lng": 0
   },
-  "cover_photo": "https://uc.orez.io/i/4d0c8da5238a4110bd81f07f4d749368-Large",
+  "cover_photo": "../assets/covers/playhouse.jpg",
   "photo_gallery": [
    "https://uc.orez.io/i/b570d6a11bd24b96af2b997dbd71852d-Large",
    "https://uc.orez.io/i/e3d6c2d3ab07407fb22abcf1379adcb2-Large",
@@ -72,7 +72,7 @@
  ],
  "amenities": {
   "hot_tub": {
-   "brand": "Hybrid by Beachcomber",
+   "brand": "Beachcomber Hot Tubs",
    "temp_range": "100°F – 102°F",
    "shock_location": "Top of the fridge",
    "mode_setup": {
