@@ -8,7 +8,7 @@
    "lat": 0,
    "lng": 0
   },
-  "cover_photo": "https://uc.orez.io/i/e61283080cf845d690ac9fceb3fd4abb-Large",
+  "cover_photo": "../assets/covers/sheridan.jpg",
   "photo_gallery": [
    "https://uc.orez.io/i/29ef0ce587a94112a7c3061db4fbcc99-Large",
    "https://uc.orez.io/i/1268d62b500d4121a379a9954d23853d-Large",
@@ -68,7 +68,7 @@
  ],
  "amenities": {
   "hot_tub": {
-   "brand": "FreeFlow Spa Monterey 2020",
+   "brand": "Freeflow Spas",
    "temp_range": "100°F – 102°F",
    "shock_location": "Top of the fridge",
    "mode_setup": null,
