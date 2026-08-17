@@ -8,7 +8,7 @@
    "lat": 0,
    "lng": 0
   },
-  "cover_photo": "https://uc.orez.io/i/22a5693d34c04f328d14bb12a0314773-Large",
+  "cover_photo": "../assets/covers/joystick.jpg",
   "photo_gallery": [
    "https://uc.orez.io/i/59ec2746fbc046568ab5db5f1553f261-Large",
    "https://uc.orez.io/i/129ec6cd22d7481c8ed5a0b8ac96bb9d-Large",
@@ -72,7 +72,7 @@
  ],
  "amenities": {
   "hot_tub": {
-   "brand": "Down East Spas",
+   "brand": "Balboa Water Group",
    "temp_range": "100°F – 102°F",
    "shock_location": "Top of the fridge",
    "mode_setup": null,
