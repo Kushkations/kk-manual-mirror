@@ -8,7 +8,7 @@
    "lat": 0,
    "lng": 0
   },
-  "cover_photo": "https://uc.orez.io/i/ea8ff7e8034b49058c378f7720e25fdf-Large",
+  "cover_photo": "../assets/covers/quivas.jpg",
   "photo_gallery": [
    "https://uc.orez.io/i/8481d1181a8f4cffa29acfd07715190c-Large",
    "https://uc.orez.io/i/8d4fc2ac684144b0861b36b6d2d29a18-Large",
@@ -70,7 +70,7 @@
  ],
  "amenities": {
   "hot_tub": {
-   "brand": "Caldera Spas",
+   "brand": "Strong Spas",
    "temp_range": "100°F – 102°F",
    "shock_location": "Top of the fridge",
    "mode_setup": {
