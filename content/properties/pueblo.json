@@ -8,7 +8,7 @@
    "lat": 0,
    "lng": 0
   },
-  "cover_photo": "https://uc.orez.io/i/c005c95a6bf44ad89b57d38d705bd162-Large",
+  "cover_photo": "../assets/covers/pueblo.jpg",
   "photo_gallery": [
    "https://uc.orez.io/i/e5b0ce2896294bc9b23410ccb18d1262-Large",
    "https://uc.orez.io/i/a9ee695857784e7e806db343ef8e2cbc-Large",
@@ -70,7 +70,7 @@
  ],
  "amenities": {
   "hot_tub": {
-   "brand": "Cal Spa",
+   "brand": "Cal Spas",
    "temp_range": "100°F – 102°F",
    "shock_location": "Top of the fridge",
    "mode_setup": {
